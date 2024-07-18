@@ -117,4 +117,269 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="T058CommesseTotaleOreBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>722, 54</value>
+  </metadata>
+  <metadata name="LottiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="T058CommesseTotaleOreLottiSelezionatiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="T059LottiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>135, 17</value>
+  </metadata>
+  <metadata name="T058CommesseaperteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>714, 17</value>
+  </metadata>
+  <metadata name="TmpLottiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1257, 54</value>
+  </metadata>
+  <metadata name="T059_LottiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>314, 17</value>
+  </metadata>
+  <metadata name="T074_LottiDettaglioTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>490, 17</value>
+  </metadata>
+  <metadata name="T058_Commesse_aperteTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1191, 17</value>
+  </metadata>
+  <metadata name="T058_Commesse_Totale_Ore_Lotti_SelezionatiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>361, 54</value>
+  </metadata>
+  <metadata name="T058_Commesse_Totale_OreTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>986, 54</value>
+  </metadata>
+  <metadata name="T059_Lotti_SelezionaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>961, 17</value>
+  </metadata>
+  <metadata name="TmpLottiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
+  </metadata>
+  <metadata name="T059_Lotti_SelezionaTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 91</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>224</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEAAAAEAGAAoMgAAFgAAACgAAABAAAAAgAAAAAEAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQi1QQixQQitQQixQ
+        QixQQixNQixKQSxKQixKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxK
+        QSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxKQSxK
+        QSxKQSxKQSxKQSxKQSxLQS1LQS1OQSxQQytQQixQQixQQixQQixQQixQQixQQixQQixPQytRQS1RQixP
+        Qi1PQixIQTA+TUszY3glcJ8he7IbgL8agMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAb
+        gMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAb
+        gMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAbgMAcf8AagMAvaYdPQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixSQS1RQS5QQixCRDgzZH0ZhckMk+0CkfQBkvIAkfQBk/IBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIB
+        kvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIB
+        kvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvICkvIidKZPQS1QQixQQixQQixQ
+        QixQQixQQixQQixQQixRQitIQi4yXnYXjdcCkvIDkvEBkfMCkvEBkfQDkfICkfIBkfMBkfMBkfMBkfMB
+        kfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMB
+        kfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMCkvIBkvIjc6ZQ
+        Qi1QQixQQixQQixQQixQQixPQixSQS1PQyxFRTwlfLMGk+8BkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvICkfICkfIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvICkfICkfIBkvIAkvIA
+        kvIBkvMCkvIjdKZPQi1QQixQQixQQixQQixQQixSQixPQys/SksZis8BkvICkvIAkfMAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvIBkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIB
+        kvIBkvIAkvIAkvIAkvIBkvMCkvIjdKZPQi1QQixQQixQQixQQixQQixQQiw/S0oWi9gBkvEBkfMBkfMA
+        kvIBkvEAkvEBkvEAkvIBkvMBkvMGk/EPlOsUkuITkOIIku0Ck/IAkvMAkvIAkvIGku8XkOIXkOEVkeAU
+        keAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAUkeAU
+        keAUkeAUkeAVkOAWkOAWkeEIku0BkvIAkvIBkvMCkvIjdKZPQi1QQixQQixQQixQQytRQS1ERTwZiM8F
+        kvAAkvMAkvIAkvIDkfIBkvMBkfICkvENkuogfbkxZX0+UVM8RT5CQTRAPzQVf8MCkvICkfMAkvIBkvIV
+        gL5AQDRCQTNGQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNFQDNF
+        QDNFQDNFQDNFQDNFQDNFQDNFQDNGQDRDQTNCQTMaeLMCkfMCkvEBkvMCkvIjdKZPQi1QQixQQixQQixQ
+        QS5KQTAjerAFkvADkfMBkfMAkvIAkvICkvICkvIPkesmc58+SktLQS1QQypQQS1UQitQQixLQS0cgL0B
+        kvIDkfIAkvIBkvIVf79TQitOQi1QQitQQitQQitQQitQQitQQitQQitQQitQQitQQitQQitQQitQQitQ
+        QitQQitQQitQQitQQitQQitQQitQQitQQitQQitQQitRQixRQitOQiwfebEBkfMBkvEBkvMCkvIjdKZP
+        Qi1QQixQQixQQixSQiwxXnQGk+8CkfMBkvMAkvICkvEBkvEEk/Abhco6UVJNQS5RQitQQS1RQixQQixQ
+        Qi1RQitLQC4bf78BkvECkfMAkvIBkvIWf8BPQixTQC5QQixQQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1Q
+        QS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQS1QQi1NQi4febEBkfIC
+        kfIBkfMCkvIjdKZPQi1QQixQQixQQixGRDoUjdgBkfMAkvIAkvICkvEBkfMGkvAkeq5DRDZSQS5QQixQ
+        QixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixOQi4febEBkfIBkfIBkfMCkvIjdKZPQi1QQixQQixPQiwraYoDk/ACkvIAkvIAkvIBkfQDk+8keq5H
+        QDNTQitQQi1QQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixOQi4febECkvMCkfMBkfMCkvIjdKZPQi1RQitOQixGQjUWjtcBkfQBkvEAkfMB
+        kvIDkfMYhcdFQzVSQitQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIV
+        f8BRQixRQS1PQitQQixPQixAVFwyY3kzY3ozYnozYnozYnozYnozYnozYnozYnozYnozYnozYnozYnoz
+        YnozYnozYnozYnozYnozYnozYnozYno1YnowYnwWhMsCkfMBkvIBkvICkvIjdKZPQi1QQS1QQS02XGsG
+        kvEDkvIBkfMAkvIBkvIPkug7TFBSQStRQixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8A
+        kvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixPQiwhdKICkvICkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIB
+        kvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvIBkvMBkvMBkvIBkvIBkvIBkvIBkvICkvIjdKZP
+        Qi1QQS1SQC0fd60BkfIAkfMDkvEAkvEFkfIob5dPQixPQS5RQixQQixQQixQQixQQixQQixQQixQQixR
+        QixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQiwic6QBkfMAkvIAkvMAkvMAkvMA
+        kvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvMAkvIBkvICkfMBkfMAkvEB
+        kvIBkfMCkvIjdKZPQi1OQS5EQTETkd0AkvIAkvIBkvIBkvIRkuZAR0FQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixPQiwgc6MCkfIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIBkvMCkvIjdKZPQi1RQi09T1IJlO4AkvIAkvIAkvICkvIdeLNPQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQ
+        QixPQiwic6MDkvIAkvMAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvMCkvIjdKZPQi1QQiw4XnEDk/EAkvIAkvIBkvIEkvEy
+        YXRSQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIV
+        f8BRQixRQS1PQitQQixQQiwldKEHk+8GkvEGk/AGk/AGk/AGk/AGk/AGk/AGk/AGk/AGk/AGk/AGk/AG
+        k/AGk/AGk/AGk/AGk/AGk/AGk/AGk/AHkvEGk+8DkvIBkvMCkvEBkvMCkvIjdKZPQi1RQywtaosCkvIA
+        kvIAkvIBkfMIlO8+TE1QQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8A
+        kvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQixETUk5VF84VV05VF45VF45VF45VF45VF45VF45VF45
+        VF45VF45VF45VF45VF45VF45VF45VF45VF45VF45VF45VV46VF43VV4Xf8EBkfMCkvEBkvMCkvIjdKZP
+        Qi1RQiwicp4CkvIAkvIAkvIAkvMQk+ZDQjdQQi1QQixQQixQQixQQixQQixQQixQQixQQixQQixQQixR
+        QixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQixOQixQQixQQS1RQS1RQS1RQS1R
+        QS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1RQS1PQixNQS4eerEBkfQB
+        kvIBkvMCkvIjdKZPQi1PQiwhdagBkvIAkvIAkvIAkvMXj9xAQDJQQi1QQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQixQQixRQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixRQixQ
+        QitPQi0feq8BkfMCkfIBkvMCkvIjdKZPQi1PQi0idKkBkfMAkvIAkvIAkvIXj9tFPzBPQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQitPQi0ferABkfIBkvIBkvMCkvIjdKZPQi1QQiwicqIDkvEAkvIAkvIAkvIUkudC
+        QjVQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIV
+        f8BRQixRQS1PQitQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQitPQi0febECkvEBkfIBkfMCkvIjdKZPQi1RQisra5EBkvIA
+        kvIAkvIAkvEMk+4+S0lQQi1QQixQQixQQixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8A
+        kvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixRQixIRjw+SUZBSEZASUVASUVASUVASUVASUVASUVASUVA
+        SUVASUVASUVASUVASUVASUVASUVASUVASUVASUVASUVBSUQ+SkQ+SUcafLgCkfMCkfMBkvICkvIjdKZP
+        Qi1QQiw1YHgCkvIAkvIAkvIAkvIEkvE2XHJPQytQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixR
+        QixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQiwndKINlO4KlO4Lk+8Lk+8Lk+8L
+        k+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+8Lk+4KlO8LlO0GkvEBkvIB
+        kvIBkvICkvIjdKZPQi1SQis9UlgHlO8AkvIAkvIBkvICkvIidalOQixQQixPQi1QQixQQixQQixQQixQ
+        QixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixPQiwgc6QBkvIB
+        kvICkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMCkfMBkvIB
+        kfMBkvIAkvIAkvIAkvIBkvMCkvIjdKZPQi1QQixCQjgUkeUCkfICkfICkfIDkvEUkeI+RTpRQS5QQixP
+        QixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQ
+        QixQQi0icqQBkvIBkvEAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvMCkvIjdKZPQi1SQS1MQisdfbgBkvIBkfIBkvEBkfQD
+        kvMtaYlOQytQQixRQixQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIV
+        f8BRQixRQS1PQitQQixQQi0icqQBkvIBkvEAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvMAkvMAkvIAkvIAkvIBkvMCkvIjdKZPQi1OQi5RQSwzYXgE
+        k/ACkvIBkvIBkvIBkfMRkOM9SUNUQS1PQitQQixQQixQQixQQixQQixQQixQQixRQixQQixLQC4bgL8A
+        kvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQi0hc6QBkfMCkvIBkfMBkfMBkfMBkfMBkfMBkfMBkfMB
+        kfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMBkfMAkvMBkvEBkfIBkvIBkvMBkvIBkvMCkvIjdKZP
+        Qi1PQixTQipBRTsUkOMBkvIDkfIAkvIAkvICkvMifrhFQjBRQixQQixQQixQQixQQixQQixQQixQQixR
+        QixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQiw4XWsmbZUmbJcnbJYnbJYnbJYn
+        bJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYnbJYmbJYnbJUka5kQh9MBkvIC
+        kfMBkfMCkvIjdKZPQi1PQi1PQS1QQC4ncZoEkfIBkvMAkvIAkvIBkfMGk/AncZtMQC9QQixQQixQQixQ
+        QixQQixQQixQQixRQixQQixLQC4bgL8AkvECkfMAkvIBkvIVf8BRQixRQS1PQitQQixQQixRQS1RQixR
+        Qi1RQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQixRQytR
+        QixRQi0fea8BkvIBkvIBkvMCkvIjdKZPQi1QQixQQixQQiw+SEYRkeQCkvIAkvIBkfICkfQAkvIGlO4q
+        cJpKQTFPQixRQitSQS1PQixQQixQQixQQixQQixMQC4bf78AkvECkfMAkvIBkvIWf8BQQixPQi1QQitQ
+        QixQQixRQSxRQSxRQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQi0febABkvIBkfIBkvMCkvIjdKZPQi1QQixQQixQQixOQysuaIwFkvEBkvIB
+        kfIBkfIAkvICkvEHkvEefbZASERPQi1QQixRQixQQixQQixQQixQQixMQC4bf78AkvECkfMAkvIBkvIX
+        f8BQQixPQi1QQitQQixQQixPQixPQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQitPQi0febABkvICkfIBkfMCkvIjdKZPQi1QQixQQixQQixQ
+        QS1JQzIdhMUDkfIAkvMAkvIAkvICkfICkvIFkvESj+AuZ4dBRTlPQi1QQixQQixQQi1QQixMQC4bf8AA
+        kvECkfMAkvIBkvIWf8BQQitPQi1QQitQQixQQixRQSxRQSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxS
+        QSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxSQSxQQitPQi0febABkvICkfIBkfMCkvIjdKZP
+        Qi1QQixQQixQQixPQixTQyo7TE0Vjt4EkfICkvECkfICkfIAkvIAkfMAkvIFkvMVj98lc586WWg8Rz5E
+        QDJLQS1HPy4bfsICkfMCkvEAkvIAkvIUf8BMQC9PQC1LQC1MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5M
+        QC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC5MQC1LQC5IQS0febABkvMA
+        kvEBkvMCkvIjdKZQQixQQixQQixQQixRQitQQS5QQiw2VF8PkOgBkfMBkvIBkvIAkvIAkvIAkvIBkvIA
+        kvIDkvEEk/EOlOsVjt0Uh9EVhM4KkOYAkvIBkvIAkvIAkvIGj+oUh8sVhc0Vhc4Vhc4Vhc4Vhc4Vhc4V
+        hc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4Vhc4W
+        hc0Uhc8JjuYBkfMBkvIBkfMCkvIjdKVNQi5QQixQQixQQixPQixQQixQQS1TQSw2VWARkeICkfMBkfQB
+        kvIBkvIBkfQBkvIBkfMDkfIBkvIBkvIBkvIBkvMBkvMCkvIBkvEAkvIAkvIAkvIBkvECkfMCkvEBkvEC
+        kvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvICkvIC
+        kvICkvICkvIBkvICkvEBkfMCkvIAkvMBkvIBkfMCkvIjdKVQQi1QQixQQixQQixQQixQQixOQixOQS5O
+        Qyo+TFMbiM8Ek/ABkfQBk/ICkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvMCkvIidKZPQi5QQixQQixQQixQ
+        QixQQixRQixQQixSQS1PQytEQjsncJgPlOYDkfMDk/AAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIBkvMCkvIidKZN
+        Qi1QQixQQixQQixQQixQQixQQixPQixRQixRQixPQitQQS08TEwkdKMTkOUDk/ADkfMAkvIBkfMBkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIAkvIA
+        kvICkfIBkvMkc6dOQy1QQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQS1PQSxBRDs2XW4k
+        cp8bgcEWi9UUj+ETj+ESj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+AS
+        j+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+ASj+AS
+        j+ASj+ASj+ASj+ASj+AUjuAUj94tcptPQytQQixQQixQQixQQixQQixQQixQQixQQixRQixPQixQQixR
+        QitQQi1RQitOQixPQi1MQC5HQDBFQTBHQTFHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNH
+        QDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNH
+        QDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQDNHQTFEQTFKQS9NQitQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixRQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQ
+        QixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQixQQiwAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>
