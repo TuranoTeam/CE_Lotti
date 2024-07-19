@@ -66,8 +66,14 @@ Public Class Lotti
 
         Dim Colore As System.Drawing.Color
         For Each RwGr As LottiDataSet.TtmConfigurazioneGrigliaRow In LottiDataSet.TtmConfigurazioneGriglia.Rows
+            If Not RwGr.IsCngrTraduzioneNull AndAlso RwGr.CngrTraduzione.Trim.Length > 0 Then
+                If ngrdT059_Lotti.DisplayLayout.Bands(0).Columns.Exists(RwGr.CngrNomeColonna.Trim) Then
+                    ngrdT059_Lotti.DisplayLayout.Bands(0).Columns(RwGr.CngrNomeColonna.Trim).Header.Caption = RwGr.CngrTraduzione
+                End If
+            End If
             If Not RwGr.IsCngrUfficioNull Then
                 For Each rwcol As LottiDataSet.T108_UfficiRow In LottiDataSet.T108_Uffici.Select("T108Id=" & RwGr.CngrUfficio)
+
                     If Not rwcol.IsT108ColoreNull Then
                         Colore = TtmConvertColorToARGB(rwcol.T108Colore)
                         If ngrdT059_Lotti.DisplayLayout.Bands(0).Columns.Exists(RwGr.CngrNomeColonna.Trim) Then
@@ -84,6 +90,8 @@ Public Class Lotti
         ngrdCommesse.Text = "Commesse Aperte"
         ngrdCommesse.DisplayLayout.Bands(0).ColHeadersVisible = False
         ngrdCommesse.DisplayLayout.Bands(0).Columns("t058commessa").Width = 60
+
+        'ngrdT059_Lotti * ngrdT059_Lotti * ngrdT059_Lotti * ngrdT059_Lotti * ngrdT059_Lotti * ngrdT059_Lotti * ngrdT059_Lotti * ngrdT059_Lotti * 
         ngrdT059_Lotti.Text = ""
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059IdLotto").Hidden = True
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Commessa").Hidden = True
@@ -95,46 +103,36 @@ Public Class Lotti
         VisiblePosition = 0
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Width = 30
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Header.Caption = "Lotto"
         '      
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataConsegna").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataConsegna").Width = 80
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataConsegna").Header.Caption = "Data Consegna"
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataConsegna").CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Sede").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Sede").Width = 120
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Sede").Header.Caption = "Sede"
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataChiusura").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataChiusura").Width = 80
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataChiusura").Header.Caption = "Data Chiusura"
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataChiusura").CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Note").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Note").Width = 120
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Note").Header.Caption = "Note"
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059LavorazioniEsterne").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059LavorazioniEsterne").Width = 80
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059LavorazioniEsterne").Header.Caption = "Lavorazioni Esterne"
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059NoteUfficioIndustrializzazione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059NoteUfficioIndustrializzazione").Width = 200
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059NoteUfficioIndustrializzazione").Header.Caption = "Note Ufficio Industrializzazione"
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataAggiornamentoOre").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataAggiornamentoOre").Width = 140
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataAggiornamentoOre").Header.Caption = "Data Aggiornamento Ore"
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DataAggiornamentoOre").CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059UtenteAggiornamentoOre").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059UtenteAggiornamentoOre").Width = 200
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059UtenteAggiornamentoOre").Header.Caption = "Utente Aggiornamento Ore"
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Consegna").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Consegna").Width = 200
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Consegna").Header.Caption = "Consegna"
         '
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DescrizioneLotto").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059DescrizioneLotto").Width = 200
@@ -142,15 +140,17 @@ Public Class Lotti
         '      
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Colonne").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Colonne").Width = 80
-        ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Colonne").Header.Caption = "Colonne"
 
-
+        'ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * 
 
         ngrdT059_Lotti2.Text = ""
         ngrdT059_Lotti2.DisplayLayout.Bands(0).Columns("Lotto").Width = 30
         ngrdT059_Lotti2.DisplayLayout.Bands(0).Columns("Selezionato").Width = 20
         ngrdT059_Lotti2.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False
         ngrdT059_Lotti2.DisplayLayout.Override.AllowColSwapping = AllowColSwapping.NotAllowed
+
+        'ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * 
+
         ngrdT059_Lotti3.Text = "Totali Ore  Lotti Selezionati"
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("T074Centro").Header.Caption = "Centro"
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("T074Centro").Width = 60
@@ -162,6 +162,9 @@ Public Class Lotti
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("Esterne").Width = 100
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("Consuntivo").Header.Caption = "Consuntivo"
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("Consuntivo").Width = 100
+
+        'ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * 
+
         ngrdT059_Lotti4.Text = "Totale Ore Commessa"
         ngrdT059_Lotti4.DisplayLayout.Bands(0).Columns("T074Centro").Header.Caption = "Centro"
         ngrdT059_Lotti4.DisplayLayout.Bands(0).Columns("T074Centro").Width = 60
@@ -187,8 +190,8 @@ Public Class Lotti
         'UTBManager.Toolbars(0).Tools(2).CustomizedDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
 
         UTBManager.Toolbars(0).Tools(0).CustomizedCaption = "Uscita"
-        UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "Codifica"
-        UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "Ordina"
+        UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "funz2"
+        UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "funz3"
 
     End Sub
     Public Shared Function TtmConvertColorToARGB(colorstring As String) As System.Drawing.Color
