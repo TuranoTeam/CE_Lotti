@@ -104,6 +104,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LottiDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LottiDataSet.vb">
+      <DependentUpon>LottiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LottiResource.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
