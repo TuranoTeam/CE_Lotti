@@ -565,6 +565,27 @@ ORDER BY Lotto, T073_GantP_Attivita.T073Sequenza</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LavorazioniEsterne_cboTableAdapter" GeneratorDataComponentClassName="LavorazioniEsterne_cboTableAdapter" Name="LavorazioniEsterne_cbo" UserDataComponentName="LavorazioniEsterne_cboTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LottiConnectionString (MySettings)" DbObjectName="StrutturaCommesse.dbo.T074_LottiDettaglio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   T074Centro,     T074LavorazioniEsterne
+FROM            T074_LottiDettaglio
+where      (T074LavorazioniEsterne IS NOT NULL)
+GROUP BY T074Centro, T074LavorazioniEsterne
+ORDER BY T074Centro,T074LavorazioniEsterne</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="T074Centro" DataSetColumn="T074Centro" />
+              <Mapping SourceColumn="T074LavorazioniEsterne" DataSetColumn="T074LavorazioniEsterne" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -947,118 +968,118 @@ ORDER BY Lotto, T073_GantP_Attivita.T073Sequenza</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TtmConfigurazioneGenerale" msprop:Generator_RowClassName="TtmConfigurazioneGeneraleRow" msprop:Generator_RowEvHandlerName="TtmConfigurazioneGeneraleRowChangeEventHandler" msprop:Generator_RowDeletedName="TtmConfigurazioneGeneraleRowDeleted" msprop:Generator_RowDeletingName="TtmConfigurazioneGeneraleRowDeleting" msprop:Generator_RowEvArgName="TtmConfigurazioneGeneraleRowChangeEvent" msprop:Generator_TablePropName="TtmConfigurazioneGenerale" msprop:Generator_RowChangedName="TtmConfigurazioneGeneraleRowChanged" msprop:Generator_UserTableName="TtmConfigurazioneGenerale" msprop:Generator_RowChangingName="TtmConfigurazioneGeneraleRowChanging" msprop:Generator_TableClassName="TtmConfigurazioneGeneraleDataTable" msprop:Generator_TableVarName="tableTtmConfigurazioneGenerale">
+        <xs:element name="TtmConfigurazioneGenerale" msprop:Generator_RowEvHandlerName="TtmConfigurazioneGeneraleRowChangeEventHandler" msprop:Generator_RowDeletedName="TtmConfigurazioneGeneraleRowDeleted" msprop:Generator_RowDeletingName="TtmConfigurazioneGeneraleRowDeleting" msprop:Generator_RowEvArgName="TtmConfigurazioneGeneraleRowChangeEvent" msprop:Generator_TablePropName="TtmConfigurazioneGenerale" msprop:Generator_RowChangedName="TtmConfigurazioneGeneraleRowChanged" msprop:Generator_UserTableName="TtmConfigurazioneGenerale" msprop:Generator_RowChangingName="TtmConfigurazioneGeneraleRowChanging" msprop:Generator_RowClassName="TtmConfigurazioneGeneraleRow" msprop:Generator_TableClassName="TtmConfigurazioneGeneraleDataTable" msprop:Generator_TableVarName="tableTtmConfigurazioneGenerale">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CngeAzienda" msprop:Generator_UserColumnName="CngeAzienda" msprop:Generator_ColumnPropNameInTable="CngeAziendaColumn" msprop:Generator_ColumnPropNameInRow="CngeAzienda" msprop:Generator_ColumnVarNameInTable="columnCngeAzienda" minOccurs="0">
+              <xs:element name="CngeAzienda" msprop:Generator_ColumnPropNameInTable="CngeAziendaColumn" msprop:Generator_ColumnPropNameInRow="CngeAzienda" msprop:Generator_UserColumnName="CngeAzienda" msprop:Generator_ColumnVarNameInTable="columnCngeAzienda" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeId" msprop:Generator_UserColumnName="CngeId" msprop:Generator_ColumnPropNameInTable="CngeIdColumn" msprop:Generator_ColumnPropNameInRow="CngeId" msprop:Generator_ColumnVarNameInTable="columnCngeId" type="xs:int" />
-              <xs:element name="CngePromptNumForm" msprop:Generator_UserColumnName="CngePromptNumForm" msprop:Generator_ColumnPropNameInTable="CngePromptNumFormColumn" msprop:Generator_ColumnPropNameInRow="CngePromptNumForm" msprop:Generator_ColumnVarNameInTable="columnCngePromptNumForm" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeControlloProgrammaUtente" msprop:Generator_UserColumnName="CngeControlloProgrammaUtente" msprop:Generator_ColumnPropNameInTable="CngeControlloProgrammaUtenteColumn" msprop:Generator_ColumnPropNameInRow="CngeControlloProgrammaUtente" msprop:Generator_ColumnVarNameInTable="columnCngeControlloProgrammaUtente" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeConfigurazioneTabellaUtente" msprop:Generator_UserColumnName="CngeConfigurazioneTabellaUtente" msprop:Generator_ColumnPropNameInTable="CngeConfigurazioneTabellaUtenteColumn" msprop:Generator_ColumnPropNameInRow="CngeConfigurazioneTabellaUtente" msprop:Generator_ColumnVarNameInTable="columnCngeConfigurazioneTabellaUtente" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeConfigurazioneGrigliaUtente" msprop:Generator_UserColumnName="CngeConfigurazioneGrigliaUtente" msprop:Generator_ColumnPropNameInTable="CngeConfigurazioneGrigliaUtenteColumn" msprop:Generator_ColumnPropNameInRow="CngeConfigurazioneGrigliaUtente" msprop:Generator_ColumnVarNameInTable="columnCngeConfigurazioneGrigliaUtente" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeConfigurazioneUffici" msprop:Generator_UserColumnName="CngeConfigurazioneUffici" msprop:Generator_ColumnPropNameInTable="CngeConfigurazioneUfficiColumn" msprop:Generator_ColumnPropNameInRow="CngeConfigurazioneUffici" msprop:Generator_ColumnVarNameInTable="columnCngeConfigurazioneUffici" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeInsertDate" msprop:Generator_UserColumnName="CngeInsertDate" msprop:Generator_ColumnPropNameInTable="CngeInsertDateColumn" msprop:Generator_ColumnPropNameInRow="CngeInsertDate" msprop:Generator_ColumnVarNameInTable="columnCngeInsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="CngeInsertUser" msprop:Generator_UserColumnName="CngeInsertUser" msprop:Generator_ColumnPropNameInTable="CngeInsertUserColumn" msprop:Generator_ColumnPropNameInRow="CngeInsertUser" msprop:Generator_ColumnVarNameInTable="columnCngeInsertUser" minOccurs="0">
+              <xs:element name="CngeId" msprop:Generator_ColumnPropNameInTable="CngeIdColumn" msprop:Generator_ColumnPropNameInRow="CngeId" msprop:Generator_UserColumnName="CngeId" msprop:Generator_ColumnVarNameInTable="columnCngeId" type="xs:int" />
+              <xs:element name="CngePromptNumForm" msprop:Generator_ColumnPropNameInTable="CngePromptNumFormColumn" msprop:Generator_ColumnPropNameInRow="CngePromptNumForm" msprop:Generator_UserColumnName="CngePromptNumForm" msprop:Generator_ColumnVarNameInTable="columnCngePromptNumForm" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeControlloProgrammaUtente" msprop:Generator_ColumnPropNameInTable="CngeControlloProgrammaUtenteColumn" msprop:Generator_ColumnPropNameInRow="CngeControlloProgrammaUtente" msprop:Generator_UserColumnName="CngeControlloProgrammaUtente" msprop:Generator_ColumnVarNameInTable="columnCngeControlloProgrammaUtente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeConfigurazioneTabellaUtente" msprop:Generator_ColumnPropNameInTable="CngeConfigurazioneTabellaUtenteColumn" msprop:Generator_ColumnPropNameInRow="CngeConfigurazioneTabellaUtente" msprop:Generator_UserColumnName="CngeConfigurazioneTabellaUtente" msprop:Generator_ColumnVarNameInTable="columnCngeConfigurazioneTabellaUtente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeConfigurazioneGrigliaUtente" msprop:Generator_ColumnPropNameInTable="CngeConfigurazioneGrigliaUtenteColumn" msprop:Generator_ColumnPropNameInRow="CngeConfigurazioneGrigliaUtente" msprop:Generator_UserColumnName="CngeConfigurazioneGrigliaUtente" msprop:Generator_ColumnVarNameInTable="columnCngeConfigurazioneGrigliaUtente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeConfigurazioneUffici" msprop:Generator_ColumnPropNameInTable="CngeConfigurazioneUfficiColumn" msprop:Generator_ColumnPropNameInRow="CngeConfigurazioneUffici" msprop:Generator_UserColumnName="CngeConfigurazioneUffici" msprop:Generator_ColumnVarNameInTable="columnCngeConfigurazioneUffici" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeInsertDate" msprop:Generator_ColumnPropNameInTable="CngeInsertDateColumn" msprop:Generator_ColumnPropNameInRow="CngeInsertDate" msprop:Generator_UserColumnName="CngeInsertDate" msprop:Generator_ColumnVarNameInTable="columnCngeInsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CngeInsertUser" msprop:Generator_ColumnPropNameInTable="CngeInsertUserColumn" msprop:Generator_ColumnPropNameInRow="CngeInsertUser" msprop:Generator_UserColumnName="CngeInsertUser" msprop:Generator_ColumnVarNameInTable="columnCngeInsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeUpdateDate" msprop:Generator_UserColumnName="CngeUpdateDate" msprop:Generator_ColumnPropNameInTable="CngeUpdateDateColumn" msprop:Generator_ColumnPropNameInRow="CngeUpdateDate" msprop:Generator_ColumnVarNameInTable="columnCngeUpdateDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="CngeUpdateUser" msprop:Generator_UserColumnName="CngeUpdateUser" msprop:Generator_ColumnPropNameInTable="CngeUpdateUserColumn" msprop:Generator_ColumnPropNameInRow="CngeUpdateUser" msprop:Generator_ColumnVarNameInTable="columnCngeUpdateUser" minOccurs="0">
+              <xs:element name="CngeUpdateDate" msprop:Generator_ColumnPropNameInTable="CngeUpdateDateColumn" msprop:Generator_ColumnPropNameInRow="CngeUpdateDate" msprop:Generator_UserColumnName="CngeUpdateDate" msprop:Generator_ColumnVarNameInTable="columnCngeUpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CngeUpdateUser" msprop:Generator_ColumnPropNameInTable="CngeUpdateUserColumn" msprop:Generator_ColumnPropNameInRow="CngeUpdateUser" msprop:Generator_UserColumnName="CngeUpdateUser" msprop:Generator_ColumnVarNameInTable="columnCngeUpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeZeroValorizzato" msprop:Generator_UserColumnName="CngeZeroValorizzato" msprop:Generator_ColumnPropNameInTable="CngeZeroValorizzatoColumn" msprop:Generator_ColumnPropNameInRow="CngeZeroValorizzato" msprop:Generator_ColumnVarNameInTable="columnCngeZeroValorizzato" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeZeroVisibile" msprop:Generator_UserColumnName="CngeZeroVisibile" msprop:Generator_ColumnPropNameInTable="CngeZeroVisibileColumn" msprop:Generator_ColumnPropNameInRow="CngeZeroVisibile" msprop:Generator_ColumnVarNameInTable="columnCngeZeroVisibile" type="xs:boolean" minOccurs="0" />
-              <xs:element name="CngeColoreAttivitaPianificata" msprop:Generator_UserColumnName="CngeColoreAttivitaPianificata" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaPianificataColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaPianificata" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaPianificata" minOccurs="0">
+              <xs:element name="CngeZeroValorizzato" msprop:Generator_ColumnPropNameInTable="CngeZeroValorizzatoColumn" msprop:Generator_ColumnPropNameInRow="CngeZeroValorizzato" msprop:Generator_UserColumnName="CngeZeroValorizzato" msprop:Generator_ColumnVarNameInTable="columnCngeZeroValorizzato" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeZeroVisibile" msprop:Generator_ColumnPropNameInTable="CngeZeroVisibileColumn" msprop:Generator_ColumnPropNameInRow="CngeZeroVisibile" msprop:Generator_UserColumnName="CngeZeroVisibile" msprop:Generator_ColumnVarNameInTable="columnCngeZeroVisibile" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CngeColoreAttivitaPianificata" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaPianificataColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaPianificata" msprop:Generator_UserColumnName="CngeColoreAttivitaPianificata" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaPianificata" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeColoreAttivitaIniziata" msprop:Generator_UserColumnName="CngeColoreAttivitaIniziata" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaIniziataColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaIniziata" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaIniziata" minOccurs="0">
+              <xs:element name="CngeColoreAttivitaIniziata" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaIniziataColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaIniziata" msprop:Generator_UserColumnName="CngeColoreAttivitaIniziata" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaIniziata" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeColoreAttivitaFinita" msprop:Generator_UserColumnName="CngeColoreAttivitaFinita" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaFinitaColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaFinita" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaFinita" minOccurs="0">
+              <xs:element name="CngeColoreAttivitaFinita" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaFinitaColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaFinita" msprop:Generator_UserColumnName="CngeColoreAttivitaFinita" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaFinita" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeColoreAttivitaOltre" msprop:Generator_UserColumnName="CngeColoreAttivitaOltre" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaOltreColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaOltre" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaOltre" minOccurs="0">
+              <xs:element name="CngeColoreAttivitaOltre" msprop:Generator_ColumnPropNameInTable="CngeColoreAttivitaOltreColumn" msprop:Generator_ColumnPropNameInRow="CngeColoreAttivitaOltre" msprop:Generator_UserColumnName="CngeColoreAttivitaOltre" msprop:Generator_ColumnVarNameInTable="columnCngeColoreAttivitaOltre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngePathMedia" msprop:Generator_UserColumnName="CngePathMedia" msprop:Generator_ColumnPropNameInTable="CngePathMediaColumn" msprop:Generator_ColumnPropNameInRow="CngePathMedia" msprop:Generator_ColumnVarNameInTable="columnCngePathMedia" minOccurs="0">
+              <xs:element name="CngePathMedia" msprop:Generator_ColumnPropNameInTable="CngePathMediaColumn" msprop:Generator_ColumnPropNameInRow="CngePathMedia" msprop:Generator_UserColumnName="CngePathMedia" msprop:Generator_ColumnVarNameInTable="columnCngePathMedia" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeCartellaPreventivi1" msprop:Generator_UserColumnName="CngeCartellaPreventivi1" msprop:Generator_ColumnPropNameInTable="CngeCartellaPreventivi1Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaPreventivi1" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaPreventivi1" minOccurs="0">
+              <xs:element name="CngeCartellaPreventivi1" msprop:Generator_ColumnPropNameInTable="CngeCartellaPreventivi1Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaPreventivi1" msprop:Generator_UserColumnName="CngeCartellaPreventivi1" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaPreventivi1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeCartellaPreventivi2" msprop:Generator_UserColumnName="CngeCartellaPreventivi2" msprop:Generator_ColumnPropNameInTable="CngeCartellaPreventivi2Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaPreventivi2" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaPreventivi2" minOccurs="0">
+              <xs:element name="CngeCartellaPreventivi2" msprop:Generator_ColumnPropNameInTable="CngeCartellaPreventivi2Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaPreventivi2" msprop:Generator_UserColumnName="CngeCartellaPreventivi2" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaPreventivi2" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeCartellaPreventivi3" msprop:Generator_UserColumnName="CngeCartellaPreventivi3" msprop:Generator_ColumnPropNameInTable="CngeCartellaPreventivi3Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaPreventivi3" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaPreventivi3" minOccurs="0">
+              <xs:element name="CngeCartellaPreventivi3" msprop:Generator_ColumnPropNameInTable="CngeCartellaPreventivi3Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaPreventivi3" msprop:Generator_UserColumnName="CngeCartellaPreventivi3" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaPreventivi3" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeCartellaCommesse1" msprop:Generator_UserColumnName="CngeCartellaCommesse1" msprop:Generator_ColumnPropNameInTable="CngeCartellaCommesse1Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaCommesse1" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaCommesse1" minOccurs="0">
+              <xs:element name="CngeCartellaCommesse1" msprop:Generator_ColumnPropNameInTable="CngeCartellaCommesse1Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaCommesse1" msprop:Generator_UserColumnName="CngeCartellaCommesse1" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaCommesse1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeCartellaCommesse2" msprop:Generator_UserColumnName="CngeCartellaCommesse2" msprop:Generator_ColumnPropNameInTable="CngeCartellaCommesse2Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaCommesse2" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaCommesse2" minOccurs="0">
+              <xs:element name="CngeCartellaCommesse2" msprop:Generator_ColumnPropNameInTable="CngeCartellaCommesse2Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaCommesse2" msprop:Generator_UserColumnName="CngeCartellaCommesse2" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaCommesse2" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngeCartellaCommesse3" msprop:Generator_UserColumnName="CngeCartellaCommesse3" msprop:Generator_ColumnPropNameInTable="CngeCartellaCommesse3Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaCommesse3" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaCommesse3" minOccurs="0">
+              <xs:element name="CngeCartellaCommesse3" msprop:Generator_ColumnPropNameInTable="CngeCartellaCommesse3Column" msprop:Generator_ColumnPropNameInRow="CngeCartellaCommesse3" msprop:Generator_UserColumnName="CngeCartellaCommesse3" msprop:Generator_ColumnVarNameInTable="columnCngeCartellaCommesse3" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CngePathEseguibile" msprop:Generator_UserColumnName="CngePathEseguibile" msprop:Generator_ColumnPropNameInTable="CngePathEseguibileColumn" msprop:Generator_ColumnPropNameInRow="CngePathEseguibile" msprop:Generator_ColumnVarNameInTable="columnCngePathEseguibile" minOccurs="0">
+              <xs:element name="CngePathEseguibile" msprop:Generator_ColumnPropNameInTable="CngePathEseguibileColumn" msprop:Generator_ColumnPropNameInRow="CngePathEseguibile" msprop:Generator_UserColumnName="CngePathEseguibile" msprop:Generator_ColumnVarNameInTable="columnCngePathEseguibile" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
@@ -1068,11 +1089,70 @@ ORDER BY Lotto, T073_GantP_Attivita.T073Sequenza</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="T072_GantP" msprop:Generator_RowClassName="T072_GantPRow" msprop:Generator_RowEvHandlerName="T072_GantPRowChangeEventHandler" msprop:Generator_RowDeletedName="T072_GantPRowDeleted" msprop:Generator_RowDeletingName="T072_GantPRowDeleting" msprop:Generator_RowEvArgName="T072_GantPRowChangeEvent" msprop:Generator_TablePropName="T072_GantP" msprop:Generator_RowChangedName="T072_GantPRowChanged" msprop:Generator_UserTableName="T072_GantP" msprop:Generator_RowChangingName="T072_GantPRowChanging" msprop:Generator_TableClassName="T072_GantPDataTable" msprop:Generator_TableVarName="tableT072_GantP">
+        <xs:element name="T072_GantP" msprop:Generator_RowEvHandlerName="T072_GantPRowChangeEventHandler" msprop:Generator_RowDeletedName="T072_GantPRowDeleted" msprop:Generator_RowDeletingName="T072_GantPRowDeleting" msprop:Generator_RowEvArgName="T072_GantPRowChangeEvent" msprop:Generator_TablePropName="T072_GantP" msprop:Generator_RowChangedName="T072_GantPRowChanged" msprop:Generator_UserTableName="T072_GantP" msprop:Generator_RowChangingName="T072_GantPRowChanging" msprop:Generator_RowClassName="T072_GantPRow" msprop:Generator_TableClassName="T072_GantPDataTable" msprop:Generator_TableVarName="tableT072_GantP">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="T072Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T072Id" msprop:Generator_ColumnPropNameInTable="T072IdColumn" msprop:Generator_ColumnPropNameInRow="T072Id" msprop:Generator_ColumnVarNameInTable="columnT072Id" type="xs:int" />
-              <xs:element name="T072Attivita" msprop:Generator_UserColumnName="T072Attivita" msprop:Generator_ColumnPropNameInTable="T072AttivitaColumn" msprop:Generator_ColumnPropNameInRow="T072Attivita" msprop:Generator_ColumnVarNameInTable="columnT072Attivita" minOccurs="0">
+              <xs:element name="T072Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="T072IdColumn" msprop:Generator_ColumnPropNameInRow="T072Id" msprop:Generator_UserColumnName="T072Id" msprop:Generator_ColumnVarNameInTable="columnT072Id" type="xs:int" />
+              <xs:element name="T072Attivita" msprop:Generator_ColumnPropNameInTable="T072AttivitaColumn" msprop:Generator_ColumnPropNameInRow="T072Attivita" msprop:Generator_UserColumnName="T072Attivita" msprop:Generator_ColumnVarNameInTable="columnT072Attivita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T072D1" msprop:Generator_ColumnPropNameInTable="T072D1Column" msprop:Generator_ColumnPropNameInRow="T072D1" msprop:Generator_UserColumnName="T072D1" msprop:Generator_ColumnVarNameInTable="columnT072D1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T072D2" msprop:Generator_ColumnPropNameInTable="T072D2Column" msprop:Generator_ColumnPropNameInRow="T072D2" msprop:Generator_UserColumnName="T072D2" msprop:Generator_ColumnVarNameInTable="columnT072D2" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T072I" msprop:Generator_ColumnPropNameInTable="T072IColumn" msprop:Generator_ColumnPropNameInRow="T072I" msprop:Generator_UserColumnName="T072I" msprop:Generator_ColumnVarNameInTable="columnT072I" type="xs:int" minOccurs="0" />
+              <xs:element name="T072F" msprop:Generator_ColumnPropNameInTable="T072FColumn" msprop:Generator_ColumnPropNameInRow="T072F" msprop:Generator_UserColumnName="T072F" msprop:Generator_ColumnVarNameInTable="columnT072F" type="xs:int" minOccurs="0" />
+              <xs:element name="T072Lotto" msprop:Generator_ColumnPropNameInTable="T072LottoColumn" msprop:Generator_ColumnPropNameInRow="T072Lotto" msprop:Generator_UserColumnName="T072Lotto" msprop:Generator_ColumnVarNameInTable="columnT072Lotto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T072Sequenza" msprop:Generator_ColumnPropNameInTable="T072SequenzaColumn" msprop:Generator_ColumnPropNameInRow="T072Sequenza" msprop:Generator_UserColumnName="T072Sequenza" msprop:Generator_ColumnVarNameInTable="columnT072Sequenza" type="xs:int" minOccurs="0" />
+              <xs:element name="T072NonApplicabile" msprop:Generator_ColumnPropNameInTable="T072NonApplicabileColumn" msprop:Generator_ColumnPropNameInRow="T072NonApplicabile" msprop:Generator_UserColumnName="T072NonApplicabile" msprop:Generator_ColumnVarNameInTable="columnT072NonApplicabile" type="xs:int" minOccurs="0" />
+              <xs:element name="T072Durata" msprop:Generator_ColumnPropNameInTable="T072DurataColumn" msprop:Generator_ColumnPropNameInRow="T072Durata" msprop:Generator_UserColumnName="T072Durata" msprop:Generator_ColumnVarNameInTable="columnT072Durata" type="xs:int" minOccurs="0" />
+              <xs:element name="T072Commessa" msprop:Generator_ColumnPropNameInTable="T072CommessaColumn" msprop:Generator_ColumnPropNameInRow="T072Commessa" msprop:Generator_UserColumnName="T072Commessa" msprop:Generator_ColumnVarNameInTable="columnT072Commessa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T072InsertUser" msprop:Generator_ColumnPropNameInTable="T072InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T072InsertUser" msprop:Generator_UserColumnName="T072InsertUser" msprop:Generator_ColumnVarNameInTable="columnT072InsertUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T072InsertDate" msprop:Generator_ColumnPropNameInTable="T072InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T072InsertDate" msprop:Generator_UserColumnName="T072InsertDate" msprop:Generator_ColumnVarNameInTable="columnT072InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T072UpdateUser" msprop:Generator_ColumnPropNameInTable="T072UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T072UpdateUser" msprop:Generator_UserColumnName="T072UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT072UpdateUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T072UpdateDate" msprop:Generator_ColumnPropNameInTable="T072UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T072UpdateDate" msprop:Generator_UserColumnName="T072UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT072UpdateDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTableGantP" msprop:Generator_RowClassName="DataTableGantPRow" msprop:Generator_RowEvHandlerName="DataTableGantPRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableGantPRowDeleted" msprop:Generator_RowDeletingName="DataTableGantPRowDeleting" msprop:Generator_RowEvArgName="DataTableGantPRowChangeEvent" msprop:Generator_TablePropName="DataTableGantP" msprop:Generator_RowChangedName="DataTableGantPRowChanged" msprop:Generator_UserTableName="DataTableGantP" msprop:Generator_RowChangingName="DataTableGantPRowChanging" msprop:Generator_TableClassName="DataTableGantPDataTable" msprop:Generator_TableVarName="tableDataTableGantP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Lotto" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Lotto" msprop:Generator_ColumnPropNameInTable="LottoColumn" msprop:Generator_ColumnPropNameInRow="Lotto" msprop:Generator_ColumnVarNameInTable="columnLotto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataInizioLotto" msprop:Generator_UserColumnName="DataInizioLotto" msprop:Generator_ColumnPropNameInTable="DataInizioLottoColumn" msprop:Generator_ColumnPropNameInRow="DataInizioLotto" msprop:Generator_ColumnVarNameInTable="columnDataInizioLotto" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataFineLotto" msprop:Generator_UserColumnName="DataFineLotto" msprop:Generator_ColumnPropNameInTable="DataFineLottoColumn" msprop:Generator_ColumnPropNameInRow="DataFineLotto" msprop:Generator_ColumnVarNameInTable="columnDataFineLotto" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Attivita" msprop:Generator_UserColumnName="Attivita" msprop:Generator_ColumnPropNameInTable="AttivitaColumn" msprop:Generator_ColumnPropNameInRow="Attivita" msprop:Generator_ColumnVarNameInTable="columnAttivita" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
@@ -1080,84 +1160,45 @@ ORDER BY Lotto, T073_GantP_Attivita.T073Sequenza</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="T072D1" msprop:Generator_UserColumnName="T072D1" msprop:Generator_ColumnPropNameInTable="T072D1Column" msprop:Generator_ColumnPropNameInRow="T072D1" msprop:Generator_ColumnVarNameInTable="columnT072D1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataInizioAttivita" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DataInizioAttivita" msprop:Generator_ColumnPropNameInTable="DataInizioAttivitaColumn" msprop:Generator_ColumnPropNameInRow="DataInizioAttivita" msprop:Generator_ColumnVarNameInTable="columnDataInizioAttivita" type="xs:dateTime" minOccurs="0" />
               <xs:element name="T072D2" msprop:Generator_UserColumnName="T072D2" msprop:Generator_ColumnPropNameInTable="T072D2Column" msprop:Generator_ColumnPropNameInRow="T072D2" msprop:Generator_ColumnVarNameInTable="columnT072D2" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataFineAttivita" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DataFineAttivita" msprop:Generator_ColumnPropNameInTable="DataFineAttivitaColumn" msprop:Generator_ColumnPropNameInRow="DataFineAttivita" msprop:Generator_ColumnVarNameInTable="columnDataFineAttivita" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T072NonApplicabile" msprop:Generator_UserColumnName="T072NonApplicabile" msprop:Generator_ColumnPropNameInTable="T072NonApplicabileColumn" msprop:Generator_ColumnPropNameInRow="T072NonApplicabile" msprop:Generator_ColumnVarNameInTable="columnT072NonApplicabile" type="xs:int" minOccurs="0" />
+              <xs:element name="T073Sequenza" msprop:Generator_UserColumnName="T073Sequenza" msprop:Generator_ColumnPropNameInTable="T073SequenzaColumn" msprop:Generator_ColumnPropNameInRow="T073Sequenza" msprop:Generator_ColumnVarNameInTable="columnT073Sequenza" type="xs:int" minOccurs="0" />
+              <xs:element name="DD" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DD" msprop:Generator_ColumnPropNameInTable="DDColumn" msprop:Generator_ColumnPropNameInRow="DD" msprop:Generator_ColumnVarNameInTable="columnDD" type="xs:int" minOccurs="0" />
+              <xs:element name="T108Colore" msprop:Generator_UserColumnName="T108Colore" msprop:Generator_ColumnPropNameInTable="T108ColoreColumn" msprop:Generator_ColumnPropNameInRow="T108Colore" msprop:Generator_ColumnVarNameInTable="columnT108Colore" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="T072I" msprop:Generator_UserColumnName="T072I" msprop:Generator_ColumnPropNameInTable="T072IColumn" msprop:Generator_ColumnPropNameInRow="T072I" msprop:Generator_ColumnVarNameInTable="columnT072I" type="xs:int" minOccurs="0" />
               <xs:element name="T072F" msprop:Generator_UserColumnName="T072F" msprop:Generator_ColumnPropNameInTable="T072FColumn" msprop:Generator_ColumnPropNameInRow="T072F" msprop:Generator_ColumnVarNameInTable="columnT072F" type="xs:int" minOccurs="0" />
-              <xs:element name="T072Lotto" msprop:Generator_UserColumnName="T072Lotto" msprop:Generator_ColumnPropNameInTable="T072LottoColumn" msprop:Generator_ColumnPropNameInRow="T072Lotto" msprop:Generator_ColumnVarNameInTable="columnT072Lotto" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T072Sequenza" msprop:Generator_UserColumnName="T072Sequenza" msprop:Generator_ColumnPropNameInTable="T072SequenzaColumn" msprop:Generator_ColumnPropNameInRow="T072Sequenza" msprop:Generator_ColumnVarNameInTable="columnT072Sequenza" type="xs:int" minOccurs="0" />
-              <xs:element name="T072NonApplicabile" msprop:Generator_UserColumnName="T072NonApplicabile" msprop:Generator_ColumnPropNameInTable="T072NonApplicabileColumn" msprop:Generator_ColumnPropNameInRow="T072NonApplicabile" msprop:Generator_ColumnVarNameInTable="columnT072NonApplicabile" type="xs:int" minOccurs="0" />
-              <xs:element name="T072Durata" msprop:Generator_UserColumnName="T072Durata" msprop:Generator_ColumnPropNameInTable="T072DurataColumn" msprop:Generator_ColumnPropNameInRow="T072Durata" msprop:Generator_ColumnVarNameInTable="columnT072Durata" type="xs:int" minOccurs="0" />
-              <xs:element name="T072Commessa" msprop:Generator_UserColumnName="T072Commessa" msprop:Generator_ColumnPropNameInTable="T072CommessaColumn" msprop:Generator_ColumnPropNameInRow="T072Commessa" msprop:Generator_ColumnVarNameInTable="columnT072Commessa" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T072InsertUser" msprop:Generator_UserColumnName="T072InsertUser" msprop:Generator_ColumnPropNameInTable="T072InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T072InsertUser" msprop:Generator_ColumnVarNameInTable="columnT072InsertUser" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T072InsertDate" msprop:Generator_UserColumnName="T072InsertDate" msprop:Generator_ColumnPropNameInTable="T072InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T072InsertDate" msprop:Generator_ColumnVarNameInTable="columnT072InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T072UpdateUser" msprop:Generator_UserColumnName="T072UpdateUser" msprop:Generator_ColumnPropNameInTable="T072UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T072UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT072UpdateUser" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T072UpdateDate" msprop:Generator_UserColumnName="T072UpdateDate" msprop:Generator_ColumnPropNameInTable="T072UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T072UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT072UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T072Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T072Id" msprop:Generator_ColumnPropNameInTable="T072IdColumn" msprop:Generator_ColumnPropNameInRow="T072Id" msprop:Generator_ColumnVarNameInTable="columnT072Id" type="xs:int" />
+              <xs:element name="Durata" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Durata" msprop:Generator_ColumnPropNameInTable="DurataColumn" msprop:Generator_ColumnPropNameInRow="Durata" msprop:Generator_ColumnVarNameInTable="columnDurata" type="xs:int" minOccurs="0" />
+              <xs:element name="Preventivo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Preventivo" msprop:Generator_ColumnPropNameInTable="PreventivoColumn" msprop:Generator_ColumnPropNameInRow="Preventivo" msprop:Generator_ColumnVarNameInTable="columnPreventivo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Consuntivo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Consuntivo" msprop:Generator_ColumnPropNameInTable="ConsuntivoColumn" msprop:Generator_ColumnPropNameInRow="Consuntivo" msprop:Generator_ColumnVarNameInTable="columnConsuntivo" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTableGantP" msprop:Generator_RowEvHandlerName="DataTableGantPRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableGantPRowDeleted" msprop:Generator_RowDeletingName="DataTableGantPRowDeleting" msprop:Generator_RowEvArgName="DataTableGantPRowChangeEvent" msprop:Generator_TablePropName="DataTableGantP" msprop:Generator_RowChangedName="DataTableGantPRowChanged" msprop:Generator_RowChangingName="DataTableGantPRowChanging" msprop:Generator_TableClassName="DataTableGantPDataTable" msprop:Generator_RowClassName="DataTableGantPRow" msprop:Generator_TableVarName="tableDataTableGantP" msprop:Generator_UserTableName="DataTableGantP">
+        <xs:element name="LavorazioniEsterne_cbo" msprop:Generator_RowEvHandlerName="LavorazioniEsterne_cboRowChangeEventHandler" msprop:Generator_RowDeletedName="LavorazioniEsterne_cboRowDeleted" msprop:Generator_RowDeletingName="LavorazioniEsterne_cboRowDeleting" msprop:Generator_RowEvArgName="LavorazioniEsterne_cboRowChangeEvent" msprop:Generator_TablePropName="LavorazioniEsterne_cbo" msprop:Generator_RowChangedName="LavorazioniEsterne_cboRowChanged" msprop:Generator_RowChangingName="LavorazioniEsterne_cboRowChanging" msprop:Generator_TableClassName="LavorazioniEsterne_cboDataTable" msprop:Generator_RowClassName="LavorazioniEsterne_cboRow" msprop:Generator_TableVarName="tableLavorazioniEsterne_cbo" msprop:Generator_UserTableName="LavorazioniEsterne_cbo">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Lotto" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Lotto" msprop:Generator_ColumnPropNameInTable="LottoColumn" msprop:Generator_ColumnVarNameInTable="columnLotto" msprop:Generator_UserColumnName="Lotto" minOccurs="0">
+              <xs:element name="T074Centro" msprop:Generator_ColumnPropNameInRow="T074Centro" msprop:Generator_ColumnPropNameInTable="T074CentroColumn" msprop:Generator_ColumnVarNameInTable="columnT074Centro" msprop:Generator_UserColumnName="T074Centro">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="7" />
+                    <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DataInizioLotto" msprop:Generator_ColumnPropNameInRow="DataInizioLotto" msprop:Generator_ColumnPropNameInTable="DataInizioLottoColumn" msprop:Generator_ColumnVarNameInTable="columnDataInizioLotto" msprop:Generator_UserColumnName="DataInizioLotto" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="DataFineLotto" msprop:Generator_ColumnPropNameInRow="DataFineLotto" msprop:Generator_ColumnPropNameInTable="DataFineLottoColumn" msprop:Generator_ColumnVarNameInTable="columnDataFineLotto" msprop:Generator_UserColumnName="DataFineLotto" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Attivita" msprop:Generator_ColumnPropNameInRow="Attivita" msprop:Generator_ColumnPropNameInTable="AttivitaColumn" msprop:Generator_ColumnVarNameInTable="columnAttivita" msprop:Generator_UserColumnName="Attivita" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="7" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T072D1" msprop:Generator_ColumnPropNameInRow="T072D1" msprop:Generator_ColumnPropNameInTable="T072D1Column" msprop:Generator_ColumnVarNameInTable="columnT072D1" msprop:Generator_UserColumnName="T072D1" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="DataInizioAttivita" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="DataInizioAttivita" msprop:Generator_ColumnPropNameInTable="DataInizioAttivitaColumn" msprop:Generator_ColumnVarNameInTable="columnDataInizioAttivita" msprop:Generator_UserColumnName="DataInizioAttivita" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T072D2" msprop:Generator_ColumnPropNameInRow="T072D2" msprop:Generator_ColumnPropNameInTable="T072D2Column" msprop:Generator_ColumnVarNameInTable="columnT072D2" msprop:Generator_UserColumnName="T072D2" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="DataFineAttivita" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="DataFineAttivita" msprop:Generator_ColumnPropNameInTable="DataFineAttivitaColumn" msprop:Generator_ColumnVarNameInTable="columnDataFineAttivita" msprop:Generator_UserColumnName="DataFineAttivita" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T072NonApplicabile" msprop:Generator_ColumnPropNameInRow="T072NonApplicabile" msprop:Generator_ColumnPropNameInTable="T072NonApplicabileColumn" msprop:Generator_ColumnVarNameInTable="columnT072NonApplicabile" msprop:Generator_UserColumnName="T072NonApplicabile" type="xs:int" minOccurs="0" />
-              <xs:element name="T073Sequenza" msprop:Generator_ColumnPropNameInRow="T073Sequenza" msprop:Generator_ColumnPropNameInTable="T073SequenzaColumn" msprop:Generator_ColumnVarNameInTable="columnT073Sequenza" msprop:Generator_UserColumnName="T073Sequenza" type="xs:int" minOccurs="0" />
-              <xs:element name="DD" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="DD" msprop:Generator_ColumnPropNameInTable="DDColumn" msprop:Generator_ColumnVarNameInTable="columnDD" msprop:Generator_UserColumnName="DD" type="xs:int" minOccurs="0" />
-              <xs:element name="T108Colore" msprop:Generator_ColumnPropNameInRow="T108Colore" msprop:Generator_ColumnPropNameInTable="T108ColoreColumn" msprop:Generator_ColumnVarNameInTable="columnT108Colore" msprop:Generator_UserColumnName="T108Colore" minOccurs="0">
+              <xs:element name="T074LavorazioniEsterne" msprop:Generator_ColumnPropNameInRow="T074LavorazioniEsterne" msprop:Generator_ColumnPropNameInTable="T074LavorazioniEsterneColumn" msprop:Generator_ColumnVarNameInTable="columnT074LavorazioniEsterne" msprop:Generator_UserColumnName="T074LavorazioniEsterne" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T072I" msprop:Generator_ColumnPropNameInRow="T072I" msprop:Generator_ColumnPropNameInTable="T072IColumn" msprop:Generator_ColumnVarNameInTable="columnT072I" msprop:Generator_UserColumnName="T072I" type="xs:int" minOccurs="0" />
-              <xs:element name="T072F" msprop:Generator_ColumnPropNameInRow="T072F" msprop:Generator_ColumnPropNameInTable="T072FColumn" msprop:Generator_ColumnVarNameInTable="columnT072F" msprop:Generator_UserColumnName="T072F" type="xs:int" minOccurs="0" />
-              <xs:element name="T072Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T072Id" msprop:Generator_ColumnPropNameInTable="T072IdColumn" msprop:Generator_ColumnVarNameInTable="columnT072Id" msprop:Generator_UserColumnName="T072Id" type="xs:int" />
-              <xs:element name="Durata" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Durata" msprop:Generator_ColumnPropNameInTable="DurataColumn" msprop:Generator_ColumnVarNameInTable="columnDurata" msprop:Generator_UserColumnName="Durata" type="xs:int" minOccurs="0" />
-              <xs:element name="Preventivo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Preventivo" msprop:Generator_ColumnPropNameInTable="PreventivoColumn" msprop:Generator_ColumnVarNameInTable="columnPreventivo" msprop:Generator_UserColumnName="Preventivo" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Consuntivo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Consuntivo" msprop:Generator_ColumnPropNameInTable="ConsuntivoColumn" msprop:Generator_ColumnVarNameInTable="columnConsuntivo" msprop:Generator_UserColumnName="Consuntivo" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1201,7 +1242,7 @@ ORDER BY Lotto, T073_GantP_Attivita.T073Sequenza</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="T059_Lotti_T074_LottiDettaglio" msdata:parent="T059_Lotti" msdata:child="T074_LottiDettaglio" msdata:parentkey="T059Commessa T059Lotto" msdata:childkey="T074Commessa T074Lotto" msprop:Generator_UserParentTable="T059_Lotti" msprop:Generator_UserChildTable="T074_LottiDettaglio" msprop:Generator_RelationVarName="relationT059_Lotti_T074_LottiDettaglio" msprop:Generator_ChildPropName="GetT074_LottiDettaglioRows" msprop:Generator_ParentPropName="T059_LottiRowParent" msprop:Generator_UserRelationName="T059_Lotti_T074_LottiDettaglio" />
+      <msdata:Relationship name="T059_Lotti_T074_LottiDettaglio" msdata:parent="T059_Lotti" msdata:child="T074_LottiDettaglio" msdata:parentkey="T059Commessa T059Lotto" msdata:childkey="T074Commessa T074Lotto" msprop:Generator_UserParentTable="T059_Lotti" msprop:Generator_UserChildTable="T074_LottiDettaglio" msprop:Generator_RelationVarName="relationT059_Lotti_T074_LottiDettaglio" msprop:Generator_ChildPropName="GetT074_LottiDettaglioRows" msprop:Generator_UserRelationName="T059_Lotti_T074_LottiDettaglio" msprop:Generator_ParentPropName="T059_LottiRowParent" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

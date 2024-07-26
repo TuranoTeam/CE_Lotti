@@ -33,7 +33,7 @@ Public Class Lotti
         InitializeComponent()
 
         ' Aggiungere le eventuali istruzioni di inizializzazione dopo la chiamata a InitializeComponent().
-
+        Me.Height = 1000
     End Sub
 
     Private Sub Lotti_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -80,6 +80,8 @@ Public Class Lotti
         ImpostazioniControlli()
         ImpostazioneToolBar()
         T058_Commesse_aperteTableAdapter.Fill(Me.LottiDataSet.T058_Commesse_aperte)
+        LavorazioniEsterne_cboTableAdapter.Fill(Me.LottiDataSet.LavorazioniEsterne_cbo)
+
         CreateTasks()
         CreateProject()
     End Sub
@@ -125,24 +127,20 @@ Public Class Lotti
             Case "ButtonTool1"
                 Me.Close()
             Case "ButtonTool2"
-                MsgBox("btn2")
+                VerificaModifiche(False)
             Case "ButtonTool3"
                 MsgBox("btn3")
         End Select
     End Sub
-    Private Sub ImpostazioniControlli()
-        Dim VisiblePosition As Integer = 0
-        Infragistics.Win.AppStyling.StyleManager.Load(Application.StartupPath.Replace("bin\Debug", "Resources") & "\CE.isl")
-
-        ' tacamia
-        TtmConfigurazioneGrigliaTableAdapter.Fill(LottiDataSet.TtmConfigurazioneGriglia, 0, "T059_Lotti", "BLACK", "")
+    Private Sub ConfigurazioneGriglia(ByRef griglia As UltraGrid, band As Integer, tabella As String)
+        TtmConfigurazioneGrigliaTableAdapter.Fill(LottiDataSet.TtmConfigurazioneGriglia, 0, tabella, "BLACK", "")
         T108_UfficiTableAdapter.Fill(LottiDataSet.T108_Uffici, 0, 1, 1)
 
         Dim Colore As System.Drawing.Color
         For Each RwGr As LottiDataSet.TtmConfigurazioneGrigliaRow In LottiDataSet.TtmConfigurazioneGriglia.Rows
             If Not RwGr.IsCngrTraduzioneNull AndAlso RwGr.CngrTraduzione.Trim.Length > 0 Then
-                If ngrdT059_Lotti.DisplayLayout.Bands(0).Columns.Exists(RwGr.CngrNomeColonna.Trim) Then
-                    ngrdT059_Lotti.DisplayLayout.Bands(0).Columns(RwGr.CngrNomeColonna.Trim).Header.Caption = RwGr.CngrTraduzione
+                If griglia.DisplayLayout.Bands(band).Columns.Exists(RwGr.CngrNomeColonna.Trim) Then
+                    griglia.DisplayLayout.Bands(band).Columns(RwGr.CngrNomeColonna.Trim).Header.Caption = RwGr.CngrTraduzione
                 End If
             End If
             If Not RwGr.IsCngrUfficioNull Then
@@ -150,13 +148,22 @@ Public Class Lotti
 
                     If Not rwcol.IsT108ColoreNull Then
                         Colore = TtmConvertColorToARGB(rwcol.T108Colore)
-                        If ngrdT059_Lotti.DisplayLayout.Bands(0).Columns.Exists(RwGr.CngrNomeColonna.Trim) Then
-                            ngrdT059_Lotti.DisplayLayout.Bands(0).Columns(RwGr.CngrNomeColonna.Trim).Header.Appearance.BackColor = Colore
+                        If griglia.DisplayLayout.Bands(band).Columns.Exists(RwGr.CngrNomeColonna.Trim) Then
+                            griglia.DisplayLayout.Bands(band).Columns(RwGr.CngrNomeColonna.Trim).Header.Appearance.BackColor = Colore
                         End If
                     End If
                 Next
             End If
         Next
+    End Sub
+    Private Sub ImpostazioniControlli()
+        Dim VisiblePosition As Integer = 0
+        Infragistics.Win.AppStyling.StyleManager.Load(Application.StartupPath.Replace("bin\Debug", "Resources") & "\CE.isl")
+
+        ' tacamia
+        ConfigurazioneGriglia(ngrdT059_Lotti, 0, "T059_Lotti")
+        ConfigurazioneGriglia(ngrdT059_Lotti, 1, "T074_LottiDettaglio")
+
 
         For Each rwcol As LottiDataSet.T108_UfficiRow In LottiDataSet.T108_Uffici.Rows
             Colore = TtmConvertColorToARGB(rwcol.T108Colore)
@@ -219,6 +226,17 @@ Public Class Lotti
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059UpdateUser").Hidden = True
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059UpdateDate").Hidden = True
 
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Id").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Lotto").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Commessa").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074InsertUser").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074InsertDate").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074UpdateUser").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074UpdateDate").Hidden = True
+
+        cboT074LavorazioniEsterneG.DisplayLayout.Bands(0).Columns("T074Centro").Hidden = True
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074LavorazioniEsterne").EditorComponent = cboT074LavorazioniEsterneG
+
         VisiblePosition = 0
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Width = 30
@@ -259,6 +277,21 @@ Public Class Lotti
         '      
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Colonne").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Colonne").Width = 80
+
+        VisiblePosition = 0
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Centro").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Centro").Width = 60
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Preventivo").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Preventivo").Width = 100
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Obbiettivo").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074Obbiettivo").Width = 100
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074OreEsterne").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074OreEsterne").Width = 100
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074LavorazioniEsterne").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074LavorazioniEsterne").Width = 100
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("Consuntivo").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("Consuntivo").Width = 100
+
 
         'ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * 
 
@@ -309,7 +342,7 @@ Public Class Lotti
         'UTBManager.Toolbars(0).Tools(2).CustomizedDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
 
         UTBManager.Toolbars(0).Tools(0).CustomizedCaption = "Uscita"
-        UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "funz2"
+        UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "Salva"
         UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "funz3"
 
     End Sub
@@ -601,6 +634,7 @@ Public Class Lotti
     End Sub
 
     Private Sub StartPiu_Click(sender As Object, e As EventArgs) Handles btnStartPiu.Click
+
         If UltraGanttView1.ActiveTask IsNot Nothing And TaskName <> "LOTTO" Then
             datDataInizio.Value = CDate(UG.ActiveRow.Cells("StartDateTime").Value)
             datDataInizio.Value = CDate(datDataInizio.Value).AddDays(CInt(numStartDay.Value))
@@ -691,5 +725,51 @@ Public Class Lotti
                 Exit For
             End If
         Next UGR
+    End Sub
+
+    Private Sub ngrdT059_Lotti_AfterRowActivate(sender As Object, e As EventArgs) Handles ngrdT059_Lotti.AfterRowActivate
+        If ngrdT059_Lotti.ActiveRow.Band.Index = 1 Then
+            CType(ngrdT059_Lotti.ActiveRow.Cells("T074LavorazioniEsterne").EditorComponentResolved, UltraCombo).DisplayLayout.Bands(0).ColumnFilters("T074Centro").ClearFilterConditions()
+            CType(ngrdT059_Lotti.ActiveRow.Cells("T074LavorazioniEsterne").EditorComponentResolved, UltraCombo).DisplayLayout.Bands(0).ColumnFilters("T074Centro").FilterConditions.Add(FilterComparisionOperator.Equals, ngrdT059_Lotti.ActiveRow.Cells("T074Centro").Text.Trim)
+        End If
+    End Sub
+    Dim TtmTransaction As SqlClient.SqlTransaction
+    Private Sub VerificaModifiche(Richiesta As Boolean)
+        ngrdT059_Lotti.UpdateData()
+
+        If LottiDataSet.HasChanges Or GantPDT.GetChanges IsNot Nothing Then
+            If Richiesta Then
+                If MessageBox.Show("Confermi Modifiche ?", "Lotti", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    Verificamodifiche()
+                Else
+                    LottiDataSet.RejectChanges()
+                End If
+            Else
+                Verificamodifiche()
+            End If
+        End If
+    End Sub
+
+    Private Sub Verificamodifiche()
+
+        Try
+            T074_LottiDettaglioTableAdapter.Update(LottiDataSet.T074_LottiDettaglio)
+            T059_LottiTableAdapter.Update(LottiDataSet.T059_Lotti)
+
+            SalvaModificheGant()
+            LavorazioniEsterne_cboTableAdapter.Fill(Me.LottiDataSet.LavorazioniEsterne_cbo)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub ngrdCommesse_BeforeRowDeactivate(sender As Object, e As CancelEventArgs) Handles ngrdCommesse.BeforeRowDeactivate
+        VerificaModifiche(True)
+    End Sub
+
+    Private Sub Lotti_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        VerificaModifiche(True)
     End Sub
 End Class
