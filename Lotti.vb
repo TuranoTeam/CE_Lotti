@@ -128,6 +128,8 @@ Public Class Lotti
                 Me.Close()
             Case "ButtonTool2"
                 VerificaModifiche(False)
+            Case "ButtonTool3"
+                MsgBox("Help")
             Case "ButtonTool4"
                 If TabControlPrincipale.SelectedTab Is UltraTabPageControl1.Tab Then
                     TabControlPrincipale.SelectedTab = UltraTabPageControl2.Tab
@@ -136,7 +138,34 @@ Public Class Lotti
                     TabControlPrincipale.SelectedTab = UltraTabPageControl1.Tab
                     UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Prospetto Ore"
                 End If
+
+            Case "ButtonTool5"
+                MsgBox("Etichette")
+            Case "ButtonTool6"
+                MsgBox("6666")
+            Case "ButtonTool7"
+                T058_Commessa_Cartella()
+            Case "ButtonTool8"
+                MsgBox("6666")
         End Select
+    End Sub
+    Private Sub T058_Commessa_Cartella()
+
+        Dim Commessa As String = ngrdCommesse.ActiveRow.Cells("T058Commessa").Value.ToString
+        Dim Path1 As String = "P:\000Comm\"
+        Dim Path2 As String = "Comm" & CStr(IIf(Val(Strings.Left(Commessa, 2)) < 50, "20", "19")) & Strings.Left(Commessa, 2) & "\C" & Strings.Left(Commessa, 2) & "-" & Strings.Right(Commessa, 3)
+        Dim X As String
+        If Not System.IO.Directory.Exists(Path1 & Path2) Then
+            Path1 = "\\srvfs01\Archivio-Comm\"
+            If Not System.IO.Directory.Exists(Path1 & Path2) Then
+                X = "C:\"
+            Else
+                X = Path1 & Path2
+            End If
+        Else
+            X = Path1 & Path2
+        End If
+        Process.Start(X)
     End Sub
     Private Sub ConfigurazioneGriglia(ByRef griglia As UltraGrid, band As Integer, tabella As String)
         TtmConfigurazioneGrigliaTableAdapter.Fill(LottiDataSet.TtmConfigurazioneGriglia, 0, tabella, "BLACK", "")
@@ -351,6 +380,10 @@ Public Class Lotti
         UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "Salva"
         UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "Help"
         UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Prospetto Ore"
+        UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Etichette/Modelli"
+        UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Pianificazione Attività"
+        UTBManager.Toolbars(0).Tools(6).CustomizedCaption = "Cartella Commessa"
+        UTBManager.Toolbars(0).Tools(7).CustomizedCaption = "Situazione Ordini"
 
     End Sub
     Public Shared Function TtmConvertColorToARGB(colorstring As String) As System.Drawing.Color

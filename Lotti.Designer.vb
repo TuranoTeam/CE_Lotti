@@ -24,8 +24,8 @@ Partial Class Lotti
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim UltraGridBand1 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("LavorazioniEsterne_cbo", -1)
-        Dim UltraGridColumn1 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn2 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
+        Dim UltraGridColumn3 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
+        Dim UltraGridColumn4 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -100,6 +100,10 @@ Partial Class Lotti
         Dim ButtonTool14 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool2")
         Dim ButtonTool15 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool3")
         Dim ButtonTool1 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool4")
+        Dim ButtonTool3 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool5")
+        Dim ButtonTool5 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool6")
+        Dim ButtonTool6 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool7")
+        Dim ButtonTool11 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool8")
         Dim ButtonTool16 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool1")
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim ButtonTool17 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool2")
@@ -108,6 +112,14 @@ Partial Class Lotti
         Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim ButtonTool2 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool4")
         Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim ButtonTool4 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool5")
+        Dim Appearance18 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim ButtonTool8 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool6")
+        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim ButtonTool9 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool7")
+        Dim Appearance20 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim ButtonTool10 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool8")
+        Dim Appearance21 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lotti))
         Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.UltraPanel1 = New Infragistics.Win.Misc.UltraPanel()
@@ -267,7 +279,7 @@ Partial Class Lotti
         Me.UltraTabPageControl1.Controls.Add(Me.UltraPanel1)
         Me.UltraTabPageControl1.Location = New System.Drawing.Point(0, 0)
         Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
-        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 675)
+        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 700)
         '
         'UltraPanel1
         '
@@ -282,7 +294,7 @@ Partial Class Lotti
         Me.UltraPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanel1.Location = New System.Drawing.Point(0, 0)
         Me.UltraPanel1.Name = "UltraPanel1"
-        Me.UltraPanel1.Size = New System.Drawing.Size(1689, 675)
+        Me.UltraPanel1.Size = New System.Drawing.Size(1689, 700)
         Me.UltraPanel1.TabIndex = 6
         '
         'UltraPanel4
@@ -294,7 +306,7 @@ Partial Class Lotti
         Me.UltraPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanel4.Location = New System.Drawing.Point(0, 420)
         Me.UltraPanel4.Name = "UltraPanel4"
-        Me.UltraPanel4.Size = New System.Drawing.Size(1689, 255)
+        Me.UltraPanel4.Size = New System.Drawing.Size(1689, 280)
         Me.UltraPanel4.TabIndex = 6
         '
         'UltraGanttView1
@@ -315,7 +327,7 @@ Partial Class Lotti
         Me.UltraGanttView1.GridSettings.ColumnSettings.GetValue("RowNumber").VisiblePosition = 12
         Me.UltraGanttView1.Location = New System.Drawing.Point(0, 0)
         Me.UltraGanttView1.Name = "UltraGanttView1"
-        Me.UltraGanttView1.Size = New System.Drawing.Size(1689, 255)
+        Me.UltraGanttView1.Size = New System.Drawing.Size(1689, 280)
         Me.UltraGanttView1.TabIndex = 11
         Me.UltraGanttView1.Text = "UltraGanttView1"
         Me.UltraGanttView1.VerticalSplitterMinimumResizeWidth = 10
@@ -429,9 +441,9 @@ Partial Class Lotti
         'cboT074LavorazioniEsterneG
         '
         Me.cboT074LavorazioniEsterneG.DataSource = Me.LavorazioniEsternecboBindingSource
-        UltraGridColumn1.Header.VisiblePosition = 0
-        UltraGridColumn2.Header.VisiblePosition = 1
-        UltraGridBand1.Columns.AddRange(New Object() {UltraGridColumn1, UltraGridColumn2})
+        UltraGridColumn3.Header.VisiblePosition = 0
+        UltraGridColumn4.Header.VisiblePosition = 1
+        UltraGridBand1.Columns.AddRange(New Object() {UltraGridColumn3, UltraGridColumn4})
         Me.cboT074LavorazioniEsterneG.DisplayLayout.BandsSerializer.Add(UltraGridBand1)
         Me.cboT074LavorazioniEsterneG.DisplayMember = "T074LavorazioniEsterne"
         Me.cboT074LavorazioniEsterneG.Location = New System.Drawing.Point(14, 139)
@@ -1033,9 +1045,9 @@ Partial Class Lotti
         '
         Me.UltraPanelResto.ClientArea.Controls.Add(Me.TabControlPrincipale)
         Me.UltraPanelResto.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UltraPanelResto.Location = New System.Drawing.Point(0, 68)
+        Me.UltraPanelResto.Location = New System.Drawing.Point(0, 43)
         Me.UltraPanelResto.Name = "UltraPanelResto"
-        Me.UltraPanelResto.Size = New System.Drawing.Size(1689, 675)
+        Me.UltraPanelResto.Size = New System.Drawing.Size(1689, 700)
         Me.UltraPanelResto.TabIndex = 12
         '
         'TabControlPrincipale
@@ -1047,7 +1059,7 @@ Partial Class Lotti
         Me.TabControlPrincipale.Location = New System.Drawing.Point(0, 0)
         Me.TabControlPrincipale.Name = "TabControlPrincipale"
         Me.TabControlPrincipale.SharedControlsPage = Me.UltraTabSharedControlsPage1
-        Me.TabControlPrincipale.Size = New System.Drawing.Size(1689, 675)
+        Me.TabControlPrincipale.Size = New System.Drawing.Size(1689, 700)
         Me.TabControlPrincipale.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Wizard
         Me.TabControlPrincipale.TabIndex = 12
         UltraTab1.Key = "Lotti"
@@ -1062,7 +1074,7 @@ Partial Class Lotti
         '
         Me.UltraTabSharedControlsPage1.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabSharedControlsPage1.Name = "UltraTabSharedControlsPage1"
-        Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(1689, 675)
+        Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(1689, 700)
         '
         'UTBManager
         '
@@ -1074,7 +1086,7 @@ Partial Class Lotti
         UltraToolbar1.DockedRow = 0
         ButtonTool13.InstanceProps.IsFirstInGroup = True
         ButtonTool1.InstanceProps.IsFirstInGroup = True
-        UltraToolbar1.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool13, ButtonTool14, ButtonTool15, ButtonTool1})
+        UltraToolbar1.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool13, ButtonTool14, ButtonTool15, ButtonTool1, ButtonTool3, ButtonTool5, ButtonTool6, ButtonTool11})
         UltraToolbar1.Text = "CODIFICA"
         Me.UTBManager.Toolbars.AddRange(New Infragistics.Win.UltraWinToolbars.UltraToolbar() {UltraToolbar1})
         Appearance14.Image = Global.CE_Lotti.My.Resources.LottiResource.logout_16
@@ -1096,7 +1108,23 @@ Partial Class Lotti
         ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = Appearance17
         ButtonTool2.SharedPropsInternal.Caption = "LottiProspetto (BT4)"
         ButtonTool2.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
-        Me.UTBManager.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool16, ButtonTool17, ButtonTool18, ButtonTool2})
+        Appearance18.Image = Global.CE_Lotti.My.Resources.LottiResource.label_16
+        ButtonTool4.SharedPropsInternal.AppearancesSmall.Appearance = Appearance18
+        ButtonTool4.SharedPropsInternal.Caption = "Etichette (BT5)"
+        ButtonTool4.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
+        Appearance19.Image = Global.CE_Lotti.My.Resources.LottiResource.engineering_16
+        ButtonTool8.SharedPropsInternal.AppearancesSmall.Appearance = Appearance19
+        ButtonTool8.SharedPropsInternal.Caption = "Pianificazione (BT6)"
+        ButtonTool8.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
+        Appearance20.Image = Global.CE_Lotti.My.Resources.LottiResource.folder_open_16
+        ButtonTool9.SharedPropsInternal.AppearancesSmall.Appearance = Appearance20
+        ButtonTool9.SharedPropsInternal.Caption = "ApreCartella (BT7)"
+        ButtonTool9.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
+        Appearance21.Image = Global.CE_Lotti.My.Resources.LottiResource.list_alt_16
+        ButtonTool10.SharedPropsInternal.AppearancesSmall.Appearance = Appearance21
+        ButtonTool10.SharedPropsInternal.Caption = "Ordini (BT8)"
+        ButtonTool10.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
+        Me.UTBManager.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool16, ButtonTool17, ButtonTool18, ButtonTool2, ButtonTool4, ButtonTool8, ButtonTool9, ButtonTool10})
         Me.UTBManager.UseLargeImagesOnToolbar = True
         '
         '_UltraTabPageControl2_Toolbars_Dock_Area_Top
@@ -1107,7 +1135,7 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Top.ForeColor = System.Drawing.SystemColors.ControlText
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Top.Location = New System.Drawing.Point(0, 0)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Top.Name = "_UltraTabPageControl2_Toolbars_Dock_Area_Top"
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Top.Size = New System.Drawing.Size(1689, 68)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Top.Size = New System.Drawing.Size(1689, 43)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Top.ToolbarsManager = Me.UTBManager
         '
         '_UltraTabPageControl2_Toolbars_Dock_Area_Bottom
@@ -1127,9 +1155,9 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.BackColor = System.Drawing.SystemColors.Control
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Left
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Location = New System.Drawing.Point(0, 68)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Location = New System.Drawing.Point(0, 43)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Name = "_UltraTabPageControl2_Toolbars_Dock_Area_Left"
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Size = New System.Drawing.Size(0, 675)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Size = New System.Drawing.Size(0, 700)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.ToolbarsManager = Me.UTBManager
         '
         '_UltraTabPageControl2_Toolbars_Dock_Area_Right
@@ -1138,18 +1166,18 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.BackColor = System.Drawing.SystemColors.Control
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Right
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Location = New System.Drawing.Point(1689, 68)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Location = New System.Drawing.Point(1689, 43)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Name = "_UltraTabPageControl2_Toolbars_Dock_Area_Right"
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Size = New System.Drawing.Size(0, 675)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Size = New System.Drawing.Size(0, 700)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.ToolbarsManager = Me.UTBManager
         '
         'Lotti_Fill_Panel
         '
         Me.Lotti_Fill_Panel.Cursor = System.Windows.Forms.Cursors.Default
         Me.Lotti_Fill_Panel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Lotti_Fill_Panel.Location = New System.Drawing.Point(0, 68)
+        Me.Lotti_Fill_Panel.Location = New System.Drawing.Point(0, 43)
         Me.Lotti_Fill_Panel.Name = "Lotti_Fill_Panel"
-        Me.Lotti_Fill_Panel.Size = New System.Drawing.Size(1689, 675)
+        Me.Lotti_Fill_Panel.Size = New System.Drawing.Size(1689, 700)
         Me.Lotti_Fill_Panel.TabIndex = 21
         '
         'UltraCalendarInfo1

@@ -176,40 +176,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\prova.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Ce_logo_64.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\printer.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\p16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\p162.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\322.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\help.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\help_16.png" />
@@ -240,6 +207,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\help_center_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_alt_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_alt_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_open_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_open_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineering_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineering_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1694,6 +1694,8 @@ Partial Public Class LottiDataSet
         
         Private columnT058IdCommessa As Global.System.Data.DataColumn
         
+        Private columnT058CartellaArchivio As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -1762,6 +1764,14 @@ Partial Public Class LottiDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T058CartellaArchivioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT058CartellaArchivio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1798,9 +1808,9 @@ Partial Public Class LottiDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddT058_Commesse_aperteRow(ByVal T058Commessa As String, ByVal T055RagioneSociale As String, ByVal T058Descrizione As String) As T058_Commesse_aperteRow
+        Public Overloads Function AddT058_Commesse_aperteRow(ByVal T058Commessa As String, ByVal T055RagioneSociale As String, ByVal T058Descrizione As String, ByVal T058CartellaArchivio As String) As T058_Commesse_aperteRow
             Dim rowT058_Commesse_aperteRow As T058_Commesse_aperteRow = CType(Me.NewRow,T058_Commesse_aperteRow)
-            Dim columnValuesArray() As Object = New Object() {T058Commessa, T055RagioneSociale, T058Descrizione, Nothing}
+            Dim columnValuesArray() As Object = New Object() {T058Commessa, T055RagioneSociale, T058Descrizione, Nothing, T058CartellaArchivio}
             rowT058_Commesse_aperteRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowT058_Commesse_aperteRow)
             Return rowT058_Commesse_aperteRow
@@ -1833,6 +1843,7 @@ Partial Public Class LottiDataSet
             Me.columnT055RagioneSociale = MyBase.Columns("T055RagioneSociale")
             Me.columnT058Descrizione = MyBase.Columns("T058Descrizione")
             Me.columnT058IdCommessa = MyBase.Columns("T058IdCommessa")
+            Me.columnT058CartellaArchivio = MyBase.Columns("T058CartellaArchivio")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1846,6 +1857,8 @@ Partial Public Class LottiDataSet
             MyBase.Columns.Add(Me.columnT058Descrizione)
             Me.columnT058IdCommessa = New Global.System.Data.DataColumn("T058IdCommessa", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnT058IdCommessa)
+            Me.columnT058CartellaArchivio = New Global.System.Data.DataColumn("T058CartellaArchivio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT058CartellaArchivio)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnT058Commessa}, true))
             Me.columnT058Commessa.AllowDBNull = false
             Me.columnT058Commessa.Unique = true
@@ -1857,6 +1870,7 @@ Partial Public Class LottiDataSet
             Me.columnT058IdCommessa.AutoIncrementStep = -1
             Me.columnT058IdCommessa.AllowDBNull = false
             Me.columnT058IdCommessa.ReadOnly = true
+            Me.columnT058CartellaArchivio.MaxLength = 6
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7028,6 +7042,22 @@ Partial Public Class LottiDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T058CartellaArchivio() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT058_Commesse_aperte.T058CartellaArchivioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T058CartellaArchivio' nella tabella 'T058_Commesse_apert"& _ 
+                            "e' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT058_Commesse_aperte.T058CartellaArchivioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsT055RagioneSocialeNull() As Boolean
             Return Me.IsNull(Me.tableT058_Commesse_aperte.T055RagioneSocialeColumn)
         End Function
@@ -7048,6 +7078,18 @@ Partial Public Class LottiDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetT058DescrizioneNull()
             Me(Me.tableT058_Commesse_aperte.T058DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT058CartellaArchivioNull() As Boolean
+            Return Me.IsNull(Me.tableT058_Commesse_aperte.T058CartellaArchivioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT058CartellaArchivioNull()
+            Me(Me.tableT058_Commesse_aperte.T058CartellaArchivioColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -11605,6 +11647,7 @@ Namespace LottiDataSetTableAdapters
             tableMapping.ColumnMappings.Add("T055RagioneSociale", "T055RagioneSociale")
             tableMapping.ColumnMappings.Add("T058Descrizione", "T058Descrizione")
             tableMapping.ColumnMappings.Add("T058IdCommessa", "T058IdCommessa")
+            tableMapping.ColumnMappings.Add("T058CartellaArchivio", "T058CartellaArchivio")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
