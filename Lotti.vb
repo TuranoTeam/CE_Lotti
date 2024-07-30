@@ -128,8 +128,14 @@ Public Class Lotti
                 Me.Close()
             Case "ButtonTool2"
                 VerificaModifiche(False)
-            Case "ButtonTool3"
-                MsgBox("btn3")
+            Case "ButtonTool4"
+                If TabControlPrincipale.SelectedTab Is UltraTabPageControl1.Tab Then
+                    TabControlPrincipale.SelectedTab = UltraTabPageControl2.Tab
+                    UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Lotti"
+                Else
+                    TabControlPrincipale.SelectedTab = UltraTabPageControl1.Tab
+                    UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Prospetto Ore"
+                End If
         End Select
     End Sub
     Private Sub ConfigurazioneGriglia(ByRef griglia As UltraGrid, band As Integer, tabella As String)
@@ -343,7 +349,8 @@ Public Class Lotti
 
         UTBManager.Toolbars(0).Tools(0).CustomizedCaption = "Uscita"
         UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "Salva"
-        UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "funz3"
+        UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "Help"
+        UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Prospetto Ore"
 
     End Sub
     Public Shared Function TtmConvertColorToARGB(colorstring As String) As System.Drawing.Color

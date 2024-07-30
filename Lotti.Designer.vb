@@ -24,8 +24,8 @@ Partial Class Lotti
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim UltraGridBand1 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("LavorazioniEsterne_cbo", -1)
-        Dim UltraGridColumn17 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn18 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
+        Dim UltraGridColumn1 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
+        Dim UltraGridColumn2 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -93,17 +93,23 @@ Partial Class Lotti
         Dim UltraGridBand7 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("tmpLotti", -1)
         Dim UltraGridColumn117 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Lotto")
         Dim UltraGridColumn118 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Selezionato")
+        Dim UltraTab1 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab2 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim UltraToolbar1 As Infragistics.Win.UltraWinToolbars.UltraToolbar = New Infragistics.Win.UltraWinToolbars.UltraToolbar("UltraToolbar1")
         Dim ButtonTool13 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool1")
         Dim ButtonTool14 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool2")
         Dim ButtonTool15 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool3")
+        Dim ButtonTool1 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool4")
         Dim ButtonTool16 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool1")
         Dim Appearance14 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim ButtonTool17 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool2")
         Dim Appearance15 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim ButtonTool18 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool3")
         Dim Appearance16 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim ButtonTool2 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool4")
+        Dim Appearance17 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lotti))
+        Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.UltraPanel1 = New Infragistics.Win.Misc.UltraPanel()
         Me.UltraPanel4 = New Infragistics.Win.Misc.UltraPanel()
         Me.UltraGanttView1 = New Infragistics.Win.UltraWinGanttView.UltraGanttView()
@@ -118,6 +124,8 @@ Partial Class Lotti
         Me.btnPercCompMeno = New System.Windows.Forms.Button()
         Me.ugbGanttOpzioni = New Infragistics.Win.Misc.UltraGroupBox()
         Me.cboT074LavorazioniEsterneG = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.LavorazioniEsternecboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LottiDataSet = New CE_Lotti.LottiDataSet()
         Me.uceAttivitaNA = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.uceAttivitaFinite = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.ugbDataInizio = New System.Windows.Forms.GroupBox()
@@ -147,22 +155,30 @@ Partial Class Lotti
         Me.btnEndPiu = New System.Windows.Forms.Button()
         Me.UltraPanel8 = New Infragistics.Win.Misc.UltraPanel()
         Me.ngrdT059_Lotti4 = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.T058CommesseTotaleOreBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UltraPanel7 = New Infragistics.Win.Misc.UltraPanel()
         Me.ngrdT059_Lotti3 = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.T058CommesseTotaleOreLottiSelezionatiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UltraSplitter1 = New Infragistics.Win.Misc.UltraSplitter()
         Me.UltraPanel6 = New Infragistics.Win.Misc.UltraPanel()
         Me.UltraPanel3 = New Infragistics.Win.Misc.UltraPanel()
         Me.ngrdT059_Lotti = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.T059LottiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UltraSplitter4 = New Infragistics.Win.Misc.UltraSplitter()
         Me.UltraPanel10 = New Infragistics.Win.Misc.UltraPanel()
         Me.ngrdCommesse = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.T058CommesseaperteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UltraPanel11 = New Infragistics.Win.Misc.UltraPanel()
         Me.lblRicercaCommessa = New Infragistics.Win.Misc.UltraLabel()
         Me.txtRicercaCommessa = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.UltraSplitter2 = New Infragistics.Win.Misc.UltraSplitter()
         Me.UltraPanel5 = New Infragistics.Win.Misc.UltraPanel()
         Me.ngrdT059_Lotti2 = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.TmpLottiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UltraTabPageControl2 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.UltraPanelResto = New Infragistics.Win.Misc.UltraPanel()
+        Me.TabControlPrincipale = New Infragistics.Win.UltraWinTabControl.UltraTabControl()
+        Me.UltraTabSharedControlsPage1 = New Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage()
         Me.UTBManager = New Infragistics.Win.UltraWinToolbars.UltraToolbarsManager(Me.components)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Top = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
@@ -170,13 +186,6 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me.Lotti_Fill_Panel = New System.Windows.Forms.Panel()
         Me.UltraCalendarInfo1 = New Infragistics.Win.UltraWinSchedule.UltraCalendarInfo(Me.components)
-        Me.LavorazioniEsternecboBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LottiDataSet = New CE_Lotti.LottiDataSet()
-        Me.T058CommesseTotaleOreBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.T058CommesseTotaleOreLottiSelezionatiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.T059LottiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.T058CommesseaperteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TmpLottiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.T059_LottiTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T059_LottiTableAdapter()
         Me.T074_LottiDettaglioTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T074_LottiDettaglioTableAdapter()
         Me.T058_Commesse_aperteTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T058_Commesse_aperteTableAdapter()
@@ -192,6 +201,7 @@ Partial Class Lotti
         Me.T072_GantPTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T072_GantPTableAdapter()
         Me.TableAdapterGantP = New CE_Lotti.LottiDataSetTableAdapters.TableAdapterGantP()
         Me.LavorazioniEsterne_cboTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.LavorazioniEsterne_cboTableAdapter()
+        Me.UltraTabPageControl1.SuspendLayout()
         Me.UltraPanel1.ClientArea.SuspendLayout()
         Me.UltraPanel1.SuspendLayout()
         Me.UltraPanel4.ClientArea.SuspendLayout()
@@ -208,6 +218,8 @@ Partial Class Lotti
         CType(Me.ugbGanttOpzioni, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ugbGanttOpzioni.SuspendLayout()
         CType(Me.cboT074LavorazioniEsterneG, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LavorazioniEsternecboBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LottiDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.uceAttivitaNA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.uceAttivitaFinite, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ugbDataInizio.SuspendLayout()
@@ -221,34 +233,41 @@ Partial Class Lotti
         Me.UltraPanel8.ClientArea.SuspendLayout()
         Me.UltraPanel8.SuspendLayout()
         CType(Me.ngrdT059_Lotti4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.T058CommesseTotaleOreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanel7.ClientArea.SuspendLayout()
         Me.UltraPanel7.SuspendLayout()
         CType(Me.ngrdT059_Lotti3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.T058CommesseTotaleOreLottiSelezionatiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanel6.ClientArea.SuspendLayout()
         Me.UltraPanel6.SuspendLayout()
         Me.UltraPanel3.ClientArea.SuspendLayout()
         Me.UltraPanel3.SuspendLayout()
         CType(Me.ngrdT059_Lotti, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.T059LottiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanel10.ClientArea.SuspendLayout()
         Me.UltraPanel10.SuspendLayout()
         CType(Me.ngrdCommesse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.T058CommesseaperteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanel11.ClientArea.SuspendLayout()
         Me.UltraPanel11.SuspendLayout()
         CType(Me.txtRicercaCommessa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanel5.ClientArea.SuspendLayout()
         Me.UltraPanel5.SuspendLayout()
         CType(Me.ngrdT059_Lotti2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TmpLottiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanelResto.ClientArea.SuspendLayout()
         Me.UltraPanelResto.SuspendLayout()
+        CType(Me.TabControlPrincipale, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlPrincipale.SuspendLayout()
         CType(Me.UTBManager, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LavorazioniEsternecboBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LottiDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.T058CommesseTotaleOreBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.T058CommesseTotaleOreLottiSelezionatiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.T059LottiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.T058CommesseaperteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TmpLottiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'UltraTabPageControl1
+        '
+        Me.UltraTabPageControl1.Controls.Add(Me.UltraPanel1)
+        Me.UltraTabPageControl1.Location = New System.Drawing.Point(0, 0)
+        Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
+        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 675)
         '
         'UltraPanel1
         '
@@ -410,9 +429,9 @@ Partial Class Lotti
         'cboT074LavorazioniEsterneG
         '
         Me.cboT074LavorazioniEsterneG.DataSource = Me.LavorazioniEsternecboBindingSource
-        UltraGridColumn17.Header.VisiblePosition = 0
-        UltraGridColumn18.Header.VisiblePosition = 1
-        UltraGridBand1.Columns.AddRange(New Object() {UltraGridColumn17, UltraGridColumn18})
+        UltraGridColumn1.Header.VisiblePosition = 0
+        UltraGridColumn2.Header.VisiblePosition = 1
+        UltraGridBand1.Columns.AddRange(New Object() {UltraGridColumn1, UltraGridColumn2})
         Me.cboT074LavorazioniEsterneG.DisplayLayout.BandsSerializer.Add(UltraGridBand1)
         Me.cboT074LavorazioniEsterneG.DisplayMember = "T074LavorazioniEsterne"
         Me.cboT074LavorazioniEsterneG.Location = New System.Drawing.Point(14, 139)
@@ -422,6 +441,16 @@ Partial Class Lotti
         Me.cboT074LavorazioniEsterneG.Text = "cboT074LavorazioniEsterneG"
         Me.cboT074LavorazioniEsterneG.ValueMember = "T074LavorazioniEsterne"
         Me.cboT074LavorazioniEsterneG.Visible = False
+        '
+        'LavorazioniEsternecboBindingSource
+        '
+        Me.LavorazioniEsternecboBindingSource.DataMember = "LavorazioniEsterne_cbo"
+        Me.LavorazioniEsternecboBindingSource.DataSource = Me.LottiDataSet
+        '
+        'LottiDataSet
+        '
+        Me.LottiDataSet.DataSetName = "LottiDataSet"
+        Me.LottiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'uceAttivitaNA
         '
@@ -746,6 +775,11 @@ Partial Class Lotti
         Me.ngrdT059_Lotti4.TabIndex = 10
         Me.ngrdT059_Lotti4.Text = "ngrdT059_Lotti4"
         '
+        'T058CommesseTotaleOreBindingSource
+        '
+        Me.T058CommesseTotaleOreBindingSource.DataMember = "T058_Commesse_Totale_Ore"
+        Me.T058CommesseTotaleOreBindingSource.DataSource = Me.LottiDataSet
+        '
         'UltraPanel7
         '
         '
@@ -774,6 +808,11 @@ Partial Class Lotti
         Me.ngrdT059_Lotti3.Size = New System.Drawing.Size(507, 170)
         Me.ngrdT059_Lotti3.TabIndex = 44
         Me.ngrdT059_Lotti3.Text = "ngrdT059_Lotti3"
+        '
+        'T058CommesseTotaleOreLottiSelezionatiBindingSource
+        '
+        Me.T058CommesseTotaleOreLottiSelezionatiBindingSource.DataMember = "T058_Commesse_Totale_Ore_Lotti_Selezionati"
+        Me.T058CommesseTotaleOreLottiSelezionatiBindingSource.DataSource = Me.LottiDataSet
         '
         'UltraSplitter1
         '
@@ -859,6 +898,11 @@ Partial Class Lotti
         Me.ngrdT059_Lotti.TabIndex = 8
         Me.ngrdT059_Lotti.Text = "ngrdT059_Lotti"
         '
+        'T059LottiBindingSource
+        '
+        Me.T059LottiBindingSource.DataMember = "T059_Lotti"
+        Me.T059LottiBindingSource.DataSource = Me.LottiDataSet
+        '
         'UltraSplitter4
         '
         Me.UltraSplitter4.BackColor = System.Drawing.Color.Transparent
@@ -896,6 +940,11 @@ Partial Class Lotti
         Me.ngrdCommesse.Size = New System.Drawing.Size(222, 207)
         Me.ngrdCommesse.TabIndex = 7
         Me.ngrdCommesse.Text = "UltraGrid1"
+        '
+        'T058CommesseaperteBindingSource
+        '
+        Me.T058CommesseaperteBindingSource.DataMember = "T058_Commesse_aperte"
+        Me.T058CommesseaperteBindingSource.DataSource = Me.LottiDataSet
         '
         'UltraPanel11
         '
@@ -966,17 +1015,54 @@ Partial Class Lotti
         Me.ngrdT059_Lotti2.TabIndex = 8
         Me.ngrdT059_Lotti2.Text = "ngrdT059_Lotti2"
         '
+        'TmpLottiBindingSource
+        '
+        Me.TmpLottiBindingSource.DataMember = "tmpLotti"
+        Me.TmpLottiBindingSource.DataSource = Me.LottiDataSet
+        '
+        'UltraTabPageControl2
+        '
+        Me.UltraTabPageControl2.Location = New System.Drawing.Point(-10000, -10000)
+        Me.UltraTabPageControl2.Name = "UltraTabPageControl2"
+        Me.UltraTabPageControl2.Size = New System.Drawing.Size(1689, 675)
+        '
         'UltraPanelResto
         '
         '
         'UltraPanelResto.ClientArea
         '
-        Me.UltraPanelResto.ClientArea.Controls.Add(Me.UltraPanel1)
+        Me.UltraPanelResto.ClientArea.Controls.Add(Me.TabControlPrincipale)
         Me.UltraPanelResto.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanelResto.Location = New System.Drawing.Point(0, 68)
         Me.UltraPanelResto.Name = "UltraPanelResto"
         Me.UltraPanelResto.Size = New System.Drawing.Size(1689, 675)
         Me.UltraPanelResto.TabIndex = 12
+        '
+        'TabControlPrincipale
+        '
+        Me.TabControlPrincipale.Controls.Add(Me.UltraTabSharedControlsPage1)
+        Me.TabControlPrincipale.Controls.Add(Me.UltraTabPageControl1)
+        Me.TabControlPrincipale.Controls.Add(Me.UltraTabPageControl2)
+        Me.TabControlPrincipale.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPrincipale.Location = New System.Drawing.Point(0, 0)
+        Me.TabControlPrincipale.Name = "TabControlPrincipale"
+        Me.TabControlPrincipale.SharedControlsPage = Me.UltraTabSharedControlsPage1
+        Me.TabControlPrincipale.Size = New System.Drawing.Size(1689, 675)
+        Me.TabControlPrincipale.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Wizard
+        Me.TabControlPrincipale.TabIndex = 12
+        UltraTab1.Key = "Lotti"
+        UltraTab1.TabPage = Me.UltraTabPageControl1
+        UltraTab1.Text = "Lotti"
+        UltraTab2.Key = "Prospetto Ore"
+        UltraTab2.TabPage = Me.UltraTabPageControl2
+        UltraTab2.Text = "Prospetto Ore"
+        Me.TabControlPrincipale.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab1, UltraTab2})
+        '
+        'UltraTabSharedControlsPage1
+        '
+        Me.UltraTabSharedControlsPage1.Location = New System.Drawing.Point(-10000, -10000)
+        Me.UltraTabSharedControlsPage1.Name = "UltraTabSharedControlsPage1"
+        Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(1689, 675)
         '
         'UTBManager
         '
@@ -987,27 +1073,30 @@ Partial Class Lotti
         UltraToolbar1.DockedColumn = 0
         UltraToolbar1.DockedRow = 0
         ButtonTool13.InstanceProps.IsFirstInGroup = True
-        ButtonTool14.InstanceProps.IsFirstInGroup = True
-        ButtonTool15.InstanceProps.IsFirstInGroup = True
-        UltraToolbar1.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool13, ButtonTool14, ButtonTool15})
+        ButtonTool1.InstanceProps.IsFirstInGroup = True
+        UltraToolbar1.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool13, ButtonTool14, ButtonTool15, ButtonTool1})
         UltraToolbar1.Text = "CODIFICA"
         Me.UTBManager.Toolbars.AddRange(New Infragistics.Win.UltraWinToolbars.UltraToolbar() {UltraToolbar1})
-        Appearance14.Image = Global.CE_Lotti.My.Resources.LottiResource.logout
+        Appearance14.Image = Global.CE_Lotti.My.Resources.LottiResource.logout_16
         ButtonTool16.SharedPropsInternal.AppearancesSmall.Appearance = Appearance14
         ButtonTool16.SharedPropsInternal.Caption = "uscita (BT1)"
         ButtonTool16.SharedPropsInternal.CustomizerCaption = "indietro"
         ButtonTool16.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
-        Appearance15.Image = Global.CE_Lotti.My.Resources.LottiResource.save
+        Appearance15.Image = Global.CE_Lotti.My.Resources.LottiResource.save_16
         ButtonTool17.SharedPropsInternal.AppearancesSmall.Appearance = Appearance15
         ButtonTool17.SharedPropsInternal.Caption = "Salva (BT2)"
         ButtonTool17.SharedPropsInternal.CustomizerCaption = "Codifica"
         ButtonTool17.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
-        Appearance16.Image = Global.CE_Lotti.My.Resources.LottiResource._322
+        Appearance16.Image = Global.CE_Lotti.My.Resources.LottiResource.help_center_16
         ButtonTool18.SharedPropsInternal.AppearancesSmall.Appearance = Appearance16
-        ButtonTool18.SharedPropsInternal.Caption = "rifunz (BT3)"
+        ButtonTool18.SharedPropsInternal.Caption = "Help (BT3)"
         ButtonTool18.SharedPropsInternal.CustomizerCaption = "Ordina"
         ButtonTool18.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
-        Me.UTBManager.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool16, ButtonTool17, ButtonTool18})
+        Appearance17.Image = Global.CE_Lotti.My.Resources.LottiResource.view_list_16
+        ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = Appearance17
+        ButtonTool2.SharedPropsInternal.Caption = "LottiProspetto (BT4)"
+        ButtonTool2.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
+        Me.UTBManager.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool16, ButtonTool17, ButtonTool18, ButtonTool2})
         Me.UTBManager.UseLargeImagesOnToolbar = True
         '
         '_UltraTabPageControl2_Toolbars_Dock_Area_Top
@@ -1067,41 +1156,6 @@ Partial Class Lotti
         '
         Me.UltraCalendarInfo1.DataBindingsForAppointments.BindingContextControl = Me
         Me.UltraCalendarInfo1.DataBindingsForOwners.BindingContextControl = Me
-        '
-        'LavorazioniEsternecboBindingSource
-        '
-        Me.LavorazioniEsternecboBindingSource.DataMember = "LavorazioniEsterne_cbo"
-        Me.LavorazioniEsternecboBindingSource.DataSource = Me.LottiDataSet
-        '
-        'LottiDataSet
-        '
-        Me.LottiDataSet.DataSetName = "LottiDataSet"
-        Me.LottiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'T058CommesseTotaleOreBindingSource
-        '
-        Me.T058CommesseTotaleOreBindingSource.DataMember = "T058_Commesse_Totale_Ore"
-        Me.T058CommesseTotaleOreBindingSource.DataSource = Me.LottiDataSet
-        '
-        'T058CommesseTotaleOreLottiSelezionatiBindingSource
-        '
-        Me.T058CommesseTotaleOreLottiSelezionatiBindingSource.DataMember = "T058_Commesse_Totale_Ore_Lotti_Selezionati"
-        Me.T058CommesseTotaleOreLottiSelezionatiBindingSource.DataSource = Me.LottiDataSet
-        '
-        'T059LottiBindingSource
-        '
-        Me.T059LottiBindingSource.DataMember = "T059_Lotti"
-        Me.T059LottiBindingSource.DataSource = Me.LottiDataSet
-        '
-        'T058CommesseaperteBindingSource
-        '
-        Me.T058CommesseaperteBindingSource.DataMember = "T058_Commesse_aperte"
-        Me.T058CommesseaperteBindingSource.DataSource = Me.LottiDataSet
-        '
-        'TmpLottiBindingSource
-        '
-        Me.TmpLottiBindingSource.DataMember = "tmpLotti"
-        Me.TmpLottiBindingSource.DataSource = Me.LottiDataSet
         '
         'T059_LottiTableAdapter
         '
@@ -1178,6 +1232,7 @@ Partial Class Lotti
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Lotti"
         Me.Text = "Form1"
+        Me.UltraTabPageControl1.ResumeLayout(False)
         Me.UltraPanel1.ClientArea.ResumeLayout(False)
         Me.UltraPanel1.ResumeLayout(False)
         Me.UltraPanel4.ClientArea.ResumeLayout(False)
@@ -1197,6 +1252,8 @@ Partial Class Lotti
         Me.ugbGanttOpzioni.ResumeLayout(False)
         Me.ugbGanttOpzioni.PerformLayout()
         CType(Me.cboT074LavorazioniEsterneG, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LavorazioniEsternecboBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LottiDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.uceAttivitaNA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.uceAttivitaFinite, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ugbDataInizio.ResumeLayout(False)
@@ -1213,17 +1270,21 @@ Partial Class Lotti
         Me.UltraPanel8.ClientArea.ResumeLayout(False)
         Me.UltraPanel8.ResumeLayout(False)
         CType(Me.ngrdT059_Lotti4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.T058CommesseTotaleOreBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraPanel7.ClientArea.ResumeLayout(False)
         Me.UltraPanel7.ResumeLayout(False)
         CType(Me.ngrdT059_Lotti3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.T058CommesseTotaleOreLottiSelezionatiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraPanel6.ClientArea.ResumeLayout(False)
         Me.UltraPanel6.ResumeLayout(False)
         Me.UltraPanel3.ClientArea.ResumeLayout(False)
         Me.UltraPanel3.ResumeLayout(False)
         CType(Me.ngrdT059_Lotti, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.T059LottiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraPanel10.ClientArea.ResumeLayout(False)
         Me.UltraPanel10.ResumeLayout(False)
         CType(Me.ngrdCommesse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.T058CommesseaperteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraPanel11.ClientArea.ResumeLayout(False)
         Me.UltraPanel11.ClientArea.PerformLayout()
         Me.UltraPanel11.ResumeLayout(False)
@@ -1231,16 +1292,12 @@ Partial Class Lotti
         Me.UltraPanel5.ClientArea.ResumeLayout(False)
         Me.UltraPanel5.ResumeLayout(False)
         CType(Me.ngrdT059_Lotti2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TmpLottiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraPanelResto.ClientArea.ResumeLayout(False)
         Me.UltraPanelResto.ResumeLayout(False)
+        CType(Me.TabControlPrincipale, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlPrincipale.ResumeLayout(False)
         CType(Me.UTBManager, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LavorazioniEsternecboBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LottiDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.T058CommesseTotaleOreBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.T058CommesseTotaleOreLottiSelezionatiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.T059LottiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.T058CommesseaperteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TmpLottiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1332,4 +1389,8 @@ Partial Class Lotti
     Friend WithEvents cboT074LavorazioniEsterneG As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents LavorazioniEsternecboBindingSource As BindingSource
     Friend WithEvents LavorazioniEsterne_cboTableAdapter As LottiDataSetTableAdapters.LavorazioniEsterne_cboTableAdapter
+    Friend WithEvents TabControlPrincipale As Infragistics.Win.UltraWinTabControl.UltraTabControl
+    Friend WithEvents UltraTabSharedControlsPage1 As Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage
+    Friend WithEvents UltraTabPageControl1 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
+    Friend WithEvents UltraTabPageControl2 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
 End Class

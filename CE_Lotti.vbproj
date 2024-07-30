@@ -208,5 +208,38 @@
   <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_list_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_list_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_center_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_center_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

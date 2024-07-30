@@ -65,36 +65,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend Shared ReadOnly Property _32() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("32", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend Shared ReadOnly Property _322() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("322", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend Shared ReadOnly Property _exit() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("exit", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
         '''</summary>
         Friend Shared ReadOnly Property Ce_logo_64() As System.Drawing.Icon
@@ -107,9 +77,9 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend Shared ReadOnly Property logout() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property help_16() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("logout", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("help_16", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -117,9 +87,9 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend Shared ReadOnly Property p16() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property help_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("p16", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("help_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -127,49 +97,79 @@ Namespace My.Resources
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend Shared ReadOnly Property p162() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property help_center_16() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("p162", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("help_center_16", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-        '''</summary>
-        Friend Shared ReadOnly Property printer() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("printer", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend Shared ReadOnly Property prova() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property help_center_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("prova", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("help_center_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-        '''</summary>
-        Friend Shared ReadOnly Property refresh() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("refresh", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         
         '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend Shared ReadOnly Property save() As System.Drawing.Bitmap
+        Friend Shared ReadOnly Property logout_16() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("save", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("logout_16", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property logout_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logout_32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property save_16() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("save_16", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property save_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("save_32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property view_list_16() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("view_list_16", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property view_list_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("view_list_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
