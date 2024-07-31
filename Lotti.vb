@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
 Imports System.Threading
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar
 Imports Infragistics.Win
@@ -133,10 +134,10 @@ Public Class Lotti
             Case "ButtonTool4"
                 If TabControlPrincipale.SelectedTab Is UltraTabPageControl1.Tab Then
                     TabControlPrincipale.SelectedTab = UltraTabPageControl2.Tab
-                    UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Lotti"
+                    UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Lotti"
                 Else
                     TabControlPrincipale.SelectedTab = UltraTabPageControl1.Tab
-                    UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Prospetto Ore"
+                    UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Prospetto Ore"
                 End If
 
             Case "ButtonTool5"
@@ -146,7 +147,14 @@ Public Class Lotti
             Case "ButtonTool7"
                 T058_Commessa_Cartella()
             Case "ButtonTool8"
-                MsgBox("6666")
+                MsgBox("8888")
+            Case "ButtonTool9"
+                ' MsgBox("nuovo lotto")
+                Inserimento_LottoTableAdapter.Fill(LottiDataSet.Inserimento_Lotto, CommessaAttiva, Environ("USERNAME"))
+                LeggiLotti(CommessaAttiva)
+            Case "ButtonTool10"
+                ngrdT059_Lotti.DeleteSelectedRows(False)
+
         End Select
     End Sub
     Private Sub T058_Commessa_Cartella()
@@ -377,13 +385,17 @@ Public Class Lotti
         'UTBManager.Toolbars(0).Tools(2).CustomizedDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
 
         UTBManager.Toolbars(0).Tools(0).CustomizedCaption = "Uscita"
-        UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "Salva"
-        UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "Help"
-        UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Prospetto Ore"
-        UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Etichette/Modelli"
-        UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Pianificazione Attività"
-        UTBManager.Toolbars(0).Tools(6).CustomizedCaption = "Cartella Commessa"
-        UTBManager.Toolbars(0).Tools(7).CustomizedCaption = "Situazione Ordini"
+        UTBManager.Toolbars(0).Tools(1).CustomizedCaption = "Help"
+        UTBManager.Toolbars(0).Tools(2).CustomizedCaption = "Salva Modifiche"
+        UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Nuovo Lotto"
+        UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Lotto"
+        UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Prospetto Ore"
+        UTBManager.Toolbars(0).Tools(6).CustomizedCaption = "Etichette/Modelli"
+        UTBManager.Toolbars(0).Tools(7).CustomizedCaption = "Pianificazione Attività"
+        UTBManager.Toolbars(0).Tools(8).CustomizedCaption = "Cartella Commessa"
+        UTBManager.Toolbars(0).Tools(9).CustomizedCaption = "Situazione Ordini"
+
+        ' UTBManager.Toolbars(0).
 
     End Sub
     Public Shared Function TtmConvertColorToARGB(colorstring As String) As System.Drawing.Color
@@ -811,5 +823,38 @@ Public Class Lotti
 
     Private Sub Lotti_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         VerificaModifiche(True)
+    End Sub
+    Dim cmd As SqlCommand
+    Dim con As New SqlClient.SqlConnection(My.MySettings.Default.LottiConnectionString)
+    Dim D As New DataTable
+
+    Private Sub ngrdT059_Lotti_BeforeRowsDeleted(sender As Object, e As BeforeRowsDeletedEventArgs) Handles ngrdT059_Lotti.BeforeRowsDeleted
+        For Each rg As UltraGridRow In ngrdT059_Lotti.Selected.Rows
+            If rg.Band.Index <> 0 Then
+                MsgBox("Selezionare Riga Lotto")
+                e.Cancel = True
+                Exit Sub
+            End If
+        Next
+        If MessageBox.Show("Confermi Cancellazione Lotto/i", "Cancellazione", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            e.Cancel = True
+            Exit Sub
+        End If
+        cmd = New SqlCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.Connection = con
+        con.Open()
+        For Each rg As UltraGridRow In ngrdT059_Lotti.Selected.Rows
+            cmd.CommandText = "delete from T074_LottiDettaglio where T074Commessa = '" & CommessaAttiva & "' and T074Lotto = '" & rg.Cells("T059Lotto").Text & "'"
+            cmd.ExecuteNonQuery()
+            cmd.CommandText = "delete from T072_GantP where T072Commessa = '" & CommessaAttiva & "' and T072Lotto = '" & rg.Cells("T059Lotto").Text & "'"
+            cmd.ExecuteNonQuery()
+        Next
+    End Sub
+
+    Private Sub ngrdT059_Lotti_AfterRowsDeleted(sender As Object, e As EventArgs) Handles ngrdT059_Lotti.AfterRowsDeleted
+        VerificaModifiche(False)
+
+
     End Sub
 End Class

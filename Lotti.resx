@@ -412,4 +412,7 @@
   <metadata name="LavorazioniEsterne_cboTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>986, 128</value>
   </metadata>
+  <metadata name="Inserimento_LottoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1232, 128</value>
+  </metadata>
 </root>

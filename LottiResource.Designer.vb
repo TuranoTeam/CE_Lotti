@@ -65,12 +65,52 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property add_notes_16() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("add_notes_16", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property add_notes_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("add_notes_32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
         '''</summary>
         Friend Shared ReadOnly Property Ce_logo_64() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("Ce_logo_64", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property delete_16() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("delete_16", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property delete_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("delete_32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
@@ -110,26 +150,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property folder_open_32() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("folder_open_32", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend Shared ReadOnly Property help_16() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("help_16", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend Shared ReadOnly Property help_32() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("help_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

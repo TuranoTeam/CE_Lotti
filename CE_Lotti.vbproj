@@ -232,5 +232,20 @@
   <ItemGroup>
     <None Include="Resources\engineering_32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_16_cecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_notes_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_notes_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
