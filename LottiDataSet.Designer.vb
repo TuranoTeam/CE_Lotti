@@ -55,7 +55,29 @@ Partial Public Class LottiDataSet
     
     Private tableInserimento_Lotto As Inserimento_LottoDataTable
     
+    Private tableT042_ListeQuadri As T042_ListeQuadriDataTable
+    
+    Private tableT117_ListeQuadriDettaglio As T117_ListeQuadriDettaglioDataTable
+    
+    Private tableT045_ListeQuadriElenchiMateriali As T045_ListeQuadriElenchiMaterialiDataTable
+    
+    Private tableT042_Magic As T042_MagicDataTable
+    
+    Private tableT043_ElenchiMateriali As T043_ElenchiMaterialiDataTable
+    
+    Private tableT044_ElenchiMaterialiDettaglioComponente As T044_ElenchiMaterialiDettaglioComponenteDataTable
+    
+    Private tableT044_ElenchiMaterialiDettaglioAccessorio As T044_ElenchiMaterialiDettaglioAccessorioDataTable
+    
     Private relationT059_Lotti_T074_LottiDettaglio As Global.System.Data.DataRelation
+    
+    Private relationT042_ListeQuadri_T117_ListeQuadriDettaglio As Global.System.Data.DataRelation
+    
+    Private relationT042_ListeQuadri_T045_ListeQuadriElenchiMateriali As Global.System.Data.DataRelation
+    
+    Private relationT043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente As Global.System.Data.DataRelation
+    
+    Private relationT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -130,6 +152,27 @@ Partial Public Class LottiDataSet
             End If
             If (Not (ds.Tables("Inserimento_Lotto")) Is Nothing) Then
                 MyBase.Tables.Add(New Inserimento_LottoDataTable(ds.Tables("Inserimento_Lotto")))
+            End If
+            If (Not (ds.Tables("T042_ListeQuadri")) Is Nothing) Then
+                MyBase.Tables.Add(New T042_ListeQuadriDataTable(ds.Tables("T042_ListeQuadri")))
+            End If
+            If (Not (ds.Tables("T117_ListeQuadriDettaglio")) Is Nothing) Then
+                MyBase.Tables.Add(New T117_ListeQuadriDettaglioDataTable(ds.Tables("T117_ListeQuadriDettaglio")))
+            End If
+            If (Not (ds.Tables("T045_ListeQuadriElenchiMateriali")) Is Nothing) Then
+                MyBase.Tables.Add(New T045_ListeQuadriElenchiMaterialiDataTable(ds.Tables("T045_ListeQuadriElenchiMateriali")))
+            End If
+            If (Not (ds.Tables("T042_Magic")) Is Nothing) Then
+                MyBase.Tables.Add(New T042_MagicDataTable(ds.Tables("T042_Magic")))
+            End If
+            If (Not (ds.Tables("T043_ElenchiMateriali")) Is Nothing) Then
+                MyBase.Tables.Add(New T043_ElenchiMaterialiDataTable(ds.Tables("T043_ElenchiMateriali")))
+            End If
+            If (Not (ds.Tables("T044_ElenchiMaterialiDettaglioComponente")) Is Nothing) Then
+                MyBase.Tables.Add(New T044_ElenchiMaterialiDettaglioComponenteDataTable(ds.Tables("T044_ElenchiMaterialiDettaglioComponente")))
+            End If
+            If (Not (ds.Tables("T044_ElenchiMaterialiDettaglioAccessorio")) Is Nothing) Then
+                MyBase.Tables.Add(New T044_ElenchiMaterialiDettaglioAccessorioDataTable(ds.Tables("T044_ElenchiMaterialiDettaglioAccessorio")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -300,6 +343,76 @@ Partial Public Class LottiDataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T042_ListeQuadri() As T042_ListeQuadriDataTable
+        Get
+            Return Me.tableT042_ListeQuadri
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T117_ListeQuadriDettaglio() As T117_ListeQuadriDettaglioDataTable
+        Get
+            Return Me.tableT117_ListeQuadriDettaglio
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T045_ListeQuadriElenchiMateriali() As T045_ListeQuadriElenchiMaterialiDataTable
+        Get
+            Return Me.tableT045_ListeQuadriElenchiMateriali
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T042_Magic() As T042_MagicDataTable
+        Get
+            Return Me.tableT042_Magic
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T043_ElenchiMateriali() As T043_ElenchiMaterialiDataTable
+        Get
+            Return Me.tableT043_ElenchiMateriali
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T044_ElenchiMaterialiDettaglioComponente() As T044_ElenchiMaterialiDettaglioComponenteDataTable
+        Get
+            Return Me.tableT044_ElenchiMaterialiDettaglioComponente
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property T044_ElenchiMaterialiDettaglioAccessorio() As T044_ElenchiMaterialiDettaglioAccessorioDataTable
+        Get
+            Return Me.tableT044_ElenchiMaterialiDettaglioAccessorio
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -409,6 +522,27 @@ Partial Public Class LottiDataSet
             End If
             If (Not (ds.Tables("Inserimento_Lotto")) Is Nothing) Then
                 MyBase.Tables.Add(New Inserimento_LottoDataTable(ds.Tables("Inserimento_Lotto")))
+            End If
+            If (Not (ds.Tables("T042_ListeQuadri")) Is Nothing) Then
+                MyBase.Tables.Add(New T042_ListeQuadriDataTable(ds.Tables("T042_ListeQuadri")))
+            End If
+            If (Not (ds.Tables("T117_ListeQuadriDettaglio")) Is Nothing) Then
+                MyBase.Tables.Add(New T117_ListeQuadriDettaglioDataTable(ds.Tables("T117_ListeQuadriDettaglio")))
+            End If
+            If (Not (ds.Tables("T045_ListeQuadriElenchiMateriali")) Is Nothing) Then
+                MyBase.Tables.Add(New T045_ListeQuadriElenchiMaterialiDataTable(ds.Tables("T045_ListeQuadriElenchiMateriali")))
+            End If
+            If (Not (ds.Tables("T042_Magic")) Is Nothing) Then
+                MyBase.Tables.Add(New T042_MagicDataTable(ds.Tables("T042_Magic")))
+            End If
+            If (Not (ds.Tables("T043_ElenchiMateriali")) Is Nothing) Then
+                MyBase.Tables.Add(New T043_ElenchiMaterialiDataTable(ds.Tables("T043_ElenchiMateriali")))
+            End If
+            If (Not (ds.Tables("T044_ElenchiMaterialiDettaglioComponente")) Is Nothing) Then
+                MyBase.Tables.Add(New T044_ElenchiMaterialiDettaglioComponenteDataTable(ds.Tables("T044_ElenchiMaterialiDettaglioComponente")))
+            End If
+            If (Not (ds.Tables("T044_ElenchiMaterialiDettaglioAccessorio")) Is Nothing) Then
+                MyBase.Tables.Add(New T044_ElenchiMaterialiDettaglioAccessorioDataTable(ds.Tables("T044_ElenchiMaterialiDettaglioAccessorio")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -532,7 +666,54 @@ Partial Public Class LottiDataSet
                 Me.tableInserimento_Lotto.InitVars
             End If
         End If
+        Me.tableT042_ListeQuadri = CType(MyBase.Tables("T042_ListeQuadri"),T042_ListeQuadriDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT042_ListeQuadri) Is Nothing) Then
+                Me.tableT042_ListeQuadri.InitVars
+            End If
+        End If
+        Me.tableT117_ListeQuadriDettaglio = CType(MyBase.Tables("T117_ListeQuadriDettaglio"),T117_ListeQuadriDettaglioDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT117_ListeQuadriDettaglio) Is Nothing) Then
+                Me.tableT117_ListeQuadriDettaglio.InitVars
+            End If
+        End If
+        Me.tableT045_ListeQuadriElenchiMateriali = CType(MyBase.Tables("T045_ListeQuadriElenchiMateriali"),T045_ListeQuadriElenchiMaterialiDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT045_ListeQuadriElenchiMateriali) Is Nothing) Then
+                Me.tableT045_ListeQuadriElenchiMateriali.InitVars
+            End If
+        End If
+        Me.tableT042_Magic = CType(MyBase.Tables("T042_Magic"),T042_MagicDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT042_Magic) Is Nothing) Then
+                Me.tableT042_Magic.InitVars
+            End If
+        End If
+        Me.tableT043_ElenchiMateriali = CType(MyBase.Tables("T043_ElenchiMateriali"),T043_ElenchiMaterialiDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT043_ElenchiMateriali) Is Nothing) Then
+                Me.tableT043_ElenchiMateriali.InitVars
+            End If
+        End If
+        Me.tableT044_ElenchiMaterialiDettaglioComponente = CType(MyBase.Tables("T044_ElenchiMaterialiDettaglioComponente"),T044_ElenchiMaterialiDettaglioComponenteDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT044_ElenchiMaterialiDettaglioComponente) Is Nothing) Then
+                Me.tableT044_ElenchiMaterialiDettaglioComponente.InitVars
+            End If
+        End If
+        Me.tableT044_ElenchiMaterialiDettaglioAccessorio = CType(MyBase.Tables("T044_ElenchiMaterialiDettaglioAccessorio"),T044_ElenchiMaterialiDettaglioAccessorioDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableT044_ElenchiMaterialiDettaglioAccessorio) Is Nothing) Then
+                Me.tableT044_ElenchiMaterialiDettaglioAccessorio.InitVars
+            End If
+        End If
         Me.relationT059_Lotti_T074_LottiDettaglio = Me.Relations("T059_Lotti_T074_LottiDettaglio")
+        Me.relationT042_ListeQuadri_T117_ListeQuadriDettaglio = Me.Relations("T042_ListeQuadri_T117_ListeQuadriDettaglio")
+        Me.relationT042_ListeQuadri_T045_ListeQuadriElenchiMateriali = Me.Relations("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali")
+        Me.relationT043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente = Me.Relations("T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente")
+        Me.relationT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio = Me.Relations("T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio"& _ 
+            "")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -573,8 +754,31 @@ Partial Public Class LottiDataSet
         MyBase.Tables.Add(Me.tableLavorazioniEsterne_cbo)
         Me.tableInserimento_Lotto = New Inserimento_LottoDataTable()
         MyBase.Tables.Add(Me.tableInserimento_Lotto)
+        Me.tableT042_ListeQuadri = New T042_ListeQuadriDataTable()
+        MyBase.Tables.Add(Me.tableT042_ListeQuadri)
+        Me.tableT117_ListeQuadriDettaglio = New T117_ListeQuadriDettaglioDataTable()
+        MyBase.Tables.Add(Me.tableT117_ListeQuadriDettaglio)
+        Me.tableT045_ListeQuadriElenchiMateriali = New T045_ListeQuadriElenchiMaterialiDataTable()
+        MyBase.Tables.Add(Me.tableT045_ListeQuadriElenchiMateriali)
+        Me.tableT042_Magic = New T042_MagicDataTable()
+        MyBase.Tables.Add(Me.tableT042_Magic)
+        Me.tableT043_ElenchiMateriali = New T043_ElenchiMaterialiDataTable()
+        MyBase.Tables.Add(Me.tableT043_ElenchiMateriali)
+        Me.tableT044_ElenchiMaterialiDettaglioComponente = New T044_ElenchiMaterialiDettaglioComponenteDataTable()
+        MyBase.Tables.Add(Me.tableT044_ElenchiMaterialiDettaglioComponente)
+        Me.tableT044_ElenchiMaterialiDettaglioAccessorio = New T044_ElenchiMaterialiDettaglioAccessorioDataTable()
+        MyBase.Tables.Add(Me.tableT044_ElenchiMaterialiDettaglioAccessorio)
         Me.relationT059_Lotti_T074_LottiDettaglio = New Global.System.Data.DataRelation("T059_Lotti_T074_LottiDettaglio", New Global.System.Data.DataColumn() {Me.tableT059_Lotti.T059CommessaColumn, Me.tableT059_Lotti.T059LottoColumn}, New Global.System.Data.DataColumn() {Me.tableT074_LottiDettaglio.T074CommessaColumn, Me.tableT074_LottiDettaglio.T074LottoColumn}, false)
         Me.Relations.Add(Me.relationT059_Lotti_T074_LottiDettaglio)
+        Me.relationT042_ListeQuadri_T117_ListeQuadriDettaglio = New Global.System.Data.DataRelation("T042_ListeQuadri_T117_ListeQuadriDettaglio", New Global.System.Data.DataColumn() {Me.tableT042_ListeQuadri.T042CommessaColumn, Me.tableT042_ListeQuadri.T042PosizioneInternaColumn}, New Global.System.Data.DataColumn() {Me.tableT117_ListeQuadriDettaglio.T117CommessaColumn, Me.tableT117_ListeQuadriDettaglio.T117PosizioneInternaColumn}, false)
+        Me.Relations.Add(Me.relationT042_ListeQuadri_T117_ListeQuadriDettaglio)
+        Me.relationT042_ListeQuadri_T045_ListeQuadriElenchiMateriali = New Global.System.Data.DataRelation("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali", New Global.System.Data.DataColumn() {Me.tableT042_ListeQuadri.T042CommessaColumn, Me.tableT042_ListeQuadri.T042PosizioneInternaColumn}, New Global.System.Data.DataColumn() {Me.tableT045_ListeQuadriElenchiMateriali.T045CommessaColumn, Me.tableT045_ListeQuadriElenchiMateriali.T045PosizioneInternaColumn}, false)
+        Me.Relations.Add(Me.relationT042_ListeQuadri_T045_ListeQuadriElenchiMateriali)
+        Me.relationT043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente = New Global.System.Data.DataRelation("T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente", New Global.System.Data.DataColumn() {Me.tableT043_ElenchiMateriali.T043CommessaColumn, Me.tableT043_ElenchiMateriali.T043ElencoMaterialiColumn}, New Global.System.Data.DataColumn() {Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CommessaColumn, Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ElencoMaterialiColumn}, false)
+        Me.Relations.Add(Me.relationT043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente)
+        Me.relationT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio = New Global.System.Data.DataRelation("T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio"& _ 
+                "", New Global.System.Data.DataColumn() {Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdColumn}, New Global.System.Data.DataColumn() {Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdSuperioreColumn}, false)
+        Me.Relations.Add(Me.relationT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -664,6 +868,48 @@ Partial Public Class LottiDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Function ShouldSerializeInserimento_Lotto() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT042_ListeQuadri() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT117_ListeQuadriDettaglio() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT045_ListeQuadriElenchiMateriali() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT042_Magic() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT043_ElenchiMateriali() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT044_ElenchiMaterialiDettaglioComponente() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeT044_ElenchiMaterialiDettaglioAccessorio() As Boolean
         Return false
     End Function
     
@@ -769,6 +1015,27 @@ Partial Public Class LottiDataSet
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Delegate Sub Inserimento_LottoRowChangeEventHandler(ByVal sender As Object, ByVal e As Inserimento_LottoRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T042_ListeQuadriRowChangeEventHandler(ByVal sender As Object, ByVal e As T042_ListeQuadriRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T117_ListeQuadriDettaglioRowChangeEventHandler(ByVal sender As Object, ByVal e As T117_ListeQuadriDettaglioRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T045_ListeQuadriElenchiMaterialiRowChangeEventHandler(ByVal sender As Object, ByVal e As T045_ListeQuadriElenchiMaterialiRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T042_MagicRowChangeEventHandler(ByVal sender As Object, ByVal e As T042_MagicRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T043_ElenchiMaterialiRowChangeEventHandler(ByVal sender As Object, ByVal e As T043_ElenchiMaterialiRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler(ByVal sender As Object, ByVal e As T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler(ByVal sender As Object, ByVal e As T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -6511,6 +6778,3665 @@ Partial Public Class LottiDataSet
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T042_ListeQuadriDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T042_ListeQuadriRow)
+        
+        Private columnOrdinamento As Global.System.Data.DataColumn
+        
+        Private columnT042Id As Global.System.Data.DataColumn
+        
+        Private columnT042Commessa As Global.System.Data.DataColumn
+        
+        Private columnT042Numerazione As Global.System.Data.DataColumn
+        
+        Private columnT042PosizioneInterna As Global.System.Data.DataColumn
+        
+        Private columnT042PosizioneOrdine As Global.System.Data.DataColumn
+        
+        Private columnT042Quantita As Global.System.Data.DataColumn
+        
+        Private columnT042Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT042Lotto As Global.System.Data.DataColumn
+        
+        Private columnT042StandBy As Global.System.Data.DataColumn
+        
+        Private columnT042Revisione As Global.System.Data.DataColumn
+        
+        Private columnT042DataRevisione As Global.System.Data.DataColumn
+        
+        Private columnT042Note As Global.System.Data.DataColumn
+        
+        Private columnT042ConsegnaMateriali As Global.System.Data.DataColumn
+        
+        Private columnT042Colonne As Global.System.Data.DataColumn
+        
+        Private columnT042PrezzoUnitario As Global.System.Data.DataColumn
+        
+        Private columnT042PrezzoVarianti As Global.System.Data.DataColumn
+        
+        Private columnT042InsertUser As Global.System.Data.DataColumn
+        
+        Private columnT042InsertDate As Global.System.Data.DataColumn
+        
+        Private columnT042UpdateUser As Global.System.Data.DataColumn
+        
+        Private columnT042UpdateDate As Global.System.Data.DataColumn
+        
+        Private columnT042PrezzoTotale As Global.System.Data.DataColumn
+        
+        Private columnT042DescrizioneLotto As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T042_ListeQuadri"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property OrdinamentoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOrdinamento
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042NumerazioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Numerazione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042PosizioneInternaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042PosizioneInterna
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042PosizioneOrdineColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042PosizioneOrdine
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042QuantitaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Quantita
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042LottoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Lotto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042StandByColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042StandBy
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042RevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Revisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042DataRevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042DataRevisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042NoteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Note
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042ConsegnaMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042ConsegnaMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042ColonneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Colonne
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042PrezzoUnitarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042PrezzoUnitario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042PrezzoVariantiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042PrezzoVarianti
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042InsertUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042InsertUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042InsertDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042InsertDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042UpdateUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042UpdateUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042UpdateDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042UpdateDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042PrezzoTotaleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042PrezzoTotale
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042DescrizioneLottoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042DescrizioneLotto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T042_ListeQuadriRow
+            Get
+                Return CType(Me.Rows(index),T042_ListeQuadriRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_ListeQuadriRowChanging As T042_ListeQuadriRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_ListeQuadriRowChanged As T042_ListeQuadriRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_ListeQuadriRowDeleting As T042_ListeQuadriRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_ListeQuadriRowDeleted As T042_ListeQuadriRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT042_ListeQuadriRow(ByVal row As T042_ListeQuadriRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT042_ListeQuadriRow( _
+                    ByVal Ordinamento As Integer,  _
+                    ByVal T042Id As Integer,  _
+                    ByVal T042Commessa As String,  _
+                    ByVal T042Numerazione As Integer,  _
+                    ByVal T042PosizioneInterna As String,  _
+                    ByVal T042PosizioneOrdine As String,  _
+                    ByVal T042Quantita As Integer,  _
+                    ByVal T042Descrizione As String,  _
+                    ByVal T042Lotto As String,  _
+                    ByVal T042StandBy As Boolean,  _
+                    ByVal T042Revisione As Integer,  _
+                    ByVal T042DataRevisione As Date,  _
+                    ByVal T042Note As String,  _
+                    ByVal T042ConsegnaMateriali As Date,  _
+                    ByVal T042Colonne As Integer,  _
+                    ByVal T042PrezzoUnitario As Decimal,  _
+                    ByVal T042PrezzoVarianti As Decimal,  _
+                    ByVal T042InsertUser As String,  _
+                    ByVal T042InsertDate As Date,  _
+                    ByVal T042UpdateUser As String,  _
+                    ByVal T042UpdateDate As Date,  _
+                    ByVal T042PrezzoTotale As Decimal,  _
+                    ByVal T042DescrizioneLotto As String) As T042_ListeQuadriRow
+            Dim rowT042_ListeQuadriRow As T042_ListeQuadriRow = CType(Me.NewRow,T042_ListeQuadriRow)
+            Dim columnValuesArray() As Object = New Object() {Ordinamento, T042Id, T042Commessa, T042Numerazione, T042PosizioneInterna, T042PosizioneOrdine, T042Quantita, T042Descrizione, T042Lotto, T042StandBy, T042Revisione, T042DataRevisione, T042Note, T042ConsegnaMateriali, T042Colonne, T042PrezzoUnitario, T042PrezzoVarianti, T042InsertUser, T042InsertDate, T042UpdateUser, T042UpdateDate, T042PrezzoTotale, T042DescrizioneLotto}
+            rowT042_ListeQuadriRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT042_ListeQuadriRow)
+            Return rowT042_ListeQuadriRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T042_ListeQuadriDataTable = CType(MyBase.Clone,T042_ListeQuadriDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T042_ListeQuadriDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnOrdinamento = MyBase.Columns("Ordinamento")
+            Me.columnT042Id = MyBase.Columns("T042Id")
+            Me.columnT042Commessa = MyBase.Columns("T042Commessa")
+            Me.columnT042Numerazione = MyBase.Columns("T042Numerazione")
+            Me.columnT042PosizioneInterna = MyBase.Columns("T042PosizioneInterna")
+            Me.columnT042PosizioneOrdine = MyBase.Columns("T042PosizioneOrdine")
+            Me.columnT042Quantita = MyBase.Columns("T042Quantita")
+            Me.columnT042Descrizione = MyBase.Columns("T042Descrizione")
+            Me.columnT042Lotto = MyBase.Columns("T042Lotto")
+            Me.columnT042StandBy = MyBase.Columns("T042StandBy")
+            Me.columnT042Revisione = MyBase.Columns("T042Revisione")
+            Me.columnT042DataRevisione = MyBase.Columns("T042DataRevisione")
+            Me.columnT042Note = MyBase.Columns("T042Note")
+            Me.columnT042ConsegnaMateriali = MyBase.Columns("T042ConsegnaMateriali")
+            Me.columnT042Colonne = MyBase.Columns("T042Colonne")
+            Me.columnT042PrezzoUnitario = MyBase.Columns("T042PrezzoUnitario")
+            Me.columnT042PrezzoVarianti = MyBase.Columns("T042PrezzoVarianti")
+            Me.columnT042InsertUser = MyBase.Columns("T042InsertUser")
+            Me.columnT042InsertDate = MyBase.Columns("T042InsertDate")
+            Me.columnT042UpdateUser = MyBase.Columns("T042UpdateUser")
+            Me.columnT042UpdateDate = MyBase.Columns("T042UpdateDate")
+            Me.columnT042PrezzoTotale = MyBase.Columns("T042PrezzoTotale")
+            Me.columnT042DescrizioneLotto = MyBase.Columns("T042DescrizioneLotto")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnOrdinamento = New Global.System.Data.DataColumn("Ordinamento", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOrdinamento)
+            Me.columnT042Id = New Global.System.Data.DataColumn("T042Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Id)
+            Me.columnT042Commessa = New Global.System.Data.DataColumn("T042Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Commessa)
+            Me.columnT042Numerazione = New Global.System.Data.DataColumn("T042Numerazione", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Numerazione)
+            Me.columnT042PosizioneInterna = New Global.System.Data.DataColumn("T042PosizioneInterna", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042PosizioneInterna)
+            Me.columnT042PosizioneOrdine = New Global.System.Data.DataColumn("T042PosizioneOrdine", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042PosizioneOrdine)
+            Me.columnT042Quantita = New Global.System.Data.DataColumn("T042Quantita", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Quantita)
+            Me.columnT042Descrizione = New Global.System.Data.DataColumn("T042Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Descrizione)
+            Me.columnT042Lotto = New Global.System.Data.DataColumn("T042Lotto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Lotto)
+            Me.columnT042StandBy = New Global.System.Data.DataColumn("T042StandBy", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042StandBy)
+            Me.columnT042Revisione = New Global.System.Data.DataColumn("T042Revisione", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Revisione)
+            Me.columnT042DataRevisione = New Global.System.Data.DataColumn("T042DataRevisione", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042DataRevisione)
+            Me.columnT042Note = New Global.System.Data.DataColumn("T042Note", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Note)
+            Me.columnT042ConsegnaMateriali = New Global.System.Data.DataColumn("T042ConsegnaMateriali", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042ConsegnaMateriali)
+            Me.columnT042Colonne = New Global.System.Data.DataColumn("T042Colonne", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Colonne)
+            Me.columnT042PrezzoUnitario = New Global.System.Data.DataColumn("T042PrezzoUnitario", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042PrezzoUnitario)
+            Me.columnT042PrezzoVarianti = New Global.System.Data.DataColumn("T042PrezzoVarianti", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042PrezzoVarianti)
+            Me.columnT042InsertUser = New Global.System.Data.DataColumn("T042InsertUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042InsertUser)
+            Me.columnT042InsertDate = New Global.System.Data.DataColumn("T042InsertDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042InsertDate)
+            Me.columnT042UpdateUser = New Global.System.Data.DataColumn("T042UpdateUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042UpdateUser)
+            Me.columnT042UpdateDate = New Global.System.Data.DataColumn("T042UpdateDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042UpdateDate)
+            Me.columnT042PrezzoTotale = New Global.System.Data.DataColumn("T042PrezzoTotale", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042PrezzoTotale)
+            Me.columnT042DescrizioneLotto = New Global.System.Data.DataColumn("T042DescrizioneLotto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042DescrizioneLotto)
+            Me.columnOrdinamento.ReadOnly = true
+            Me.columnT042Id.ReadOnly = true
+            Me.columnT042Commessa.ReadOnly = true
+            Me.columnT042Commessa.MaxLength = 5
+            Me.columnT042Numerazione.ReadOnly = true
+            Me.columnT042PosizioneInterna.ReadOnly = true
+            Me.columnT042PosizioneInterna.MaxLength = 6
+            Me.columnT042PosizioneOrdine.ReadOnly = true
+            Me.columnT042PosizioneOrdine.MaxLength = 16
+            Me.columnT042Quantita.ReadOnly = true
+            Me.columnT042Descrizione.ReadOnly = true
+            Me.columnT042Descrizione.MaxLength = 255
+            Me.columnT042Lotto.ReadOnly = true
+            Me.columnT042Lotto.MaxLength = 1
+            Me.columnT042StandBy.ReadOnly = true
+            Me.columnT042Revisione.ReadOnly = true
+            Me.columnT042DataRevisione.ReadOnly = true
+            Me.columnT042Note.ReadOnly = true
+            Me.columnT042Note.MaxLength = 255
+            Me.columnT042ConsegnaMateriali.ReadOnly = true
+            Me.columnT042Colonne.ReadOnly = true
+            Me.columnT042PrezzoUnitario.ReadOnly = true
+            Me.columnT042PrezzoVarianti.ReadOnly = true
+            Me.columnT042InsertUser.ReadOnly = true
+            Me.columnT042InsertUser.MaxLength = 50
+            Me.columnT042InsertDate.ReadOnly = true
+            Me.columnT042UpdateUser.ReadOnly = true
+            Me.columnT042UpdateUser.MaxLength = 50
+            Me.columnT042UpdateDate.ReadOnly = true
+            Me.columnT042PrezzoTotale.ReadOnly = true
+            Me.columnT042DescrizioneLotto.ReadOnly = true
+            Me.columnT042DescrizioneLotto.MaxLength = 4000
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT042_ListeQuadriRow() As T042_ListeQuadriRow
+            Return CType(Me.NewRow,T042_ListeQuadriRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T042_ListeQuadriRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T042_ListeQuadriRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T042_ListeQuadriRowChangedEvent) Is Nothing) Then
+                RaiseEvent T042_ListeQuadriRowChanged(Me, New T042_ListeQuadriRowChangeEvent(CType(e.Row,T042_ListeQuadriRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T042_ListeQuadriRowChangingEvent) Is Nothing) Then
+                RaiseEvent T042_ListeQuadriRowChanging(Me, New T042_ListeQuadriRowChangeEvent(CType(e.Row,T042_ListeQuadriRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T042_ListeQuadriRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T042_ListeQuadriRowDeleted(Me, New T042_ListeQuadriRowChangeEvent(CType(e.Row,T042_ListeQuadriRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T042_ListeQuadriRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T042_ListeQuadriRowDeleting(Me, New T042_ListeQuadriRowChangeEvent(CType(e.Row,T042_ListeQuadriRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT042_ListeQuadriRow(ByVal row As T042_ListeQuadriRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T042_ListeQuadriDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T117_ListeQuadriDettaglioDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T117_ListeQuadriDettaglioRow)
+        
+        Private columnT117Id As Global.System.Data.DataColumn
+        
+        Private columnT117Commessa As Global.System.Data.DataColumn
+        
+        Private columnT117PosizioneInterna As Global.System.Data.DataColumn
+        
+        Private columnT117Centro As Global.System.Data.DataColumn
+        
+        Private columnT117OrePreventivate As Global.System.Data.DataColumn
+        
+        Private columnT117InsertUser As Global.System.Data.DataColumn
+        
+        Private columnT117InsertDate As Global.System.Data.DataColumn
+        
+        Private columnT117UpdateUser As Global.System.Data.DataColumn
+        
+        Private columnT117UpdateDate As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T117_ListeQuadriDettaglio"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117PosizioneInternaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117PosizioneInterna
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117CentroColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117Centro
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117OrePreventivateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117OrePreventivate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117InsertUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117InsertUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117InsertDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117InsertDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117UpdateUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117UpdateUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T117UpdateDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT117UpdateDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T117_ListeQuadriDettaglioRow
+            Get
+                Return CType(Me.Rows(index),T117_ListeQuadriDettaglioRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T117_ListeQuadriDettaglioRowChanging As T117_ListeQuadriDettaglioRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T117_ListeQuadriDettaglioRowChanged As T117_ListeQuadriDettaglioRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T117_ListeQuadriDettaglioRowDeleting As T117_ListeQuadriDettaglioRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T117_ListeQuadriDettaglioRowDeleted As T117_ListeQuadriDettaglioRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT117_ListeQuadriDettaglioRow(ByVal row As T117_ListeQuadriDettaglioRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT117_ListeQuadriDettaglioRow(ByVal T117Commessa As String, ByVal T117PosizioneInterna As String, ByVal T117Centro As String, ByVal T117OrePreventivate As Integer, ByVal T117InsertUser As String, ByVal T117InsertDate As Date, ByVal T117UpdateUser As String, ByVal T117UpdateDate As Date) As T117_ListeQuadriDettaglioRow
+            Dim rowT117_ListeQuadriDettaglioRow As T117_ListeQuadriDettaglioRow = CType(Me.NewRow,T117_ListeQuadriDettaglioRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, T117Commessa, T117PosizioneInterna, T117Centro, T117OrePreventivate, T117InsertUser, T117InsertDate, T117UpdateUser, T117UpdateDate}
+            rowT117_ListeQuadriDettaglioRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT117_ListeQuadriDettaglioRow)
+            Return rowT117_ListeQuadriDettaglioRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByT117CommessaT117PosizioneInternaT117Centro(ByVal T117Commessa As String, ByVal T117PosizioneInterna As String, ByVal T117Centro As String) As T117_ListeQuadriDettaglioRow
+            Return CType(Me.Rows.Find(New Object() {T117Commessa, T117PosizioneInterna, T117Centro}),T117_ListeQuadriDettaglioRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T117_ListeQuadriDettaglioDataTable = CType(MyBase.Clone,T117_ListeQuadriDettaglioDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T117_ListeQuadriDettaglioDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnT117Id = MyBase.Columns("T117Id")
+            Me.columnT117Commessa = MyBase.Columns("T117Commessa")
+            Me.columnT117PosizioneInterna = MyBase.Columns("T117PosizioneInterna")
+            Me.columnT117Centro = MyBase.Columns("T117Centro")
+            Me.columnT117OrePreventivate = MyBase.Columns("T117OrePreventivate")
+            Me.columnT117InsertUser = MyBase.Columns("T117InsertUser")
+            Me.columnT117InsertDate = MyBase.Columns("T117InsertDate")
+            Me.columnT117UpdateUser = MyBase.Columns("T117UpdateUser")
+            Me.columnT117UpdateDate = MyBase.Columns("T117UpdateDate")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnT117Id = New Global.System.Data.DataColumn("T117Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117Id)
+            Me.columnT117Commessa = New Global.System.Data.DataColumn("T117Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117Commessa)
+            Me.columnT117PosizioneInterna = New Global.System.Data.DataColumn("T117PosizioneInterna", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117PosizioneInterna)
+            Me.columnT117Centro = New Global.System.Data.DataColumn("T117Centro", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117Centro)
+            Me.columnT117OrePreventivate = New Global.System.Data.DataColumn("T117OrePreventivate", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117OrePreventivate)
+            Me.columnT117InsertUser = New Global.System.Data.DataColumn("T117InsertUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117InsertUser)
+            Me.columnT117InsertDate = New Global.System.Data.DataColumn("T117InsertDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117InsertDate)
+            Me.columnT117UpdateUser = New Global.System.Data.DataColumn("T117UpdateUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117UpdateUser)
+            Me.columnT117UpdateDate = New Global.System.Data.DataColumn("T117UpdateDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT117UpdateDate)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnT117Commessa, Me.columnT117PosizioneInterna, Me.columnT117Centro}, true))
+            Me.columnT117Id.AutoIncrement = true
+            Me.columnT117Id.AutoIncrementSeed = -1
+            Me.columnT117Id.AutoIncrementStep = -1
+            Me.columnT117Id.AllowDBNull = false
+            Me.columnT117Id.ReadOnly = true
+            Me.columnT117Commessa.AllowDBNull = false
+            Me.columnT117Commessa.MaxLength = 5
+            Me.columnT117PosizioneInterna.AllowDBNull = false
+            Me.columnT117PosizioneInterna.MaxLength = 6
+            Me.columnT117Centro.AllowDBNull = false
+            Me.columnT117Centro.MaxLength = 2
+            Me.columnT117InsertUser.MaxLength = 50
+            Me.columnT117UpdateUser.MaxLength = 50
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT117_ListeQuadriDettaglioRow() As T117_ListeQuadriDettaglioRow
+            Return CType(Me.NewRow,T117_ListeQuadriDettaglioRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T117_ListeQuadriDettaglioRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T117_ListeQuadriDettaglioRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T117_ListeQuadriDettaglioRowChangedEvent) Is Nothing) Then
+                RaiseEvent T117_ListeQuadriDettaglioRowChanged(Me, New T117_ListeQuadriDettaglioRowChangeEvent(CType(e.Row,T117_ListeQuadriDettaglioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T117_ListeQuadriDettaglioRowChangingEvent) Is Nothing) Then
+                RaiseEvent T117_ListeQuadriDettaglioRowChanging(Me, New T117_ListeQuadriDettaglioRowChangeEvent(CType(e.Row,T117_ListeQuadriDettaglioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T117_ListeQuadriDettaglioRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T117_ListeQuadriDettaglioRowDeleted(Me, New T117_ListeQuadriDettaglioRowChangeEvent(CType(e.Row,T117_ListeQuadriDettaglioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T117_ListeQuadriDettaglioRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T117_ListeQuadriDettaglioRowDeleting(Me, New T117_ListeQuadriDettaglioRowChangeEvent(CType(e.Row,T117_ListeQuadriDettaglioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT117_ListeQuadriDettaglioRow(ByVal row As T117_ListeQuadriDettaglioRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T117_ListeQuadriDettaglioDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T045_ListeQuadriElenchiMaterialiDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T045_ListeQuadriElenchiMaterialiRow)
+        
+        Private columnT045Id As Global.System.Data.DataColumn
+        
+        Private columnT045Commessa As Global.System.Data.DataColumn
+        
+        Private columnT045PosizioneInterna As Global.System.Data.DataColumn
+        
+        Private columnT045ElencoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT045Quantita As Global.System.Data.DataColumn
+        
+        Private columnT045DataConsegnaMateriali As Global.System.Data.DataColumn
+        
+        Private columnT045TipoConsegna As Global.System.Data.DataColumn
+        
+        Private columnT045StandBy As Global.System.Data.DataColumn
+        
+        Private columnT045Revisione As Global.System.Data.DataColumn
+        
+        Private columnT045DataRevisione As Global.System.Data.DataColumn
+        
+        Private columnT045Note As Global.System.Data.DataColumn
+        
+        Private columnT045InsertUser As Global.System.Data.DataColumn
+        
+        Private columnT045InsertDate As Global.System.Data.DataColumn
+        
+        Private columnT045UpdateUser As Global.System.Data.DataColumn
+        
+        Private columnT045UpdateDate As Global.System.Data.DataColumn
+        
+        Private columnT042Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT042Quantita As Global.System.Data.DataColumn
+        
+        Private columnT043Descrizione As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T045_ListeQuadriElenchiMateriali"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045PosizioneInternaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045PosizioneInterna
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045ElencoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045ElencoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045QuantitaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045Quantita
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045DataConsegnaMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045DataConsegnaMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045TipoConsegnaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045TipoConsegna
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045StandByColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045StandBy
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045RevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045Revisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045DataRevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045DataRevisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045NoteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045Note
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045InsertUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045InsertUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045InsertDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045InsertDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045UpdateUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045UpdateUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T045UpdateDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT045UpdateDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042QuantitaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Quantita
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T045_ListeQuadriElenchiMaterialiRow
+            Get
+                Return CType(Me.Rows(index),T045_ListeQuadriElenchiMaterialiRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T045_ListeQuadriElenchiMaterialiRowChanging As T045_ListeQuadriElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T045_ListeQuadriElenchiMaterialiRowChanged As T045_ListeQuadriElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T045_ListeQuadriElenchiMaterialiRowDeleting As T045_ListeQuadriElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T045_ListeQuadriElenchiMaterialiRowDeleted As T045_ListeQuadriElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT045_ListeQuadriElenchiMaterialiRow(ByVal row As T045_ListeQuadriElenchiMaterialiRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT045_ListeQuadriElenchiMaterialiRow( _
+                    ByVal T045Commessa As String,  _
+                    ByVal T045PosizioneInterna As String,  _
+                    ByVal T045ElencoMateriali As String,  _
+                    ByVal T045Quantita As Integer,  _
+                    ByVal T045DataConsegnaMateriali As Date,  _
+                    ByVal T045TipoConsegna As Integer,  _
+                    ByVal T045StandBy As Boolean,  _
+                    ByVal T045Revisione As Integer,  _
+                    ByVal T045DataRevisione As Date,  _
+                    ByVal T045Note As String,  _
+                    ByVal T045InsertUser As String,  _
+                    ByVal T045InsertDate As Date,  _
+                    ByVal T045UpdateUser As String,  _
+                    ByVal T045UpdateDate As Date,  _
+                    ByVal T042Descrizione As String,  _
+                    ByVal T042Quantita As Integer,  _
+                    ByVal T043Descrizione As String) As T045_ListeQuadriElenchiMaterialiRow
+            Dim rowT045_ListeQuadriElenchiMaterialiRow As T045_ListeQuadriElenchiMaterialiRow = CType(Me.NewRow,T045_ListeQuadriElenchiMaterialiRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, T045Commessa, T045PosizioneInterna, T045ElencoMateriali, T045Quantita, T045DataConsegnaMateriali, T045TipoConsegna, T045StandBy, T045Revisione, T045DataRevisione, T045Note, T045InsertUser, T045InsertDate, T045UpdateUser, T045UpdateDate, T042Descrizione, T042Quantita, T043Descrizione}
+            rowT045_ListeQuadriElenchiMaterialiRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT045_ListeQuadriElenchiMaterialiRow)
+            Return rowT045_ListeQuadriElenchiMaterialiRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByT045CommessaT045PosizioneInternaT045ElencoMateriali(ByVal T045Commessa As String, ByVal T045PosizioneInterna As String, ByVal T045ElencoMateriali As String) As T045_ListeQuadriElenchiMaterialiRow
+            Return CType(Me.Rows.Find(New Object() {T045Commessa, T045PosizioneInterna, T045ElencoMateriali}),T045_ListeQuadriElenchiMaterialiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T045_ListeQuadriElenchiMaterialiDataTable = CType(MyBase.Clone,T045_ListeQuadriElenchiMaterialiDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T045_ListeQuadriElenchiMaterialiDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnT045Id = MyBase.Columns("T045Id")
+            Me.columnT045Commessa = MyBase.Columns("T045Commessa")
+            Me.columnT045PosizioneInterna = MyBase.Columns("T045PosizioneInterna")
+            Me.columnT045ElencoMateriali = MyBase.Columns("T045ElencoMateriali")
+            Me.columnT045Quantita = MyBase.Columns("T045Quantita")
+            Me.columnT045DataConsegnaMateriali = MyBase.Columns("T045DataConsegnaMateriali")
+            Me.columnT045TipoConsegna = MyBase.Columns("T045TipoConsegna")
+            Me.columnT045StandBy = MyBase.Columns("T045StandBy")
+            Me.columnT045Revisione = MyBase.Columns("T045Revisione")
+            Me.columnT045DataRevisione = MyBase.Columns("T045DataRevisione")
+            Me.columnT045Note = MyBase.Columns("T045Note")
+            Me.columnT045InsertUser = MyBase.Columns("T045InsertUser")
+            Me.columnT045InsertDate = MyBase.Columns("T045InsertDate")
+            Me.columnT045UpdateUser = MyBase.Columns("T045UpdateUser")
+            Me.columnT045UpdateDate = MyBase.Columns("T045UpdateDate")
+            Me.columnT042Descrizione = MyBase.Columns("T042Descrizione")
+            Me.columnT042Quantita = MyBase.Columns("T042Quantita")
+            Me.columnT043Descrizione = MyBase.Columns("T043Descrizione")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnT045Id = New Global.System.Data.DataColumn("T045Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045Id)
+            Me.columnT045Commessa = New Global.System.Data.DataColumn("T045Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045Commessa)
+            Me.columnT045PosizioneInterna = New Global.System.Data.DataColumn("T045PosizioneInterna", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045PosizioneInterna)
+            Me.columnT045ElencoMateriali = New Global.System.Data.DataColumn("T045ElencoMateriali", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045ElencoMateriali)
+            Me.columnT045Quantita = New Global.System.Data.DataColumn("T045Quantita", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045Quantita)
+            Me.columnT045DataConsegnaMateriali = New Global.System.Data.DataColumn("T045DataConsegnaMateriali", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045DataConsegnaMateriali)
+            Me.columnT045TipoConsegna = New Global.System.Data.DataColumn("T045TipoConsegna", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045TipoConsegna)
+            Me.columnT045StandBy = New Global.System.Data.DataColumn("T045StandBy", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045StandBy)
+            Me.columnT045Revisione = New Global.System.Data.DataColumn("T045Revisione", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045Revisione)
+            Me.columnT045DataRevisione = New Global.System.Data.DataColumn("T045DataRevisione", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045DataRevisione)
+            Me.columnT045Note = New Global.System.Data.DataColumn("T045Note", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045Note)
+            Me.columnT045InsertUser = New Global.System.Data.DataColumn("T045InsertUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045InsertUser)
+            Me.columnT045InsertDate = New Global.System.Data.DataColumn("T045InsertDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045InsertDate)
+            Me.columnT045UpdateUser = New Global.System.Data.DataColumn("T045UpdateUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045UpdateUser)
+            Me.columnT045UpdateDate = New Global.System.Data.DataColumn("T045UpdateDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT045UpdateDate)
+            Me.columnT042Descrizione = New Global.System.Data.DataColumn("T042Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Descrizione)
+            Me.columnT042Quantita = New Global.System.Data.DataColumn("T042Quantita", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Quantita)
+            Me.columnT043Descrizione = New Global.System.Data.DataColumn("T043Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Descrizione)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnT045Commessa, Me.columnT045PosizioneInterna, Me.columnT045ElencoMateriali}, true))
+            Me.columnT045Id.AutoIncrement = true
+            Me.columnT045Id.AutoIncrementSeed = -1
+            Me.columnT045Id.AutoIncrementStep = -1
+            Me.columnT045Id.AllowDBNull = false
+            Me.columnT045Id.ReadOnly = true
+            Me.columnT045Commessa.AllowDBNull = false
+            Me.columnT045Commessa.MaxLength = 5
+            Me.columnT045PosizioneInterna.AllowDBNull = false
+            Me.columnT045PosizioneInterna.MaxLength = 6
+            Me.columnT045ElencoMateriali.AllowDBNull = false
+            Me.columnT045ElencoMateriali.MaxLength = 7
+            Me.columnT045Note.MaxLength = 255
+            Me.columnT045InsertUser.MaxLength = 50
+            Me.columnT045UpdateUser.MaxLength = 50
+            Me.columnT042Descrizione.MaxLength = 255
+            Me.columnT043Descrizione.MaxLength = 255
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT045_ListeQuadriElenchiMaterialiRow() As T045_ListeQuadriElenchiMaterialiRow
+            Return CType(Me.NewRow,T045_ListeQuadriElenchiMaterialiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T045_ListeQuadriElenchiMaterialiRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T045_ListeQuadriElenchiMaterialiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T045_ListeQuadriElenchiMaterialiRowChangedEvent) Is Nothing) Then
+                RaiseEvent T045_ListeQuadriElenchiMaterialiRowChanged(Me, New T045_ListeQuadriElenchiMaterialiRowChangeEvent(CType(e.Row,T045_ListeQuadriElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T045_ListeQuadriElenchiMaterialiRowChangingEvent) Is Nothing) Then
+                RaiseEvent T045_ListeQuadriElenchiMaterialiRowChanging(Me, New T045_ListeQuadriElenchiMaterialiRowChangeEvent(CType(e.Row,T045_ListeQuadriElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T045_ListeQuadriElenchiMaterialiRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T045_ListeQuadriElenchiMaterialiRowDeleted(Me, New T045_ListeQuadriElenchiMaterialiRowChangeEvent(CType(e.Row,T045_ListeQuadriElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T045_ListeQuadriElenchiMaterialiRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T045_ListeQuadriElenchiMaterialiRowDeleting(Me, New T045_ListeQuadriElenchiMaterialiRowChangeEvent(CType(e.Row,T045_ListeQuadriElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT045_ListeQuadriElenchiMaterialiRow(ByVal row As T045_ListeQuadriElenchiMaterialiRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T045_ListeQuadriElenchiMaterialiDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T042_MagicDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T042_MagicRow)
+        
+        Private columnT042Commessa As Global.System.Data.DataColumn
+        
+        Private columnT042Lotto As Global.System.Data.DataColumn
+        
+        Private columnDescrizioneLotto As Global.System.Data.DataColumn
+        
+        Private columnC1 As Global.System.Data.DataColumn
+        
+        Private columnC2 As Global.System.Data.DataColumn
+        
+        Private columnC3 As Global.System.Data.DataColumn
+        
+        Private columnC4 As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T042_Magic"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T042LottoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT042Lotto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property DescrizioneLottoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDescrizioneLotto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property C1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnC1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property C2Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnC2
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property C3Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnC3
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property C4Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnC4
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T042_MagicRow
+            Get
+                Return CType(Me.Rows(index),T042_MagicRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_MagicRowChanging As T042_MagicRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_MagicRowChanged As T042_MagicRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_MagicRowDeleting As T042_MagicRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T042_MagicRowDeleted As T042_MagicRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT042_MagicRow(ByVal row As T042_MagicRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT042_MagicRow(ByVal T042Commessa As String, ByVal T042Lotto As String, ByVal DescrizioneLotto As String, ByVal C1 As Integer, ByVal C2 As Integer, ByVal C3 As Integer, ByVal C4 As Integer) As T042_MagicRow
+            Dim rowT042_MagicRow As T042_MagicRow = CType(Me.NewRow,T042_MagicRow)
+            Dim columnValuesArray() As Object = New Object() {T042Commessa, T042Lotto, DescrizioneLotto, C1, C2, C3, C4}
+            rowT042_MagicRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT042_MagicRow)
+            Return rowT042_MagicRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T042_MagicDataTable = CType(MyBase.Clone,T042_MagicDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T042_MagicDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnT042Commessa = MyBase.Columns("T042Commessa")
+            Me.columnT042Lotto = MyBase.Columns("T042Lotto")
+            Me.columnDescrizioneLotto = MyBase.Columns("DescrizioneLotto")
+            Me.columnC1 = MyBase.Columns("C1")
+            Me.columnC2 = MyBase.Columns("C2")
+            Me.columnC3 = MyBase.Columns("C3")
+            Me.columnC4 = MyBase.Columns("C4")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnT042Commessa = New Global.System.Data.DataColumn("T042Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Commessa)
+            Me.columnT042Lotto = New Global.System.Data.DataColumn("T042Lotto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT042Lotto)
+            Me.columnDescrizioneLotto = New Global.System.Data.DataColumn("DescrizioneLotto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDescrizioneLotto)
+            Me.columnC1 = New Global.System.Data.DataColumn("C1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC1)
+            Me.columnC2 = New Global.System.Data.DataColumn("C2", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC2)
+            Me.columnC3 = New Global.System.Data.DataColumn("C3", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC3)
+            Me.columnC4 = New Global.System.Data.DataColumn("C4", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnC4)
+            Me.columnT042Commessa.AllowDBNull = false
+            Me.columnT042Commessa.MaxLength = 5
+            Me.columnT042Lotto.MaxLength = 1
+            Me.columnDescrizioneLotto.MaxLength = 4000
+            Me.columnC1.ReadOnly = true
+            Me.columnC2.ReadOnly = true
+            Me.columnC3.ReadOnly = true
+            Me.columnC4.ReadOnly = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT042_MagicRow() As T042_MagicRow
+            Return CType(Me.NewRow,T042_MagicRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T042_MagicRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T042_MagicRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T042_MagicRowChangedEvent) Is Nothing) Then
+                RaiseEvent T042_MagicRowChanged(Me, New T042_MagicRowChangeEvent(CType(e.Row,T042_MagicRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T042_MagicRowChangingEvent) Is Nothing) Then
+                RaiseEvent T042_MagicRowChanging(Me, New T042_MagicRowChangeEvent(CType(e.Row,T042_MagicRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T042_MagicRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T042_MagicRowDeleted(Me, New T042_MagicRowChangeEvent(CType(e.Row,T042_MagicRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T042_MagicRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T042_MagicRowDeleting(Me, New T042_MagicRowChangeEvent(CType(e.Row,T042_MagicRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT042_MagicRow(ByVal row As T042_MagicRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T042_MagicDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T043_ElenchiMaterialiDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T043_ElenchiMaterialiRow)
+        
+        Private columnT043Id As Global.System.Data.DataColumn
+        
+        Private columnT043Commessa As Global.System.Data.DataColumn
+        
+        Private columnT043ElencoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT043Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT043Note As Global.System.Data.DataColumn
+        
+        Private columnT043InsertUser As Global.System.Data.DataColumn
+        
+        Private columnT043InsertDate As Global.System.Data.DataColumn
+        
+        Private columnT043UpdateUser As Global.System.Data.DataColumn
+        
+        Private columnT043UpdateDate As Global.System.Data.DataColumn
+        
+        Private columnT043Revisione As Global.System.Data.DataColumn
+        
+        Private columnT043DataRevisione As Global.System.Data.DataColumn
+        
+        Private columnT043StandBy As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T043_ElenchiMateriali"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043ElencoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043ElencoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043NoteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Note
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043InsertUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043InsertUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043InsertDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043InsertDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043UpdateUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043UpdateUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043UpdateDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043UpdateDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043RevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Revisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043DataRevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043DataRevisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043StandByColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043StandBy
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T043_ElenchiMaterialiRow
+            Get
+                Return CType(Me.Rows(index),T043_ElenchiMaterialiRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T043_ElenchiMaterialiRowChanging As T043_ElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T043_ElenchiMaterialiRowChanged As T043_ElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T043_ElenchiMaterialiRowDeleting As T043_ElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T043_ElenchiMaterialiRowDeleted As T043_ElenchiMaterialiRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT043_ElenchiMaterialiRow(ByVal row As T043_ElenchiMaterialiRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT043_ElenchiMaterialiRow(ByVal T043Commessa As String, ByVal T043ElencoMateriali As String, ByVal T043Descrizione As String, ByVal T043Note As String, ByVal T043InsertUser As String, ByVal T043InsertDate As Date, ByVal T043UpdateUser As String, ByVal T043UpdateDate As Date, ByVal T043Revisione As Integer, ByVal T043DataRevisione As Date, ByVal T043StandBy As Boolean) As T043_ElenchiMaterialiRow
+            Dim rowT043_ElenchiMaterialiRow As T043_ElenchiMaterialiRow = CType(Me.NewRow,T043_ElenchiMaterialiRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, T043Commessa, T043ElencoMateriali, T043Descrizione, T043Note, T043InsertUser, T043InsertDate, T043UpdateUser, T043UpdateDate, T043Revisione, T043DataRevisione, T043StandBy}
+            rowT043_ElenchiMaterialiRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT043_ElenchiMaterialiRow)
+            Return rowT043_ElenchiMaterialiRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByT043CommessaT043ElencoMateriali(ByVal T043Commessa As String, ByVal T043ElencoMateriali As String) As T043_ElenchiMaterialiRow
+            Return CType(Me.Rows.Find(New Object() {T043Commessa, T043ElencoMateriali}),T043_ElenchiMaterialiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T043_ElenchiMaterialiDataTable = CType(MyBase.Clone,T043_ElenchiMaterialiDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T043_ElenchiMaterialiDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnT043Id = MyBase.Columns("T043Id")
+            Me.columnT043Commessa = MyBase.Columns("T043Commessa")
+            Me.columnT043ElencoMateriali = MyBase.Columns("T043ElencoMateriali")
+            Me.columnT043Descrizione = MyBase.Columns("T043Descrizione")
+            Me.columnT043Note = MyBase.Columns("T043Note")
+            Me.columnT043InsertUser = MyBase.Columns("T043InsertUser")
+            Me.columnT043InsertDate = MyBase.Columns("T043InsertDate")
+            Me.columnT043UpdateUser = MyBase.Columns("T043UpdateUser")
+            Me.columnT043UpdateDate = MyBase.Columns("T043UpdateDate")
+            Me.columnT043Revisione = MyBase.Columns("T043Revisione")
+            Me.columnT043DataRevisione = MyBase.Columns("T043DataRevisione")
+            Me.columnT043StandBy = MyBase.Columns("T043StandBy")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnT043Id = New Global.System.Data.DataColumn("T043Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Id)
+            Me.columnT043Commessa = New Global.System.Data.DataColumn("T043Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Commessa)
+            Me.columnT043ElencoMateriali = New Global.System.Data.DataColumn("T043ElencoMateriali", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043ElencoMateriali)
+            Me.columnT043Descrizione = New Global.System.Data.DataColumn("T043Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Descrizione)
+            Me.columnT043Note = New Global.System.Data.DataColumn("T043Note", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Note)
+            Me.columnT043InsertUser = New Global.System.Data.DataColumn("T043InsertUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043InsertUser)
+            Me.columnT043InsertDate = New Global.System.Data.DataColumn("T043InsertDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043InsertDate)
+            Me.columnT043UpdateUser = New Global.System.Data.DataColumn("T043UpdateUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043UpdateUser)
+            Me.columnT043UpdateDate = New Global.System.Data.DataColumn("T043UpdateDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043UpdateDate)
+            Me.columnT043Revisione = New Global.System.Data.DataColumn("T043Revisione", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Revisione)
+            Me.columnT043DataRevisione = New Global.System.Data.DataColumn("T043DataRevisione", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043DataRevisione)
+            Me.columnT043StandBy = New Global.System.Data.DataColumn("T043StandBy", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043StandBy)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnT043Commessa, Me.columnT043ElencoMateriali}, true))
+            Me.columnT043Id.AutoIncrement = true
+            Me.columnT043Id.AutoIncrementSeed = -1
+            Me.columnT043Id.AutoIncrementStep = -1
+            Me.columnT043Id.AllowDBNull = false
+            Me.columnT043Id.ReadOnly = true
+            Me.columnT043Commessa.AllowDBNull = false
+            Me.columnT043Commessa.MaxLength = 5
+            Me.columnT043ElencoMateriali.AllowDBNull = false
+            Me.columnT043ElencoMateriali.MaxLength = 7
+            Me.columnT043Descrizione.MaxLength = 255
+            Me.columnT043Note.MaxLength = 255
+            Me.columnT043InsertUser.MaxLength = 50
+            Me.columnT043UpdateUser.MaxLength = 50
+            Me.columnT043Revisione.ReadOnly = true
+            Me.columnT043DataRevisione.ReadOnly = true
+            Me.columnT043StandBy.ReadOnly = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT043_ElenchiMaterialiRow() As T043_ElenchiMaterialiRow
+            Return CType(Me.NewRow,T043_ElenchiMaterialiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T043_ElenchiMaterialiRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T043_ElenchiMaterialiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T043_ElenchiMaterialiRowChangedEvent) Is Nothing) Then
+                RaiseEvent T043_ElenchiMaterialiRowChanged(Me, New T043_ElenchiMaterialiRowChangeEvent(CType(e.Row,T043_ElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T043_ElenchiMaterialiRowChangingEvent) Is Nothing) Then
+                RaiseEvent T043_ElenchiMaterialiRowChanging(Me, New T043_ElenchiMaterialiRowChangeEvent(CType(e.Row,T043_ElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T043_ElenchiMaterialiRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T043_ElenchiMaterialiRowDeleted(Me, New T043_ElenchiMaterialiRowChangeEvent(CType(e.Row,T043_ElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T043_ElenchiMaterialiRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T043_ElenchiMaterialiRowDeleting(Me, New T043_ElenchiMaterialiRowChangeEvent(CType(e.Row,T043_ElenchiMaterialiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT043_ElenchiMaterialiRow(ByVal row As T043_ElenchiMaterialiRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T043_ElenchiMaterialiDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T044_ElenchiMaterialiDettaglioComponenteDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T044_ElenchiMaterialiDettaglioComponenteRow)
+        
+        Private columnT044Id As Global.System.Data.DataColumn
+        
+        Private columnT044Commessa As Global.System.Data.DataColumn
+        
+        Private columnT044ElencoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT044Riga As Global.System.Data.DataColumn
+        
+        Private columnT044Quantita As Global.System.Data.DataColumn
+        
+        Private columnT044UnitaMisura As Global.System.Data.DataColumn
+        
+        Private columnT044Codice As Global.System.Data.DataColumn
+        
+        Private columnT044SettoreMerceologico As Global.System.Data.DataColumn
+        
+        Private columnT044Marca As Global.System.Data.DataColumn
+        
+        Private columnT044Specifica As Global.System.Data.DataColumn
+        
+        Private columnT044XCodice As Global.System.Data.DataColumn
+        
+        Private columnT044ContoLavorazione As Global.System.Data.DataColumn
+        
+        Private columnT044Nota As Global.System.Data.DataColumn
+        
+        Private columnT044Revisione As Global.System.Data.DataColumn
+        
+        Private columnT044DataRevisione As Global.System.Data.DataColumn
+        
+        Private columnT044StandBy As Global.System.Data.DataColumn
+        
+        Private columnT044IdSuperiore As Global.System.Data.DataColumn
+        
+        Private columnT044InsertUser As Global.System.Data.DataColumn
+        
+        Private columnT044InsertDate As Global.System.Data.DataColumn
+        
+        Private columnT044UpdateUser As Global.System.Data.DataColumn
+        
+        Private columnT044UpdateDate As Global.System.Data.DataColumn
+        
+        Private columnT044Accessori As Global.System.Data.DataColumn
+        
+        Private columnT044RaggruppamentoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT049Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT043Id As Global.System.Data.DataColumn
+        
+        Private columnT043Commessa As Global.System.Data.DataColumn
+        
+        Private columnT043ElencoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT043Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT043Note As Global.System.Data.DataColumn
+        
+        Private columnTipoRiga As Global.System.Data.DataColumn
+        
+        Private columnT044Movimentato As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T044_ElenchiMaterialiDettaglioComponente"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044ElencoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044ElencoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044RigaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Riga
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044QuantitaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Quantita
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044UnitaMisuraColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044UnitaMisura
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044CodiceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Codice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044SettoreMerceologicoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044SettoreMerceologico
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044MarcaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Marca
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044SpecificaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Specifica
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044XCodiceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044XCodice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044ContoLavorazioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044ContoLavorazione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044NotaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Nota
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044RevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Revisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044DataRevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044DataRevisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044StandByColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044StandBy
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044IdSuperioreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044IdSuperiore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044InsertUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044InsertUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044InsertDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044InsertDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044UpdateUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044UpdateUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044UpdateDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044UpdateDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044AccessoriColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Accessori
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044RaggruppamentoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044RaggruppamentoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T049DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT049Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043ElencoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043ElencoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043NoteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Note
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property TipoRigaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTipoRiga
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044MovimentatoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Movimentato
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T044_ElenchiMaterialiDettaglioComponenteRow
+            Get
+                Return CType(Me.Rows(index),T044_ElenchiMaterialiDettaglioComponenteRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioComponenteRowChanging As T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioComponenteRowChanged As T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioComponenteRowDeleting As T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioComponenteRowDeleted As T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT044_ElenchiMaterialiDettaglioComponenteRow(ByVal row As T044_ElenchiMaterialiDettaglioComponenteRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT044_ElenchiMaterialiDettaglioComponenteRow( _
+                    ByVal T044Commessa As String,  _
+                    ByVal T044ElencoMateriali As String,  _
+                    ByVal T044Riga As Decimal,  _
+                    ByVal T044Quantita As Decimal,  _
+                    ByVal T044UnitaMisura As Integer,  _
+                    ByVal T044Codice As String,  _
+                    ByVal T044SettoreMerceologico As Integer,  _
+                    ByVal T044Marca As Integer,  _
+                    ByVal T044Specifica As String,  _
+                    ByVal T044XCodice As String,  _
+                    ByVal T044ContoLavorazione As Boolean,  _
+                    ByVal T044Nota As String,  _
+                    ByVal T044Revisione As Integer,  _
+                    ByVal T044DataRevisione As Date,  _
+                    ByVal T044StandBy As Boolean,  _
+                    ByVal T044IdSuperiore As Integer,  _
+                    ByVal T044InsertUser As String,  _
+                    ByVal T044InsertDate As Date,  _
+                    ByVal T044UpdateUser As String,  _
+                    ByVal T044UpdateDate As Date,  _
+                    ByVal T044Accessori As String,  _
+                    ByVal T044RaggruppamentoMateriali As Integer,  _
+                    ByVal T049Descrizione As String,  _
+                    ByVal T043Commessa As String,  _
+                    ByVal T043ElencoMateriali As String,  _
+                    ByVal T043Descrizione As String,  _
+                    ByVal T043Note As String,  _
+                    ByVal TipoRiga As Integer,  _
+                    ByVal T044Movimentato As Integer) As T044_ElenchiMaterialiDettaglioComponenteRow
+            Dim rowT044_ElenchiMaterialiDettaglioComponenteRow As T044_ElenchiMaterialiDettaglioComponenteRow = CType(Me.NewRow,T044_ElenchiMaterialiDettaglioComponenteRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, T044Commessa, T044ElencoMateriali, T044Riga, T044Quantita, T044UnitaMisura, T044Codice, T044SettoreMerceologico, T044Marca, T044Specifica, T044XCodice, T044ContoLavorazione, T044Nota, T044Revisione, T044DataRevisione, T044StandBy, T044IdSuperiore, T044InsertUser, T044InsertDate, T044UpdateUser, T044UpdateDate, T044Accessori, T044RaggruppamentoMateriali, T049Descrizione, Nothing, T043Commessa, T043ElencoMateriali, T043Descrizione, T043Note, TipoRiga, T044Movimentato}
+            rowT044_ElenchiMaterialiDettaglioComponenteRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT044_ElenchiMaterialiDettaglioComponenteRow)
+            Return rowT044_ElenchiMaterialiDettaglioComponenteRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByT044CommessaT044ElencoMaterialiT044RigaT043CommessaT043ElencoMateriali(ByVal T044Commessa As String, ByVal T044ElencoMateriali As String, ByVal T044Riga As Decimal, ByVal T043Commessa As String, ByVal T043ElencoMateriali As String) As T044_ElenchiMaterialiDettaglioComponenteRow
+            Return CType(Me.Rows.Find(New Object() {T044Commessa, T044ElencoMateriali, T044Riga, T043Commessa, T043ElencoMateriali}),T044_ElenchiMaterialiDettaglioComponenteRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T044_ElenchiMaterialiDettaglioComponenteDataTable = CType(MyBase.Clone,T044_ElenchiMaterialiDettaglioComponenteDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T044_ElenchiMaterialiDettaglioComponenteDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnT044Id = MyBase.Columns("T044Id")
+            Me.columnT044Commessa = MyBase.Columns("T044Commessa")
+            Me.columnT044ElencoMateriali = MyBase.Columns("T044ElencoMateriali")
+            Me.columnT044Riga = MyBase.Columns("T044Riga")
+            Me.columnT044Quantita = MyBase.Columns("T044Quantita")
+            Me.columnT044UnitaMisura = MyBase.Columns("T044UnitaMisura")
+            Me.columnT044Codice = MyBase.Columns("T044Codice")
+            Me.columnT044SettoreMerceologico = MyBase.Columns("T044SettoreMerceologico")
+            Me.columnT044Marca = MyBase.Columns("T044Marca")
+            Me.columnT044Specifica = MyBase.Columns("T044Specifica")
+            Me.columnT044XCodice = MyBase.Columns("T044XCodice")
+            Me.columnT044ContoLavorazione = MyBase.Columns("T044ContoLavorazione")
+            Me.columnT044Nota = MyBase.Columns("T044Nota")
+            Me.columnT044Revisione = MyBase.Columns("T044Revisione")
+            Me.columnT044DataRevisione = MyBase.Columns("T044DataRevisione")
+            Me.columnT044StandBy = MyBase.Columns("T044StandBy")
+            Me.columnT044IdSuperiore = MyBase.Columns("T044IdSuperiore")
+            Me.columnT044InsertUser = MyBase.Columns("T044InsertUser")
+            Me.columnT044InsertDate = MyBase.Columns("T044InsertDate")
+            Me.columnT044UpdateUser = MyBase.Columns("T044UpdateUser")
+            Me.columnT044UpdateDate = MyBase.Columns("T044UpdateDate")
+            Me.columnT044Accessori = MyBase.Columns("T044Accessori")
+            Me.columnT044RaggruppamentoMateriali = MyBase.Columns("T044RaggruppamentoMateriali")
+            Me.columnT049Descrizione = MyBase.Columns("T049Descrizione")
+            Me.columnT043Id = MyBase.Columns("T043Id")
+            Me.columnT043Commessa = MyBase.Columns("T043Commessa")
+            Me.columnT043ElencoMateriali = MyBase.Columns("T043ElencoMateriali")
+            Me.columnT043Descrizione = MyBase.Columns("T043Descrizione")
+            Me.columnT043Note = MyBase.Columns("T043Note")
+            Me.columnTipoRiga = MyBase.Columns("TipoRiga")
+            Me.columnT044Movimentato = MyBase.Columns("T044Movimentato")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnT044Id = New Global.System.Data.DataColumn("T044Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Id)
+            Me.columnT044Commessa = New Global.System.Data.DataColumn("T044Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Commessa)
+            Me.columnT044ElencoMateriali = New Global.System.Data.DataColumn("T044ElencoMateriali", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044ElencoMateriali)
+            Me.columnT044Riga = New Global.System.Data.DataColumn("T044Riga", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Riga)
+            Me.columnT044Quantita = New Global.System.Data.DataColumn("T044Quantita", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Quantita)
+            Me.columnT044UnitaMisura = New Global.System.Data.DataColumn("T044UnitaMisura", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044UnitaMisura)
+            Me.columnT044Codice = New Global.System.Data.DataColumn("T044Codice", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Codice)
+            Me.columnT044SettoreMerceologico = New Global.System.Data.DataColumn("T044SettoreMerceologico", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044SettoreMerceologico)
+            Me.columnT044Marca = New Global.System.Data.DataColumn("T044Marca", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Marca)
+            Me.columnT044Specifica = New Global.System.Data.DataColumn("T044Specifica", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Specifica)
+            Me.columnT044XCodice = New Global.System.Data.DataColumn("T044XCodice", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044XCodice)
+            Me.columnT044ContoLavorazione = New Global.System.Data.DataColumn("T044ContoLavorazione", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044ContoLavorazione)
+            Me.columnT044Nota = New Global.System.Data.DataColumn("T044Nota", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Nota)
+            Me.columnT044Revisione = New Global.System.Data.DataColumn("T044Revisione", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Revisione)
+            Me.columnT044DataRevisione = New Global.System.Data.DataColumn("T044DataRevisione", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044DataRevisione)
+            Me.columnT044StandBy = New Global.System.Data.DataColumn("T044StandBy", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044StandBy)
+            Me.columnT044IdSuperiore = New Global.System.Data.DataColumn("T044IdSuperiore", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044IdSuperiore)
+            Me.columnT044InsertUser = New Global.System.Data.DataColumn("T044InsertUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044InsertUser)
+            Me.columnT044InsertDate = New Global.System.Data.DataColumn("T044InsertDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044InsertDate)
+            Me.columnT044UpdateUser = New Global.System.Data.DataColumn("T044UpdateUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044UpdateUser)
+            Me.columnT044UpdateDate = New Global.System.Data.DataColumn("T044UpdateDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044UpdateDate)
+            Me.columnT044Accessori = New Global.System.Data.DataColumn("T044Accessori", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Accessori)
+            Me.columnT044RaggruppamentoMateriali = New Global.System.Data.DataColumn("T044RaggruppamentoMateriali", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044RaggruppamentoMateriali)
+            Me.columnT049Descrizione = New Global.System.Data.DataColumn("T049Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT049Descrizione)
+            Me.columnT043Id = New Global.System.Data.DataColumn("T043Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Id)
+            Me.columnT043Commessa = New Global.System.Data.DataColumn("T043Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Commessa)
+            Me.columnT043ElencoMateriali = New Global.System.Data.DataColumn("T043ElencoMateriali", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043ElencoMateriali)
+            Me.columnT043Descrizione = New Global.System.Data.DataColumn("T043Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Descrizione)
+            Me.columnT043Note = New Global.System.Data.DataColumn("T043Note", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Note)
+            Me.columnTipoRiga = New Global.System.Data.DataColumn("TipoRiga", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTipoRiga)
+            Me.columnT044Movimentato = New Global.System.Data.DataColumn("T044Movimentato", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Movimentato)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnT044Commessa, Me.columnT044ElencoMateriali, Me.columnT044Riga, Me.columnT043Commessa, Me.columnT043ElencoMateriali}, true))
+            Me.columnT044Id.AutoIncrement = true
+            Me.columnT044Id.AutoIncrementSeed = -1
+            Me.columnT044Id.AutoIncrementStep = -1
+            Me.columnT044Id.AllowDBNull = false
+            Me.columnT044Id.ReadOnly = true
+            Me.columnT044Commessa.AllowDBNull = false
+            Me.columnT044Commessa.MaxLength = 5
+            Me.columnT044ElencoMateriali.AllowDBNull = false
+            Me.columnT044ElencoMateriali.MaxLength = 7
+            Me.columnT044Riga.AllowDBNull = false
+            Me.columnT044Codice.MaxLength = 32
+            Me.columnT044Specifica.MaxLength = 2147483647
+            Me.columnT044XCodice.MaxLength = 24
+            Me.columnT044Nota.MaxLength = 255
+            Me.columnT044InsertUser.MaxLength = 50
+            Me.columnT044UpdateUser.MaxLength = 50
+            Me.columnT044Accessori.MaxLength = 2147483647
+            Me.columnT049Descrizione.MaxLength = 32
+            Me.columnT043Id.AutoIncrement = true
+            Me.columnT043Id.AutoIncrementSeed = -1
+            Me.columnT043Id.AutoIncrementStep = -1
+            Me.columnT043Id.AllowDBNull = false
+            Me.columnT043Id.ReadOnly = true
+            Me.columnT043Commessa.AllowDBNull = false
+            Me.columnT043Commessa.MaxLength = 5
+            Me.columnT043ElencoMateriali.AllowDBNull = false
+            Me.columnT043ElencoMateriali.MaxLength = 7
+            Me.columnT043Descrizione.MaxLength = 255
+            Me.columnT043Note.MaxLength = 255
+            Me.columnTipoRiga.ReadOnly = true
+            Me.columnT044Movimentato.ReadOnly = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT044_ElenchiMaterialiDettaglioComponenteRow() As T044_ElenchiMaterialiDettaglioComponenteRow
+            Return CType(Me.NewRow,T044_ElenchiMaterialiDettaglioComponenteRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T044_ElenchiMaterialiDettaglioComponenteRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T044_ElenchiMaterialiDettaglioComponenteRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioComponenteRowChangedEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioComponenteRowChanged(Me, New T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioComponenteRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioComponenteRowChangingEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioComponenteRowChanging(Me, New T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioComponenteRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioComponenteRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioComponenteRowDeleted(Me, New T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioComponenteRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioComponenteRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioComponenteRowDeleting(Me, New T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioComponenteRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT044_ElenchiMaterialiDettaglioComponenteRow(ByVal row As T044_ElenchiMaterialiDettaglioComponenteRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T044_ElenchiMaterialiDettaglioComponenteDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class T044_ElenchiMaterialiDettaglioAccessorioDataTable
+        Inherits Global.System.Data.TypedTableBase(Of T044_ElenchiMaterialiDettaglioAccessorioRow)
+        
+        Private columnT044Id As Global.System.Data.DataColumn
+        
+        Private columnT044Commessa As Global.System.Data.DataColumn
+        
+        Private columnT044ElencoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT044Riga As Global.System.Data.DataColumn
+        
+        Private columnT044Quantita As Global.System.Data.DataColumn
+        
+        Private columnT044UnitaMisura As Global.System.Data.DataColumn
+        
+        Private columnT044Codice As Global.System.Data.DataColumn
+        
+        Private columnT044SettoreMerceologico As Global.System.Data.DataColumn
+        
+        Private columnT044Marca As Global.System.Data.DataColumn
+        
+        Private columnT044Specifica As Global.System.Data.DataColumn
+        
+        Private columnT044XCodice As Global.System.Data.DataColumn
+        
+        Private columnT044ContoLavorazione As Global.System.Data.DataColumn
+        
+        Private columnT044Nota As Global.System.Data.DataColumn
+        
+        Private columnT044Revisione As Global.System.Data.DataColumn
+        
+        Private columnT044DataRevisione As Global.System.Data.DataColumn
+        
+        Private columnT044StandBy As Global.System.Data.DataColumn
+        
+        Private columnT044IdSuperiore As Global.System.Data.DataColumn
+        
+        Private columnT044InsertUser As Global.System.Data.DataColumn
+        
+        Private columnT044InsertDate As Global.System.Data.DataColumn
+        
+        Private columnT044UpdateUser As Global.System.Data.DataColumn
+        
+        Private columnT044UpdateDate As Global.System.Data.DataColumn
+        
+        Private columnT044Accessori As Global.System.Data.DataColumn
+        
+        Private columnT044RaggruppamentoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT049Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT043Id As Global.System.Data.DataColumn
+        
+        Private columnT043Commessa As Global.System.Data.DataColumn
+        
+        Private columnT043ElencoMateriali As Global.System.Data.DataColumn
+        
+        Private columnT043Descrizione As Global.System.Data.DataColumn
+        
+        Private columnT043Note As Global.System.Data.DataColumn
+        
+        Private columnTipoRiga As Global.System.Data.DataColumn
+        
+        Private columnT044Movimentato As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "T044_ElenchiMaterialiDettaglioAccessorio"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044ElencoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044ElencoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044RigaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Riga
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044QuantitaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Quantita
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044UnitaMisuraColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044UnitaMisura
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044CodiceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Codice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044SettoreMerceologicoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044SettoreMerceologico
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044MarcaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Marca
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044SpecificaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Specifica
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044XCodiceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044XCodice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044ContoLavorazioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044ContoLavorazione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044NotaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Nota
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044RevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Revisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044DataRevisioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044DataRevisione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044StandByColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044StandBy
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044IdSuperioreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044IdSuperiore
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044InsertUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044InsertUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044InsertDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044InsertDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044UpdateUserColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044UpdateUser
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044UpdateDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044UpdateDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044AccessoriColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Accessori
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044RaggruppamentoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044RaggruppamentoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T049DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT049Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043IdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043CommessaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Commessa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043ElencoMaterialiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043ElencoMateriali
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043DescrizioneColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Descrizione
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T043NoteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT043Note
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property TipoRigaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTipoRiga
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property T044MovimentatoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnT044Movimentato
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As T044_ElenchiMaterialiDettaglioAccessorioRow
+            Get
+                Return CType(Me.Rows(index),T044_ElenchiMaterialiDettaglioAccessorioRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioAccessorioRowChanging As T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioAccessorioRowChanged As T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioAccessorioRowDeleting As T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event T044_ElenchiMaterialiDettaglioAccessorioRowDeleted As T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddT044_ElenchiMaterialiDettaglioAccessorioRow(ByVal row As T044_ElenchiMaterialiDettaglioAccessorioRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddT044_ElenchiMaterialiDettaglioAccessorioRow( _
+                    ByVal T044Commessa As String,  _
+                    ByVal T044ElencoMateriali As String,  _
+                    ByVal T044Riga As Decimal,  _
+                    ByVal T044Quantita As Decimal,  _
+                    ByVal T044UnitaMisura As Integer,  _
+                    ByVal T044Codice As String,  _
+                    ByVal T044SettoreMerceologico As Integer,  _
+                    ByVal T044Marca As Integer,  _
+                    ByVal T044Specifica As String,  _
+                    ByVal T044XCodice As String,  _
+                    ByVal T044ContoLavorazione As Boolean,  _
+                    ByVal T044Nota As String,  _
+                    ByVal T044Revisione As Integer,  _
+                    ByVal T044DataRevisione As Date,  _
+                    ByVal T044StandBy As Boolean,  _
+                    ByVal parentT044_ElenchiMaterialiDettaglioComponenteRowByT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio As T044_ElenchiMaterialiDettaglioComponenteRow,  _
+                    ByVal T044InsertUser As String,  _
+                    ByVal T044InsertDate As Date,  _
+                    ByVal T044UpdateUser As String,  _
+                    ByVal T044UpdateDate As Date,  _
+                    ByVal T044Accessori As String,  _
+                    ByVal T044RaggruppamentoMateriali As Integer,  _
+                    ByVal T049Descrizione As String,  _
+                    ByVal T043Commessa As String,  _
+                    ByVal T043ElencoMateriali As String,  _
+                    ByVal T043Descrizione As String,  _
+                    ByVal T043Note As String,  _
+                    ByVal TipoRiga As Integer,  _
+                    ByVal T044Movimentato As Integer) As T044_ElenchiMaterialiDettaglioAccessorioRow
+            Dim rowT044_ElenchiMaterialiDettaglioAccessorioRow As T044_ElenchiMaterialiDettaglioAccessorioRow = CType(Me.NewRow,T044_ElenchiMaterialiDettaglioAccessorioRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, T044Commessa, T044ElencoMateriali, T044Riga, T044Quantita, T044UnitaMisura, T044Codice, T044SettoreMerceologico, T044Marca, T044Specifica, T044XCodice, T044ContoLavorazione, T044Nota, T044Revisione, T044DataRevisione, T044StandBy, Nothing, T044InsertUser, T044InsertDate, T044UpdateUser, T044UpdateDate, T044Accessori, T044RaggruppamentoMateriali, T049Descrizione, Nothing, T043Commessa, T043ElencoMateriali, T043Descrizione, T043Note, TipoRiga, T044Movimentato}
+            If (Not (parentT044_ElenchiMaterialiDettaglioComponenteRowByT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio) Is Nothing) Then
+                columnValuesArray(16) = parentT044_ElenchiMaterialiDettaglioComponenteRowByT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio(0)
+            End If
+            rowT044_ElenchiMaterialiDettaglioAccessorioRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowT044_ElenchiMaterialiDettaglioAccessorioRow)
+            Return rowT044_ElenchiMaterialiDettaglioAccessorioRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByT044CommessaT044ElencoMaterialiT044RigaT043CommessaT043ElencoMateriali(ByVal T044Commessa As String, ByVal T044ElencoMateriali As String, ByVal T044Riga As Decimal, ByVal T043Commessa As String, ByVal T043ElencoMateriali As String) As T044_ElenchiMaterialiDettaglioAccessorioRow
+            Return CType(Me.Rows.Find(New Object() {T044Commessa, T044ElencoMateriali, T044Riga, T043Commessa, T043ElencoMateriali}),T044_ElenchiMaterialiDettaglioAccessorioRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As T044_ElenchiMaterialiDettaglioAccessorioDataTable = CType(MyBase.Clone,T044_ElenchiMaterialiDettaglioAccessorioDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New T044_ElenchiMaterialiDettaglioAccessorioDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnT044Id = MyBase.Columns("T044Id")
+            Me.columnT044Commessa = MyBase.Columns("T044Commessa")
+            Me.columnT044ElencoMateriali = MyBase.Columns("T044ElencoMateriali")
+            Me.columnT044Riga = MyBase.Columns("T044Riga")
+            Me.columnT044Quantita = MyBase.Columns("T044Quantita")
+            Me.columnT044UnitaMisura = MyBase.Columns("T044UnitaMisura")
+            Me.columnT044Codice = MyBase.Columns("T044Codice")
+            Me.columnT044SettoreMerceologico = MyBase.Columns("T044SettoreMerceologico")
+            Me.columnT044Marca = MyBase.Columns("T044Marca")
+            Me.columnT044Specifica = MyBase.Columns("T044Specifica")
+            Me.columnT044XCodice = MyBase.Columns("T044XCodice")
+            Me.columnT044ContoLavorazione = MyBase.Columns("T044ContoLavorazione")
+            Me.columnT044Nota = MyBase.Columns("T044Nota")
+            Me.columnT044Revisione = MyBase.Columns("T044Revisione")
+            Me.columnT044DataRevisione = MyBase.Columns("T044DataRevisione")
+            Me.columnT044StandBy = MyBase.Columns("T044StandBy")
+            Me.columnT044IdSuperiore = MyBase.Columns("T044IdSuperiore")
+            Me.columnT044InsertUser = MyBase.Columns("T044InsertUser")
+            Me.columnT044InsertDate = MyBase.Columns("T044InsertDate")
+            Me.columnT044UpdateUser = MyBase.Columns("T044UpdateUser")
+            Me.columnT044UpdateDate = MyBase.Columns("T044UpdateDate")
+            Me.columnT044Accessori = MyBase.Columns("T044Accessori")
+            Me.columnT044RaggruppamentoMateriali = MyBase.Columns("T044RaggruppamentoMateriali")
+            Me.columnT049Descrizione = MyBase.Columns("T049Descrizione")
+            Me.columnT043Id = MyBase.Columns("T043Id")
+            Me.columnT043Commessa = MyBase.Columns("T043Commessa")
+            Me.columnT043ElencoMateriali = MyBase.Columns("T043ElencoMateriali")
+            Me.columnT043Descrizione = MyBase.Columns("T043Descrizione")
+            Me.columnT043Note = MyBase.Columns("T043Note")
+            Me.columnTipoRiga = MyBase.Columns("TipoRiga")
+            Me.columnT044Movimentato = MyBase.Columns("T044Movimentato")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnT044Id = New Global.System.Data.DataColumn("T044Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Id)
+            Me.columnT044Commessa = New Global.System.Data.DataColumn("T044Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Commessa)
+            Me.columnT044ElencoMateriali = New Global.System.Data.DataColumn("T044ElencoMateriali", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044ElencoMateriali)
+            Me.columnT044Riga = New Global.System.Data.DataColumn("T044Riga", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Riga)
+            Me.columnT044Quantita = New Global.System.Data.DataColumn("T044Quantita", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Quantita)
+            Me.columnT044UnitaMisura = New Global.System.Data.DataColumn("T044UnitaMisura", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044UnitaMisura)
+            Me.columnT044Codice = New Global.System.Data.DataColumn("T044Codice", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Codice)
+            Me.columnT044SettoreMerceologico = New Global.System.Data.DataColumn("T044SettoreMerceologico", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044SettoreMerceologico)
+            Me.columnT044Marca = New Global.System.Data.DataColumn("T044Marca", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Marca)
+            Me.columnT044Specifica = New Global.System.Data.DataColumn("T044Specifica", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Specifica)
+            Me.columnT044XCodice = New Global.System.Data.DataColumn("T044XCodice", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044XCodice)
+            Me.columnT044ContoLavorazione = New Global.System.Data.DataColumn("T044ContoLavorazione", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044ContoLavorazione)
+            Me.columnT044Nota = New Global.System.Data.DataColumn("T044Nota", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Nota)
+            Me.columnT044Revisione = New Global.System.Data.DataColumn("T044Revisione", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Revisione)
+            Me.columnT044DataRevisione = New Global.System.Data.DataColumn("T044DataRevisione", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044DataRevisione)
+            Me.columnT044StandBy = New Global.System.Data.DataColumn("T044StandBy", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044StandBy)
+            Me.columnT044IdSuperiore = New Global.System.Data.DataColumn("T044IdSuperiore", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044IdSuperiore)
+            Me.columnT044InsertUser = New Global.System.Data.DataColumn("T044InsertUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044InsertUser)
+            Me.columnT044InsertDate = New Global.System.Data.DataColumn("T044InsertDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044InsertDate)
+            Me.columnT044UpdateUser = New Global.System.Data.DataColumn("T044UpdateUser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044UpdateUser)
+            Me.columnT044UpdateDate = New Global.System.Data.DataColumn("T044UpdateDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044UpdateDate)
+            Me.columnT044Accessori = New Global.System.Data.DataColumn("T044Accessori", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Accessori)
+            Me.columnT044RaggruppamentoMateriali = New Global.System.Data.DataColumn("T044RaggruppamentoMateriali", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044RaggruppamentoMateriali)
+            Me.columnT049Descrizione = New Global.System.Data.DataColumn("T049Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT049Descrizione)
+            Me.columnT043Id = New Global.System.Data.DataColumn("T043Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Id)
+            Me.columnT043Commessa = New Global.System.Data.DataColumn("T043Commessa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Commessa)
+            Me.columnT043ElencoMateriali = New Global.System.Data.DataColumn("T043ElencoMateriali", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043ElencoMateriali)
+            Me.columnT043Descrizione = New Global.System.Data.DataColumn("T043Descrizione", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Descrizione)
+            Me.columnT043Note = New Global.System.Data.DataColumn("T043Note", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT043Note)
+            Me.columnTipoRiga = New Global.System.Data.DataColumn("TipoRiga", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTipoRiga)
+            Me.columnT044Movimentato = New Global.System.Data.DataColumn("T044Movimentato", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnT044Movimentato)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnT044Commessa, Me.columnT044ElencoMateriali, Me.columnT044Riga, Me.columnT043Commessa, Me.columnT043ElencoMateriali}, true))
+            Me.columnT044Id.AutoIncrement = true
+            Me.columnT044Id.AutoIncrementSeed = -1
+            Me.columnT044Id.AutoIncrementStep = -1
+            Me.columnT044Id.AllowDBNull = false
+            Me.columnT044Id.ReadOnly = true
+            Me.columnT044Commessa.AllowDBNull = false
+            Me.columnT044Commessa.MaxLength = 5
+            Me.columnT044ElencoMateriali.AllowDBNull = false
+            Me.columnT044ElencoMateriali.MaxLength = 7
+            Me.columnT044Riga.AllowDBNull = false
+            Me.columnT044Codice.MaxLength = 32
+            Me.columnT044Specifica.MaxLength = 2147483647
+            Me.columnT044XCodice.MaxLength = 24
+            Me.columnT044Nota.MaxLength = 255
+            Me.columnT044InsertUser.MaxLength = 50
+            Me.columnT044UpdateUser.MaxLength = 50
+            Me.columnT044Accessori.MaxLength = 2147483647
+            Me.columnT049Descrizione.MaxLength = 32
+            Me.columnT043Id.AutoIncrement = true
+            Me.columnT043Id.AutoIncrementSeed = -1
+            Me.columnT043Id.AutoIncrementStep = -1
+            Me.columnT043Id.AllowDBNull = false
+            Me.columnT043Id.ReadOnly = true
+            Me.columnT043Commessa.AllowDBNull = false
+            Me.columnT043Commessa.MaxLength = 5
+            Me.columnT043ElencoMateriali.AllowDBNull = false
+            Me.columnT043ElencoMateriali.MaxLength = 7
+            Me.columnT043Descrizione.MaxLength = 255
+            Me.columnT043Note.MaxLength = 255
+            Me.columnTipoRiga.ReadOnly = true
+            Me.columnT044Movimentato.ReadOnly = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewT044_ElenchiMaterialiDettaglioAccessorioRow() As T044_ElenchiMaterialiDettaglioAccessorioRow
+            Return CType(Me.NewRow,T044_ElenchiMaterialiDettaglioAccessorioRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New T044_ElenchiMaterialiDettaglioAccessorioRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(T044_ElenchiMaterialiDettaglioAccessorioRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioAccessorioRowChangedEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioAccessorioRowChanged(Me, New T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioAccessorioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioAccessorioRowChangingEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioAccessorioRowChanging(Me, New T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioAccessorioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioAccessorioRowDeletedEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioAccessorioRowDeleted(Me, New T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioAccessorioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.T044_ElenchiMaterialiDettaglioAccessorioRowDeletingEvent) Is Nothing) Then
+                RaiseEvent T044_ElenchiMaterialiDettaglioAccessorioRowDeleting(Me, New T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent(CType(e.Row,T044_ElenchiMaterialiDettaglioAccessorioRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveT044_ElenchiMaterialiDettaglioAccessorioRow(ByVal row As T044_ElenchiMaterialiDettaglioAccessorioRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LottiDataSet = New LottiDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "T044_ElenchiMaterialiDettaglioAccessorioDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class T059_LottiRow
@@ -10494,6 +14420,3420 @@ Partial Public Class LottiDataSet
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T042_ListeQuadriRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT042_ListeQuadri As T042_ListeQuadriDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT042_ListeQuadri = CType(Me.Table,T042_ListeQuadriDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Ordinamento() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.OrdinamentoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'Ordinamento' nella tabella 'T042_ListeQuadri' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.OrdinamentoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Id() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042IdColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Id' nella tabella 'T042_ListeQuadri' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Commessa() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042CommessaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Commessa' nella tabella 'T042_ListeQuadri' è DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Numerazione() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042NumerazioneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Numerazione' nella tabella 'T042_ListeQuadri' è DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042NumerazioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042PosizioneInterna() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042PosizioneInternaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042PosizioneInterna' nella tabella 'T042_ListeQuadri' è"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042PosizioneInternaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042PosizioneOrdine() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042PosizioneOrdineColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042PosizioneOrdine' nella tabella 'T042_ListeQuadri' è "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042PosizioneOrdineColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Quantita() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042QuantitaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Quantita' nella tabella 'T042_ListeQuadri' è DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042QuantitaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Descrizione' nella tabella 'T042_ListeQuadri' è DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Lotto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042LottoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Lotto' nella tabella 'T042_ListeQuadri' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042LottoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042StandBy() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042StandByColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042StandBy' nella tabella 'T042_ListeQuadri' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042StandByColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Revisione() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042RevisioneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Revisione' nella tabella 'T042_ListeQuadri' è DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042RevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042DataRevisione() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042DataRevisioneColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042DataRevisione' nella tabella 'T042_ListeQuadri' è DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042DataRevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Note() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042NoteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Note' nella tabella 'T042_ListeQuadri' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042NoteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042ConsegnaMateriali() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042ConsegnaMaterialiColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042ConsegnaMateriali' nella tabella 'T042_ListeQuadri' "& _ 
+                            "è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042ConsegnaMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Colonne() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042ColonneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Colonne' nella tabella 'T042_ListeQuadri' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042ColonneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042PrezzoUnitario() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042PrezzoUnitarioColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042PrezzoUnitario' nella tabella 'T042_ListeQuadri' è D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042PrezzoUnitarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042PrezzoVarianti() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042PrezzoVariantiColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042PrezzoVarianti' nella tabella 'T042_ListeQuadri' è D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042PrezzoVariantiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042InsertUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042InsertUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042InsertUser' nella tabella 'T042_ListeQuadri' è DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042InsertUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042InsertDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042InsertDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042InsertDate' nella tabella 'T042_ListeQuadri' è DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042InsertDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042UpdateUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042UpdateUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042UpdateUser' nella tabella 'T042_ListeQuadri' è DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042UpdateUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042UpdateDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042UpdateDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042UpdateDate' nella tabella 'T042_ListeQuadri' è DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042UpdateDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042PrezzoTotale() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042PrezzoTotaleColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042PrezzoTotale' nella tabella 'T042_ListeQuadri' è DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042PrezzoTotaleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042DescrizioneLotto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_ListeQuadri.T042DescrizioneLottoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042DescrizioneLotto' nella tabella 'T042_ListeQuadri' è"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_ListeQuadri.T042DescrizioneLottoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsOrdinamentoNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.OrdinamentoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetOrdinamentoNull()
+            Me(Me.tableT042_ListeQuadri.OrdinamentoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042IdNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042IdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042IdNull()
+            Me(Me.tableT042_ListeQuadri.T042IdColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042CommessaNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042CommessaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042CommessaNull()
+            Me(Me.tableT042_ListeQuadri.T042CommessaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042NumerazioneNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042NumerazioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042NumerazioneNull()
+            Me(Me.tableT042_ListeQuadri.T042NumerazioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042PosizioneInternaNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042PosizioneInternaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042PosizioneInternaNull()
+            Me(Me.tableT042_ListeQuadri.T042PosizioneInternaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042PosizioneOrdineNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042PosizioneOrdineColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042PosizioneOrdineNull()
+            Me(Me.tableT042_ListeQuadri.T042PosizioneOrdineColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042QuantitaNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042QuantitaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042QuantitaNull()
+            Me(Me.tableT042_ListeQuadri.T042QuantitaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042DescrizioneNull()
+            Me(Me.tableT042_ListeQuadri.T042DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042LottoNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042LottoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042LottoNull()
+            Me(Me.tableT042_ListeQuadri.T042LottoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042StandByNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042StandByColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042StandByNull()
+            Me(Me.tableT042_ListeQuadri.T042StandByColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042RevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042RevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042RevisioneNull()
+            Me(Me.tableT042_ListeQuadri.T042RevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042DataRevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042DataRevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042DataRevisioneNull()
+            Me(Me.tableT042_ListeQuadri.T042DataRevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042NoteNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042NoteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042NoteNull()
+            Me(Me.tableT042_ListeQuadri.T042NoteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042ConsegnaMaterialiNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042ConsegnaMaterialiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042ConsegnaMaterialiNull()
+            Me(Me.tableT042_ListeQuadri.T042ConsegnaMaterialiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042ColonneNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042ColonneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042ColonneNull()
+            Me(Me.tableT042_ListeQuadri.T042ColonneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042PrezzoUnitarioNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042PrezzoUnitarioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042PrezzoUnitarioNull()
+            Me(Me.tableT042_ListeQuadri.T042PrezzoUnitarioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042PrezzoVariantiNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042PrezzoVariantiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042PrezzoVariantiNull()
+            Me(Me.tableT042_ListeQuadri.T042PrezzoVariantiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042InsertUserNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042InsertUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042InsertUserNull()
+            Me(Me.tableT042_ListeQuadri.T042InsertUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042InsertDateNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042InsertDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042InsertDateNull()
+            Me(Me.tableT042_ListeQuadri.T042InsertDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042UpdateUserNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042UpdateUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042UpdateUserNull()
+            Me(Me.tableT042_ListeQuadri.T042UpdateUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042UpdateDateNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042UpdateDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042UpdateDateNull()
+            Me(Me.tableT042_ListeQuadri.T042UpdateDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042PrezzoTotaleNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042PrezzoTotaleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042PrezzoTotaleNull()
+            Me(Me.tableT042_ListeQuadri.T042PrezzoTotaleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042DescrizioneLottoNull() As Boolean
+            Return Me.IsNull(Me.tableT042_ListeQuadri.T042DescrizioneLottoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042DescrizioneLottoNull()
+            Me(Me.tableT042_ListeQuadri.T042DescrizioneLottoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetT117_ListeQuadriDettaglioRows() As T117_ListeQuadriDettaglioRow()
+            If (Me.Table.ChildRelations("T042_ListeQuadri_T117_ListeQuadriDettaglio") Is Nothing) Then
+                Return New T117_ListeQuadriDettaglioRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("T042_ListeQuadri_T117_ListeQuadriDettaglio")),T117_ListeQuadriDettaglioRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetT045_ListeQuadriElenchiMaterialiRows() As T045_ListeQuadriElenchiMaterialiRow()
+            If (Me.Table.ChildRelations("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali") Is Nothing) Then
+                Return New T045_ListeQuadriElenchiMaterialiRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali")),T045_ListeQuadriElenchiMaterialiRow())
+            End If
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T117_ListeQuadriDettaglioRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT117_ListeQuadriDettaglio As T117_ListeQuadriDettaglioDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT117_ListeQuadriDettaglio = CType(Me.Table,T117_ListeQuadriDettaglioDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117Id() As Integer
+            Get
+                Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117Commessa() As String
+            Get
+                Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117PosizioneInterna() As String
+            Get
+                Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117PosizioneInternaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117PosizioneInternaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117Centro() As String
+            Get
+                Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117CentroColumn),String)
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117CentroColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117OrePreventivate() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117OrePreventivateColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T117OrePreventivate' nella tabella 'T117_ListeQuadriDett"& _ 
+                            "aglio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117OrePreventivateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117InsertUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117InsertUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T117InsertUser' nella tabella 'T117_ListeQuadriDettaglio"& _ 
+                            "' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117InsertUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117InsertDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117InsertDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T117InsertDate' nella tabella 'T117_ListeQuadriDettaglio"& _ 
+                            "' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117InsertDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117UpdateUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117UpdateUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T117UpdateUser' nella tabella 'T117_ListeQuadriDettaglio"& _ 
+                            "' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117UpdateUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T117UpdateDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT117_ListeQuadriDettaglio.T117UpdateDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T117UpdateDate' nella tabella 'T117_ListeQuadriDettaglio"& _ 
+                            "' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT117_ListeQuadriDettaglio.T117UpdateDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042_ListeQuadriRowParent() As T042_ListeQuadriRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("T042_ListeQuadri_T117_ListeQuadriDettaglio")),T042_ListeQuadriRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("T042_ListeQuadri_T117_ListeQuadriDettaglio"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT117OrePreventivateNull() As Boolean
+            Return Me.IsNull(Me.tableT117_ListeQuadriDettaglio.T117OrePreventivateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT117OrePreventivateNull()
+            Me(Me.tableT117_ListeQuadriDettaglio.T117OrePreventivateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT117InsertUserNull() As Boolean
+            Return Me.IsNull(Me.tableT117_ListeQuadriDettaglio.T117InsertUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT117InsertUserNull()
+            Me(Me.tableT117_ListeQuadriDettaglio.T117InsertUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT117InsertDateNull() As Boolean
+            Return Me.IsNull(Me.tableT117_ListeQuadriDettaglio.T117InsertDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT117InsertDateNull()
+            Me(Me.tableT117_ListeQuadriDettaglio.T117InsertDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT117UpdateUserNull() As Boolean
+            Return Me.IsNull(Me.tableT117_ListeQuadriDettaglio.T117UpdateUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT117UpdateUserNull()
+            Me(Me.tableT117_ListeQuadriDettaglio.T117UpdateUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT117UpdateDateNull() As Boolean
+            Return Me.IsNull(Me.tableT117_ListeQuadriDettaglio.T117UpdateDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT117UpdateDateNull()
+            Me(Me.tableT117_ListeQuadriDettaglio.T117UpdateDateColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T045_ListeQuadriElenchiMaterialiRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT045_ListeQuadriElenchiMateriali As T045_ListeQuadriElenchiMaterialiDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT045_ListeQuadriElenchiMateriali = CType(Me.Table,T045_ListeQuadriElenchiMaterialiDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045Id() As Integer
+            Get
+                Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045Commessa() As String
+            Get
+                Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045PosizioneInterna() As String
+            Get
+                Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045PosizioneInternaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045PosizioneInternaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045ElencoMateriali() As String
+            Get
+                Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045ElencoMaterialiColumn),String)
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045ElencoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045Quantita() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045QuantitaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045Quantita' nella tabella 'T045_ListeQuadriElenchiMate"& _ 
+                            "riali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045QuantitaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045DataConsegnaMateriali() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045DataConsegnaMaterialiColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045DataConsegnaMateriali' nella tabella 'T045_ListeQuad"& _ 
+                            "riElenchiMateriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045DataConsegnaMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045TipoConsegna() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045TipoConsegnaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045TipoConsegna' nella tabella 'T045_ListeQuadriElenchi"& _ 
+                            "Materiali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045TipoConsegnaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045StandBy() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045StandByColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045StandBy' nella tabella 'T045_ListeQuadriElenchiMater"& _ 
+                            "iali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045StandByColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045Revisione() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045RevisioneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045Revisione' nella tabella 'T045_ListeQuadriElenchiMat"& _ 
+                            "eriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045RevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045DataRevisione() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045DataRevisioneColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045DataRevisione' nella tabella 'T045_ListeQuadriElench"& _ 
+                            "iMateriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045DataRevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045Note() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045NoteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045Note' nella tabella 'T045_ListeQuadriElenchiMaterial"& _ 
+                            "i' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045NoteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045InsertUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045InsertUser' nella tabella 'T045_ListeQuadriElenchiMa"& _ 
+                            "teriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045InsertDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045InsertDate' nella tabella 'T045_ListeQuadriElenchiMa"& _ 
+                            "teriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045UpdateUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045UpdateUser' nella tabella 'T045_ListeQuadriElenchiMa"& _ 
+                            "teriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T045UpdateDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T045UpdateDate' nella tabella 'T045_ListeQuadriElenchiMa"& _ 
+                            "teriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T042DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Descrizione' nella tabella 'T045_ListeQuadriElenchiM"& _ 
+                            "ateriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T042DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Quantita() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T042QuantitaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Quantita' nella tabella 'T045_ListeQuadriElenchiMate"& _ 
+                            "riali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T042QuantitaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT045_ListeQuadriElenchiMateriali.T043DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Descrizione' nella tabella 'T045_ListeQuadriElenchiM"& _ 
+                            "ateriali' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT045_ListeQuadriElenchiMateriali.T043DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042_ListeQuadriRowParent() As T042_ListeQuadriRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali")),T042_ListeQuadriRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045QuantitaNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045QuantitaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045QuantitaNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045QuantitaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045DataConsegnaMaterialiNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045DataConsegnaMaterialiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045DataConsegnaMaterialiNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045DataConsegnaMaterialiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045TipoConsegnaNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045TipoConsegnaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045TipoConsegnaNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045TipoConsegnaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045StandByNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045StandByColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045StandByNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045StandByColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045RevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045RevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045RevisioneNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045RevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045DataRevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045DataRevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045DataRevisioneNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045DataRevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045NoteNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045NoteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045NoteNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045NoteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045InsertUserNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045InsertUserNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045InsertDateNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045InsertDateNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045InsertDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045UpdateUserNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045UpdateUserNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT045UpdateDateNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT045UpdateDateNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T045UpdateDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T042DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042DescrizioneNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T042DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042QuantitaNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T042QuantitaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042QuantitaNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T042QuantitaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT045_ListeQuadriElenchiMateriali.T043DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043DescrizioneNull()
+            Me(Me.tableT045_ListeQuadriElenchiMateriali.T043DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T042_MagicRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT042_Magic As T042_MagicDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT042_Magic = CType(Me.Table,T042_MagicDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Commessa() As String
+            Get
+                Return CType(Me(Me.tableT042_Magic.T042CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT042_Magic.T042CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T042Lotto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_Magic.T042LottoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T042Lotto' nella tabella 'T042_Magic' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_Magic.T042LottoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property DescrizioneLotto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_Magic.DescrizioneLottoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'DescrizioneLotto' nella tabella 'T042_Magic' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_Magic.DescrizioneLottoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property C1() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_Magic.C1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'C1' nella tabella 'T042_Magic' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_Magic.C1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property C2() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_Magic.C2Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'C2' nella tabella 'T042_Magic' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_Magic.C2Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property C3() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_Magic.C3Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'C3' nella tabella 'T042_Magic' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_Magic.C3Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property C4() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT042_Magic.C4Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'C4' nella tabella 'T042_Magic' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT042_Magic.C4Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT042LottoNull() As Boolean
+            Return Me.IsNull(Me.tableT042_Magic.T042LottoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT042LottoNull()
+            Me(Me.tableT042_Magic.T042LottoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsDescrizioneLottoNull() As Boolean
+            Return Me.IsNull(Me.tableT042_Magic.DescrizioneLottoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetDescrizioneLottoNull()
+            Me(Me.tableT042_Magic.DescrizioneLottoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsC1Null() As Boolean
+            Return Me.IsNull(Me.tableT042_Magic.C1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetC1Null()
+            Me(Me.tableT042_Magic.C1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsC2Null() As Boolean
+            Return Me.IsNull(Me.tableT042_Magic.C2Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetC2Null()
+            Me(Me.tableT042_Magic.C2Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsC3Null() As Boolean
+            Return Me.IsNull(Me.tableT042_Magic.C3Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetC3Null()
+            Me(Me.tableT042_Magic.C3Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsC4Null() As Boolean
+            Return Me.IsNull(Me.tableT042_Magic.C4Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetC4Null()
+            Me(Me.tableT042_Magic.C4Column) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T043_ElenchiMaterialiRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT043_ElenchiMateriali As T043_ElenchiMaterialiDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT043_ElenchiMateriali = CType(Me.Table,T043_ElenchiMaterialiDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Id() As Integer
+            Get
+                Return CType(Me(Me.tableT043_ElenchiMateriali.T043IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Commessa() As String
+            Get
+                Return CType(Me(Me.tableT043_ElenchiMateriali.T043CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043ElencoMateriali() As String
+            Get
+                Return CType(Me(Me.tableT043_ElenchiMateriali.T043ElencoMaterialiColumn),String)
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043ElencoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Descrizione' nella tabella 'T043_ElenchiMateriali' è"& _ 
+                            " DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Note() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043NoteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Note' nella tabella 'T043_ElenchiMateriali' è DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043NoteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043InsertUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043InsertUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043InsertUser' nella tabella 'T043_ElenchiMateriali' è "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043InsertUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043InsertDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043InsertDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043InsertDate' nella tabella 'T043_ElenchiMateriali' è "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043InsertDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043UpdateUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043UpdateUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043UpdateUser' nella tabella 'T043_ElenchiMateriali' è "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043UpdateUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043UpdateDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043UpdateDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043UpdateDate' nella tabella 'T043_ElenchiMateriali' è "& _ 
+                            "DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043UpdateDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Revisione() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043RevisioneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Revisione' nella tabella 'T043_ElenchiMateriali' è D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043RevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043DataRevisione() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043DataRevisioneColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043DataRevisione' nella tabella 'T043_ElenchiMateriali'"& _ 
+                            " è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043DataRevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043StandBy() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT043_ElenchiMateriali.T043StandByColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043StandBy' nella tabella 'T043_ElenchiMateriali' è DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT043_ElenchiMateriali.T043StandByColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043DescrizioneNull()
+            Me(Me.tableT043_ElenchiMateriali.T043DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043NoteNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043NoteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043NoteNull()
+            Me(Me.tableT043_ElenchiMateriali.T043NoteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043InsertUserNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043InsertUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043InsertUserNull()
+            Me(Me.tableT043_ElenchiMateriali.T043InsertUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043InsertDateNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043InsertDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043InsertDateNull()
+            Me(Me.tableT043_ElenchiMateriali.T043InsertDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043UpdateUserNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043UpdateUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043UpdateUserNull()
+            Me(Me.tableT043_ElenchiMateriali.T043UpdateUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043UpdateDateNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043UpdateDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043UpdateDateNull()
+            Me(Me.tableT043_ElenchiMateriali.T043UpdateDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043RevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043RevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043RevisioneNull()
+            Me(Me.tableT043_ElenchiMateriali.T043RevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043DataRevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043DataRevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043DataRevisioneNull()
+            Me(Me.tableT043_ElenchiMateriali.T043DataRevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043StandByNull() As Boolean
+            Return Me.IsNull(Me.tableT043_ElenchiMateriali.T043StandByColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043StandByNull()
+            Me(Me.tableT043_ElenchiMateriali.T043StandByColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetT044_ElenchiMaterialiDettaglioComponenteRows() As T044_ElenchiMaterialiDettaglioComponenteRow()
+            If (Me.Table.ChildRelations("T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente") Is Nothing) Then
+                Return New T044_ElenchiMaterialiDettaglioComponenteRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente")),T044_ElenchiMaterialiDettaglioComponenteRow())
+            End If
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T044_ElenchiMaterialiDettaglioComponenteRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT044_ElenchiMaterialiDettaglioComponente As T044_ElenchiMaterialiDettaglioComponenteDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT044_ElenchiMaterialiDettaglioComponente = CType(Me.Table,T044_ElenchiMaterialiDettaglioComponenteDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Id() As Integer
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Commessa() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044ElencoMateriali() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ElencoMaterialiColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ElencoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Riga() As Decimal
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RigaColumn),Decimal)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RigaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Quantita() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044QuantitaColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Quantita' nella tabella 'T044_ElenchiMaterialiDettag"& _ 
+                            "lioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044QuantitaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044UnitaMisura() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UnitaMisuraColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044UnitaMisura' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UnitaMisuraColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Codice() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CodiceColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Codice' nella tabella 'T044_ElenchiMaterialiDettagli"& _ 
+                            "oComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CodiceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044SettoreMerceologico() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SettoreMerceologicoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044SettoreMerceologico' nella tabella 'T044_ElenchiMate"& _ 
+                            "rialiDettaglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SettoreMerceologicoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Marca() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MarcaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Marca' nella tabella 'T044_ElenchiMaterialiDettaglio"& _ 
+                            "Componente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MarcaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Specifica() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SpecificaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Specifica' nella tabella 'T044_ElenchiMaterialiDetta"& _ 
+                            "glioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SpecificaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044XCodice() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044XCodiceColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044XCodice' nella tabella 'T044_ElenchiMaterialiDettagl"& _ 
+                            "ioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044XCodiceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044ContoLavorazione() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ContoLavorazioneColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044ContoLavorazione' nella tabella 'T044_ElenchiMateria"& _ 
+                            "liDettaglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ContoLavorazioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Nota() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044NotaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Nota' nella tabella 'T044_ElenchiMaterialiDettaglioC"& _ 
+                            "omponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044NotaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Revisione() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RevisioneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Revisione' nella tabella 'T044_ElenchiMaterialiDetta"& _ 
+                            "glioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044DataRevisione() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044DataRevisioneColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044DataRevisione' nella tabella 'T044_ElenchiMaterialiD"& _ 
+                            "ettaglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044DataRevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044StandBy() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044StandByColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044StandBy' nella tabella 'T044_ElenchiMaterialiDettagl"& _ 
+                            "ioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044StandByColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044IdSuperiore() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdSuperioreColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044IdSuperiore' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdSuperioreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044InsertUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044InsertUser' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044InsertDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044InsertDate' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044UpdateUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044UpdateUser' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044UpdateDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044UpdateDate' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Accessori() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044AccessoriColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Accessori' nella tabella 'T044_ElenchiMaterialiDetta"& _ 
+                            "glioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044AccessoriColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044RaggruppamentoMateriali() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RaggruppamentoMaterialiColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044RaggruppamentoMateriali' nella tabella 'T044_Elenchi"& _ 
+                            "MaterialiDettaglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RaggruppamentoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T049Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T049DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T049Descrizione' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T049DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Id() As Integer
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Commessa() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043ElencoMateriali() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043ElencoMaterialiColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043ElencoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Descrizione' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Note() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043NoteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Note' nella tabella 'T044_ElenchiMaterialiDettaglioC"& _ 
+                            "omponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043NoteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property TipoRiga() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.TipoRigaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'TipoRiga' nella tabella 'T044_ElenchiMaterialiDettaglioC"& _ 
+                            "omponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.TipoRigaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Movimentato() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MovimentatoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Movimentato' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioComponente' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MovimentatoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043_ElenchiMaterialiRowParent() As T043_ElenchiMaterialiRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente")),T043_ElenchiMaterialiRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044QuantitaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044QuantitaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044QuantitaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044QuantitaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044UnitaMisuraNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UnitaMisuraColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044UnitaMisuraNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UnitaMisuraColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044CodiceNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CodiceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044CodiceNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044CodiceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044SettoreMerceologicoNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SettoreMerceologicoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044SettoreMerceologicoNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SettoreMerceologicoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044MarcaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MarcaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044MarcaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MarcaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044SpecificaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SpecificaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044SpecificaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044SpecificaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044XCodiceNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044XCodiceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044XCodiceNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044XCodiceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044ContoLavorazioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ContoLavorazioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044ContoLavorazioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044ContoLavorazioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044NotaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044NotaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044NotaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044NotaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044RevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044RevisioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044DataRevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044DataRevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044DataRevisioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044DataRevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044StandByNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044StandByColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044StandByNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044StandByColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044IdSuperioreNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdSuperioreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044IdSuperioreNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044IdSuperioreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044InsertUserNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044InsertUserNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044InsertDateNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044InsertDateNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044InsertDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044UpdateUserNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044UpdateUserNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044UpdateDateNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044UpdateDateNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044UpdateDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044AccessoriNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044AccessoriColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044AccessoriNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044AccessoriColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044RaggruppamentoMaterialiNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RaggruppamentoMaterialiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044RaggruppamentoMaterialiNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044RaggruppamentoMaterialiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT049DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T049DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT049DescrizioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T049DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043DescrizioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043NoteNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043NoteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043NoteNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T043NoteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTipoRigaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.TipoRigaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTipoRigaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.TipoRigaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044MovimentatoNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MovimentatoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044MovimentatoNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioComponente.T044MovimentatoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetT044_ElenchiMaterialiDettaglioAccessorioRows() As T044_ElenchiMaterialiDettaglioAccessorioRow()
+            If (Me.Table.ChildRelations("T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio"& _ 
+                "") Is Nothing) Then
+                Return New T044_ElenchiMaterialiDettaglioAccessorioRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio"& _ 
+                        "")),T044_ElenchiMaterialiDettaglioAccessorioRow())
+            End If
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class T044_ElenchiMaterialiDettaglioAccessorioRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableT044_ElenchiMaterialiDettaglioAccessorio As T044_ElenchiMaterialiDettaglioAccessorioDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableT044_ElenchiMaterialiDettaglioAccessorio = CType(Me.Table,T044_ElenchiMaterialiDettaglioAccessorioDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Id() As Integer
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Commessa() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044ElencoMateriali() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044ElencoMaterialiColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044ElencoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Riga() As Decimal
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RigaColumn),Decimal)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RigaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Quantita() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044QuantitaColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Quantita' nella tabella 'T044_ElenchiMaterialiDettag"& _ 
+                            "lioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044QuantitaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044UnitaMisura() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UnitaMisuraColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044UnitaMisura' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UnitaMisuraColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Codice() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044CodiceColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Codice' nella tabella 'T044_ElenchiMaterialiDettagli"& _ 
+                            "oAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044CodiceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044SettoreMerceologico() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SettoreMerceologicoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044SettoreMerceologico' nella tabella 'T044_ElenchiMate"& _ 
+                            "rialiDettaglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SettoreMerceologicoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Marca() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MarcaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Marca' nella tabella 'T044_ElenchiMaterialiDettaglio"& _ 
+                            "Accessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MarcaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Specifica() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SpecificaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Specifica' nella tabella 'T044_ElenchiMaterialiDetta"& _ 
+                            "glioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SpecificaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044XCodice() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044XCodiceColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044XCodice' nella tabella 'T044_ElenchiMaterialiDettagl"& _ 
+                            "ioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044XCodiceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044ContoLavorazione() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044ContoLavorazioneColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044ContoLavorazione' nella tabella 'T044_ElenchiMateria"& _ 
+                            "liDettaglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044ContoLavorazioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Nota() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044NotaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Nota' nella tabella 'T044_ElenchiMaterialiDettaglioA"& _ 
+                            "ccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044NotaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Revisione() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RevisioneColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Revisione' nella tabella 'T044_ElenchiMaterialiDetta"& _ 
+                            "glioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044DataRevisione() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044DataRevisioneColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044DataRevisione' nella tabella 'T044_ElenchiMaterialiD"& _ 
+                            "ettaglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044DataRevisioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044StandBy() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044StandByColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044StandBy' nella tabella 'T044_ElenchiMaterialiDettagl"& _ 
+                            "ioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044StandByColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044IdSuperiore() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdSuperioreColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044IdSuperiore' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdSuperioreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044InsertUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044InsertUser' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044InsertDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044InsertDate' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044UpdateUser() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateUserColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044UpdateUser' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateUserColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044UpdateDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044UpdateDate' nella tabella 'T044_ElenchiMaterialiDett"& _ 
+                            "aglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Accessori() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044AccessoriColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Accessori' nella tabella 'T044_ElenchiMaterialiDetta"& _ 
+                            "glioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044AccessoriColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044RaggruppamentoMateriali() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RaggruppamentoMaterialiColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044RaggruppamentoMateriali' nella tabella 'T044_Elenchi"& _ 
+                            "MaterialiDettaglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RaggruppamentoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T049Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T049DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T049Descrizione' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T049DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Id() As Integer
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043IdColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043IdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Commessa() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043CommessaColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043CommessaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043ElencoMateriali() As String
+            Get
+                Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043ElencoMaterialiColumn),String)
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043ElencoMaterialiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Descrizione() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043DescrizioneColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Descrizione' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043DescrizioneColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T043Note() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043NoteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T043Note' nella tabella 'T044_ElenchiMaterialiDettaglioA"& _ 
+                            "ccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043NoteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property TipoRiga() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.TipoRigaColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'TipoRiga' nella tabella 'T044_ElenchiMaterialiDettaglioA"& _ 
+                            "ccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.TipoRigaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044Movimentato() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MovimentatoColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Il valore della colonna 'T044Movimentato' nella tabella 'T044_ElenchiMaterialiDet"& _ 
+                            "taglioAccessorio' è DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MovimentatoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property T044_ElenchiMaterialiDettaglioComponenteRow() As T044_ElenchiMaterialiDettaglioComponenteRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio"& _ 
+                        "")),T044_ElenchiMaterialiDettaglioComponenteRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio"& _ 
+                        ""))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044QuantitaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044QuantitaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044QuantitaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044QuantitaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044UnitaMisuraNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UnitaMisuraColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044UnitaMisuraNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UnitaMisuraColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044CodiceNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044CodiceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044CodiceNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044CodiceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044SettoreMerceologicoNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SettoreMerceologicoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044SettoreMerceologicoNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SettoreMerceologicoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044MarcaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MarcaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044MarcaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MarcaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044SpecificaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SpecificaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044SpecificaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044SpecificaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044XCodiceNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044XCodiceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044XCodiceNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044XCodiceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044ContoLavorazioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044ContoLavorazioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044ContoLavorazioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044ContoLavorazioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044NotaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044NotaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044NotaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044NotaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044RevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044RevisioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044DataRevisioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044DataRevisioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044DataRevisioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044DataRevisioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044StandByNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044StandByColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044StandByNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044StandByColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044IdSuperioreNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdSuperioreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044IdSuperioreNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044IdSuperioreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044InsertUserNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044InsertUserNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044InsertDateNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044InsertDateNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044InsertDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044UpdateUserNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateUserColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044UpdateUserNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateUserColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044UpdateDateNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044UpdateDateNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044UpdateDateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044AccessoriNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044AccessoriColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044AccessoriNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044AccessoriColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044RaggruppamentoMaterialiNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RaggruppamentoMaterialiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044RaggruppamentoMaterialiNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044RaggruppamentoMaterialiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT049DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T049DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT049DescrizioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T049DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043DescrizioneNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043DescrizioneColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043DescrizioneNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043DescrizioneColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT043NoteNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043NoteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT043NoteNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T043NoteColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTipoRigaNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.TipoRigaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTipoRigaNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.TipoRigaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsT044MovimentatoNull() As Boolean
+            Return Me.IsNull(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MovimentatoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetT044MovimentatoNull()
+            Me(Me.tableT044_ElenchiMaterialiDettaglioAccessorio.T044MovimentatoColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -11019,6 +18359,258 @@ Partial Public Class LottiDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property Row() As Inserimento_LottoRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T042_ListeQuadriRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T042_ListeQuadriRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T042_ListeQuadriRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T042_ListeQuadriRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T117_ListeQuadriDettaglioRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T117_ListeQuadriDettaglioRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T117_ListeQuadriDettaglioRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T117_ListeQuadriDettaglioRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T045_ListeQuadriElenchiMaterialiRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T045_ListeQuadriElenchiMaterialiRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T045_ListeQuadriElenchiMaterialiRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T045_ListeQuadriElenchiMaterialiRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T042_MagicRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T042_MagicRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T042_MagicRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T042_MagicRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T043_ElenchiMaterialiRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T043_ElenchiMaterialiRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T043_ElenchiMaterialiRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T043_ElenchiMaterialiRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T044_ElenchiMaterialiDettaglioComponenteRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T044_ElenchiMaterialiDettaglioComponenteRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T044_ElenchiMaterialiDettaglioComponenteRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As T044_ElenchiMaterialiDettaglioAccessorioRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As T044_ElenchiMaterialiDettaglioAccessorioRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As T044_ElenchiMaterialiDettaglioAccessorioRow
             Get
                 Return Me.eventRow
             End Get
@@ -14804,6 +22396,3344 @@ Namespace LottiDataSetTableAdapters
     End Class
     
     '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T042_ListeQuadriTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T042_ListeQuadri"
+            tableMapping.ColumnMappings.Add("Ordinamento", "Ordinamento")
+            tableMapping.ColumnMappings.Add("T042Id", "T042Id")
+            tableMapping.ColumnMappings.Add("T042Commessa", "T042Commessa")
+            tableMapping.ColumnMappings.Add("T042Numerazione", "T042Numerazione")
+            tableMapping.ColumnMappings.Add("T042PosizioneInterna", "T042PosizioneInterna")
+            tableMapping.ColumnMappings.Add("T042PosizioneOrdine", "T042PosizioneOrdine")
+            tableMapping.ColumnMappings.Add("T042Quantita", "T042Quantita")
+            tableMapping.ColumnMappings.Add("T042Descrizione", "T042Descrizione")
+            tableMapping.ColumnMappings.Add("T042Lotto", "T042Lotto")
+            tableMapping.ColumnMappings.Add("T042StandBy", "T042StandBy")
+            tableMapping.ColumnMappings.Add("T042Revisione", "T042Revisione")
+            tableMapping.ColumnMappings.Add("T042DataRevisione", "T042DataRevisione")
+            tableMapping.ColumnMappings.Add("T042Note", "T042Note")
+            tableMapping.ColumnMappings.Add("T042ConsegnaMateriali", "T042ConsegnaMateriali")
+            tableMapping.ColumnMappings.Add("T042Colonne", "T042Colonne")
+            tableMapping.ColumnMappings.Add("T042PrezzoUnitario", "T042PrezzoUnitario")
+            tableMapping.ColumnMappings.Add("T042PrezzoVarianti", "T042PrezzoVarianti")
+            tableMapping.ColumnMappings.Add("T042InsertUser", "T042InsertUser")
+            tableMapping.ColumnMappings.Add("T042InsertDate", "T042InsertDate")
+            tableMapping.ColumnMappings.Add("T042UpdateUser", "T042UpdateUser")
+            tableMapping.ColumnMappings.Add("T042UpdateDate", "T042UpdateDate")
+            tableMapping.ColumnMappings.Add("T042PrezzoTotale", "T042PrezzoTotale")
+            tableMapping.ColumnMappings.Add("T042DescrizioneLotto", "T042DescrizioneLotto")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "dbo.T042_ListeQuadri_DeleteCommand"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T042Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T042PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T042PosizioneInterna", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "dbo.T042_ListeQuadri_InsertCommand"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Numerazione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Numerazione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T042PosizioneInterna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PosizioneOrdine", Global.System.Data.SqlDbType.NVarChar, 16, Global.System.Data.ParameterDirection.Input, 0, 0, "T042PosizioneOrdine", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Quantita", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Quantita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Descrizione", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Descrizione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Lotto", Global.System.Data.SqlDbType.NVarChar, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Lotto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042StandBy", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T042StandBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Revisione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Revisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042DataRevisione", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T042DataRevisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Note", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Note", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042ConsegnaMateriali", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T042ConsegnaMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Colonne", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Colonne", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PrezzoUnitario", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 2, "T042PrezzoUnitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PrezzoVarianti", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 2, "T042PrezzoVarianti", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T042InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T042InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T042UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T042UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "dbo.T042_ListeQuadri_UpdateCommand"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Numerazione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Numerazione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T042PosizioneInterna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PosizioneOrdine", Global.System.Data.SqlDbType.NVarChar, 16, Global.System.Data.ParameterDirection.Input, 0, 0, "T042PosizioneOrdine", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Quantita", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Quantita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Descrizione", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Descrizione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Lotto", Global.System.Data.SqlDbType.NVarChar, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Lotto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042StandBy", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T042StandBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Revisione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Revisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042DataRevisione", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T042DataRevisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Note", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Note", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042ConsegnaMateriali", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T042ConsegnaMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042Colonne", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T042Colonne", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PrezzoUnitario", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 2, "T042PrezzoUnitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042PrezzoVarianti", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 2, "T042PrezzoVarianti", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T042InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T042InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T042UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T042UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T042UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T042Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T042Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T042PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T042PosizioneInterna", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T042_ListeQuadri_SelectCommand"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T042_ListeQuadriDataTable, ByVal Commessa As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As LottiDataSet.T042_ListeQuadriDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As LottiDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "T042_ListeQuadri")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_T042Commessa As String, ByVal Original_T042PosizioneInterna As String) As Integer
+            If (Original_T042Commessa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T042Commessa,String)
+            End If
+            If (Original_T042PosizioneInterna Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T042PosizioneInterna,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert( _
+                    ByVal T042Commessa As String,  _
+                    ByVal T042Numerazione As Global.System.Nullable(Of Integer),  _
+                    ByVal T042PosizioneInterna As String,  _
+                    ByVal T042PosizioneOrdine As String,  _
+                    ByVal T042Quantita As Global.System.Nullable(Of Integer),  _
+                    ByVal T042Descrizione As String,  _
+                    ByVal T042Lotto As String,  _
+                    ByVal T042StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T042Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T042DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T042Note As String,  _
+                    ByVal T042ConsegnaMateriali As Global.System.Nullable(Of Date),  _
+                    ByVal T042Colonne As Global.System.Nullable(Of Integer),  _
+                    ByVal T042PrezzoUnitario As Global.System.Nullable(Of Decimal),  _
+                    ByVal T042PrezzoVarianti As Global.System.Nullable(Of Decimal),  _
+                    ByVal T042InsertUser As String,  _
+                    ByVal T042InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T042UpdateUser As String,  _
+                    ByVal T042UpdateDate As Global.System.Nullable(Of Date)) As Integer
+            If (T042Commessa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T042Commessa,String)
+            End If
+            If (T042Numerazione.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(T042Numerazione.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (T042PosizioneInterna Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(T042PosizioneInterna,String)
+            End If
+            If (T042PosizioneOrdine Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T042PosizioneOrdine,String)
+            End If
+            If (T042Quantita.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(T042Quantita.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (T042Descrizione Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(T042Descrizione,String)
+            End If
+            If (T042Lotto Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(T042Lotto,String)
+            End If
+            If (T042StandBy.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(T042StandBy.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (T042Revisione.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(T042Revisione.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (T042DataRevisione.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(T042DataRevisione.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (T042Note Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(T042Note,String)
+            End If
+            If (T042ConsegnaMateriali.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(T042ConsegnaMateriali.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (T042Colonne.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(T042Colonne.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (T042PrezzoUnitario.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(T042PrezzoUnitario.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (T042PrezzoVarianti.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(T042PrezzoVarianti.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (T042InsertUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(16).Value = CType(T042InsertUser,String)
+            End If
+            If (T042InsertDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(T042InsertDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (T042UpdateUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(T042UpdateUser,String)
+            End If
+            If (T042UpdateDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(19).Value = CType(T042UpdateDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal T042Commessa As String,  _
+                    ByVal T042Numerazione As Global.System.Nullable(Of Integer),  _
+                    ByVal T042PosizioneInterna As String,  _
+                    ByVal T042PosizioneOrdine As String,  _
+                    ByVal T042Quantita As Global.System.Nullable(Of Integer),  _
+                    ByVal T042Descrizione As String,  _
+                    ByVal T042Lotto As String,  _
+                    ByVal T042StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T042Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T042DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T042Note As String,  _
+                    ByVal T042ConsegnaMateriali As Global.System.Nullable(Of Date),  _
+                    ByVal T042Colonne As Global.System.Nullable(Of Integer),  _
+                    ByVal T042PrezzoUnitario As Global.System.Nullable(Of Decimal),  _
+                    ByVal T042PrezzoVarianti As Global.System.Nullable(Of Decimal),  _
+                    ByVal T042InsertUser As String,  _
+                    ByVal T042InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T042UpdateUser As String,  _
+                    ByVal T042UpdateDate As Global.System.Nullable(Of Date),  _
+                    ByVal Original_T042Commessa As String,  _
+                    ByVal Original_T042PosizioneInterna As String) As Integer
+            If (T042Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T042Commessa,String)
+            End If
+            If (T042Numerazione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(T042Numerazione.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (T042PosizioneInterna Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(T042PosizioneInterna,String)
+            End If
+            If (T042PosizioneOrdine Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T042PosizioneOrdine,String)
+            End If
+            If (T042Quantita.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(T042Quantita.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (T042Descrizione Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(T042Descrizione,String)
+            End If
+            If (T042Lotto Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(T042Lotto,String)
+            End If
+            If (T042StandBy.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(T042StandBy.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (T042Revisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(T042Revisione.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (T042DataRevisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(T042DataRevisione.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (T042Note Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(T042Note,String)
+            End If
+            If (T042ConsegnaMateriali.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(T042ConsegnaMateriali.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (T042Colonne.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(T042Colonne.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (T042PrezzoUnitario.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(T042PrezzoUnitario.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (T042PrezzoVarianti.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(T042PrezzoVarianti.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (T042InsertUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(T042InsertUser,String)
+            End If
+            If (T042InsertDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(T042InsertDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (T042UpdateUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(T042UpdateUser,String)
+            End If
+            If (T042UpdateDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(T042UpdateDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
+            If (Original_T042Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_T042Commessa,String)
+            End If
+            If (Original_T042PosizioneInterna Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_T042PosizioneInterna,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T117_ListeQuadriDettaglioTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T117_ListeQuadriDettaglio"
+            tableMapping.ColumnMappings.Add("T117Id", "T117Id")
+            tableMapping.ColumnMappings.Add("T117Commessa", "T117Commessa")
+            tableMapping.ColumnMappings.Add("T117PosizioneInterna", "T117PosizioneInterna")
+            tableMapping.ColumnMappings.Add("T117Centro", "T117Centro")
+            tableMapping.ColumnMappings.Add("T117OrePreventivate", "T117OrePreventivate")
+            tableMapping.ColumnMappings.Add("T117InsertUser", "T117InsertUser")
+            tableMapping.ColumnMappings.Add("T117InsertDate", "T117InsertDate")
+            tableMapping.ColumnMappings.Add("T117UpdateUser", "T117UpdateUser")
+            tableMapping.ColumnMappings.Add("T117UpdateDate", "T117UpdateDate")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "dbo.T117_ListeQuadriDettaglio_DeleteCommand"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T117Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T117PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T117PosizioneInterna", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T117Centro", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Centro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "dbo.T117_ListeQuadriDettaglio_InsertCommand"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T117PosizioneInterna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117Centro", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Centro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117OrePreventivate", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T117OrePreventivate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T117InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T117InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T117UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T117UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "dbo.T117_ListeQuadriDettaglio_UpdateCommand"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T117PosizioneInterna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117Centro", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Centro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117OrePreventivate", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T117OrePreventivate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T117InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T117InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T117UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T117UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T117UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T117Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T117PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T117PosizioneInterna", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T117Centro", Global.System.Data.SqlDbType.[Char], 2, Global.System.Data.ParameterDirection.Input, 0, 0, "T117Centro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T117_ListeQuadriDettaglio_SelectCommand"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T117_ListeQuadriDettaglioDataTable, ByVal Commessa As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As LottiDataSet.T117_ListeQuadriDettaglioDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As LottiDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "T117_ListeQuadriDettaglio")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_T117Commessa As String, ByVal Original_T117PosizioneInterna As String, ByVal Original_T117Centro As String) As Integer
+            If (Original_T117Commessa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T117Commessa,String)
+            End If
+            If (Original_T117PosizioneInterna Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T117PosizioneInterna,String)
+            End If
+            If (Original_T117Centro Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_T117Centro,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal T117Commessa As String, ByVal T117PosizioneInterna As String, ByVal T117Centro As String, ByVal T117OrePreventivate As Global.System.Nullable(Of Integer), ByVal T117InsertUser As String, ByVal T117InsertDate As Global.System.Nullable(Of Date), ByVal T117UpdateUser As String, ByVal T117UpdateDate As Global.System.Nullable(Of Date)) As Integer
+            If (T117Commessa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T117Commessa,String)
+            End If
+            If (T117PosizioneInterna Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(T117PosizioneInterna,String)
+            End If
+            If (T117Centro Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(T117Centro,String)
+            End If
+            If (T117OrePreventivate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T117OrePreventivate.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (T117InsertUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(T117InsertUser,String)
+            End If
+            If (T117InsertDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(T117InsertDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (T117UpdateUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(T117UpdateUser,String)
+            End If
+            If (T117UpdateDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(T117UpdateDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal T117Commessa As String, ByVal T117PosizioneInterna As String, ByVal T117Centro As String, ByVal T117OrePreventivate As Global.System.Nullable(Of Integer), ByVal T117InsertUser As String, ByVal T117InsertDate As Global.System.Nullable(Of Date), ByVal T117UpdateUser As String, ByVal T117UpdateDate As Global.System.Nullable(Of Date), ByVal Original_T117Commessa As String, ByVal Original_T117PosizioneInterna As String, ByVal Original_T117Centro As String) As Integer
+            If (T117Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T117Commessa,String)
+            End If
+            If (T117PosizioneInterna Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(T117PosizioneInterna,String)
+            End If
+            If (T117Centro Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(T117Centro,String)
+            End If
+            If (T117OrePreventivate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T117OrePreventivate.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (T117InsertUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(T117InsertUser,String)
+            End If
+            If (T117InsertDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(T117InsertDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (T117UpdateUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(T117UpdateUser,String)
+            End If
+            If (T117UpdateDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(T117UpdateDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_T117Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_T117Commessa,String)
+            End If
+            If (Original_T117PosizioneInterna Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_T117PosizioneInterna,String)
+            End If
+            If (Original_T117Centro Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_T117Centro,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal T117OrePreventivate As Global.System.Nullable(Of Integer), ByVal T117InsertUser As String, ByVal T117InsertDate As Global.System.Nullable(Of Date), ByVal T117UpdateUser As String, ByVal T117UpdateDate As Global.System.Nullable(Of Date), ByVal Original_T117Commessa As String, ByVal Original_T117PosizioneInterna As String, ByVal Original_T117Centro As String) As Integer
+            Return Me.Update(Original_T117Commessa, Original_T117PosizioneInterna, Original_T117Centro, T117OrePreventivate, T117InsertUser, T117InsertDate, T117UpdateUser, T117UpdateDate, Original_T117Commessa, Original_T117PosizioneInterna, Original_T117Centro)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T045_ListeQuadriElenchiMaterialiTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T045_ListeQuadriElenchiMateriali"
+            tableMapping.ColumnMappings.Add("T045Id", "T045Id")
+            tableMapping.ColumnMappings.Add("T045Commessa", "T045Commessa")
+            tableMapping.ColumnMappings.Add("T045PosizioneInterna", "T045PosizioneInterna")
+            tableMapping.ColumnMappings.Add("T045ElencoMateriali", "T045ElencoMateriali")
+            tableMapping.ColumnMappings.Add("T045Quantita", "T045Quantita")
+            tableMapping.ColumnMappings.Add("T045DataConsegnaMateriali", "T045DataConsegnaMateriali")
+            tableMapping.ColumnMappings.Add("T045TipoConsegna", "T045TipoConsegna")
+            tableMapping.ColumnMappings.Add("T045StandBy", "T045StandBy")
+            tableMapping.ColumnMappings.Add("T045Revisione", "T045Revisione")
+            tableMapping.ColumnMappings.Add("T045DataRevisione", "T045DataRevisione")
+            tableMapping.ColumnMappings.Add("T045Note", "T045Note")
+            tableMapping.ColumnMappings.Add("T045InsertUser", "T045InsertUser")
+            tableMapping.ColumnMappings.Add("T045InsertDate", "T045InsertDate")
+            tableMapping.ColumnMappings.Add("T045UpdateUser", "T045UpdateUser")
+            tableMapping.ColumnMappings.Add("T045UpdateDate", "T045UpdateDate")
+            tableMapping.ColumnMappings.Add("T042Descrizione", "T042Descrizione")
+            tableMapping.ColumnMappings.Add("T042Quantita", "T042Quantita")
+            tableMapping.ColumnMappings.Add("T043Descrizione", "T043Descrizione")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "dbo.T045_ListeQuadriElenchiMateriali_DeleteCommand"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T045Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T045Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T045PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T045PosizioneInterna", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T045ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T045ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "dbo.T045_ListeQuadriElenchiMateriali_InsertCommand"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T045Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T045PosizioneInterna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T045ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Quantita", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T045Quantita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045DataConsegnaMateriali", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T045DataConsegnaMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045TipoConsegna", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T045TipoConsegna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045StandBy", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T045StandBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Revisione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T045Revisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045DataRevisione", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T045DataRevisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Note", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T045Note", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T045InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T045InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T045UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T045UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "dbo.T045_ListeQuadriElenchiMateriali_UpdateCommand"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T045Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T045PosizioneInterna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T045ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Quantita", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T045Quantita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045DataConsegnaMateriali", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T045DataConsegnaMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045TipoConsegna", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T045TipoConsegna", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045StandBy", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T045StandBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Revisione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T045Revisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045DataRevisione", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T045DataRevisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045Note", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T045Note", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T045InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T045InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T045UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T045UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T045UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T045Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T045Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T045PosizioneInterna", Global.System.Data.SqlDbType.[Char], 6, Global.System.Data.ParameterDirection.Input, 0, 0, "T045PosizioneInterna", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T045ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T045ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T045_ListeQuadriElenchiMateriali_SelectCommand"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T045_ListeQuadriElenchiMaterialiDataTable, ByVal Commessa As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As LottiDataSet.T045_ListeQuadriElenchiMaterialiDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As LottiDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "T045_ListeQuadriElenchiMateriali")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_T045Commessa As String, ByVal Original_T045PosizioneInterna As String, ByVal Original_T045ElencoMateriali As String) As Integer
+            If (Original_T045Commessa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T045Commessa,String)
+            End If
+            If (Original_T045PosizioneInterna Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T045PosizioneInterna,String)
+            End If
+            If (Original_T045ElencoMateriali Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_T045ElencoMateriali,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal T045Commessa As String, ByVal T045PosizioneInterna As String, ByVal T045ElencoMateriali As String, ByVal T045Quantita As Global.System.Nullable(Of Integer), ByVal T045DataConsegnaMateriali As Global.System.Nullable(Of Date), ByVal T045TipoConsegna As Global.System.Nullable(Of Integer), ByVal T045StandBy As Global.System.Nullable(Of Boolean), ByVal T045Revisione As Global.System.Nullable(Of Integer), ByVal T045DataRevisione As Global.System.Nullable(Of Date), ByVal T045Note As String, ByVal T045InsertUser As String, ByVal T045InsertDate As Global.System.Nullable(Of Date), ByVal T045UpdateUser As String, ByVal T045UpdateDate As Global.System.Nullable(Of Date)) As Integer
+            If (T045Commessa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T045Commessa,String)
+            End If
+            If (T045PosizioneInterna Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(T045PosizioneInterna,String)
+            End If
+            If (T045ElencoMateriali Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(T045ElencoMateriali,String)
+            End If
+            If (T045Quantita.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T045Quantita.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (T045DataConsegnaMateriali.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(T045DataConsegnaMateriali.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (T045TipoConsegna.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(T045TipoConsegna.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (T045StandBy.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(T045StandBy.Value,Boolean)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (T045Revisione.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(T045Revisione.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (T045DataRevisione.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(T045DataRevisione.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (T045Note Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(T045Note,String)
+            End If
+            If (T045InsertUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(T045InsertUser,String)
+            End If
+            If (T045InsertDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(T045InsertDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (T045UpdateUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(T045UpdateUser,String)
+            End If
+            If (T045UpdateDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(T045UpdateDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal T045Commessa As String,  _
+                    ByVal T045PosizioneInterna As String,  _
+                    ByVal T045ElencoMateriali As String,  _
+                    ByVal T045Quantita As Global.System.Nullable(Of Integer),  _
+                    ByVal T045DataConsegnaMateriali As Global.System.Nullable(Of Date),  _
+                    ByVal T045TipoConsegna As Global.System.Nullable(Of Integer),  _
+                    ByVal T045StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T045Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T045DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T045Note As String,  _
+                    ByVal T045InsertUser As String,  _
+                    ByVal T045InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T045UpdateUser As String,  _
+                    ByVal T045UpdateDate As Global.System.Nullable(Of Date),  _
+                    ByVal Original_T045Commessa As String,  _
+                    ByVal Original_T045PosizioneInterna As String,  _
+                    ByVal Original_T045ElencoMateriali As String) As Integer
+            If (T045Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T045Commessa,String)
+            End If
+            If (T045PosizioneInterna Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(T045PosizioneInterna,String)
+            End If
+            If (T045ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(T045ElencoMateriali,String)
+            End If
+            If (T045Quantita.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T045Quantita.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (T045DataConsegnaMateriali.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(T045DataConsegnaMateriali.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (T045TipoConsegna.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(T045TipoConsegna.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (T045StandBy.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(T045StandBy.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (T045Revisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(T045Revisione.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (T045DataRevisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(T045DataRevisione.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (T045Note Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(T045Note,String)
+            End If
+            If (T045InsertUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(T045InsertUser,String)
+            End If
+            If (T045InsertDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(T045InsertDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (T045UpdateUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(T045UpdateUser,String)
+            End If
+            If (T045UpdateDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(T045UpdateDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_T045Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_T045Commessa,String)
+            End If
+            If (Original_T045PosizioneInterna Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_T045PosizioneInterna,String)
+            End If
+            If (Original_T045ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_T045ElencoMateriali,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal T045Quantita As Global.System.Nullable(Of Integer), ByVal T045DataConsegnaMateriali As Global.System.Nullable(Of Date), ByVal T045TipoConsegna As Global.System.Nullable(Of Integer), ByVal T045StandBy As Global.System.Nullable(Of Boolean), ByVal T045Revisione As Global.System.Nullable(Of Integer), ByVal T045DataRevisione As Global.System.Nullable(Of Date), ByVal T045Note As String, ByVal T045InsertUser As String, ByVal T045InsertDate As Global.System.Nullable(Of Date), ByVal T045UpdateUser As String, ByVal T045UpdateDate As Global.System.Nullable(Of Date), ByVal Original_T045Commessa As String, ByVal Original_T045PosizioneInterna As String, ByVal Original_T045ElencoMateriali As String) As Integer
+            Return Me.Update(Original_T045Commessa, Original_T045PosizioneInterna, Original_T045ElencoMateriali, T045Quantita, T045DataConsegnaMateriali, T045TipoConsegna, T045StandBy, T045Revisione, T045DataRevisione, T045Note, T045InsertUser, T045InsertDate, T045UpdateUser, T045UpdateDate, Original_T045Commessa, Original_T045PosizioneInterna, Original_T045ElencoMateriali)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T042_MagicTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T042_Magic"
+            tableMapping.ColumnMappings.Add("T042Commessa", "T042Commessa")
+            tableMapping.ColumnMappings.Add("T042Lotto", "T042Lotto")
+            tableMapping.ColumnMappings.Add("DescrizioneLotto", "DescrizioneLotto")
+            tableMapping.ColumnMappings.Add("C1", "C1")
+            tableMapping.ColumnMappings.Add("C2", "C2")
+            tableMapping.ColumnMappings.Add("C3", "C3")
+            tableMapping.ColumnMappings.Add("C4", "C4")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T042_Magic"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T042_MagicDataTable, ByVal Commessa As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal Commessa As String) As LottiDataSet.T042_MagicDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            Dim dataTable As LottiDataSet.T042_MagicDataTable = New LottiDataSet.T042_MagicDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T043_ElenchiMaterialiTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T043_ElenchiMateriali"
+            tableMapping.ColumnMappings.Add("T043Id", "T043Id")
+            tableMapping.ColumnMappings.Add("T043Commessa", "T043Commessa")
+            tableMapping.ColumnMappings.Add("T043ElencoMateriali", "T043ElencoMateriali")
+            tableMapping.ColumnMappings.Add("T043Descrizione", "T043Descrizione")
+            tableMapping.ColumnMappings.Add("T043Note", "T043Note")
+            tableMapping.ColumnMappings.Add("T043InsertUser", "T043InsertUser")
+            tableMapping.ColumnMappings.Add("T043InsertDate", "T043InsertDate")
+            tableMapping.ColumnMappings.Add("T043UpdateUser", "T043UpdateUser")
+            tableMapping.ColumnMappings.Add("T043UpdateDate", "T043UpdateDate")
+            tableMapping.ColumnMappings.Add("T043Revisione", "T043Revisione")
+            tableMapping.ColumnMappings.Add("T043DataRevisione", "T043DataRevisione")
+            tableMapping.ColumnMappings.Add("T043StandBy", "T043StandBy")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "dbo.T043_ElenchiMateriali_DeleteCommand"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T043Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T043ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T043ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "dbo.T043_ElenchiMateriali_InsertCommand_Fasulla"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T043ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043Descrizione", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Descrizione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043Note", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Note", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043InsertUser", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T043InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T043InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043UpdateUser", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T043UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T043UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "dbo.T043_ElenchiMateriali_UpdateCommand"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T043ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043Descrizione", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Descrizione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043Note", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Note", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T043InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T043InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T043UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T043UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T043UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T043Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T043Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T043ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T043ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T043_ElenchiMateriali_SelectCommand"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T043_ElenchiMaterialiDataTable, ByVal Commessa As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal Commessa As String) As LottiDataSet.T043_ElenchiMaterialiDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            Dim dataTable As LottiDataSet.T043_ElenchiMaterialiDataTable = New LottiDataSet.T043_ElenchiMaterialiDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As LottiDataSet.T043_ElenchiMaterialiDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As LottiDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "T043_ElenchiMateriali")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_T043Commessa As String, ByVal Original_T043ElencoMateriali As String) As Integer
+            If (Original_T043Commessa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T043Commessa,String)
+            End If
+            If (Original_T043ElencoMateriali Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T043ElencoMateriali,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal T043Commessa As String, ByVal T043ElencoMateriali As String, ByVal T043Descrizione As String, ByVal T043Note As String, ByVal T043InsertUser As String, ByVal T043InsertDate As Global.System.Nullable(Of Date), ByVal T043UpdateUser As String, ByVal T043UpdateDate As Global.System.Nullable(Of Date)) As Integer
+            If (T043Commessa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T043Commessa,String)
+            End If
+            If (T043ElencoMateriali Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(T043ElencoMateriali,String)
+            End If
+            If (T043Descrizione Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(T043Descrizione,String)
+            End If
+            If (T043Note Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T043Note,String)
+            End If
+            If (T043InsertUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(T043InsertUser,String)
+            End If
+            If (T043InsertDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(T043InsertDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (T043UpdateUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(T043UpdateUser,String)
+            End If
+            If (T043UpdateDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(T043UpdateDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal T043Commessa As String, ByVal T043ElencoMateriali As String, ByVal T043Descrizione As String, ByVal T043Note As String, ByVal T043InsertUser As String, ByVal T043InsertDate As Global.System.Nullable(Of Date), ByVal T043UpdateUser As String, ByVal T043UpdateDate As Global.System.Nullable(Of Date), ByVal Original_T043Commessa As String, ByVal Original_T043ElencoMateriali As String) As Integer
+            If (T043Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T043Commessa,String)
+            End If
+            If (T043ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(T043ElencoMateriali,String)
+            End If
+            If (T043Descrizione Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(T043Descrizione,String)
+            End If
+            If (T043Note Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T043Note,String)
+            End If
+            If (T043InsertUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(T043InsertUser,String)
+            End If
+            If (T043InsertDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(T043InsertDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (T043UpdateUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(T043UpdateUser,String)
+            End If
+            If (T043UpdateDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(T043UpdateDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_T043Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_T043Commessa,String)
+            End If
+            If (Original_T043ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_T043ElencoMateriali,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal T043Descrizione As String, ByVal T043Note As String, ByVal T043InsertUser As String, ByVal T043InsertDate As Global.System.Nullable(Of Date), ByVal T043UpdateUser As String, ByVal T043UpdateDate As Global.System.Nullable(Of Date), ByVal Original_T043Commessa As String, ByVal Original_T043ElencoMateriali As String) As Integer
+            Return Me.Update(Original_T043Commessa, Original_T043ElencoMateriali, T043Descrizione, T043Note, T043InsertUser, T043InsertDate, T043UpdateUser, T043UpdateDate, Original_T043Commessa, Original_T043ElencoMateriali)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T044_ElenchiMaterialiDettaglioComponenteTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T044_ElenchiMaterialiDettaglioComponente"
+            tableMapping.ColumnMappings.Add("T044Id", "T044Id")
+            tableMapping.ColumnMappings.Add("T044Commessa", "T044Commessa")
+            tableMapping.ColumnMappings.Add("T044ElencoMateriali", "T044ElencoMateriali")
+            tableMapping.ColumnMappings.Add("T044Riga", "T044Riga")
+            tableMapping.ColumnMappings.Add("T044Quantita", "T044Quantita")
+            tableMapping.ColumnMappings.Add("T044UnitaMisura", "T044UnitaMisura")
+            tableMapping.ColumnMappings.Add("T044Codice", "T044Codice")
+            tableMapping.ColumnMappings.Add("T044SettoreMerceologico", "T044SettoreMerceologico")
+            tableMapping.ColumnMappings.Add("T044Marca", "T044Marca")
+            tableMapping.ColumnMappings.Add("T044Specifica", "T044Specifica")
+            tableMapping.ColumnMappings.Add("T044XCodice", "T044XCodice")
+            tableMapping.ColumnMappings.Add("T044ContoLavorazione", "T044ContoLavorazione")
+            tableMapping.ColumnMappings.Add("T044Nota", "T044Nota")
+            tableMapping.ColumnMappings.Add("T044Revisione", "T044Revisione")
+            tableMapping.ColumnMappings.Add("T044DataRevisione", "T044DataRevisione")
+            tableMapping.ColumnMappings.Add("T044StandBy", "T044StandBy")
+            tableMapping.ColumnMappings.Add("T044IdSuperiore", "T044IdSuperiore")
+            tableMapping.ColumnMappings.Add("T044InsertUser", "T044InsertUser")
+            tableMapping.ColumnMappings.Add("T044InsertDate", "T044InsertDate")
+            tableMapping.ColumnMappings.Add("T044UpdateUser", "T044UpdateUser")
+            tableMapping.ColumnMappings.Add("T044UpdateDate", "T044UpdateDate")
+            tableMapping.ColumnMappings.Add("T044Accessori", "T044Accessori")
+            tableMapping.ColumnMappings.Add("T044RaggruppamentoMateriali", "T044RaggruppamentoMateriali")
+            tableMapping.ColumnMappings.Add("T049Descrizione", "T049Descrizione")
+            tableMapping.ColumnMappings.Add("T043Id", "T043Id")
+            tableMapping.ColumnMappings.Add("T043Commessa", "T043Commessa")
+            tableMapping.ColumnMappings.Add("T043ElencoMateriali", "T043ElencoMateriali")
+            tableMapping.ColumnMappings.Add("T043Descrizione", "T043Descrizione")
+            tableMapping.ColumnMappings.Add("T043Note", "T043Note")
+            tableMapping.ColumnMappings.Add("TipoRiga", "TipoRiga")
+            tableMapping.ColumnMappings.Add("T044Movimentato", "T044Movimentato")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "dbo.T044_ElenchiMaterialiDettaglio_DeleteCommand"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Riga", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 15, 3, "T044Riga", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "dbo.T044_ElenchiMaterialiDettaglio_InsertCommand"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044IdSuperiore", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044IdSuperiore", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T044InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "dbo.T044_ElenchiMaterialiDettaglio_UpdateCommand"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Riga", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 15, 3, "T044Riga", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Quantita", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 10, 3, "T044Quantita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044UnitaMisura", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044UnitaMisura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Codice", Global.System.Data.SqlDbType.[Char], 32, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Codice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044SettoreMerceologico", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044SettoreMerceologico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Marca", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044Marca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Specifica", Global.System.Data.SqlDbType.NVarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Specifica", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044XCodice", Global.System.Data.SqlDbType.NVarChar, 24, Global.System.Data.ParameterDirection.Input, 0, 0, "T044XCodice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044ContoLavorazione", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T044ContoLavorazione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Nota", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Nota", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Revisione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044Revisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044DataRevisione", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T044DataRevisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044StandBy", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T044StandBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044IdSuperiore", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044IdSuperiore", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T044InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T044InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T044UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T044UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Accessori", Global.System.Data.SqlDbType.NVarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Accessori", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044RaggruppamentoMateriali", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044RaggruppamentoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Riga", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 15, 3, "T044Riga", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T044_ElenchiMaterialiDettaglio_SelectCommand"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoRiga", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Idsuperiore", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T044_ElenchiMaterialiDettaglioComponenteDataTable, ByVal Commessa As String, ByVal TipoRiga As Global.System.Nullable(Of Integer), ByVal Id As Global.System.Nullable(Of Integer), ByVal Idsuperiore As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (TipoRiga.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(TipoRiga.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Id.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Id.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Idsuperiore.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Idsuperiore.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal Commessa As String, ByVal TipoRiga As Global.System.Nullable(Of Integer), ByVal Id As Global.System.Nullable(Of Integer), ByVal Idsuperiore As Global.System.Nullable(Of Integer)) As LottiDataSet.T044_ElenchiMaterialiDettaglioComponenteDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (TipoRiga.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(TipoRiga.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Id.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Id.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Idsuperiore.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Idsuperiore.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            Dim dataTable As LottiDataSet.T044_ElenchiMaterialiDettaglioComponenteDataTable = New LottiDataSet.T044_ElenchiMaterialiDettaglioComponenteDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As LottiDataSet.T044_ElenchiMaterialiDettaglioComponenteDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As LottiDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "T044_ElenchiMaterialiDettaglioComponente")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_T044Commessa As String, ByVal Original_T044ElencoMateriali As String, ByVal Original_T044Riga As Global.System.Nullable(Of Decimal)) As Integer
+            If (Original_T044Commessa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T044Commessa,String)
+            End If
+            If (Original_T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T044ElencoMateriali,String)
+            End If
+            If (Original_T044Riga.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_T044Riga.Value,Decimal)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal T044Commessa As String, ByVal T044ElencoMateriali As String, ByVal T044IdSuperiore As Global.System.Nullable(Of Integer), ByVal T044InsertUser As String) As Integer
+            If (T044Commessa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T044Commessa,String)
+            End If
+            If (T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(T044ElencoMateriali,String)
+            End If
+            If (T044IdSuperiore.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(T044IdSuperiore.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (T044InsertUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T044InsertUser,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal T044Commessa As String,  _
+                    ByVal T044ElencoMateriali As String,  _
+                    ByVal T044Riga As Global.System.Nullable(Of Decimal),  _
+                    ByVal T044Quantita As Global.System.Nullable(Of Decimal),  _
+                    ByVal T044UnitaMisura As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Codice As String,  _
+                    ByVal T044SettoreMerceologico As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Marca As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Specifica As String,  _
+                    ByVal T044XCodice As String,  _
+                    ByVal T044ContoLavorazione As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044Nota As String,  _
+                    ByVal T044Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T044DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T044StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044IdSuperiore As Global.System.Nullable(Of Integer),  _
+                    ByVal T044InsertUser As String,  _
+                    ByVal T044InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044UpdateUser As String,  _
+                    ByVal T044UpdateDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044Accessori As String,  _
+                    ByVal T044RaggruppamentoMateriali As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_T044Commessa As String,  _
+                    ByVal Original_T044ElencoMateriali As String,  _
+                    ByVal Original_T044Riga As Global.System.Nullable(Of Decimal)) As Integer
+            If (T044Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T044Commessa,String)
+            End If
+            If (T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(T044ElencoMateriali,String)
+            End If
+            If (T044Riga.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(T044Riga.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (T044Quantita.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T044Quantita.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (T044UnitaMisura.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(T044UnitaMisura.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (T044Codice Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(T044Codice,String)
+            End If
+            If (T044SettoreMerceologico.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(T044SettoreMerceologico.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (T044Marca.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(T044Marca.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (T044Specifica Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(T044Specifica,String)
+            End If
+            If (T044XCodice Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(T044XCodice,String)
+            End If
+            If (T044ContoLavorazione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(T044ContoLavorazione.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (T044Nota Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(T044Nota,String)
+            End If
+            If (T044Revisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(T044Revisione.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (T044DataRevisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(T044DataRevisione.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (T044StandBy.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(T044StandBy.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (T044IdSuperiore.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(T044IdSuperiore.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (T044InsertUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(T044InsertUser,String)
+            End If
+            If (T044InsertDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(T044InsertDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (T044UpdateUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(T044UpdateUser,String)
+            End If
+            If (T044UpdateDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(T044UpdateDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (T044Accessori Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(T044Accessori,String)
+            End If
+            If (T044RaggruppamentoMateriali.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(T044RaggruppamentoMateriali.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_T044Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_T044Commessa,String)
+            End If
+            If (Original_T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_T044ElencoMateriali,String)
+            End If
+            If (Original_T044Riga.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_T044Riga.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal T044Quantita As Global.System.Nullable(Of Decimal),  _
+                    ByVal T044UnitaMisura As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Codice As String,  _
+                    ByVal T044SettoreMerceologico As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Marca As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Specifica As String,  _
+                    ByVal T044XCodice As String,  _
+                    ByVal T044ContoLavorazione As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044Nota As String,  _
+                    ByVal T044Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T044DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T044StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044IdSuperiore As Global.System.Nullable(Of Integer),  _
+                    ByVal T044InsertUser As String,  _
+                    ByVal T044InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044UpdateUser As String,  _
+                    ByVal T044UpdateDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044Accessori As String,  _
+                    ByVal T044RaggruppamentoMateriali As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_T044Commessa As String,  _
+                    ByVal Original_T044ElencoMateriali As String,  _
+                    ByVal Original_T044Riga As Global.System.Nullable(Of Decimal)) As Integer
+            Return Me.Update(Original_T044Commessa, Original_T044ElencoMateriali, Original_T044Riga, T044Quantita, T044UnitaMisura, T044Codice, T044SettoreMerceologico, T044Marca, T044Specifica, T044XCodice, T044ContoLavorazione, T044Nota, T044Revisione, T044DataRevisione, T044StandBy, T044IdSuperiore, T044InsertUser, T044InsertDate, T044UpdateUser, T044UpdateDate, T044Accessori, T044RaggruppamentoMateriali, Original_T044Commessa, Original_T044ElencoMateriali, Original_T044Riga)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class T044_ElenchiMaterialiDettaglioAccessorioTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "T044_ElenchiMaterialiDettaglioAccessorio"
+            tableMapping.ColumnMappings.Add("T044Id", "T044Id")
+            tableMapping.ColumnMappings.Add("T044Commessa", "T044Commessa")
+            tableMapping.ColumnMappings.Add("T044ElencoMateriali", "T044ElencoMateriali")
+            tableMapping.ColumnMappings.Add("T044Riga", "T044Riga")
+            tableMapping.ColumnMappings.Add("T044Quantita", "T044Quantita")
+            tableMapping.ColumnMappings.Add("T044UnitaMisura", "T044UnitaMisura")
+            tableMapping.ColumnMappings.Add("T044Codice", "T044Codice")
+            tableMapping.ColumnMappings.Add("T044SettoreMerceologico", "T044SettoreMerceologico")
+            tableMapping.ColumnMappings.Add("T044Marca", "T044Marca")
+            tableMapping.ColumnMappings.Add("T044Specifica", "T044Specifica")
+            tableMapping.ColumnMappings.Add("T044XCodice", "T044XCodice")
+            tableMapping.ColumnMappings.Add("T044ContoLavorazione", "T044ContoLavorazione")
+            tableMapping.ColumnMappings.Add("T044Nota", "T044Nota")
+            tableMapping.ColumnMappings.Add("T044Revisione", "T044Revisione")
+            tableMapping.ColumnMappings.Add("T044DataRevisione", "T044DataRevisione")
+            tableMapping.ColumnMappings.Add("T044StandBy", "T044StandBy")
+            tableMapping.ColumnMappings.Add("T044IdSuperiore", "T044IdSuperiore")
+            tableMapping.ColumnMappings.Add("T044InsertUser", "T044InsertUser")
+            tableMapping.ColumnMappings.Add("T044InsertDate", "T044InsertDate")
+            tableMapping.ColumnMappings.Add("T044UpdateUser", "T044UpdateUser")
+            tableMapping.ColumnMappings.Add("T044UpdateDate", "T044UpdateDate")
+            tableMapping.ColumnMappings.Add("T044Accessori", "T044Accessori")
+            tableMapping.ColumnMappings.Add("T044RaggruppamentoMateriali", "T044RaggruppamentoMateriali")
+            tableMapping.ColumnMappings.Add("T049Descrizione", "T049Descrizione")
+            tableMapping.ColumnMappings.Add("T043Id", "T043Id")
+            tableMapping.ColumnMappings.Add("T043Commessa", "T043Commessa")
+            tableMapping.ColumnMappings.Add("T043ElencoMateriali", "T043ElencoMateriali")
+            tableMapping.ColumnMappings.Add("T043Descrizione", "T043Descrizione")
+            tableMapping.ColumnMappings.Add("T043Note", "T043Note")
+            tableMapping.ColumnMappings.Add("TipoRiga", "TipoRiga")
+            tableMapping.ColumnMappings.Add("T044Movimentato", "T044Movimentato")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "dbo.T044_ElenchiMaterialiDettaglio_DeleteCommand"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Riga", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 15, 3, "T044Riga", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "dbo.T044_ElenchiMaterialiDettaglio_InsertCommand"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044IdSuperiore", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044IdSuperiore", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T044InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "dbo.T044_ElenchiMaterialiDettaglio_UpdateCommand"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Riga", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 15, 3, "T044Riga", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Quantita", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 10, 3, "T044Quantita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044UnitaMisura", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044UnitaMisura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Codice", Global.System.Data.SqlDbType.[Char], 32, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Codice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044SettoreMerceologico", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044SettoreMerceologico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Marca", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044Marca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Specifica", Global.System.Data.SqlDbType.NVarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Specifica", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044XCodice", Global.System.Data.SqlDbType.NVarChar, 24, Global.System.Data.ParameterDirection.Input, 0, 0, "T044XCodice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044ContoLavorazione", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T044ContoLavorazione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Nota", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Nota", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Revisione", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044Revisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044DataRevisione", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, "T044DataRevisione", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044StandBy", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 1, 0, "T044StandBy", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044IdSuperiore", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044IdSuperiore", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044InsertUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T044InsertUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044InsertDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T044InsertDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044UpdateUser", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "T044UpdateUser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044UpdateDate", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 23, 3, "T044UpdateDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044Accessori", Global.System.Data.SqlDbType.NVarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Accessori", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@T044RaggruppamentoMateriali", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, "T044RaggruppamentoMateriali", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, "T044Commessa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044ElencoMateriali", Global.System.Data.SqlDbType.[Char], 7, Global.System.Data.ParameterDirection.Input, 0, 0, "T044ElencoMateriali", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_T044Riga", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 15, 3, "T044Riga", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.CE_Lotti.My.MySettings.Default.LottiConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.T044_ElenchiMaterialiDettaglio_SelectCommand"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Commessa", Global.System.Data.SqlDbType.[Char], 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoRiga", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Idsuperiore", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorioDataTable, ByVal Commessa As String, ByVal TipoRiga As Global.System.Nullable(Of Integer), ByVal Id As Global.System.Nullable(Of Integer), ByVal Idsuperiore As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (TipoRiga.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(TipoRiga.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Id.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Id.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Idsuperiore.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Idsuperiore.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal Commessa As String, ByVal TipoRiga As Global.System.Nullable(Of Integer), ByVal Id As Global.System.Nullable(Of Integer), ByVal Idsuperiore As Global.System.Nullable(Of Integer)) As LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorioDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Commessa Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Commessa,String)
+            End If
+            If (TipoRiga.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(TipoRiga.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Id.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Id.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Idsuperiore.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Idsuperiore.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            Dim dataTable As LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorioDataTable = New LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorioDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorioDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As LottiDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "T044_ElenchiMaterialiDettaglioAccessorio")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_T044Commessa As String, ByVal Original_T044ElencoMateriali As String, ByVal Original_T044Riga As Global.System.Nullable(Of Decimal)) As Integer
+            If (Original_T044Commessa Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_T044Commessa,String)
+            End If
+            If (Original_T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_T044ElencoMateriali,String)
+            End If
+            If (Original_T044Riga.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_T044Riga.Value,Decimal)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal T044Commessa As String, ByVal T044ElencoMateriali As String, ByVal T044IdSuperiore As Global.System.Nullable(Of Integer), ByVal T044InsertUser As String) As Integer
+            If (T044Commessa Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(T044Commessa,String)
+            End If
+            If (T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(T044ElencoMateriali,String)
+            End If
+            If (T044IdSuperiore.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(T044IdSuperiore.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (T044InsertUser Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(T044InsertUser,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal T044Commessa As String,  _
+                    ByVal T044ElencoMateriali As String,  _
+                    ByVal T044Riga As Global.System.Nullable(Of Decimal),  _
+                    ByVal T044Quantita As Global.System.Nullable(Of Decimal),  _
+                    ByVal T044UnitaMisura As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Codice As String,  _
+                    ByVal T044SettoreMerceologico As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Marca As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Specifica As String,  _
+                    ByVal T044XCodice As String,  _
+                    ByVal T044ContoLavorazione As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044Nota As String,  _
+                    ByVal T044Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T044DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T044StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044IdSuperiore As Global.System.Nullable(Of Integer),  _
+                    ByVal T044InsertUser As String,  _
+                    ByVal T044InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044UpdateUser As String,  _
+                    ByVal T044UpdateDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044Accessori As String,  _
+                    ByVal T044RaggruppamentoMateriali As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_T044Commessa As String,  _
+                    ByVal Original_T044ElencoMateriali As String,  _
+                    ByVal Original_T044Riga As Global.System.Nullable(Of Decimal)) As Integer
+            If (T044Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(T044Commessa,String)
+            End If
+            If (T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(T044ElencoMateriali,String)
+            End If
+            If (T044Riga.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(T044Riga.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (T044Quantita.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(T044Quantita.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (T044UnitaMisura.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(T044UnitaMisura.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (T044Codice Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(T044Codice,String)
+            End If
+            If (T044SettoreMerceologico.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(T044SettoreMerceologico.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (T044Marca.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(T044Marca.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (T044Specifica Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(T044Specifica,String)
+            End If
+            If (T044XCodice Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(T044XCodice,String)
+            End If
+            If (T044ContoLavorazione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(T044ContoLavorazione.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (T044Nota Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(T044Nota,String)
+            End If
+            If (T044Revisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(T044Revisione.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (T044DataRevisione.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(T044DataRevisione.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (T044StandBy.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(T044StandBy.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (T044IdSuperiore.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(T044IdSuperiore.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (T044InsertUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(T044InsertUser,String)
+            End If
+            If (T044InsertDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(T044InsertDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (T044UpdateUser Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(T044UpdateUser,String)
+            End If
+            If (T044UpdateDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(T044UpdateDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (T044Accessori Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(T044Accessori,String)
+            End If
+            If (T044RaggruppamentoMateriali.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(T044RaggruppamentoMateriali.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_T044Commessa Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_T044Commessa,String)
+            End If
+            If (Original_T044ElencoMateriali Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_T044ElencoMateriali,String)
+            End If
+            If (Original_T044Riga.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_T044Riga.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal T044Quantita As Global.System.Nullable(Of Decimal),  _
+                    ByVal T044UnitaMisura As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Codice As String,  _
+                    ByVal T044SettoreMerceologico As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Marca As Global.System.Nullable(Of Integer),  _
+                    ByVal T044Specifica As String,  _
+                    ByVal T044XCodice As String,  _
+                    ByVal T044ContoLavorazione As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044Nota As String,  _
+                    ByVal T044Revisione As Global.System.Nullable(Of Integer),  _
+                    ByVal T044DataRevisione As Global.System.Nullable(Of Date),  _
+                    ByVal T044StandBy As Global.System.Nullable(Of Boolean),  _
+                    ByVal T044IdSuperiore As Global.System.Nullable(Of Integer),  _
+                    ByVal T044InsertUser As String,  _
+                    ByVal T044InsertDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044UpdateUser As String,  _
+                    ByVal T044UpdateDate As Global.System.Nullable(Of Date),  _
+                    ByVal T044Accessori As String,  _
+                    ByVal T044RaggruppamentoMateriali As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_T044Commessa As String,  _
+                    ByVal Original_T044ElencoMateriali As String,  _
+                    ByVal Original_T044Riga As Global.System.Nullable(Of Decimal)) As Integer
+            Return Me.Update(Original_T044Commessa, Original_T044ElencoMateriali, Original_T044Riga, T044Quantita, T044UnitaMisura, T044Codice, T044SettoreMerceologico, T044Marca, T044Specifica, T044XCodice, T044ContoLavorazione, T044Nota, T044Revisione, T044DataRevisione, T044StandBy, T044IdSuperiore, T044InsertUser, T044InsertDate, T044UpdateUser, T044UpdateDate, T044Accessori, T044RaggruppamentoMateriali, Original_T044Commessa, Original_T044ElencoMateriali, Original_T044Riga)
+        End Function
+    End Class
+    
+    '''<summary>
     '''TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     '''</summary>
     <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
@@ -14821,6 +25751,18 @@ Namespace LottiDataSetTableAdapters
         Private _t074_LottiDettaglioTableAdapter As T074_LottiDettaglioTableAdapter
         
         Private _t072_GantPTableAdapter As T072_GantPTableAdapter
+        
+        Private _t042_ListeQuadriTableAdapter As T042_ListeQuadriTableAdapter
+        
+        Private _t117_ListeQuadriDettaglioTableAdapter As T117_ListeQuadriDettaglioTableAdapter
+        
+        Private _t045_ListeQuadriElenchiMaterialiTableAdapter As T045_ListeQuadriElenchiMaterialiTableAdapter
+        
+        Private _t043_ElenchiMaterialiTableAdapter As T043_ElenchiMaterialiTableAdapter
+        
+        Private _t044_ElenchiMaterialiDettaglioComponenteTableAdapter As T044_ElenchiMaterialiDettaglioComponenteTableAdapter
+        
+        Private _t044_ElenchiMaterialiDettaglioAccessorioTableAdapter As T044_ElenchiMaterialiDettaglioAccessorioTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -14880,6 +25822,90 @@ Namespace LottiDataSetTableAdapters
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property T042_ListeQuadriTableAdapter() As T042_ListeQuadriTableAdapter
+            Get
+                Return Me._t042_ListeQuadriTableAdapter
+            End Get
+            Set
+                Me._t042_ListeQuadriTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property T117_ListeQuadriDettaglioTableAdapter() As T117_ListeQuadriDettaglioTableAdapter
+            Get
+                Return Me._t117_ListeQuadriDettaglioTableAdapter
+            End Get
+            Set
+                Me._t117_ListeQuadriDettaglioTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property T045_ListeQuadriElenchiMaterialiTableAdapter() As T045_ListeQuadriElenchiMaterialiTableAdapter
+            Get
+                Return Me._t045_ListeQuadriElenchiMaterialiTableAdapter
+            End Get
+            Set
+                Me._t045_ListeQuadriElenchiMaterialiTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property T043_ElenchiMaterialiTableAdapter() As T043_ElenchiMaterialiTableAdapter
+            Get
+                Return Me._t043_ElenchiMaterialiTableAdapter
+            End Get
+            Set
+                Me._t043_ElenchiMaterialiTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property T044_ElenchiMaterialiDettaglioComponenteTableAdapter() As T044_ElenchiMaterialiDettaglioComponenteTableAdapter
+            Get
+                Return Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter
+            End Get
+            Set
+                Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property T044_ElenchiMaterialiDettaglioAccessorioTableAdapter() As T044_ElenchiMaterialiDettaglioAccessorioTableAdapter
+            Get
+                Return Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter
+            End Get
+            Set
+                Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property BackupDataSetBeforeUpdate() As Boolean
             Get
@@ -14910,6 +25936,30 @@ Namespace LottiDataSetTableAdapters
                             AndAlso (Not (Me._t072_GantPTableAdapter.Connection) Is Nothing)) Then
                     Return Me._t072_GantPTableAdapter.Connection
                 End If
+                If ((Not (Me._t042_ListeQuadriTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._t042_ListeQuadriTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._t042_ListeQuadriTableAdapter.Connection
+                End If
+                If ((Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._t117_ListeQuadriDettaglioTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._t117_ListeQuadriDettaglioTableAdapter.Connection
+                End If
+                If ((Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Connection
+                End If
+                If ((Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._t043_ElenchiMaterialiTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._t043_ElenchiMaterialiTableAdapter.Connection
+                End If
+                If ((Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Connection
+                End If
+                If ((Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Connection
+                End If
                 Return Nothing
             End Get
             Set
@@ -14932,6 +25982,24 @@ Namespace LottiDataSetTableAdapters
                 If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
+                If (Not (Me._t042_ListeQuadriTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
                 Return count
             End Get
         End Property
@@ -14943,12 +26011,66 @@ Namespace LottiDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As LottiDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T043_ElenchiMateriali.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._t043_ElenchiMaterialiTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             If (Not (Me._t059_LottiTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.T059_Lotti.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._t059_LottiTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._t042_ListeQuadriTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T042_ListeQuadri.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._t042_ListeQuadriTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T044_ElenchiMaterialiDettaglioComponente.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T045_ListeQuadriElenchiMateriali.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T117_ListeQuadriDettaglio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._t117_ListeQuadriDettaglioTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T072_GantP.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._t072_GantPTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -14961,12 +26083,12 @@ Namespace LottiDataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T072_GantP.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.T044_ElenchiMaterialiDettaglioAccessorio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._t072_GantPTableAdapter.Update(updatedRows))
+                    result = (result + Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -14980,11 +26102,59 @@ Namespace LottiDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As LottiDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T043_ElenchiMateriali.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._t043_ElenchiMaterialiTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             If (Not (Me._t059_LottiTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.T059_Lotti.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._t059_LottiTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._t042_ListeQuadriTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T042_ListeQuadri.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._t042_ListeQuadriTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T044_ElenchiMaterialiDettaglioComponente.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T045_ListeQuadriElenchiMateriali.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T117_ListeQuadriDettaglio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._t117_ListeQuadriDettaglioTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T072_GantP.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._t072_GantPTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -14996,11 +26166,11 @@ Namespace LottiDataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.T072_GantP.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.T044_ElenchiMaterialiDettaglioAccessorio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._t072_GantPTableAdapter.Update(addedRows))
+                    result = (result + Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -15014,11 +26184,11 @@ Namespace LottiDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As LottiDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T072_GantP.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T044_ElenchiMaterialiDettaglioAccessorio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._t072_GantPTableAdapter.Update(deletedRows))
+                    result = (result + Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -15030,11 +26200,59 @@ Namespace LottiDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
+            If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T072_GantP.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._t072_GantPTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T117_ListeQuadriDettaglio.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._t117_ListeQuadriDettaglioTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T045_ListeQuadriElenchiMateriali.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T044_ElenchiMaterialiDettaglioComponente.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._t042_ListeQuadriTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T042_ListeQuadri.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._t042_ListeQuadriTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._t059_LottiTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.T059_Lotti.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._t059_LottiTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.T043_ElenchiMateriali.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._t043_ElenchiMaterialiTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -15091,6 +26309,36 @@ Namespace LottiDataSetTableAdapters
             End If
             If ((Not (Me._t072_GantPTableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._t072_GantPTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
+                        "a stessa stringa di connessione.")
+            End If
+            If ((Not (Me._t042_ListeQuadriTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._t042_ListeQuadriTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
+                        "a stessa stringa di connessione.")
+            End If
+            If ((Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._t117_ListeQuadriDettaglioTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
+                        "a stessa stringa di connessione.")
+            End If
+            If ((Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
+                        "a stessa stringa di connessione.")
+            End If
+            If ((Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._t043_ElenchiMaterialiTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
+                        "a stessa stringa di connessione.")
+            End If
+            If ((Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
+                        "a stessa stringa di connessione.")
+            End If
+            If ((Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l"& _ 
                         "a stessa stringa di connessione.")
             End If
@@ -15152,6 +26400,60 @@ Namespace LottiDataSetTableAdapters
                     If Me._t072_GantPTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._t072_GantPTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._t072_GantPTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._t042_ListeQuadriTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._t042_ListeQuadriTableAdapter, Me._t042_ListeQuadriTableAdapter.Connection)
+                    Me._t042_ListeQuadriTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._t042_ListeQuadriTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._t042_ListeQuadriTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._t042_ListeQuadriTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._t042_ListeQuadriTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._t117_ListeQuadriDettaglioTableAdapter, Me._t117_ListeQuadriDettaglioTableAdapter.Connection)
+                    Me._t117_ListeQuadriDettaglioTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._t117_ListeQuadriDettaglioTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._t117_ListeQuadriDettaglioTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._t117_ListeQuadriDettaglioTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._t117_ListeQuadriDettaglioTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._t045_ListeQuadriElenchiMaterialiTableAdapter, Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Connection)
+                    Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._t043_ElenchiMaterialiTableAdapter, Me._t043_ElenchiMaterialiTableAdapter.Connection)
+                    Me._t043_ElenchiMaterialiTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._t043_ElenchiMaterialiTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._t043_ElenchiMaterialiTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._t043_ElenchiMaterialiTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._t043_ElenchiMaterialiTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter, Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Connection)
+                    Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter, Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Connection)
+                    Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -15225,6 +26527,30 @@ Namespace LottiDataSetTableAdapters
                 If (Not (Me._t072_GantPTableAdapter) Is Nothing) Then
                     Me._t072_GantPTableAdapter.Connection = CType(revertConnections(Me._t072_GantPTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._t072_GantPTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._t042_ListeQuadriTableAdapter) Is Nothing) Then
+                    Me._t042_ListeQuadriTableAdapter.Connection = CType(revertConnections(Me._t042_ListeQuadriTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._t042_ListeQuadriTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._t117_ListeQuadriDettaglioTableAdapter) Is Nothing) Then
+                    Me._t117_ListeQuadriDettaglioTableAdapter.Connection = CType(revertConnections(Me._t117_ListeQuadriDettaglioTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._t117_ListeQuadriDettaglioTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._t045_ListeQuadriElenchiMaterialiTableAdapter) Is Nothing) Then
+                    Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Connection = CType(revertConnections(Me._t045_ListeQuadriElenchiMaterialiTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._t045_ListeQuadriElenchiMaterialiTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._t043_ElenchiMaterialiTableAdapter) Is Nothing) Then
+                    Me._t043_ElenchiMaterialiTableAdapter.Connection = CType(revertConnections(Me._t043_ElenchiMaterialiTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._t043_ElenchiMaterialiTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter) Is Nothing) Then
+                    Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Connection = CType(revertConnections(Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._t044_ElenchiMaterialiDettaglioComponenteTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter) Is Nothing) Then
+                    Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Connection = CType(revertConnections(Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._t044_ElenchiMaterialiDettaglioAccessorioTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

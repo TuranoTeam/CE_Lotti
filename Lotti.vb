@@ -2,6 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Threading
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar
+Imports CE_Lotti.LottiDataSetTableAdapters
 Imports Infragistics.Win
 Imports Infragistics.Win.UltraWinGanttView
 Imports Infragistics.Win.UltraWinGrid
@@ -26,8 +27,6 @@ Public Class Lotti
     Private LottoTask As Task
     Private AttivitaChildTask As Task
     Private AttivitaChildTaskPrecedente As Task
-
-
     Public Sub New()
 
         ' La chiamata è richiesta dalla finestra di progettazione.
@@ -103,12 +102,20 @@ Public Class Lotti
         'usGantt.Collapsed = True
 
     End Sub
+    Private Sub LeggiProspettoOre()
+        T042_ListeQuadriTableAdapter.Fill(LottiDataSet.T042_ListeQuadri, CommessaAttiva)
+        T117_ListeQuadriDettaglioTableAdapter.Fill(LottiDataSet.T117_ListeQuadriDettaglio, CommessaAttiva)
+        T045_ListeQuadriElenchiMaterialiTableAdapter.Fill(LottiDataSet.T045_ListeQuadriElenchiMateriali, CommessaAttiva)
+        T042_MagicTableAdapter.Fill(LottiDataSet.T042_Magic, CommessaAttiva)
+
+    End Sub
 
     Private Sub ngrdCommesse_AfterRowActivate(sender As Object, e As EventArgs) Handles ngrdCommesse.AfterRowActivate
         If ngrdCommesse.ActiveRow IsNot Nothing AndAlso ngrdCommesse.ActiveRow.IsDataRow Then
             Me.Text = ngrdCommesse.ActiveRow.Cells("t058commessa").Text.Trim & " - " & ngrdCommesse.ActiveRow.Cells("t055RagioneSociale").Text
             CommessaAttiva = ngrdCommesse.ActiveRow.Cells("t058commessa").Text
             LeggiLotti(CommessaAttiva)
+            LeggiProspettoOre()
             GantPDT = TableAdapterGantP.GetData(Environ("Username"))
 
             Lotto = ""
@@ -122,7 +129,7 @@ Public Class Lotti
         T059_LottiTableAdapter.Fill(LottiDataSet.T059_Lotti, CommessaAttiva, Environ("USERNAME"))
         T058_Commesse_Totale_Ore_Lotti_SelezionatiTableAdapter.Fill(LottiDataSet.T058_Commesse_Totale_Ore_Lotti_Selezionati, Environ("USERNAME"))
     End Sub
-
+    Dim LottiProspetto As String = "L"
     Private Sub UtbManager_ToolClick(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinToolbars.ToolClickEventArgs) Handles UTBManager.ToolClick
         Select Case e.Tool.Key
             Case "ButtonTool1"
@@ -135,11 +142,16 @@ Public Class Lotti
                 If TabControlPrincipale.SelectedTab Is UltraTabPageControl1.Tab Then
                     TabControlPrincipale.SelectedTab = UltraTabPageControl2.Tab
                     UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Lotti"
+                    LottiProspetto = "P"
+                    UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Nuovo Quadro"
+                    UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Quadro202408010"
                 Else
                     TabControlPrincipale.SelectedTab = UltraTabPageControl1.Tab
                     UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Prospetto Ore"
+                    LottiProspetto = "L"
+                    UTBManager.Toolbars(0).Tools(3).CustomizedCaption = "Nuovo Lotto"
+                    UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Lotto"
                 End If
-
             Case "ButtonTool5"
                 MsgBox("Etichette")
             Case "ButtonTool6"
@@ -149,12 +161,21 @@ Public Class Lotti
             Case "ButtonTool8"
                 MsgBox("8888")
             Case "ButtonTool9"
-                ' MsgBox("nuovo lotto")
-                Inserimento_LottoTableAdapter.Fill(LottiDataSet.Inserimento_Lotto, CommessaAttiva, Environ("USERNAME"))
-                LeggiLotti(CommessaAttiva)
-            Case "ButtonTool10"
-                ngrdT059_Lotti.DeleteSelectedRows(False)
+                If LottiProspetto = "L" Then
+                    ' MsgBox("nuovo lotto")
+                    Inserimento_LottoTableAdapter.Fill(LottiDataSet.Inserimento_Lotto, CommessaAttiva, Environ("USERNAME"))
+                    LeggiLotti(CommessaAttiva)
+                End If
+                If LottiProspetto = "P" Then
 
+                End If
+            Case "ButtonTool10"
+                If LottiProspetto = "L" Then
+                    ngrdT059_Lotti.DeleteSelectedRows(False)
+                End If
+                If LottiProspetto = "P" Then
+                    ngrdT042_ListeQuadri.DeleteSelectedRows(False)
+                End If
         End Select
     End Sub
     Private Sub T058_Commessa_Cartella()
@@ -850,11 +871,344 @@ Public Class Lotti
             cmd.CommandText = "delete from T072_GantP where T072Commessa = '" & CommessaAttiva & "' and T072Lotto = '" & rg.Cells("T059Lotto").Text & "'"
             cmd.ExecuteNonQuery()
         Next
+        con.Close()
     End Sub
 
     Private Sub ngrdT059_Lotti_AfterRowsDeleted(sender As Object, e As EventArgs) Handles ngrdT059_Lotti.AfterRowsDeleted
         VerificaModifiche(False)
-
-
     End Sub
+    Dim DT1 As New DataTable
+    Dim DT2 As New DataTable
+    Dim DT3 As New DataTable
+    Private Sub ngrdT042_ListeQuadri_TotaliOrePreventivate_Calcolo()
+        DT1.Clear()
+        DT2.Clear()
+        Dim X As DataTable = LottiDataSet.T042_Magic.Clone
+        Dim nRW As DataRow = Nothing
+        For Each RW As DataRow In LottiDataSet.T042_Magic.Rows
+            If RW.RowState <> DataRowState.Deleted Then
+                nRW = X.NewRow
+                nRW.ItemArray = RW.ItemArray
+                X.Rows.Add(nRW)
+            End If
+        Next
+        If X.Rows.Count > 0 Then
+            DT1 = X.AsEnumerable().GroupBy(Function(r) r.Field(Of String)("T042Lotto")).[Select](Function(g)
+                                                                                                     Dim row As DataRow = DT1.NewRow()
+                                                                                                     row("Dummy") = 1
+                                                                                                     row("Lotto") = NxaNvl(g.Key)
+                                                                                                     row("Descrizione") = g.GroupBy(Function(r) r.Field(Of String)("DescrizioneLotto"))(0).Key
+                                                                                                     row("C1") = g.Sum(Function(r) r.Field(Of Integer)("C1"))
+                                                                                                     row("C2") = g.Sum(Function(r) r.Field(Of Integer)("C2"))
+                                                                                                     row("C3") = g.Sum(Function(r) r.Field(Of Integer)("C3"))
+                                                                                                     row("C4") = g.Sum(Function(r) r.Field(Of Integer)("C4"))
+                                                                                                     Return row
+                                                                                                 End Function).CopyToDataTable()
+        End If
+        If DT1.Rows.Count > 1 Then
+            DT2 = X.AsEnumerable().GroupBy(Function(r) r.Field(Of String)("T042Commessa")).[Select](Function(g)
+                                                                                                        Dim row As DataRow = DT2.NewRow()
+                                                                                                        row("Dummy") = 2
+                                                                                                        row("Lotto") = ""
+                                                                                                        row("Descrizione") = "Totali"
+                                                                                                        row("C1") = g.Sum(Function(r) r.Field(Of Integer)("C1"))
+                                                                                                        row("C2") = g.Sum(Function(r) r.Field(Of Integer)("C2"))
+                                                                                                        row("C3") = g.Sum(Function(r) r.Field(Of Integer)("C3"))
+                                                                                                        row("C4") = g.Sum(Function(r) r.Field(Of Integer)("C4"))
+                                                                                                        Return row
+                                                                                                    End Function).CopyToDataTable()
+        End If
+        Dim DT3 As New DataTable()
+        Dim dc As New DataColumn("Id") With {
+            .AutoIncrement = True,
+            .AutoIncrementSeed = 1,
+            .AutoIncrementStep = 1,
+            .DataType = GetType(Int32)
+        }
+        DT3.Columns.Add(dc)
+        DT3.Columns.Add("Lotto", GetType(String))
+        DT3.Columns.Add("Descrizione", GetType(String))
+        DT3.Columns.Add("C1", GetType(Integer))
+        DT3.Columns.Add("C2", GetType(Integer))
+        DT3.Columns.Add("C3", GetType(Integer))
+        DT3.Columns.Add("C4", GetType(Integer))
+        For I As Integer = 0 To DT1.Rows.Count - 1
+            Dim row As DataRow = DT3.Rows.Add()
+            row.ItemArray = DT1(I).ItemArray
+        Next I
+        If DT1.Rows.Count > 1 Then
+            For I As Integer = 0 To DT2.Rows.Count - 1
+                Dim row As DataRow = DT3.Rows.Add()
+                row.ItemArray = DT2(I).ItemArray
+            Next I
+        End If
+        ugT042Totali.DataSource = DT3
+        ugT042Totali.DisplayLayout.Bands(0).Columns(0).Hidden = True
+        ugT042Totali.DisplayLayout.Bands(0).Columns(1).Width = 50
+        ugT042Totali.DisplayLayout.Bands(0).Columns(2).Width = 250
+        For I As Integer = 3 To 6
+            ugT042Totali.DisplayLayout.Bands(0).Columns(I).Width = 100
+            ugT042Totali.DisplayLayout.Bands(0).Columns(I).Format = "###,###,###"
+            ugT042Totali.DisplayLayout.Bands(0).Columns(I).CellAppearance.TextHAlign = Infragistics.Win.HAlign.Right
+        Next I
+        ugT042Totali.DisplayLayout.Override.AllowUpdate = Infragistics.Win.DefaultableBoolean.False
+        ugT042Totali.DisplayLayout.Bands(0).Columns(0).SortIndicator = SortIndicator.Ascending
+    End Sub
+    Private Sub ngrdT042_ListeQuadri_AfterCellUpdate(sender As Object, e As Infragistics.Win.UltraWinGrid.CellEventArgs) Handles ngrdT042_ListeQuadri.AfterCellUpdate
+        If e.Cell.Row.Band.Index = 0 Then
+            e.Cell.Row.Cells("T042StandBy").Value = CBool(1)
+            If e.Cell.Column.Key = "T042Lotto" Or Strings.Left(e.Cell.Column.Key, 19) = "T042OrePreventivate" Then ngrdT042_ListeQuadri_TotaliOrePreventivate_Calcolo()
+            If e.Cell.Column.Key = "T042PrezzoUnitario" Or e.Cell.Column.Key = "T042PrezzoVarianti" Then e.Cell.Row.Cells("T042PrezzoTotale").Value = CDec(IIf(e.Cell.Row.Cells("T042PrezzoUnitario").Value.ToString = "", 0, e.Cell.Row.Cells("T042PrezzoUnitario").Value)) + CDec(IIf(e.Cell.Row.Cells("T042PrezzoVarianti").Value.ToString = "", 0, e.Cell.Row.Cells("T042PrezzoVarianti").Value))
+        Else
+            If e.Cell.Row.Band.Index = 1 Then
+                e.Cell.Row.ParentRow.Cells("T042StandBy").Value = CBool(1)
+            Else
+                e.Cell.Row.Cells("T045StandBy").Value = CBool(1)
+            End If
+        End If
+    End Sub
+    Dim PosizioneAttiva As String = ""
+
+    Private Sub ngrdT042_ListeQuadri_AfterRowExpanded(sender As Object, e As RowEventArgs) Handles ngrdT042_ListeQuadri.AfterRowExpanded
+        CercaPosizione(NxaNvl(e.Row.Cells("T042PosizioneInterna").Value))
+        PosizioneAttiva = NxaNvl(e.Row.Cells("T042PosizioneInterna").Value)
+    End Sub
+    Private Sub ngrdT042_ListeQuadri_AfterRowInsert(sender As Object, e As RowEventArgs) Handles ngrdT042_ListeQuadri.AfterRowInsert
+        e.Row.Cells("T042PosizioneInterna").Value = e.Row.Cells("T042Id").Value
+        e.Row.Cells("T042Commessa").Value = CommessaAttiva
+        e.Row.Cells("T042Quantita").Value = 1
+    End Sub
+    Private Sub CercaPosizione(Posizione As String)
+        For Each UGR As Infragistics.Win.UltraWinGrid.UltraGridRow In Me.ngrdT042_ListeQuadri.Rows
+            If UGR.Cells("T042PosizioneInterna").Value.ToString = Posizione Then
+                ngrdT042_ListeQuadri.Selected.Rows.Clear()
+                ngrdT042_ListeQuadri.ActiveRow = UGR
+                UGR.Selected = True
+                Exit For
+            End If
+        Next
+    End Sub
+    Private Sub ngrdT042_ListeQuadri_InitializeLayout(sender As Object, e As InitializeLayoutEventArgs) Handles ngrdT042_ListeQuadri.InitializeLayout
+        e.Layout.Override.HeaderClickAction = HeaderClickAction.Select
+        e.Layout.Override.SelectTypeCol = UltraWinGrid.SelectType.None
+    End Sub
+    Private Sub ngrdT042_ListeQuadri_InitializeRow(sender As Object, e As InitializeRowEventArgs) Handles ngrdT042_ListeQuadri.InitializeRow
+        If e.Row.Band.Index = 0 AndAlso CInt(e.Row.Cells("T042Id").Value) = 0 Then
+            e.Row.Cells("T042PosizioneInterna").Appearance.FontData.Bold = DefaultableBoolean.True
+            e.Row.Cells("T042PrezzoUnitario").Appearance.FontData.Bold = DefaultableBoolean.True
+            e.Row.Cells("T042PrezzoVarianti").Appearance.FontData.Bold = DefaultableBoolean.True
+            e.Row.Cells("T042PrezzoTotale").Appearance.FontData.Bold = DefaultableBoolean.True
+            e.Row.Cells("T042Id").Appearance.ForeColor = e.Row.Cells("T042Id").Appearance.BackColor
+            e.Row.Activation = Activation.ActivateOnly
+        End If
+    End Sub
+    'Private Sub ngrdT042_ListeQuadri_MouseUp(sender As Object, e As Windows.Forms.MouseEventArgs) Handles ngrdT042_ListeQuadri.MouseUp
+    '    If ngrdT042_ListeQuadri.ActiveRow IsNot Nothing AndAlso ngrdT042_ListeQuadri.ActiveRow.IsDataRow AndAlso ngrdT042_ListeQuadri.ActiveRow.Band.Index = 0 Then
+    '        Dim Grid As UltraGrid = CType(sender, UltraGrid)
+    '        Dim element As UIElement = Grid.DisplayLayout.UIElement.LastElementEntered
+    '        Dim header As Infragistics.Win.UltraWinGrid.ColumnHeader = CType(element.GetContext(GetType(ColumnHeader)), Infragistics.Win.UltraWinGrid.ColumnHeader)
+    '        If header IsNot Nothing AndAlso header.Column.Key = "T045ElencoMateriali" Then
+    '            Dim f As New T045Inserimento(Me, CommessaAttiva, NxaNvl(ngrdT042_ListeQuadri.NxaActiveDataRow.Cells("T042PosizioneInterna").Value), "P")
+    '            f.StartPosition = Windows.Forms.FormStartPosition.CenterParent
+    '            f.WindowState = Windows.Forms.FormWindowState.Normal
+    '            RigheInserite = False
+    '            f.ShowDialog()
+    '            If RigheInserite Then T045_Lettura()
+    '        End If
+    '    End If
+    'End Sub
+    'Private Sub ngrdT042_ListeQuadri_TtmAfterUpdate(sender As Object, e As CancelEventArgs) Handles ngrdT042_ListeQuadri.TtmAfterUpdate
+    '    T117_ListeQuadriDettaglioTableAdapter.Fill(LottiDataSet.T117_ListeQuadriDettaglio, CommessaAttiva)
+    'End Sub
+    Dim A As SqlClient.SqlDataAdapter = New SqlClient.SqlDataAdapter()
+    Dim S As New SqlClient.SqlConnection(My.MySettings.Default.LottiConnectionString)
+
+    Private Sub ngrdT042_ListeQuadri_BeforeRowsDeleted(sender As Object, e As BeforeRowsDeletedEventArgs) Handles ngrdT042_ListeQuadri.BeforeRowsDeleted
+
+        Dim DT_presente As New DataTable
+        For Each rg As Infragistics.Win.UltraWinGrid.UltraGridRow In ngrdT042_ListeQuadri.Selected.Rows
+            If rg.Band.Index = 0 Then
+                A.SelectCommand = New SqlClient.SqlCommand("select dbo.CE_FS_ControlloMovimentazionePosizione('" & CommessaAttiva & "','" & NxaNvl(rg.Cells("T042PosizioneInterna").Value) & "') Trovati", S)
+                A.Fill(DT_presente)
+                If CInt(NxaNvlNum(DT_presente.Rows(0).Item("Trovati"))) > 0 Then
+                    MsgBox("Impossibile Cancellare Posizione " & NxaNvl(rg.Cells("T042PosizioneInterna").Value).Trim & " Perchè Utilizzata ", CType(vbCritical + vbOKOnly, MsgBoxStyle), "Prospetto Ore")
+                    e.Cancel = True
+                    Exit Sub
+                End If
+            End If
+            If rg.Band.Index = 1 Then
+                MsgBox("Impossibile Cancellare Ore Preventivo", CType(vbCritical + vbOKOnly, MsgBoxStyle), "Prospetto Ore")
+                e.Cancel = True
+                Exit Sub
+            End If
+            If rg.Band.Index = 2 Then
+                MsgBox("Impossibile Cancellare Aggregazioni Da Questa Visualizzazione", CType(vbCritical + vbOKOnly, MsgBoxStyle), "Prospetto Ore")
+                e.Cancel = True
+                Exit Sub
+            End If
+        Next
+    End Sub
+    'Private Sub ngrdT042_ListeQuadri_TtmBeforeLoad(sender As Object, e As CancelEventArgs) Handles ngrdT042_ListeQuadri.TtmBeforeLoad
+    '    Dim DT1 As New DataTable
+    '    Dim DT2 As New DataTable
+    '    Dim DT3 As New DataTable
+    '    DT1.Clear()
+    '    DT1 = CType(Lottidataset.T042_ListeQuadri, DataTable).GetChanges
+    '    DT2.Clear()
+    '    DT2 = CType(Lottidataset.T045_ListeQuadriElenchiMateriali, DataTable).GetChanges
+    '    DT3.Clear()
+    '    DT3 = CType(Lottidataset.T117_ListeQuadriDettaglio, DataTable).GetChanges
+    '    If CiSonoModifiche(DT1, DT2, DT3) Then
+    '        If MsgBox("Confermi Rilettura Elenco Quadri", vbYesNo, "Tutte le Modifiche Andranno Perse") = vbYes Then ngrdT042_ListeQuadri_Lettura()
+    '    End If
+    '    e.Cancel = True
+    'End Sub
+    'Private Sub ngrdT042_ListeQuadri_TtmLettaConfigurazioneTabella(sender As Object, ByRef ConfigurazioneTabella As TtmDataSet.TtmConfigurazioneTabellaRow, Band As Integer, Tabella As String) Handles ngrdT042_ListeQuadri.TtmLettaConfigurazioneTabella
+    '    If Tabella = "T045_ListeQuadriElenchiMateriali" Then ConfigurazioneTabella.Item("CntaNewRowMode") = 0
+    'End Sub
+
+    Private Sub ngrdT042_ListeQuadri______Update()
+        Try
+            ngrdT042_ListeQuadri.UpdateData()
+            'If TtmConnection.State = ConnectionState.Closed Then TtmConnection.Open()
+            'TtmTransaction = TtmConnection.BeginTransaction
+            'T042_ListeQuadriTableAdapter.Transaction = TtmTransaction
+            T045_ListeQuadriElenchiMaterialiTableAdapter.Transaction = TtmTransaction
+            T117_ListeQuadriDettaglioTableAdapter.Transaction = TtmTransaction
+            T042_ListeQuadriTableAdapter.Update(LottiDataSet.T042_ListeQuadri)
+            T045_ListeQuadriElenchiMaterialiTableAdapter.Update(LottiDataSet.T045_ListeQuadriElenchiMateriali)
+            T117_ListeQuadriDettaglioTableAdapter.Update(LottiDataSet.T117_ListeQuadriDettaglio)
+            TtmTransaction.Commit()
+            'TtmConnection.Close()
+            ngrdT042_ListeQuadri______Revisione_Controllo()
+            T042_ListeQuadriTableAdapter.Fill(LottiDataSet.T042_ListeQuadri, CommessaAttiva)
+            'If ngrdT042_ListeQuadri.NxaDisabledTools.Contains(NxaCore.NxaCommon.NxaConsts.NXACONST_TOOLBAR_BUTTONUPDATE) Then
+            '    ngrdT042_ListeQuadri.NxaDisabledTools.Remove(NxaCore.NxaCommon.NxaConsts.NXACONST_TOOLBAR_BUTTONUPDATE)
+            '    NxaDisableTools()
+            'End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            TtmTransaction.Rollback()
+            '  TtmConnection.Close()
+        End Try
+    End Sub
+    Private Sub ngrdT042_ListeQuadri______Revisione_Controllo()
+
+        Dim DT As New DataTable()
+        Dim Revisione As Integer
+        'Dim SqlQuery As String
+        A.SelectCommand = New SqlClient.SqlCommand("SELECT T042StandBy FROM T042_ListeQuadri WHERE T042Commessa = '" & CommessaAttiva & "' AND T042StandBy=1", S)
+        A.Fill(DT)
+        'SqlQuery = "SELECT T042StandBy FROM T042_ListeQuadri WHERE T042Commessa = '" & CommessaAttiva & "' AND T042StandBy=1"
+        '    DT = NxaCore.NxaWindows.NxaDatabase.TtmFillDataTable(SqlQuery)
+        If DT.Rows.Count > 0 Then
+            If MsgBox("Aumentare Indice Revisione ?", vbYesNo, "Prospetto Ore Commessa " & CommessaAttiva) = vbYes Then
+                'SqlQuery = "SELECT ISNULL(T042Revisione, -1) AS R FROM T042_ListeQuadri WHERE T042Commessa = '" & CommessaAttiva & "' ORDER BY R DESC"
+                'DT = NxaCore.NxaWindows.NxaDatabase.TtmFillDataTable(SqlQuery)
+                A.SelectCommand = New SqlClient.SqlCommand("SELECT ISNULL(T042Revisione, -1) AS R FROM T042_ListeQuadri WHERE T042Commessa = '" & CommessaAttiva & "' ORDER BY R DESC", S)
+                A.Fill(DT)
+                Revisione = CInt(NxaNvlNum(DT.Rows(0).Item("R")))
+                'SqlQuery = "exec [dbo].[T042_ListeQuadri_Revisione_Aumento] '" & CommessaAttiva & "'," & CInt(IIf(Revisione = -1, 0, Revisione + 1))
+                'DT = NxaCore.NxaWindows.NxaDatabase.TtmFillDataTable(SqlQuery)
+                A.SelectCommand = New SqlClient.SqlCommand("exec [dbo].[T042_ListeQuadri_Revisione_Aumento] '" & CommessaAttiva & "'," & CInt(IIf(Revisione = -1, 0, Revisione + 1)), S)
+                A.Fill(DT)
+                For Each DR As DataRow In DT.Rows
+                    If CInt(DR("Esito").ToString) = 0 Then Dim Risposta As Long = MsgBox(DR("Errore").ToString & " - " & DR("Messaggio").ToString, CType(vbCritical + vbOKOnly, MsgBoxStyle), "Aumento Revisione Prospetto Ore")
+                Next DR
+            End If
+        End If
+    End Sub
+    Dim EM As LottiDataSet.T043_ElenchiMaterialiRow
+    Dim EMD As LottiDataSet.T044_ElenchiMaterialiDettaglioComponenteRow
+    Dim EMDA As LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorioRow
+    Dim DtElenchi As New DataTable
+    Public ElencoMaterialiAttivo As String = ""
+
+    Private Sub InserimentoRiga(TipoRiga As Integer, IdSuperiore As String, RigaGrid As UltraGridRow, RigaDT As DataRow, Griglia As String)
+        If DtElenchi IsNot Nothing Then
+            DtElenchi.Clear()
+        End If
+        If RigaGrid IsNot Nothing Then
+            ElencoMaterialiAttivo = NxaNvl(RigaGrid.Cells("T043ElencoMateriali").Value)
+        ElseIf RigaDT IsNot Nothing Then
+            ElencoMaterialiAttivo = NxaNvl(RigaDT.Item("T043ElencoMateriali"))
+        Else
+            Exit Sub
+        End If
+        '  DtElenchi = NxaCore.NxaWindows.NxaDatabase.TtmFillDataTable("exec T044_ElenchiMaterialiDettaglio_InsertCommand '" & CommessaAttiva & "','" & ElencoMaterialiAttivo & "'," & IdSuperiore & ",'" & NxaCore.NxaCommon.NxaVars.NxaUser & "'")
+        A.SelectCommand = New SqlClient.SqlCommand("exec T044_ElenchiMaterialiDettaglio_InsertCommand '" & CommessaAttiva & "','" & ElencoMaterialiAttivo & "'," & IdSuperiore & ",'" & Environ("Username") & "'", S)
+        A.Fill(DtElenchi)
+        For Each R As DataRow In DtElenchi.Rows
+            EMD = LottiDataSet.T044_ElenchiMaterialiDettaglioComponente.NewT044_ElenchiMaterialiDettaglioComponenteRow
+            For Each dc As DataColumn In R.Table.Columns
+                EMD.Item(dc.ColumnName) = R.Item(dc.ColumnName)
+            Next
+            If RigaGrid IsNot Nothing Then
+                EMD.T043Id = CInt(RigaGrid.Cells("T043Id").Value)
+                EMD.T043Commessa = NxaNvl(RigaGrid.Cells("T043Commessa").Value)
+                EMD.T043ElencoMateriali = NxaNvl(RigaGrid.Cells("T043ElencoMateriali").Value)
+            Else
+                EMD.T043Id = CInt(RigaDT.Item("T043Id"))
+                EMD.T043Commessa = NxaNvl(RigaDT.Item("T043Commessa"))
+                EMD.T043ElencoMateriali = NxaNvl(RigaDT.Item("T043ElencoMateriali"))
+            End If
+
+            EMD.TipoRiga = TipoRiga
+            LottiDataSet.T044_ElenchiMaterialiDettaglioComponente.Rows.Add(EMD)
+
+        Next
+        If TipoRiga = 2 Then
+            For Each R As DataRow In DtElenchi.Rows
+                EMDA = LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorio.NewT044_ElenchiMaterialiDettaglioAccessorioRow
+                For Each dc As DataColumn In R.Table.Columns
+                    EMDA.Item(dc.ColumnName) = R.Item(dc.ColumnName)
+                Next
+                If RigaGrid IsNot Nothing Then
+                    EMDA.T043Id = CInt(RigaGrid.Cells("T043Id").Value)
+                    EMDA.T043Commessa = NxaNvl(RigaGrid.Cells("T043Commessa").Value)
+                    EMDA.T043ElencoMateriali = NxaNvl(RigaGrid.Cells("T043ElencoMateriali").Value)
+                Else
+                    EMDA.T043Id = CInt(RigaDT.Item("T043Id"))
+                    EMDA.T043Commessa = NxaNvl(RigaDT.Item("T043Commessa"))
+                    EMDA.T043ElencoMateriali = NxaNvl(RigaDT.Item("T043ElencoMateriali"))
+                End If
+
+                EMDA.TipoRiga = TipoRiga
+                LottiDataSet.T044_ElenchiMaterialiDettaglioAccessorio.Rows.Add(EMDA)
+
+            Next
+        End If
+        'If Griglia = "G" Then
+        '    If RigaGrid IsNot Nothing Then
+        '        CercaRigaMateriali_G(EMD.T044Id)
+
+        '    Else
+        '        'CercaRigaMateriali_G(CInt(RigaDT.Item("T044Id")))
+        '        ngrdT043_ElenchiMateriali_G.NxaLastRecord()
+        '    End If
+        'End If
+        'If Griglia = "L" Then
+        '    If RigaGrid IsNot Nothing Then
+        '        CercaRigaMateriali_L(EMD.T044Id)
+        '    Else
+        '        CercaRigaMateriali_L(EMD.T044Id)
+        '    End If
+        'End If
+    End Sub
+
+
+
+    'Private Sub CercaRigaMateriali_G(Id As Integer)
+    '    If ngrdT043_ElenchiMateriali_G.NxaActiveDataRow IsNot Nothing Then
+    '        If ngrdT043_ElenchiMateriali_G.NxaActiveDataRow.Band.Index = 1 Then
+    '            For Each UGR As Infragistics.Win.UltraWinGrid.UltraGridRow In Me.ngrdT043_ElenchiMateriali_G.NxaActiveDataRow.ParentRow.ChildBands(0).Rows
+    '                If CInt(UGR.Cells("T044Id").Value) = Id Then
+    '                    ngrdT043_ElenchiMateriali_G.Selected.Rows.Clear()
+    '                    ngrdT043_ElenchiMateriali_G.ActiveRow = UGR
+    '                    Exit For
+    '                End If
+    '            Next
+    '        End If
+    '    End If
+    'End Sub
 End Class
