@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.188.21;Initial Catalog=StrutturaCommesse;User ID=sa;Password="& _ 
-            "Turano2020;TrustServerCertificate=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.52;Initial Catalog=StrutturaCommesse;User ID=AccessUser2021"& _ 
+            ";Password=123;TrustServerCertificate=True")>  _
         Public ReadOnly Property LottiConnectionString() As String
             Get
                 Return CType(Me("LottiConnectionString"),String)

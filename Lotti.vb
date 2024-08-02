@@ -153,7 +153,23 @@ Public Class Lotti
                     UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Lotto"
                 End If
             Case "ButtonTool5"
-                MsgBox("Etichette")
+
+                Dim oAccess As Microsoft.Office.Interop.Access.Application = Nothing
+                oAccess = New Microsoft.Office.Interop.Access.Application()
+                oAccess.OpenCurrentDatabase("O:\CE_VS\Access\Lotti.accdb", False)
+                oAccess.DoCmd.RunMacro("McrModelli")
+                oAccess.CloseCurrentDatabase()
+                oAccess.Quit()
+
+                'Select Case Oggetto
+                '    Case "OpenReport"
+                '        oAccess.DoCmd.OpenReport(NomeOggetto, Microsoft.Office.Interop.Access.AcView.acViewPreview, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Microsoft.Office.Interop.Access.AcWindowMode.acDialog, OpenArgs)
+                '        oAccess.CloseCurrentDatabase()
+                '        oAccess.Quit()
+                '    Case "OpenForm"
+                '        oAccess.DoCmd.OpenForm(NomeOggetto, Microsoft.Office.Interop.Access.AcFormView.acNormal, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Microsoft.Office.Interop.Access.AcFormOpenDataMode.acFormEdit, Microsoft.Office.Interop.Access.AcWindowMode.acDialog, OpenArgs)
+                '        oAccess.CloseCurrentDatabase()
+                '        oAccess.Quit()
             Case "ButtonTool6"
                 MsgBox("6666")
             Case "ButtonTool7"
@@ -222,8 +238,11 @@ Public Class Lotti
     End Sub
     Private Sub ImpostazioniControlli()
         Dim VisiblePosition As Integer = 0
-        Infragistics.Win.AppStyling.StyleManager.Load(Application.StartupPath.Replace("bin\Debug", "Resources") & "\CE.isl")
-
+        If Environ("Username") = "BLACK" Or Environ("Username") = "ABACU" Then
+            Infragistics.Win.AppStyling.StyleManager.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\CE_VisualStudio\CE.isl")
+        Else
+            Infragistics.Win.AppStyling.StyleManager.Load("U:\0000\CE_VS\CE.isl")
+        End If
         ' tacamia
         ConfigurazioneGriglia(ngrdT059_Lotti, 0, "T059_Lotti")
         ConfigurazioneGriglia(ngrdT059_Lotti, 1, "T074_LottiDettaglio")
