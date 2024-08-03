@@ -24,8 +24,8 @@ Partial Class Lotti
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim UltraGridBand1 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("LavorazioniEsterne_cbo", -1)
-        Dim UltraGridColumn265 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn266 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
+        Dim UltraGridColumn1 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
+        Dim UltraGridColumn2 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
         Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
@@ -149,40 +149,6 @@ Partial Class Lotti
         Dim UltraGridColumn365 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Descrizione")
         Dim UltraGridColumn366 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Quantita")
         Dim UltraGridColumn367 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T043Descrizione")
-        Dim UltraGridBand11 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T059_Lotti", -1)
-        Dim UltraGridColumn368 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059IdLotto")
-        Dim UltraGridColumn369 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Commessa")
-        Dim UltraGridColumn370 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Lotto")
-        Dim UltraGridColumn371 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DescrizioneLotto")
-        Dim UltraGridColumn372 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataConsegna")
-        Dim UltraGridColumn373 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Sede")
-        Dim UltraGridColumn374 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Consegna")
-        Dim UltraGridColumn375 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Colonne")
-        Dim UltraGridColumn376 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Note")
-        Dim UltraGridColumn377 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059NoteUfficioIndustrializzazione")
-        Dim UltraGridColumn378 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059LavorazioniEsterne")
-        Dim UltraGridColumn379 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataChiusura")
-        Dim UltraGridColumn380 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataAggiornamentoOre")
-        Dim UltraGridColumn381 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UtenteAggiornamentoOre")
-        Dim UltraGridColumn382 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059InsertUser")
-        Dim UltraGridColumn383 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059InsertDate")
-        Dim UltraGridColumn384 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UpdateUser")
-        Dim UltraGridColumn385 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UpdateDate")
-        Dim UltraGridColumn386 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059_Lotti_T074_LottiDettaglio")
-        Dim UltraGridBand12 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T059_Lotti_T074_LottiDettaglio", 0)
-        Dim UltraGridColumn387 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Id")
-        Dim UltraGridColumn388 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Commessa")
-        Dim UltraGridColumn389 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Lotto")
-        Dim UltraGridColumn390 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn391 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Obbiettivo")
-        Dim UltraGridColumn392 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074OreEsterne")
-        Dim UltraGridColumn393 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
-        Dim UltraGridColumn394 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074InsertUser")
-        Dim UltraGridColumn395 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074InsertDate")
-        Dim UltraGridColumn396 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074UpdateUser")
-        Dim UltraGridColumn397 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074UpdateDate")
-        Dim UltraGridColumn398 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Preventivo")
-        Dim UltraGridColumn399 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
         Dim UltraTab1 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim UltraTab2 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim UltraToolbar1 As Infragistics.Win.UltraWinToolbars.UltraToolbar = New Infragistics.Win.UltraWinToolbars.UltraToolbar("UltraToolbar1")
@@ -558,9 +524,9 @@ Partial Class Lotti
         'cboT074LavorazioniEsterneG
         '
         Me.cboT074LavorazioniEsterneG.DataSource = Me.LavorazioniEsternecboBindingSource
-        UltraGridColumn265.Header.VisiblePosition = 0
-        UltraGridColumn266.Header.VisiblePosition = 1
-        UltraGridBand1.Columns.AddRange(New Object() {UltraGridColumn265, UltraGridColumn266})
+        UltraGridColumn1.Header.VisiblePosition = 0
+        UltraGridColumn2.Header.VisiblePosition = 1
+        UltraGridBand1.Columns.AddRange(New Object() {UltraGridColumn1, UltraGridColumn2})
         Me.cboT074LavorazioniEsterneG.DisplayLayout.BandsSerializer.Add(UltraGridBand1)
         Me.cboT074LavorazioniEsterneG.DisplayMember = "T074LavorazioniEsterne"
         Me.cboT074LavorazioniEsterneG.Location = New System.Drawing.Point(14, 139)
@@ -1155,7 +1121,7 @@ Partial Class Lotti
         Me.UltraTabPageControl2.Controls.Add(Me.SplitContainer1)
         Me.UltraTabPageControl2.Location = New System.Drawing.Point(0, 0)
         Me.UltraTabPageControl2.Name = "UltraTabPageControl2"
-        Me.UltraTabPageControl2.Size = New System.Drawing.Size(1689, 700)
+        Me.UltraTabPageControl2.Size = New System.Drawing.Size(1689, 786)
         '
         'SplitContainer1
         '
@@ -1172,8 +1138,8 @@ Partial Class Lotti
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.ugT042Totali)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1689, 700)
-        Me.SplitContainer1.SplitterDistance = 563
+        Me.SplitContainer1.Size = New System.Drawing.Size(1689, 786)
+        Me.SplitContainer1.SplitterDistance = 657
         Me.SplitContainer1.TabIndex = 0
         '
         'ngrdT042_ListeQuadri
@@ -1240,7 +1206,7 @@ Partial Class Lotti
         Me.ngrdT042_ListeQuadri.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ngrdT042_ListeQuadri.Location = New System.Drawing.Point(0, 0)
         Me.ngrdT042_ListeQuadri.Name = "ngrdT042_ListeQuadri"
-        Me.ngrdT042_ListeQuadri.Size = New System.Drawing.Size(1689, 563)
+        Me.ngrdT042_ListeQuadri.Size = New System.Drawing.Size(1689, 657)
         Me.ngrdT042_ListeQuadri.TabIndex = 9
         Me.ngrdT042_ListeQuadri.Text = "ngrdT042_ListeQuadri"
         '
@@ -1251,47 +1217,10 @@ Partial Class Lotti
         '
         'ugT042Totali
         '
-        Me.ugT042Totali.DataSource = Me.T059LottiBindingSource
-        UltraGridColumn368.Header.VisiblePosition = 0
-        UltraGridColumn369.Header.VisiblePosition = 1
-        UltraGridColumn370.Header.VisiblePosition = 2
-        UltraGridColumn371.Header.VisiblePosition = 3
-        UltraGridColumn372.Header.VisiblePosition = 4
-        UltraGridColumn373.Header.VisiblePosition = 5
-        UltraGridColumn374.Header.VisiblePosition = 6
-        UltraGridColumn375.Header.VisiblePosition = 7
-        UltraGridColumn376.Header.VisiblePosition = 8
-        UltraGridColumn377.Header.VisiblePosition = 9
-        UltraGridColumn378.Header.VisiblePosition = 10
-        UltraGridColumn379.Header.VisiblePosition = 11
-        UltraGridColumn380.Header.VisiblePosition = 12
-        UltraGridColumn381.Header.VisiblePosition = 13
-        UltraGridColumn382.Header.VisiblePosition = 14
-        UltraGridColumn383.Header.VisiblePosition = 15
-        UltraGridColumn384.Header.VisiblePosition = 16
-        UltraGridColumn385.Header.VisiblePosition = 17
-        UltraGridColumn386.Header.VisiblePosition = 18
-        UltraGridBand11.Columns.AddRange(New Object() {UltraGridColumn368, UltraGridColumn369, UltraGridColumn370, UltraGridColumn371, UltraGridColumn372, UltraGridColumn373, UltraGridColumn374, UltraGridColumn375, UltraGridColumn376, UltraGridColumn377, UltraGridColumn378, UltraGridColumn379, UltraGridColumn380, UltraGridColumn381, UltraGridColumn382, UltraGridColumn383, UltraGridColumn384, UltraGridColumn385, UltraGridColumn386})
-        UltraGridColumn387.Header.VisiblePosition = 0
-        UltraGridColumn388.Header.VisiblePosition = 1
-        UltraGridColumn389.Header.VisiblePosition = 2
-        UltraGridColumn390.Header.VisiblePosition = 3
-        UltraGridColumn391.Header.VisiblePosition = 4
-        UltraGridColumn392.Header.VisiblePosition = 5
-        UltraGridColumn393.Header.VisiblePosition = 6
-        UltraGridColumn394.Header.VisiblePosition = 7
-        UltraGridColumn395.Header.VisiblePosition = 8
-        UltraGridColumn396.Header.VisiblePosition = 9
-        UltraGridColumn397.Header.VisiblePosition = 10
-        UltraGridColumn398.Header.VisiblePosition = 11
-        UltraGridColumn399.Header.VisiblePosition = 12
-        UltraGridBand12.Columns.AddRange(New Object() {UltraGridColumn387, UltraGridColumn388, UltraGridColumn389, UltraGridColumn390, UltraGridColumn391, UltraGridColumn392, UltraGridColumn393, UltraGridColumn394, UltraGridColumn395, UltraGridColumn396, UltraGridColumn397, UltraGridColumn398, UltraGridColumn399})
-        Me.ugT042Totali.DisplayLayout.BandsSerializer.Add(UltraGridBand11)
-        Me.ugT042Totali.DisplayLayout.BandsSerializer.Add(UltraGridBand12)
         Me.ugT042Totali.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ugT042Totali.Location = New System.Drawing.Point(0, 0)
         Me.ugT042Totali.Name = "ugT042Totali"
-        Me.ugT042Totali.Size = New System.Drawing.Size(1689, 133)
+        Me.ugT042Totali.Size = New System.Drawing.Size(1689, 125)
         Me.ugT042Totali.TabIndex = 10
         Me.ugT042Totali.Text = "ugT042Totali"
         '
@@ -1304,7 +1233,7 @@ Partial Class Lotti
         Me.UltraPanelResto.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanelResto.Location = New System.Drawing.Point(0, 43)
         Me.UltraPanelResto.Name = "UltraPanelResto"
-        Me.UltraPanelResto.Size = New System.Drawing.Size(1689, 700)
+        Me.UltraPanelResto.Size = New System.Drawing.Size(1689, 786)
         Me.UltraPanelResto.TabIndex = 12
         '
         'TabControlPrincipale
@@ -1316,7 +1245,7 @@ Partial Class Lotti
         Me.TabControlPrincipale.Location = New System.Drawing.Point(0, 0)
         Me.TabControlPrincipale.Name = "TabControlPrincipale"
         Me.TabControlPrincipale.SharedControlsPage = Me.UltraTabSharedControlsPage1
-        Me.TabControlPrincipale.Size = New System.Drawing.Size(1689, 700)
+        Me.TabControlPrincipale.Size = New System.Drawing.Size(1689, 786)
         Me.TabControlPrincipale.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Wizard
         Me.TabControlPrincipale.TabIndex = 12
         UltraTab1.Key = "Lotti"
@@ -1331,7 +1260,7 @@ Partial Class Lotti
         '
         Me.UltraTabSharedControlsPage1.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabSharedControlsPage1.Name = "UltraTabSharedControlsPage1"
-        Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(1689, 700)
+        Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(1689, 786)
         '
         'UTBManager
         '
@@ -1416,7 +1345,7 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.BackColor = System.Drawing.SystemColors.Control
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Bottom
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.Location = New System.Drawing.Point(0, 743)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.Location = New System.Drawing.Point(0, 829)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.Name = "_UltraTabPageControl2_Toolbars_Dock_Area_Bottom"
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.Size = New System.Drawing.Size(1689, 0)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom.ToolbarsManager = Me.UTBManager
@@ -1429,7 +1358,7 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.ForeColor = System.Drawing.SystemColors.ControlText
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Location = New System.Drawing.Point(0, 43)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Name = "_UltraTabPageControl2_Toolbars_Dock_Area_Left"
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Size = New System.Drawing.Size(0, 700)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.Size = New System.Drawing.Size(0, 786)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Left.ToolbarsManager = Me.UTBManager
         '
         '_UltraTabPageControl2_Toolbars_Dock_Area_Right
@@ -1440,7 +1369,7 @@ Partial Class Lotti
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.ForeColor = System.Drawing.SystemColors.ControlText
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Location = New System.Drawing.Point(1689, 43)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Name = "_UltraTabPageControl2_Toolbars_Dock_Area_Right"
-        Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Size = New System.Drawing.Size(0, 700)
+        Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.Size = New System.Drawing.Size(0, 786)
         Me._UltraTabPageControl2_Toolbars_Dock_Area_Right.ToolbarsManager = Me.UTBManager
         '
         'Lotti_Fill_Panel
@@ -1449,7 +1378,7 @@ Partial Class Lotti
         Me.Lotti_Fill_Panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Lotti_Fill_Panel.Location = New System.Drawing.Point(0, 43)
         Me.Lotti_Fill_Panel.Name = "Lotti_Fill_Panel"
-        Me.Lotti_Fill_Panel.Size = New System.Drawing.Size(1689, 700)
+        Me.Lotti_Fill_Panel.Size = New System.Drawing.Size(1689, 786)
         Me.Lotti_Fill_Panel.TabIndex = 21
         '
         'UltraCalendarInfo1
@@ -1537,7 +1466,7 @@ Partial Class Lotti
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1689, 743)
+        Me.ClientSize = New System.Drawing.Size(1689, 829)
         Me.ControlBox = False
         Me.Controls.Add(Me.UltraPanelResto)
         Me.Controls.Add(Me.Lotti_Fill_Panel)

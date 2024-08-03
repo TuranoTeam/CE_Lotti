@@ -77,10 +77,29 @@ Public Class Lotti
         btnStartPiu.Text = "+"
         StartMeno.Text = "-"
 
-        ImpostazioniControlli()
-        ImpostazioneToolBar()
+        DT1.Columns.Add("Dummy", GetType(Integer))
+        DT1.Columns.Add("Lotto", GetType(String))
+        DT1.Columns.Add("Descrizione", GetType(String))
+        DT1.Columns.Add("C1", GetType(Integer))
+        DT1.Columns.Add("C2", GetType(Integer))
+        DT1.Columns.Add("C3", GetType(Integer))
+        DT1.Columns.Add("C4", GetType(Integer))
+
+        DT2.Columns.Add("Dummy", GetType(Integer))
+        DT2.Columns.Add("Lotto", GetType(String))
+        DT2.Columns.Add("Descrizione", GetType(String))
+        DT2.Columns.Add("C1", GetType(Integer))
+        DT2.Columns.Add("C2", GetType(Integer))
+        DT2.Columns.Add("C3", GetType(Integer))
+        DT2.Columns.Add("C4", GetType(Integer))
+
+        DT3.Columns.Add("Commessa", GetType(String))
+        DT3.Columns.Add("DataConsegna", GetType(Date))
+
         T058_Commesse_aperteTableAdapter.Fill(Me.LottiDataSet.T058_Commesse_aperte)
         LavorazioniEsterne_cboTableAdapter.Fill(Me.LottiDataSet.LavorazioniEsterne_cbo)
+        ImpostazioniControlli()
+        ImpostazioneToolBar()
 
         CreateTasks()
         CreateProject()
@@ -107,7 +126,10 @@ Public Class Lotti
         T117_ListeQuadriDettaglioTableAdapter.Fill(LottiDataSet.T117_ListeQuadriDettaglio, CommessaAttiva)
         T045_ListeQuadriElenchiMaterialiTableAdapter.Fill(LottiDataSet.T045_ListeQuadriElenchiMateriali, CommessaAttiva)
         T042_MagicTableAdapter.Fill(LottiDataSet.T042_Magic, CommessaAttiva)
-
+        T045_ListeQuadriElenchiMaterialiTableAdapter.Fill(LottiDataSet.T045_ListeQuadriElenchiMateriali, CommessaAttiva)
+        ' T058_LottiTableAdapter.Fill(DataSetCommesse.T058_Lotti, CommessaAttiva)
+        T117_ListeQuadriDettaglioTableAdapter.Fill(LottiDataSet.T117_ListeQuadriDettaglio, CommessaAttiva)
+        ngrdT042_ListeQuadri_TotaliOrePreventivate_Calcolo()
     End Sub
 
     Private Sub ngrdCommesse_AfterRowActivate(sender As Object, e As EventArgs) Handles ngrdCommesse.AfterRowActivate
@@ -137,8 +159,9 @@ Public Class Lotti
             Case "ButtonTool2"
                 VerificaModifiche(False)
             Case "ButtonTool3"
-                MsgBox("Help")
+                'help
             Case "ButtonTool4"
+                'cambio lotti/prospetto
                 If TabControlPrincipale.SelectedTab Is UltraTabPageControl1.Tab Then
                     TabControlPrincipale.SelectedTab = UltraTabPageControl2.Tab
                     UTBManager.Toolbars(0).Tools(5).CustomizedCaption = "Lotti"
@@ -153,23 +176,13 @@ Public Class Lotti
                     UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Lotto"
                 End If
             Case "ButtonTool5"
-
+                'etichette
                 Dim oAccess As Microsoft.Office.Interop.Access.Application = Nothing
                 oAccess = New Microsoft.Office.Interop.Access.Application()
                 oAccess.OpenCurrentDatabase("O:\CE_VS\Access\Lotti.accdb", False)
                 oAccess.DoCmd.RunMacro("McrModelli")
                 oAccess.CloseCurrentDatabase()
                 oAccess.Quit()
-
-                'Select Case Oggetto
-                '    Case "OpenReport"
-                '        oAccess.DoCmd.OpenReport(NomeOggetto, Microsoft.Office.Interop.Access.AcView.acViewPreview, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Microsoft.Office.Interop.Access.AcWindowMode.acDialog, OpenArgs)
-                '        oAccess.CloseCurrentDatabase()
-                '        oAccess.Quit()
-                '    Case "OpenForm"
-                '        oAccess.DoCmd.OpenForm(NomeOggetto, Microsoft.Office.Interop.Access.AcFormView.acNormal, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Microsoft.Office.Interop.Access.AcFormOpenDataMode.acFormEdit, Microsoft.Office.Interop.Access.AcWindowMode.acDialog, OpenArgs)
-                '        oAccess.CloseCurrentDatabase()
-                '        oAccess.Quit()
             Case "ButtonTool6"
                 MsgBox("6666")
             Case "ButtonTool7"
@@ -177,6 +190,7 @@ Public Class Lotti
             Case "ButtonTool8"
                 MsgBox("8888")
             Case "ButtonTool9"
+                ' nuovo
                 If LottiProspetto = "L" Then
                     ' MsgBox("nuovo lotto")
                     Inserimento_LottoTableAdapter.Fill(LottiDataSet.Inserimento_Lotto, CommessaAttiva, Environ("USERNAME"))
@@ -186,6 +200,7 @@ Public Class Lotti
 
                 End If
             Case "ButtonTool10"
+                ' cancella
                 If LottiProspetto = "L" Then
                     ngrdT059_Lotti.DeleteSelectedRows(False)
                 End If
@@ -237,15 +252,21 @@ Public Class Lotti
         Next
     End Sub
     Private Sub ImpostazioniControlli()
+
         Dim VisiblePosition As Integer = 0
-        If Environ("Username") = "BLACK" Or Environ("Username") = "ABACU" Then
+
+        If Environ("Username").ToUpper = "BLACK" Or Environ("Username").ToUpper = "ABACU" Then
             Infragistics.Win.AppStyling.StyleManager.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\CE_VisualStudio\CE.isl")
         Else
             Infragistics.Win.AppStyling.StyleManager.Load("U:\0000\CE_VS\CE.isl")
         End If
+
         ' tacamia
         ConfigurazioneGriglia(ngrdT059_Lotti, 0, "T059_Lotti")
         ConfigurazioneGriglia(ngrdT059_Lotti, 1, "T074_LottiDettaglio")
+        ConfigurazioneGriglia(ngrdT042_ListeQuadri, 0, "T042_ListeQuadri")
+        ConfigurazioneGriglia(ngrdT042_ListeQuadri, 1, "T117_ListeQuadriDettaglio")
+        ConfigurazioneGriglia(ngrdT042_ListeQuadri, 2, "T045_ListeQuadriElenchiMateriali")
 
 
         For Each rwcol As LottiDataSet.T108_UfficiRow In LottiDataSet.T108_Uffici.Rows
@@ -321,6 +342,7 @@ Public Class Lotti
         ngrdT059_Lotti.DisplayLayout.Bands(1).Columns("T074LavorazioniEsterne").EditorComponent = cboT074LavorazioniEsterneG
 
         VisiblePosition = 0
+        ngrdT059_Lotti.DisplayLayout.Override.AllowColSizing = AllowColSizing.Free
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
         ngrdT059_Lotti.DisplayLayout.Bands(0).Columns("T059Lotto").Width = 30
         '      
@@ -377,6 +399,7 @@ Public Class Lotti
 
 
         'ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * ngrdT059_Lotti2 * 
+        ngrdT059_Lotti2.DisplayLayout.Override.AllowColSizing = AllowColSizing.Free
 
         ngrdT059_Lotti2.Text = ""
         ngrdT059_Lotti2.DisplayLayout.Bands(0).Columns("Lotto").Width = 30
@@ -386,6 +409,7 @@ Public Class Lotti
 
         'ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * ngrdT059_Lotti3 * 
 
+        ngrdT059_Lotti3.DisplayLayout.Override.AllowColSizing = AllowColSizing.Free
         ngrdT059_Lotti3.Text = "Totali Ore  Lotti Selezionati"
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("T074Centro").Header.Caption = "Centro"
         ngrdT059_Lotti3.DisplayLayout.Bands(0).Columns("T074Centro").Width = 60
@@ -400,6 +424,7 @@ Public Class Lotti
 
         'ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * ngrdT059_Lotti4 * 
 
+        ngrdT059_Lotti4.DisplayLayout.Override.AllowColSizing = AllowColSizing.Free
         ngrdT059_Lotti4.Text = "Totale Ore Commessa"
         ngrdT059_Lotti4.DisplayLayout.Bands(0).Columns("T074Centro").Header.Caption = "Centro"
         ngrdT059_Lotti4.DisplayLayout.Bands(0).Columns("T074Centro").Width = 60
@@ -412,6 +437,160 @@ Public Class Lotti
         ngrdT059_Lotti4.DisplayLayout.Bands(0).Columns("Consuntivo").Header.Caption = "Consuntivo"
         ngrdT059_Lotti4.DisplayLayout.Bands(0).Columns("Consuntivo").Width = 100
 
+        'ngrdT042_ListeQuadri * ngrdT042_ListeQuadri * ngrdT042_ListeQuadri * ngrdT042_ListeQuadri * ngrdT042_ListeQuadri * ngrdT042_ListeQuadri * 
+
+        ngrdT042_ListeQuadri.DisplayLayout.Override.AllowColSizing = AllowColSizing.Free
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("Ordinamento").Hidden = True
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Commessa").Hidden = True
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042DescrizioneLotto").Hidden = True
+
+        VisiblePosition = 0
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Numerazione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Numerazione").Width = 90
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PosizioneInterna").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PosizioneInterna").Width = 50
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PosizioneOrdine").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PosizioneOrdine").Width = 100
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Quantita").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Quantita").Width = 60
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Descrizione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Descrizione").Width = 200
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Lotto").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Lotto").Width = 40
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Revisione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Revisione").Width = 50
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042DataRevisione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042DataRevisione").Width = 70
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042StandBy").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042StandBy").Width = 50
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Note").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Note").Width = 200
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042ConsegnaMateriali").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042ConsegnaMateriali").Width = 90
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Colonne").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Colonne").Width = 60
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PrezzoUnitario").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PrezzoUnitario").Width = 80
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PrezzoVarianti").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PrezzoVarianti").Width = 80
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PrezzoTotale").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042PrezzoTotale").Width = 80
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042InsertUser").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042InsertUser").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042InsertUser").Header.Caption = "Utente Inserimento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042InsertDate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042InsertDate").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042InsertDate").Header.Caption = "Data Inserimento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042UpdateUser").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042UpdateUser").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042UpdateUser").Header.Caption = "Utente Aggiornamento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042UpdateDate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042UpdateDate").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042UpdateDate").Header.Caption = "Data Aggiornamento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Id").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Id").Width = 60
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117PosizioneInterna").Hidden = True
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117Commessa").Hidden = True
+
+
+        VisiblePosition = 0
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117Centro").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117Centro").Width = 90
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117OrePreventivate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117OrePreventivate").Width = 90
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117InsertUser").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117InsertUser").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117InsertUser").Header.Caption = "Utente Inserimento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117InsertDate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117InsertDate").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117InsertDate").Header.Caption = "Data Inserimento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117UpdateUser").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117UpdateUser").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117UpdateUser").Header.Caption = "Utente Aggiornamento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117UpdateDate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117UpdateDate").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117UpdateDate").Header.Caption = "Data Aggiornamento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117Id").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(1).Columns("T117Id").Width = 90
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Commessa").Hidden = True
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045PosizioneInterna").Hidden = True
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T042Descrizione").Hidden = True
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T042Quantita").Hidden = True
+        VisiblePosition = 0
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045ElencoMateriali").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045ElencoMateriali").Width = 80
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T043Descrizione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T043Descrizione").Width = 300
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Quantita").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Quantita").Width = 60
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045DataConsegnaMateriali").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045DataConsegnaMateriali").Width = 90
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045TipoConsegna").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045TipoConsegna").Width = 80
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Note").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Note").Width = 300
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Revisione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Revisione").Width = 60
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045DataRevisione").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045DataRevisione").Width = 80
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045StandBy").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045StandBy").Width = 50
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045InsertUser").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045InsertUser").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045InsertUser").Header.Caption = "Utente Inserimento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045InsertDate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045InsertDate").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045InsertDate").Header.Caption = "Data Inserimento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045UpdateUser").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045UpdateUser").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045UpdateUser").Header.Caption = "Utente Aggiornamento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045UpdateDate").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045UpdateDate").Width = 100
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045UpdateDate").Header.Caption = "Data Aggiornamento"
+
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Id").Header.VisiblePosition = SetVisiblePosition(VisiblePosition)
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(2).Columns("T045Id").Width = 90
     End Sub
     Private Sub ImpostazioneToolBar()
         UTBManager.Toolbars(0).Settings.AllowCustomize = Infragistics.Win.DefaultableBoolean.False
@@ -1230,4 +1409,11 @@ Public Class Lotti
     '        End If
     '    End If
     'End Sub
+    Private Sub ngrdT042_ListeQuadri_Totali_InitializeRow(sender As Object, e As InitializeRowEventArgs) Handles ugT042Totali.InitializeRow
+        If e.Row.Cells(2).Value.ToString = "Totali" Then
+            For I As Integer = 1 To 6
+                e.Row.Cells(I).Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True
+            Next I
+        End If
+    End Sub
 End Class
