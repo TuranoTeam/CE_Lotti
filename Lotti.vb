@@ -96,6 +96,7 @@ Public Class Lotti
         DT3.Columns.Add("Commessa", GetType(String))
         DT3.Columns.Add("DataConsegna", GetType(Date))
 
+        T062_ListeQuadriNumerazioneTableAdapter.Fill(LottiDataSet.T062_ListeQuadriNumerazione)
         T058_Commesse_aperteTableAdapter.Fill(Me.LottiDataSet.T058_Commesse_aperte)
         LavorazioniEsterne_cboTableAdapter.Fill(Me.LottiDataSet.LavorazioniEsterne_cbo)
         ImpostazioniControlli()
@@ -130,6 +131,7 @@ Public Class Lotti
         ' T058_LottiTableAdapter.Fill(DataSetCommesse.T058_Lotti, CommessaAttiva)
         T117_ListeQuadriDettaglioTableAdapter.Fill(LottiDataSet.T117_ListeQuadriDettaglio, CommessaAttiva)
         ngrdT042_ListeQuadri_TotaliOrePreventivate_Calcolo()
+
     End Sub
 
     Private Sub ngrdCommesse_AfterRowActivate(sender As Object, e As EventArgs) Handles ngrdCommesse.AfterRowActivate
@@ -153,6 +155,7 @@ Public Class Lotti
     End Sub
     Dim LottiProspetto As String = "L"
     Private Sub UtbManager_ToolClick(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinToolbars.ToolClickEventArgs) Handles UTBManager.ToolClick
+
         Select Case e.Tool.Key
             Case "ButtonTool1"
                 Me.Close()
@@ -176,13 +179,7 @@ Public Class Lotti
                     UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Lotto"
                 End If
             Case "ButtonTool5"
-                'etichette
-                Dim oAccess As Microsoft.Office.Interop.Access.Application = Nothing
-                oAccess = New Microsoft.Office.Interop.Access.Application()
-                oAccess.OpenCurrentDatabase("O:\CE_VS\Access\Lotti.accdb", False)
-                oAccess.DoCmd.RunMacro("McrModelli")
-                oAccess.CloseCurrentDatabase()
-                oAccess.Quit()
+                Process.Start("O:\CE_VS\Access\Lotti.accdb", "/X McrModelli /runtime")
             Case "ButtonTool6"
                 MsgBox("6666")
             Case "ButtonTool7"
@@ -208,6 +205,12 @@ Public Class Lotti
                     ngrdT042_ListeQuadri.DeleteSelectedRows(False)
                 End If
         End Select
+
+
+        'Select Case T062IdTipologia, T062Tipologia, T062Attiva
+        'From T062_Tipologie
+        'Where (T062Identificatore = 2)
+        'Order By T062Tipologia
     End Sub
     Private Sub T058_Commessa_Cartella()
 
@@ -265,6 +268,9 @@ Public Class Lotti
         ConfigurazioneGriglia(ngrdT059_Lotti, 0, "T059_Lotti")
         ConfigurazioneGriglia(ngrdT059_Lotti, 1, "T074_LottiDettaglio")
         ConfigurazioneGriglia(ngrdT042_ListeQuadri, 0, "T042_ListeQuadri")
+        ngrdT042_ListeQuadri.Text = "Prospetto Ore"
+        ngrdT042_ListeQuadri.DisplayLayout.Bands(0).Columns("T042Numerazione").EditorComponent = cboT042Numerazione
+        ugT042Totali.Text = ""
         ConfigurazioneGriglia(ngrdT042_ListeQuadri, 1, "T117_ListeQuadriDettaglio")
         ConfigurazioneGriglia(ngrdT042_ListeQuadri, 2, "T045_ListeQuadriElenchiMateriali")
 

@@ -1199,6 +1199,27 @@ ORDER BY T074Centro,T074LavorazioniEsterne</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="T062_ListeQuadriNumerazioneTableAdapter" GeneratorDataComponentClassName="T062_ListeQuadriNumerazioneTableAdapter" Name="T062_ListeQuadriNumerazione" UserDataComponentName="T062_ListeQuadriNumerazioneTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LottiConnectionString (MySettings)" DbObjectName="StrutturaCommesse.dbo.T062_Tipologie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>        Select T062IdTipologia, T062Tipologia, T062Attiva
+        From T062_Tipologie
+        Where (T062Identificatore = 2)
+        Order By T062Tipologia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="T062IdTipologia" DataSetColumn="T062IdTipologia" />
+              <Mapping SourceColumn="T062Tipologia" DataSetColumn="T062Tipologia" />
+              <Mapping SourceColumn="T062Attiva" DataSetColumn="T062Attiva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1838,80 +1859,80 @@ ORDER BY T074Centro,T074LavorazioniEsterne</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="T042_ListeQuadri" msprop:Generator_RowClassName="T042_ListeQuadriRow" msprop:Generator_RowEvHandlerName="T042_ListeQuadriRowChangeEventHandler" msprop:Generator_RowDeletedName="T042_ListeQuadriRowDeleted" msprop:Generator_RowDeletingName="T042_ListeQuadriRowDeleting" msprop:Generator_RowEvArgName="T042_ListeQuadriRowChangeEvent" msprop:Generator_TablePropName="T042_ListeQuadri" msprop:Generator_RowChangedName="T042_ListeQuadriRowChanged" msprop:Generator_UserTableName="T042_ListeQuadri" msprop:Generator_RowChangingName="T042_ListeQuadriRowChanging" msprop:Generator_TableClassName="T042_ListeQuadriDataTable" msprop:Generator_TableVarName="tableT042_ListeQuadri">
+        <xs:element name="T042_ListeQuadri" msprop:Generator_RowEvHandlerName="T042_ListeQuadriRowChangeEventHandler" msprop:Generator_RowDeletedName="T042_ListeQuadriRowDeleted" msprop:Generator_RowDeletingName="T042_ListeQuadriRowDeleting" msprop:Generator_RowEvArgName="T042_ListeQuadriRowChangeEvent" msprop:Generator_TablePropName="T042_ListeQuadri" msprop:Generator_RowChangedName="T042_ListeQuadriRowChanged" msprop:Generator_UserTableName="T042_ListeQuadri" msprop:Generator_RowChangingName="T042_ListeQuadriRowChanging" msprop:Generator_RowClassName="T042_ListeQuadriRow" msprop:Generator_TableClassName="T042_ListeQuadriDataTable" msprop:Generator_TableVarName="tableT042_ListeQuadri">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Ordinamento" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Ordinamento" msprop:Generator_ColumnPropNameInTable="OrdinamentoColumn" msprop:Generator_ColumnPropNameInRow="Ordinamento" msprop:Generator_ColumnVarNameInTable="columnOrdinamento" type="xs:int" minOccurs="0" />
-              <xs:element name="T042Id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Id" msprop:Generator_ColumnPropNameInTable="T042IdColumn" msprop:Generator_ColumnPropNameInRow="T042Id" msprop:Generator_ColumnVarNameInTable="columnT042Id" type="xs:int" minOccurs="0" />
-              <xs:element name="T042Commessa" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Commessa" msprop:Generator_ColumnPropNameInTable="T042CommessaColumn" msprop:Generator_ColumnPropNameInRow="T042Commessa" msprop:Generator_ColumnVarNameInTable="columnT042Commessa" minOccurs="0">
+              <xs:element name="Ordinamento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="OrdinamentoColumn" msprop:Generator_ColumnPropNameInRow="Ordinamento" msprop:Generator_UserColumnName="Ordinamento" msprop:Generator_ColumnVarNameInTable="columnOrdinamento" type="xs:int" minOccurs="0" />
+              <xs:element name="T042Id" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042IdColumn" msprop:Generator_ColumnPropNameInRow="T042Id" msprop:Generator_UserColumnName="T042Id" msprop:Generator_ColumnVarNameInTable="columnT042Id" type="xs:int" minOccurs="0" />
+              <xs:element name="T042Commessa" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042CommessaColumn" msprop:Generator_ColumnPropNameInRow="T042Commessa" msprop:Generator_UserColumnName="T042Commessa" msprop:Generator_ColumnVarNameInTable="columnT042Commessa" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042Numerazione" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Numerazione" msprop:Generator_ColumnPropNameInTable="T042NumerazioneColumn" msprop:Generator_ColumnPropNameInRow="T042Numerazione" msprop:Generator_ColumnVarNameInTable="columnT042Numerazione" type="xs:int" minOccurs="0" />
-              <xs:element name="T042PosizioneInterna" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042PosizioneInterna" msprop:Generator_ColumnPropNameInTable="T042PosizioneInternaColumn" msprop:Generator_ColumnPropNameInRow="T042PosizioneInterna" msprop:Generator_ColumnVarNameInTable="columnT042PosizioneInterna" minOccurs="0">
+              <xs:element name="T042Numerazione" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042NumerazioneColumn" msprop:Generator_ColumnPropNameInRow="T042Numerazione" msprop:Generator_UserColumnName="T042Numerazione" msprop:Generator_ColumnVarNameInTable="columnT042Numerazione" type="xs:int" minOccurs="0" />
+              <xs:element name="T042PosizioneInterna" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042PosizioneInternaColumn" msprop:Generator_ColumnPropNameInRow="T042PosizioneInterna" msprop:Generator_UserColumnName="T042PosizioneInterna" msprop:Generator_ColumnVarNameInTable="columnT042PosizioneInterna" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="6" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042PosizioneOrdine" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042PosizioneOrdine" msprop:Generator_ColumnPropNameInTable="T042PosizioneOrdineColumn" msprop:Generator_ColumnPropNameInRow="T042PosizioneOrdine" msprop:Generator_ColumnVarNameInTable="columnT042PosizioneOrdine" minOccurs="0">
+              <xs:element name="T042PosizioneOrdine" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042PosizioneOrdineColumn" msprop:Generator_ColumnPropNameInRow="T042PosizioneOrdine" msprop:Generator_UserColumnName="T042PosizioneOrdine" msprop:Generator_ColumnVarNameInTable="columnT042PosizioneOrdine" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="16" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042Quantita" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Quantita" msprop:Generator_ColumnPropNameInTable="T042QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T042Quantita" msprop:Generator_ColumnVarNameInTable="columnT042Quantita" type="xs:int" minOccurs="0" />
-              <xs:element name="T042Descrizione" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Descrizione" msprop:Generator_ColumnPropNameInTable="T042DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T042Descrizione" msprop:Generator_ColumnVarNameInTable="columnT042Descrizione" minOccurs="0">
+              <xs:element name="T042Quantita" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T042Quantita" msprop:Generator_UserColumnName="T042Quantita" msprop:Generator_ColumnVarNameInTable="columnT042Quantita" type="xs:int" minOccurs="0" />
+              <xs:element name="T042Descrizione" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T042Descrizione" msprop:Generator_UserColumnName="T042Descrizione" msprop:Generator_ColumnVarNameInTable="columnT042Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042Lotto" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Lotto" msprop:Generator_ColumnPropNameInTable="T042LottoColumn" msprop:Generator_ColumnPropNameInRow="T042Lotto" msprop:Generator_ColumnVarNameInTable="columnT042Lotto" minOccurs="0">
+              <xs:element name="T042Lotto" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042LottoColumn" msprop:Generator_ColumnPropNameInRow="T042Lotto" msprop:Generator_UserColumnName="T042Lotto" msprop:Generator_ColumnVarNameInTable="columnT042Lotto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042StandBy" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042StandBy" msprop:Generator_ColumnPropNameInTable="T042StandByColumn" msprop:Generator_ColumnPropNameInRow="T042StandBy" msprop:Generator_ColumnVarNameInTable="columnT042StandBy" type="xs:boolean" minOccurs="0" />
-              <xs:element name="T042Revisione" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Revisione" msprop:Generator_ColumnPropNameInTable="T042RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T042Revisione" msprop:Generator_ColumnVarNameInTable="columnT042Revisione" type="xs:int" minOccurs="0" />
-              <xs:element name="T042DataRevisione" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042DataRevisione" msprop:Generator_ColumnPropNameInTable="T042DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T042DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT042DataRevisione" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T042Note" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Note" msprop:Generator_ColumnPropNameInTable="T042NoteColumn" msprop:Generator_ColumnPropNameInRow="T042Note" msprop:Generator_ColumnVarNameInTable="columnT042Note" minOccurs="0">
+              <xs:element name="T042StandBy" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042StandByColumn" msprop:Generator_ColumnPropNameInRow="T042StandBy" msprop:Generator_UserColumnName="T042StandBy" msprop:Generator_ColumnVarNameInTable="columnT042StandBy" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T042Revisione" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T042Revisione" msprop:Generator_UserColumnName="T042Revisione" msprop:Generator_ColumnVarNameInTable="columnT042Revisione" type="xs:int" minOccurs="0" />
+              <xs:element name="T042DataRevisione" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T042DataRevisione" msprop:Generator_UserColumnName="T042DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT042DataRevisione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T042Note" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042NoteColumn" msprop:Generator_ColumnPropNameInRow="T042Note" msprop:Generator_UserColumnName="T042Note" msprop:Generator_ColumnVarNameInTable="columnT042Note" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042ConsegnaMateriali" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042ConsegnaMateriali" msprop:Generator_ColumnPropNameInTable="T042ConsegnaMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T042ConsegnaMateriali" msprop:Generator_ColumnVarNameInTable="columnT042ConsegnaMateriali" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T042Colonne" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042Colonne" msprop:Generator_ColumnPropNameInTable="T042ColonneColumn" msprop:Generator_ColumnPropNameInRow="T042Colonne" msprop:Generator_ColumnVarNameInTable="columnT042Colonne" type="xs:int" minOccurs="0" />
-              <xs:element name="T042PrezzoUnitario" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042PrezzoUnitario" msprop:Generator_ColumnPropNameInTable="T042PrezzoUnitarioColumn" msprop:Generator_ColumnPropNameInRow="T042PrezzoUnitario" msprop:Generator_ColumnVarNameInTable="columnT042PrezzoUnitario" type="xs:decimal" minOccurs="0" />
-              <xs:element name="T042PrezzoVarianti" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042PrezzoVarianti" msprop:Generator_ColumnPropNameInTable="T042PrezzoVariantiColumn" msprop:Generator_ColumnPropNameInRow="T042PrezzoVarianti" msprop:Generator_ColumnVarNameInTable="columnT042PrezzoVarianti" type="xs:decimal" minOccurs="0" />
-              <xs:element name="T042InsertUser" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042InsertUser" msprop:Generator_ColumnPropNameInTable="T042InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T042InsertUser" msprop:Generator_ColumnVarNameInTable="columnT042InsertUser" minOccurs="0">
+              <xs:element name="T042ConsegnaMateriali" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042ConsegnaMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T042ConsegnaMateriali" msprop:Generator_UserColumnName="T042ConsegnaMateriali" msprop:Generator_ColumnVarNameInTable="columnT042ConsegnaMateriali" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T042Colonne" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042ColonneColumn" msprop:Generator_ColumnPropNameInRow="T042Colonne" msprop:Generator_UserColumnName="T042Colonne" msprop:Generator_ColumnVarNameInTable="columnT042Colonne" type="xs:int" minOccurs="0" />
+              <xs:element name="T042PrezzoUnitario" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042PrezzoUnitarioColumn" msprop:Generator_ColumnPropNameInRow="T042PrezzoUnitario" msprop:Generator_UserColumnName="T042PrezzoUnitario" msprop:Generator_ColumnVarNameInTable="columnT042PrezzoUnitario" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T042PrezzoVarianti" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042PrezzoVariantiColumn" msprop:Generator_ColumnPropNameInRow="T042PrezzoVarianti" msprop:Generator_UserColumnName="T042PrezzoVarianti" msprop:Generator_ColumnVarNameInTable="columnT042PrezzoVarianti" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T042InsertUser" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T042InsertUser" msprop:Generator_UserColumnName="T042InsertUser" msprop:Generator_ColumnVarNameInTable="columnT042InsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042InsertDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042InsertDate" msprop:Generator_ColumnPropNameInTable="T042InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T042InsertDate" msprop:Generator_ColumnVarNameInTable="columnT042InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T042UpdateUser" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042UpdateUser" msprop:Generator_ColumnPropNameInTable="T042UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T042UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT042UpdateUser" minOccurs="0">
+              <xs:element name="T042InsertDate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T042InsertDate" msprop:Generator_UserColumnName="T042InsertDate" msprop:Generator_ColumnVarNameInTable="columnT042InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T042UpdateUser" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T042UpdateUser" msprop:Generator_UserColumnName="T042UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT042UpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042UpdateDate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042UpdateDate" msprop:Generator_ColumnPropNameInTable="T042UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T042UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT042UpdateDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T042PrezzoTotale" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042PrezzoTotale" msprop:Generator_ColumnPropNameInTable="T042PrezzoTotaleColumn" msprop:Generator_ColumnPropNameInRow="T042PrezzoTotale" msprop:Generator_ColumnVarNameInTable="columnT042PrezzoTotale" type="xs:decimal" minOccurs="0" />
-              <xs:element name="T042DescrizioneLotto" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T042DescrizioneLotto" msprop:Generator_ColumnPropNameInTable="T042DescrizioneLottoColumn" msprop:Generator_ColumnPropNameInRow="T042DescrizioneLotto" msprop:Generator_ColumnVarNameInTable="columnT042DescrizioneLotto" minOccurs="0">
+              <xs:element name="T042UpdateDate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T042UpdateDate" msprop:Generator_UserColumnName="T042UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT042UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T042PrezzoTotale" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042PrezzoTotaleColumn" msprop:Generator_ColumnPropNameInRow="T042PrezzoTotale" msprop:Generator_UserColumnName="T042PrezzoTotale" msprop:Generator_ColumnVarNameInTable="columnT042PrezzoTotale" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T042DescrizioneLotto" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="T042DescrizioneLottoColumn" msprop:Generator_ColumnPropNameInRow="T042DescrizioneLotto" msprop:Generator_UserColumnName="T042DescrizioneLotto" msprop:Generator_ColumnVarNameInTable="columnT042DescrizioneLotto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4000" />
@@ -1921,113 +1942,172 @@ ORDER BY T074Centro,T074LavorazioniEsterne</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="T117_ListeQuadriDettaglio" msprop:Generator_RowClassName="T117_ListeQuadriDettaglioRow" msprop:Generator_RowEvHandlerName="T117_ListeQuadriDettaglioRowChangeEventHandler" msprop:Generator_RowDeletedName="T117_ListeQuadriDettaglioRowDeleted" msprop:Generator_RowDeletingName="T117_ListeQuadriDettaglioRowDeleting" msprop:Generator_RowEvArgName="T117_ListeQuadriDettaglioRowChangeEvent" msprop:Generator_TablePropName="T117_ListeQuadriDettaglio" msprop:Generator_RowChangedName="T117_ListeQuadriDettaglioRowChanged" msprop:Generator_UserTableName="T117_ListeQuadriDettaglio" msprop:Generator_RowChangingName="T117_ListeQuadriDettaglioRowChanging" msprop:Generator_TableClassName="T117_ListeQuadriDettaglioDataTable" msprop:Generator_TableVarName="tableT117_ListeQuadriDettaglio">
+        <xs:element name="T117_ListeQuadriDettaglio" msprop:Generator_RowEvHandlerName="T117_ListeQuadriDettaglioRowChangeEventHandler" msprop:Generator_RowDeletedName="T117_ListeQuadriDettaglioRowDeleted" msprop:Generator_RowDeletingName="T117_ListeQuadriDettaglioRowDeleting" msprop:Generator_RowEvArgName="T117_ListeQuadriDettaglioRowChangeEvent" msprop:Generator_TablePropName="T117_ListeQuadriDettaglio" msprop:Generator_RowChangedName="T117_ListeQuadriDettaglioRowChanged" msprop:Generator_UserTableName="T117_ListeQuadriDettaglio" msprop:Generator_RowChangingName="T117_ListeQuadriDettaglioRowChanging" msprop:Generator_RowClassName="T117_ListeQuadriDettaglioRow" msprop:Generator_TableClassName="T117_ListeQuadriDettaglioDataTable" msprop:Generator_TableVarName="tableT117_ListeQuadriDettaglio">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="T117Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T117Id" msprop:Generator_ColumnPropNameInTable="T117IdColumn" msprop:Generator_ColumnPropNameInRow="T117Id" msprop:Generator_ColumnVarNameInTable="columnT117Id" type="xs:int" />
-              <xs:element name="T117Commessa" msprop:Generator_UserColumnName="T117Commessa" msprop:Generator_ColumnPropNameInTable="T117CommessaColumn" msprop:Generator_ColumnPropNameInRow="T117Commessa" msprop:Generator_ColumnVarNameInTable="columnT117Commessa">
+              <xs:element name="T117Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="T117IdColumn" msprop:Generator_ColumnPropNameInRow="T117Id" msprop:Generator_UserColumnName="T117Id" msprop:Generator_ColumnVarNameInTable="columnT117Id" type="xs:int" />
+              <xs:element name="T117Commessa" msprop:Generator_ColumnPropNameInTable="T117CommessaColumn" msprop:Generator_ColumnPropNameInRow="T117Commessa" msprop:Generator_UserColumnName="T117Commessa" msprop:Generator_ColumnVarNameInTable="columnT117Commessa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T117PosizioneInterna" msprop:Generator_UserColumnName="T117PosizioneInterna" msprop:Generator_ColumnPropNameInTable="T117PosizioneInternaColumn" msprop:Generator_ColumnPropNameInRow="T117PosizioneInterna" msprop:Generator_ColumnVarNameInTable="columnT117PosizioneInterna">
+              <xs:element name="T117PosizioneInterna" msprop:Generator_ColumnPropNameInTable="T117PosizioneInternaColumn" msprop:Generator_ColumnPropNameInRow="T117PosizioneInterna" msprop:Generator_UserColumnName="T117PosizioneInterna" msprop:Generator_ColumnVarNameInTable="columnT117PosizioneInterna">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="6" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T117Centro" msprop:Generator_UserColumnName="T117Centro" msprop:Generator_ColumnPropNameInTable="T117CentroColumn" msprop:Generator_ColumnPropNameInRow="T117Centro" msprop:Generator_ColumnVarNameInTable="columnT117Centro">
+              <xs:element name="T117Centro" msprop:Generator_ColumnPropNameInTable="T117CentroColumn" msprop:Generator_ColumnPropNameInRow="T117Centro" msprop:Generator_UserColumnName="T117Centro" msprop:Generator_ColumnVarNameInTable="columnT117Centro">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T117OrePreventivate" msprop:Generator_UserColumnName="T117OrePreventivate" msprop:Generator_ColumnPropNameInTable="T117OrePreventivateColumn" msprop:Generator_ColumnPropNameInRow="T117OrePreventivate" msprop:Generator_ColumnVarNameInTable="columnT117OrePreventivate" type="xs:int" minOccurs="0" />
-              <xs:element name="T117InsertUser" msprop:Generator_UserColumnName="T117InsertUser" msprop:Generator_ColumnPropNameInTable="T117InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T117InsertUser" msprop:Generator_ColumnVarNameInTable="columnT117InsertUser" minOccurs="0">
+              <xs:element name="T117OrePreventivate" msprop:Generator_ColumnPropNameInTable="T117OrePreventivateColumn" msprop:Generator_ColumnPropNameInRow="T117OrePreventivate" msprop:Generator_UserColumnName="T117OrePreventivate" msprop:Generator_ColumnVarNameInTable="columnT117OrePreventivate" type="xs:int" minOccurs="0" />
+              <xs:element name="T117InsertUser" msprop:Generator_ColumnPropNameInTable="T117InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T117InsertUser" msprop:Generator_UserColumnName="T117InsertUser" msprop:Generator_ColumnVarNameInTable="columnT117InsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T117InsertDate" msprop:Generator_UserColumnName="T117InsertDate" msprop:Generator_ColumnPropNameInTable="T117InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T117InsertDate" msprop:Generator_ColumnVarNameInTable="columnT117InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T117UpdateUser" msprop:Generator_UserColumnName="T117UpdateUser" msprop:Generator_ColumnPropNameInTable="T117UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T117UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT117UpdateUser" minOccurs="0">
+              <xs:element name="T117InsertDate" msprop:Generator_ColumnPropNameInTable="T117InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T117InsertDate" msprop:Generator_UserColumnName="T117InsertDate" msprop:Generator_ColumnVarNameInTable="columnT117InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T117UpdateUser" msprop:Generator_ColumnPropNameInTable="T117UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T117UpdateUser" msprop:Generator_UserColumnName="T117UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT117UpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T117UpdateDate" msprop:Generator_UserColumnName="T117UpdateDate" msprop:Generator_ColumnPropNameInTable="T117UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T117UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT117UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T117UpdateDate" msprop:Generator_ColumnPropNameInTable="T117UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T117UpdateDate" msprop:Generator_UserColumnName="T117UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT117UpdateDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="T045_ListeQuadriElenchiMateriali" msprop:Generator_RowClassName="T045_ListeQuadriElenchiMaterialiRow" msprop:Generator_RowEvHandlerName="T045_ListeQuadriElenchiMaterialiRowChangeEventHandler" msprop:Generator_RowDeletedName="T045_ListeQuadriElenchiMaterialiRowDeleted" msprop:Generator_RowDeletingName="T045_ListeQuadriElenchiMaterialiRowDeleting" msprop:Generator_RowEvArgName="T045_ListeQuadriElenchiMaterialiRowChangeEvent" msprop:Generator_TablePropName="T045_ListeQuadriElenchiMateriali" msprop:Generator_RowChangedName="T045_ListeQuadriElenchiMaterialiRowChanged" msprop:Generator_UserTableName="T045_ListeQuadriElenchiMateriali" msprop:Generator_RowChangingName="T045_ListeQuadriElenchiMaterialiRowChanging" msprop:Generator_TableClassName="T045_ListeQuadriElenchiMaterialiDataTable" msprop:Generator_TableVarName="tableT045_ListeQuadriElenchiMateriali">
+        <xs:element name="T045_ListeQuadriElenchiMateriali" msprop:Generator_RowEvHandlerName="T045_ListeQuadriElenchiMaterialiRowChangeEventHandler" msprop:Generator_RowDeletedName="T045_ListeQuadriElenchiMaterialiRowDeleted" msprop:Generator_RowDeletingName="T045_ListeQuadriElenchiMaterialiRowDeleting" msprop:Generator_RowEvArgName="T045_ListeQuadriElenchiMaterialiRowChangeEvent" msprop:Generator_TablePropName="T045_ListeQuadriElenchiMateriali" msprop:Generator_RowChangedName="T045_ListeQuadriElenchiMaterialiRowChanged" msprop:Generator_UserTableName="T045_ListeQuadriElenchiMateriali" msprop:Generator_RowChangingName="T045_ListeQuadriElenchiMaterialiRowChanging" msprop:Generator_RowClassName="T045_ListeQuadriElenchiMaterialiRow" msprop:Generator_TableClassName="T045_ListeQuadriElenchiMaterialiDataTable" msprop:Generator_TableVarName="tableT045_ListeQuadriElenchiMateriali">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="T045Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T045Id" msprop:Generator_ColumnPropNameInTable="T045IdColumn" msprop:Generator_ColumnPropNameInRow="T045Id" msprop:Generator_ColumnVarNameInTable="columnT045Id" type="xs:int" />
-              <xs:element name="T045Commessa" msprop:Generator_UserColumnName="T045Commessa" msprop:Generator_ColumnPropNameInTable="T045CommessaColumn" msprop:Generator_ColumnPropNameInRow="T045Commessa" msprop:Generator_ColumnVarNameInTable="columnT045Commessa">
+              <xs:element name="T045Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="T045IdColumn" msprop:Generator_ColumnPropNameInRow="T045Id" msprop:Generator_UserColumnName="T045Id" msprop:Generator_ColumnVarNameInTable="columnT045Id" type="xs:int" />
+              <xs:element name="T045Commessa" msprop:Generator_ColumnPropNameInTable="T045CommessaColumn" msprop:Generator_ColumnPropNameInRow="T045Commessa" msprop:Generator_UserColumnName="T045Commessa" msprop:Generator_ColumnVarNameInTable="columnT045Commessa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T045PosizioneInterna" msprop:Generator_UserColumnName="T045PosizioneInterna" msprop:Generator_ColumnPropNameInTable="T045PosizioneInternaColumn" msprop:Generator_ColumnPropNameInRow="T045PosizioneInterna" msprop:Generator_ColumnVarNameInTable="columnT045PosizioneInterna">
+              <xs:element name="T045PosizioneInterna" msprop:Generator_ColumnPropNameInTable="T045PosizioneInternaColumn" msprop:Generator_ColumnPropNameInRow="T045PosizioneInterna" msprop:Generator_UserColumnName="T045PosizioneInterna" msprop:Generator_ColumnVarNameInTable="columnT045PosizioneInterna">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="6" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T045ElencoMateriali" msprop:Generator_UserColumnName="T045ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T045ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T045ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT045ElencoMateriali">
+              <xs:element name="T045ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T045ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T045ElencoMateriali" msprop:Generator_UserColumnName="T045ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT045ElencoMateriali">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T045Quantita" msprop:Generator_UserColumnName="T045Quantita" msprop:Generator_ColumnPropNameInTable="T045QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T045Quantita" msprop:Generator_ColumnVarNameInTable="columnT045Quantita" type="xs:int" minOccurs="0" />
-              <xs:element name="T045DataConsegnaMateriali" msprop:Generator_UserColumnName="T045DataConsegnaMateriali" msprop:Generator_ColumnPropNameInTable="T045DataConsegnaMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T045DataConsegnaMateriali" msprop:Generator_ColumnVarNameInTable="columnT045DataConsegnaMateriali" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T045TipoConsegna" msprop:Generator_UserColumnName="T045TipoConsegna" msprop:Generator_ColumnPropNameInTable="T045TipoConsegnaColumn" msprop:Generator_ColumnPropNameInRow="T045TipoConsegna" msprop:Generator_ColumnVarNameInTable="columnT045TipoConsegna" type="xs:int" minOccurs="0" />
-              <xs:element name="T045StandBy" msprop:Generator_UserColumnName="T045StandBy" msprop:Generator_ColumnPropNameInTable="T045StandByColumn" msprop:Generator_ColumnPropNameInRow="T045StandBy" msprop:Generator_ColumnVarNameInTable="columnT045StandBy" type="xs:boolean" minOccurs="0" />
-              <xs:element name="T045Revisione" msprop:Generator_UserColumnName="T045Revisione" msprop:Generator_ColumnPropNameInTable="T045RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T045Revisione" msprop:Generator_ColumnVarNameInTable="columnT045Revisione" type="xs:int" minOccurs="0" />
-              <xs:element name="T045DataRevisione" msprop:Generator_UserColumnName="T045DataRevisione" msprop:Generator_ColumnPropNameInTable="T045DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T045DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT045DataRevisione" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T045Note" msprop:Generator_UserColumnName="T045Note" msprop:Generator_ColumnPropNameInTable="T045NoteColumn" msprop:Generator_ColumnPropNameInRow="T045Note" msprop:Generator_ColumnVarNameInTable="columnT045Note" minOccurs="0">
+              <xs:element name="T045Quantita" msprop:Generator_ColumnPropNameInTable="T045QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T045Quantita" msprop:Generator_UserColumnName="T045Quantita" msprop:Generator_ColumnVarNameInTable="columnT045Quantita" type="xs:int" minOccurs="0" />
+              <xs:element name="T045DataConsegnaMateriali" msprop:Generator_ColumnPropNameInTable="T045DataConsegnaMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T045DataConsegnaMateriali" msprop:Generator_UserColumnName="T045DataConsegnaMateriali" msprop:Generator_ColumnVarNameInTable="columnT045DataConsegnaMateriali" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T045TipoConsegna" msprop:Generator_ColumnPropNameInTable="T045TipoConsegnaColumn" msprop:Generator_ColumnPropNameInRow="T045TipoConsegna" msprop:Generator_UserColumnName="T045TipoConsegna" msprop:Generator_ColumnVarNameInTable="columnT045TipoConsegna" type="xs:int" minOccurs="0" />
+              <xs:element name="T045StandBy" msprop:Generator_ColumnPropNameInTable="T045StandByColumn" msprop:Generator_ColumnPropNameInRow="T045StandBy" msprop:Generator_UserColumnName="T045StandBy" msprop:Generator_ColumnVarNameInTable="columnT045StandBy" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T045Revisione" msprop:Generator_ColumnPropNameInTable="T045RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T045Revisione" msprop:Generator_UserColumnName="T045Revisione" msprop:Generator_ColumnVarNameInTable="columnT045Revisione" type="xs:int" minOccurs="0" />
+              <xs:element name="T045DataRevisione" msprop:Generator_ColumnPropNameInTable="T045DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T045DataRevisione" msprop:Generator_UserColumnName="T045DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT045DataRevisione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T045Note" msprop:Generator_ColumnPropNameInTable="T045NoteColumn" msprop:Generator_ColumnPropNameInRow="T045Note" msprop:Generator_UserColumnName="T045Note" msprop:Generator_ColumnVarNameInTable="columnT045Note" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T045InsertUser" msprop:Generator_UserColumnName="T045InsertUser" msprop:Generator_ColumnPropNameInTable="T045InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T045InsertUser" msprop:Generator_ColumnVarNameInTable="columnT045InsertUser" minOccurs="0">
+              <xs:element name="T045InsertUser" msprop:Generator_ColumnPropNameInTable="T045InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T045InsertUser" msprop:Generator_UserColumnName="T045InsertUser" msprop:Generator_ColumnVarNameInTable="columnT045InsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T045InsertDate" msprop:Generator_UserColumnName="T045InsertDate" msprop:Generator_ColumnPropNameInTable="T045InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T045InsertDate" msprop:Generator_ColumnVarNameInTable="columnT045InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T045UpdateUser" msprop:Generator_UserColumnName="T045UpdateUser" msprop:Generator_ColumnPropNameInTable="T045UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T045UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT045UpdateUser" minOccurs="0">
+              <xs:element name="T045InsertDate" msprop:Generator_ColumnPropNameInTable="T045InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T045InsertDate" msprop:Generator_UserColumnName="T045InsertDate" msprop:Generator_ColumnVarNameInTable="columnT045InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T045UpdateUser" msprop:Generator_ColumnPropNameInTable="T045UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T045UpdateUser" msprop:Generator_UserColumnName="T045UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT045UpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T045UpdateDate" msprop:Generator_UserColumnName="T045UpdateDate" msprop:Generator_ColumnPropNameInTable="T045UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T045UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT045UpdateDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T042Descrizione" msprop:Generator_UserColumnName="T042Descrizione" msprop:Generator_ColumnPropNameInTable="T042DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T042Descrizione" msprop:Generator_ColumnVarNameInTable="columnT042Descrizione" minOccurs="0">
+              <xs:element name="T045UpdateDate" msprop:Generator_ColumnPropNameInTable="T045UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T045UpdateDate" msprop:Generator_UserColumnName="T045UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT045UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T042Descrizione" msprop:Generator_ColumnPropNameInTable="T042DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T042Descrizione" msprop:Generator_UserColumnName="T042Descrizione" msprop:Generator_ColumnVarNameInTable="columnT042Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T042Quantita" msprop:Generator_UserColumnName="T042Quantita" msprop:Generator_ColumnPropNameInTable="T042QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T042Quantita" msprop:Generator_ColumnVarNameInTable="columnT042Quantita" type="xs:int" minOccurs="0" />
+              <xs:element name="T042Quantita" msprop:Generator_ColumnPropNameInTable="T042QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T042Quantita" msprop:Generator_UserColumnName="T042Quantita" msprop:Generator_ColumnVarNameInTable="columnT042Quantita" type="xs:int" minOccurs="0" />
+              <xs:element name="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T042_Magic" msprop:Generator_RowClassName="T042_MagicRow" msprop:Generator_RowEvHandlerName="T042_MagicRowChangeEventHandler" msprop:Generator_RowDeletedName="T042_MagicRowDeleted" msprop:Generator_RowDeletingName="T042_MagicRowDeleting" msprop:Generator_RowEvArgName="T042_MagicRowChangeEvent" msprop:Generator_TablePropName="T042_Magic" msprop:Generator_RowChangedName="T042_MagicRowChanged" msprop:Generator_UserTableName="T042_Magic" msprop:Generator_RowChangingName="T042_MagicRowChanging" msprop:Generator_TableClassName="T042_MagicDataTable" msprop:Generator_TableVarName="tableT042_Magic">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="T042Commessa" msprop:Generator_UserColumnName="T042Commessa" msprop:Generator_ColumnPropNameInTable="T042CommessaColumn" msprop:Generator_ColumnPropNameInRow="T042Commessa" msprop:Generator_ColumnVarNameInTable="columnT042Commessa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T042Lotto" msprop:Generator_UserColumnName="T042Lotto" msprop:Generator_ColumnPropNameInTable="T042LottoColumn" msprop:Generator_ColumnPropNameInRow="T042Lotto" msprop:Generator_ColumnVarNameInTable="columnT042Lotto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescrizioneLotto" msprop:Generator_UserColumnName="DescrizioneLotto" msprop:Generator_ColumnPropNameInTable="DescrizioneLottoColumn" msprop:Generator_ColumnPropNameInRow="DescrizioneLotto" msprop:Generator_ColumnVarNameInTable="columnDescrizioneLotto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="C1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="C1" msprop:Generator_ColumnPropNameInTable="C1Column" msprop:Generator_ColumnPropNameInRow="C1" msprop:Generator_ColumnVarNameInTable="columnC1" type="xs:int" minOccurs="0" />
+              <xs:element name="C2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="C2" msprop:Generator_ColumnPropNameInTable="C2Column" msprop:Generator_ColumnPropNameInRow="C2" msprop:Generator_ColumnVarNameInTable="columnC2" type="xs:int" minOccurs="0" />
+              <xs:element name="C3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="C3" msprop:Generator_ColumnPropNameInTable="C3Column" msprop:Generator_ColumnPropNameInRow="C3" msprop:Generator_ColumnVarNameInTable="columnC3" type="xs:int" minOccurs="0" />
+              <xs:element name="C4" msdata:ReadOnly="true" msprop:Generator_UserColumnName="C4" msprop:Generator_ColumnPropNameInTable="C4Column" msprop:Generator_ColumnPropNameInRow="C4" msprop:Generator_ColumnVarNameInTable="columnC4" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T043_ElenchiMateriali" msprop:Generator_RowClassName="T043_ElenchiMaterialiRow" msprop:Generator_RowEvHandlerName="T043_ElenchiMaterialiRowChangeEventHandler" msprop:Generator_RowDeletedName="T043_ElenchiMaterialiRowDeleted" msprop:Generator_RowDeletingName="T043_ElenchiMaterialiRowDeleting" msprop:Generator_RowEvArgName="T043_ElenchiMaterialiRowChangeEvent" msprop:Generator_TablePropName="T043_ElenchiMateriali" msprop:Generator_RowChangedName="T043_ElenchiMaterialiRowChanged" msprop:Generator_UserTableName="T043_ElenchiMateriali" msprop:Generator_RowChangingName="T043_ElenchiMaterialiRowChanging" msprop:Generator_TableClassName="T043_ElenchiMaterialiDataTable" msprop:Generator_TableVarName="tableT043_ElenchiMateriali">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="T043Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T043Id" msprop:Generator_ColumnPropNameInTable="T043IdColumn" msprop:Generator_ColumnPropNameInRow="T043Id" msprop:Generator_ColumnVarNameInTable="columnT043Id" type="xs:int" />
+              <xs:element name="T043Commessa" msprop:Generator_UserColumnName="T043Commessa" msprop:Generator_ColumnPropNameInTable="T043CommessaColumn" msprop:Generator_ColumnPropNameInRow="T043Commessa" msprop:Generator_ColumnVarNameInTable="columnT043Commessa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T043ElencoMateriali" msprop:Generator_UserColumnName="T043ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T043ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T043ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT043ElencoMateriali">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="T043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -2035,333 +2115,289 @@ ORDER BY T074Centro,T074LavorazioniEsterne</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="T042_Magic" msprop:Generator_RowEvHandlerName="T042_MagicRowChangeEventHandler" msprop:Generator_RowDeletedName="T042_MagicRowDeleted" msprop:Generator_RowDeletingName="T042_MagicRowDeleting" msprop:Generator_RowEvArgName="T042_MagicRowChangeEvent" msprop:Generator_TablePropName="T042_Magic" msprop:Generator_RowChangedName="T042_MagicRowChanged" msprop:Generator_RowChangingName="T042_MagicRowChanging" msprop:Generator_TableClassName="T042_MagicDataTable" msprop:Generator_RowClassName="T042_MagicRow" msprop:Generator_TableVarName="tableT042_Magic" msprop:Generator_UserTableName="T042_Magic">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="T042Commessa" msprop:Generator_ColumnPropNameInRow="T042Commessa" msprop:Generator_ColumnPropNameInTable="T042CommessaColumn" msprop:Generator_ColumnVarNameInTable="columnT042Commessa" msprop:Generator_UserColumnName="T042Commessa">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T042Lotto" msprop:Generator_ColumnPropNameInRow="T042Lotto" msprop:Generator_ColumnPropNameInTable="T042LottoColumn" msprop:Generator_ColumnVarNameInTable="columnT042Lotto" msprop:Generator_UserColumnName="T042Lotto" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="DescrizioneLotto" msprop:Generator_ColumnPropNameInRow="DescrizioneLotto" msprop:Generator_ColumnPropNameInTable="DescrizioneLottoColumn" msprop:Generator_ColumnVarNameInTable="columnDescrizioneLotto" msprop:Generator_UserColumnName="DescrizioneLotto" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="4000" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="C1" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="C1" msprop:Generator_ColumnPropNameInTable="C1Column" msprop:Generator_ColumnVarNameInTable="columnC1" msprop:Generator_UserColumnName="C1" type="xs:int" minOccurs="0" />
-              <xs:element name="C2" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="C2" msprop:Generator_ColumnPropNameInTable="C2Column" msprop:Generator_ColumnVarNameInTable="columnC2" msprop:Generator_UserColumnName="C2" type="xs:int" minOccurs="0" />
-              <xs:element name="C3" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="C3" msprop:Generator_ColumnPropNameInTable="C3Column" msprop:Generator_ColumnVarNameInTable="columnC3" msprop:Generator_UserColumnName="C3" type="xs:int" minOccurs="0" />
-              <xs:element name="C4" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="C4" msprop:Generator_ColumnPropNameInTable="C4Column" msprop:Generator_ColumnVarNameInTable="columnC4" msprop:Generator_UserColumnName="C4" type="xs:int" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="T043_ElenchiMateriali" msprop:Generator_RowEvHandlerName="T043_ElenchiMaterialiRowChangeEventHandler" msprop:Generator_RowDeletedName="T043_ElenchiMaterialiRowDeleted" msprop:Generator_RowDeletingName="T043_ElenchiMaterialiRowDeleting" msprop:Generator_RowEvArgName="T043_ElenchiMaterialiRowChangeEvent" msprop:Generator_TablePropName="T043_ElenchiMateriali" msprop:Generator_RowChangedName="T043_ElenchiMaterialiRowChanged" msprop:Generator_RowChangingName="T043_ElenchiMaterialiRowChanging" msprop:Generator_TableClassName="T043_ElenchiMaterialiDataTable" msprop:Generator_RowClassName="T043_ElenchiMaterialiRow" msprop:Generator_TableVarName="tableT043_ElenchiMateriali" msprop:Generator_UserTableName="T043_ElenchiMateriali">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="T043Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T043Id" msprop:Generator_ColumnPropNameInTable="T043IdColumn" msprop:Generator_ColumnVarNameInTable="columnT043Id" msprop:Generator_UserColumnName="T043Id" type="xs:int" />
-              <xs:element name="T043Commessa" msprop:Generator_ColumnPropNameInRow="T043Commessa" msprop:Generator_ColumnPropNameInTable="T043CommessaColumn" msprop:Generator_ColumnVarNameInTable="columnT043Commessa" msprop:Generator_UserColumnName="T043Commessa">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="5" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T043ElencoMateriali" msprop:Generator_ColumnPropNameInRow="T043ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T043ElencoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT043ElencoMateriali" msprop:Generator_UserColumnName="T043ElencoMateriali">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="7" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T043Descrizione" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" minOccurs="0">
+              <xs:element name="T043Note" msprop:Generator_UserColumnName="T043Note" msprop:Generator_ColumnPropNameInTable="T043NoteColumn" msprop:Generator_ColumnPropNameInRow="T043Note" msprop:Generator_ColumnVarNameInTable="columnT043Note" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Note" msprop:Generator_ColumnPropNameInRow="T043Note" msprop:Generator_ColumnPropNameInTable="T043NoteColumn" msprop:Generator_ColumnVarNameInTable="columnT043Note" msprop:Generator_UserColumnName="T043Note" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="T043InsertUser" msprop:Generator_ColumnPropNameInRow="T043InsertUser" msprop:Generator_ColumnPropNameInTable="T043InsertUserColumn" msprop:Generator_ColumnVarNameInTable="columnT043InsertUser" msprop:Generator_UserColumnName="T043InsertUser" minOccurs="0">
+              <xs:element name="T043InsertUser" msprop:Generator_UserColumnName="T043InsertUser" msprop:Generator_ColumnPropNameInTable="T043InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T043InsertUser" msprop:Generator_ColumnVarNameInTable="columnT043InsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043InsertDate" msprop:Generator_ColumnPropNameInRow="T043InsertDate" msprop:Generator_ColumnPropNameInTable="T043InsertDateColumn" msprop:Generator_ColumnVarNameInTable="columnT043InsertDate" msprop:Generator_UserColumnName="T043InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T043UpdateUser" msprop:Generator_ColumnPropNameInRow="T043UpdateUser" msprop:Generator_ColumnPropNameInTable="T043UpdateUserColumn" msprop:Generator_ColumnVarNameInTable="columnT043UpdateUser" msprop:Generator_UserColumnName="T043UpdateUser" minOccurs="0">
+              <xs:element name="T043InsertDate" msprop:Generator_UserColumnName="T043InsertDate" msprop:Generator_ColumnPropNameInTable="T043InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T043InsertDate" msprop:Generator_ColumnVarNameInTable="columnT043InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T043UpdateUser" msprop:Generator_UserColumnName="T043UpdateUser" msprop:Generator_ColumnPropNameInTable="T043UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T043UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT043UpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043UpdateDate" msprop:Generator_ColumnPropNameInRow="T043UpdateDate" msprop:Generator_ColumnPropNameInTable="T043UpdateDateColumn" msprop:Generator_ColumnVarNameInTable="columnT043UpdateDate" msprop:Generator_UserColumnName="T043UpdateDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T043Revisione" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="T043Revisione" msprop:Generator_ColumnPropNameInTable="T043RevisioneColumn" msprop:Generator_ColumnVarNameInTable="columnT043Revisione" msprop:Generator_UserColumnName="T043Revisione" type="xs:int" minOccurs="0" />
-              <xs:element name="T043DataRevisione" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="T043DataRevisione" msprop:Generator_ColumnPropNameInTable="T043DataRevisioneColumn" msprop:Generator_ColumnVarNameInTable="columnT043DataRevisione" msprop:Generator_UserColumnName="T043DataRevisione" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T043StandBy" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="T043StandBy" msprop:Generator_ColumnPropNameInTable="T043StandByColumn" msprop:Generator_ColumnVarNameInTable="columnT043StandBy" msprop:Generator_UserColumnName="T043StandBy" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T043UpdateDate" msprop:Generator_UserColumnName="T043UpdateDate" msprop:Generator_ColumnPropNameInTable="T043UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T043UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT043UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T043Revisione" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T043Revisione" msprop:Generator_ColumnPropNameInTable="T043RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T043Revisione" msprop:Generator_ColumnVarNameInTable="columnT043Revisione" type="xs:int" minOccurs="0" />
+              <xs:element name="T043DataRevisione" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T043DataRevisione" msprop:Generator_ColumnPropNameInTable="T043DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T043DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT043DataRevisione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T043StandBy" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T043StandBy" msprop:Generator_ColumnPropNameInTable="T043StandByColumn" msprop:Generator_ColumnPropNameInRow="T043StandBy" msprop:Generator_ColumnVarNameInTable="columnT043StandBy" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RowEvHandlerName="T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler" msprop:Generator_RowDeletedName="T044_ElenchiMaterialiDettaglioComponenteRowDeleted" msprop:Generator_RowDeletingName="T044_ElenchiMaterialiDettaglioComponenteRowDeleting" msprop:Generator_RowEvArgName="T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent" msprop:Generator_TablePropName="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RowChangedName="T044_ElenchiMaterialiDettaglioComponenteRowChanged" msprop:Generator_RowChangingName="T044_ElenchiMaterialiDettaglioComponenteRowChanging" msprop:Generator_TableClassName="T044_ElenchiMaterialiDettaglioComponenteDataTable" msprop:Generator_RowClassName="T044_ElenchiMaterialiDettaglioComponenteRow" msprop:Generator_TableVarName="tableT044_ElenchiMaterialiDettaglioComponente" msprop:Generator_UserTableName="T044_ElenchiMaterialiDettaglioComponente">
+        <xs:element name="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RowClassName="T044_ElenchiMaterialiDettaglioComponenteRow" msprop:Generator_RowEvHandlerName="T044_ElenchiMaterialiDettaglioComponenteRowChangeEventHandler" msprop:Generator_RowDeletedName="T044_ElenchiMaterialiDettaglioComponenteRowDeleted" msprop:Generator_RowDeletingName="T044_ElenchiMaterialiDettaglioComponenteRowDeleting" msprop:Generator_RowEvArgName="T044_ElenchiMaterialiDettaglioComponenteRowChangeEvent" msprop:Generator_TablePropName="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RowChangedName="T044_ElenchiMaterialiDettaglioComponenteRowChanged" msprop:Generator_UserTableName="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RowChangingName="T044_ElenchiMaterialiDettaglioComponenteRowChanging" msprop:Generator_TableClassName="T044_ElenchiMaterialiDettaglioComponenteDataTable" msprop:Generator_TableVarName="tableT044_ElenchiMaterialiDettaglioComponente">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="T044Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T044Id" msprop:Generator_ColumnPropNameInTable="T044IdColumn" msprop:Generator_ColumnVarNameInTable="columnT044Id" msprop:Generator_UserColumnName="T044Id" type="xs:int" />
-              <xs:element name="T044Commessa" msprop:Generator_ColumnPropNameInRow="T044Commessa" msprop:Generator_ColumnPropNameInTable="T044CommessaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Commessa" msprop:Generator_UserColumnName="T044Commessa">
+              <xs:element name="T044Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T044Id" msprop:Generator_ColumnPropNameInTable="T044IdColumn" msprop:Generator_ColumnPropNameInRow="T044Id" msprop:Generator_ColumnVarNameInTable="columnT044Id" type="xs:int" />
+              <xs:element name="T044Commessa" msprop:Generator_UserColumnName="T044Commessa" msprop:Generator_ColumnPropNameInTable="T044CommessaColumn" msprop:Generator_ColumnPropNameInRow="T044Commessa" msprop:Generator_ColumnVarNameInTable="columnT044Commessa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044ElencoMateriali" msprop:Generator_ColumnPropNameInRow="T044ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T044ElencoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT044ElencoMateriali" msprop:Generator_UserColumnName="T044ElencoMateriali">
+              <xs:element name="T044ElencoMateriali" msprop:Generator_UserColumnName="T044ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T044ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T044ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT044ElencoMateriali">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044Riga" msprop:Generator_ColumnPropNameInRow="T044Riga" msprop:Generator_ColumnPropNameInTable="T044RigaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Riga" msprop:Generator_UserColumnName="T044Riga" type="xs:decimal" />
-              <xs:element name="T044Quantita" msprop:Generator_ColumnPropNameInRow="T044Quantita" msprop:Generator_ColumnPropNameInTable="T044QuantitaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Quantita" msprop:Generator_UserColumnName="T044Quantita" type="xs:decimal" minOccurs="0" />
-              <xs:element name="T044UnitaMisura" msprop:Generator_ColumnPropNameInRow="T044UnitaMisura" msprop:Generator_ColumnPropNameInTable="T044UnitaMisuraColumn" msprop:Generator_ColumnVarNameInTable="columnT044UnitaMisura" msprop:Generator_UserColumnName="T044UnitaMisura" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Codice" msprop:Generator_ColumnPropNameInRow="T044Codice" msprop:Generator_ColumnPropNameInTable="T044CodiceColumn" msprop:Generator_ColumnVarNameInTable="columnT044Codice" msprop:Generator_UserColumnName="T044Codice" minOccurs="0">
+              <xs:element name="T044Riga" msprop:Generator_UserColumnName="T044Riga" msprop:Generator_ColumnPropNameInTable="T044RigaColumn" msprop:Generator_ColumnPropNameInRow="T044Riga" msprop:Generator_ColumnVarNameInTable="columnT044Riga" type="xs:decimal" />
+              <xs:element name="T044Quantita" msprop:Generator_UserColumnName="T044Quantita" msprop:Generator_ColumnPropNameInTable="T044QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T044Quantita" msprop:Generator_ColumnVarNameInTable="columnT044Quantita" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T044UnitaMisura" msprop:Generator_UserColumnName="T044UnitaMisura" msprop:Generator_ColumnPropNameInTable="T044UnitaMisuraColumn" msprop:Generator_ColumnPropNameInRow="T044UnitaMisura" msprop:Generator_ColumnVarNameInTable="columnT044UnitaMisura" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Codice" msprop:Generator_UserColumnName="T044Codice" msprop:Generator_ColumnPropNameInTable="T044CodiceColumn" msprop:Generator_ColumnPropNameInRow="T044Codice" msprop:Generator_ColumnVarNameInTable="columnT044Codice" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="32" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044SettoreMerceologico" msprop:Generator_ColumnPropNameInRow="T044SettoreMerceologico" msprop:Generator_ColumnPropNameInTable="T044SettoreMerceologicoColumn" msprop:Generator_ColumnVarNameInTable="columnT044SettoreMerceologico" msprop:Generator_UserColumnName="T044SettoreMerceologico" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Marca" msprop:Generator_ColumnPropNameInRow="T044Marca" msprop:Generator_ColumnPropNameInTable="T044MarcaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Marca" msprop:Generator_UserColumnName="T044Marca" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Specifica" msprop:Generator_ColumnPropNameInRow="T044Specifica" msprop:Generator_ColumnPropNameInTable="T044SpecificaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Specifica" msprop:Generator_UserColumnName="T044Specifica" minOccurs="0">
+              <xs:element name="T044SettoreMerceologico" msprop:Generator_UserColumnName="T044SettoreMerceologico" msprop:Generator_ColumnPropNameInTable="T044SettoreMerceologicoColumn" msprop:Generator_ColumnPropNameInRow="T044SettoreMerceologico" msprop:Generator_ColumnVarNameInTable="columnT044SettoreMerceologico" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Marca" msprop:Generator_UserColumnName="T044Marca" msprop:Generator_ColumnPropNameInTable="T044MarcaColumn" msprop:Generator_ColumnPropNameInRow="T044Marca" msprop:Generator_ColumnVarNameInTable="columnT044Marca" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Specifica" msprop:Generator_UserColumnName="T044Specifica" msprop:Generator_ColumnPropNameInTable="T044SpecificaColumn" msprop:Generator_ColumnPropNameInRow="T044Specifica" msprop:Generator_ColumnVarNameInTable="columnT044Specifica" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044XCodice" msprop:Generator_ColumnPropNameInRow="T044XCodice" msprop:Generator_ColumnPropNameInTable="T044XCodiceColumn" msprop:Generator_ColumnVarNameInTable="columnT044XCodice" msprop:Generator_UserColumnName="T044XCodice" minOccurs="0">
+              <xs:element name="T044XCodice" msprop:Generator_UserColumnName="T044XCodice" msprop:Generator_ColumnPropNameInTable="T044XCodiceColumn" msprop:Generator_ColumnPropNameInRow="T044XCodice" msprop:Generator_ColumnVarNameInTable="columnT044XCodice" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="24" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044ContoLavorazione" msprop:Generator_ColumnPropNameInRow="T044ContoLavorazione" msprop:Generator_ColumnPropNameInTable="T044ContoLavorazioneColumn" msprop:Generator_ColumnVarNameInTable="columnT044ContoLavorazione" msprop:Generator_UserColumnName="T044ContoLavorazione" type="xs:boolean" minOccurs="0" />
-              <xs:element name="T044Nota" msprop:Generator_ColumnPropNameInRow="T044Nota" msprop:Generator_ColumnPropNameInTable="T044NotaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Nota" msprop:Generator_UserColumnName="T044Nota" minOccurs="0">
+              <xs:element name="T044ContoLavorazione" msprop:Generator_UserColumnName="T044ContoLavorazione" msprop:Generator_ColumnPropNameInTable="T044ContoLavorazioneColumn" msprop:Generator_ColumnPropNameInRow="T044ContoLavorazione" msprop:Generator_ColumnVarNameInTable="columnT044ContoLavorazione" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T044Nota" msprop:Generator_UserColumnName="T044Nota" msprop:Generator_ColumnPropNameInTable="T044NotaColumn" msprop:Generator_ColumnPropNameInRow="T044Nota" msprop:Generator_ColumnVarNameInTable="columnT044Nota" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044Revisione" msprop:Generator_ColumnPropNameInRow="T044Revisione" msprop:Generator_ColumnPropNameInTable="T044RevisioneColumn" msprop:Generator_ColumnVarNameInTable="columnT044Revisione" msprop:Generator_UserColumnName="T044Revisione" type="xs:int" minOccurs="0" />
-              <xs:element name="T044DataRevisione" msprop:Generator_ColumnPropNameInRow="T044DataRevisione" msprop:Generator_ColumnPropNameInTable="T044DataRevisioneColumn" msprop:Generator_ColumnVarNameInTable="columnT044DataRevisione" msprop:Generator_UserColumnName="T044DataRevisione" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T044StandBy" msprop:Generator_ColumnPropNameInRow="T044StandBy" msprop:Generator_ColumnPropNameInTable="T044StandByColumn" msprop:Generator_ColumnVarNameInTable="columnT044StandBy" msprop:Generator_UserColumnName="T044StandBy" type="xs:boolean" minOccurs="0" />
-              <xs:element name="T044IdSuperiore" msprop:Generator_ColumnPropNameInRow="T044IdSuperiore" msprop:Generator_ColumnPropNameInTable="T044IdSuperioreColumn" msprop:Generator_ColumnVarNameInTable="columnT044IdSuperiore" msprop:Generator_UserColumnName="T044IdSuperiore" type="xs:int" minOccurs="0" />
-              <xs:element name="T044InsertUser" msprop:Generator_ColumnPropNameInRow="T044InsertUser" msprop:Generator_ColumnPropNameInTable="T044InsertUserColumn" msprop:Generator_ColumnVarNameInTable="columnT044InsertUser" msprop:Generator_UserColumnName="T044InsertUser" minOccurs="0">
+              <xs:element name="T044Revisione" msprop:Generator_UserColumnName="T044Revisione" msprop:Generator_ColumnPropNameInTable="T044RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T044Revisione" msprop:Generator_ColumnVarNameInTable="columnT044Revisione" type="xs:int" minOccurs="0" />
+              <xs:element name="T044DataRevisione" msprop:Generator_UserColumnName="T044DataRevisione" msprop:Generator_ColumnPropNameInTable="T044DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T044DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT044DataRevisione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T044StandBy" msprop:Generator_UserColumnName="T044StandBy" msprop:Generator_ColumnPropNameInTable="T044StandByColumn" msprop:Generator_ColumnPropNameInRow="T044StandBy" msprop:Generator_ColumnVarNameInTable="columnT044StandBy" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T044IdSuperiore" msprop:Generator_UserColumnName="T044IdSuperiore" msprop:Generator_ColumnPropNameInTable="T044IdSuperioreColumn" msprop:Generator_ColumnPropNameInRow="T044IdSuperiore" msprop:Generator_ColumnVarNameInTable="columnT044IdSuperiore" type="xs:int" minOccurs="0" />
+              <xs:element name="T044InsertUser" msprop:Generator_UserColumnName="T044InsertUser" msprop:Generator_ColumnPropNameInTable="T044InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T044InsertUser" msprop:Generator_ColumnVarNameInTable="columnT044InsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044InsertDate" msprop:Generator_ColumnPropNameInRow="T044InsertDate" msprop:Generator_ColumnPropNameInTable="T044InsertDateColumn" msprop:Generator_ColumnVarNameInTable="columnT044InsertDate" msprop:Generator_UserColumnName="T044InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T044UpdateUser" msprop:Generator_ColumnPropNameInRow="T044UpdateUser" msprop:Generator_ColumnPropNameInTable="T044UpdateUserColumn" msprop:Generator_ColumnVarNameInTable="columnT044UpdateUser" msprop:Generator_UserColumnName="T044UpdateUser" minOccurs="0">
+              <xs:element name="T044InsertDate" msprop:Generator_UserColumnName="T044InsertDate" msprop:Generator_ColumnPropNameInTable="T044InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T044InsertDate" msprop:Generator_ColumnVarNameInTable="columnT044InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T044UpdateUser" msprop:Generator_UserColumnName="T044UpdateUser" msprop:Generator_ColumnPropNameInTable="T044UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T044UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT044UpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044UpdateDate" msprop:Generator_ColumnPropNameInRow="T044UpdateDate" msprop:Generator_ColumnPropNameInTable="T044UpdateDateColumn" msprop:Generator_ColumnVarNameInTable="columnT044UpdateDate" msprop:Generator_UserColumnName="T044UpdateDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T044Accessori" msprop:Generator_ColumnPropNameInRow="T044Accessori" msprop:Generator_ColumnPropNameInTable="T044AccessoriColumn" msprop:Generator_ColumnVarNameInTable="columnT044Accessori" msprop:Generator_UserColumnName="T044Accessori" minOccurs="0">
+              <xs:element name="T044UpdateDate" msprop:Generator_UserColumnName="T044UpdateDate" msprop:Generator_ColumnPropNameInTable="T044UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T044UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT044UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T044Accessori" msprop:Generator_UserColumnName="T044Accessori" msprop:Generator_ColumnPropNameInTable="T044AccessoriColumn" msprop:Generator_ColumnPropNameInRow="T044Accessori" msprop:Generator_ColumnVarNameInTable="columnT044Accessori" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044RaggruppamentoMateriali" msprop:Generator_ColumnPropNameInRow="T044RaggruppamentoMateriali" msprop:Generator_ColumnPropNameInTable="T044RaggruppamentoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT044RaggruppamentoMateriali" msprop:Generator_UserColumnName="T044RaggruppamentoMateriali" type="xs:int" minOccurs="0" />
-              <xs:element name="T049Descrizione" msprop:Generator_ColumnPropNameInRow="T049Descrizione" msprop:Generator_ColumnPropNameInTable="T049DescrizioneColumn" msprop:Generator_ColumnVarNameInTable="columnT049Descrizione" msprop:Generator_UserColumnName="T049Descrizione" minOccurs="0">
+              <xs:element name="T044RaggruppamentoMateriali" msprop:Generator_UserColumnName="T044RaggruppamentoMateriali" msprop:Generator_ColumnPropNameInTable="T044RaggruppamentoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T044RaggruppamentoMateriali" msprop:Generator_ColumnVarNameInTable="columnT044RaggruppamentoMateriali" type="xs:int" minOccurs="0" />
+              <xs:element name="T049Descrizione" msprop:Generator_UserColumnName="T049Descrizione" msprop:Generator_ColumnPropNameInTable="T049DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T049Descrizione" msprop:Generator_ColumnVarNameInTable="columnT049Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="32" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T043Id" msprop:Generator_ColumnPropNameInTable="T043IdColumn" msprop:Generator_ColumnVarNameInTable="columnT043Id" msprop:Generator_UserColumnName="T043Id" type="xs:int" />
-              <xs:element name="T043Commessa" msprop:Generator_ColumnPropNameInRow="T043Commessa" msprop:Generator_ColumnPropNameInTable="T043CommessaColumn" msprop:Generator_ColumnVarNameInTable="columnT043Commessa" msprop:Generator_UserColumnName="T043Commessa">
+              <xs:element name="T043Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T043Id" msprop:Generator_ColumnPropNameInTable="T043IdColumn" msprop:Generator_ColumnPropNameInRow="T043Id" msprop:Generator_ColumnVarNameInTable="columnT043Id" type="xs:int" />
+              <xs:element name="T043Commessa" msprop:Generator_UserColumnName="T043Commessa" msprop:Generator_ColumnPropNameInTable="T043CommessaColumn" msprop:Generator_ColumnPropNameInRow="T043Commessa" msprop:Generator_ColumnVarNameInTable="columnT043Commessa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043ElencoMateriali" msprop:Generator_ColumnPropNameInRow="T043ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T043ElencoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT043ElencoMateriali" msprop:Generator_UserColumnName="T043ElencoMateriali">
+              <xs:element name="T043ElencoMateriali" msprop:Generator_UserColumnName="T043ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T043ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T043ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT043ElencoMateriali">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Descrizione" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" minOccurs="0">
+              <xs:element name="T043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Note" msprop:Generator_ColumnPropNameInRow="T043Note" msprop:Generator_ColumnPropNameInTable="T043NoteColumn" msprop:Generator_ColumnVarNameInTable="columnT043Note" msprop:Generator_UserColumnName="T043Note" minOccurs="0">
+              <xs:element name="T043Note" msprop:Generator_UserColumnName="T043Note" msprop:Generator_ColumnPropNameInTable="T043NoteColumn" msprop:Generator_ColumnPropNameInRow="T043Note" msprop:Generator_ColumnVarNameInTable="columnT043Note" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TipoRiga" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TipoRiga" msprop:Generator_ColumnPropNameInTable="TipoRigaColumn" msprop:Generator_ColumnVarNameInTable="columnTipoRiga" msprop:Generator_UserColumnName="TipoRiga" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Movimentato" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="T044Movimentato" msprop:Generator_ColumnPropNameInTable="T044MovimentatoColumn" msprop:Generator_ColumnVarNameInTable="columnT044Movimentato" msprop:Generator_UserColumnName="T044Movimentato" type="xs:int" minOccurs="0" />
+              <xs:element name="TipoRiga" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TipoRiga" msprop:Generator_ColumnPropNameInTable="TipoRigaColumn" msprop:Generator_ColumnPropNameInRow="TipoRiga" msprop:Generator_ColumnVarNameInTable="columnTipoRiga" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Movimentato" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T044Movimentato" msprop:Generator_ColumnPropNameInTable="T044MovimentatoColumn" msprop:Generator_ColumnPropNameInRow="T044Movimentato" msprop:Generator_ColumnVarNameInTable="columnT044Movimentato" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RowEvHandlerName="T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler" msprop:Generator_RowDeletedName="T044_ElenchiMaterialiDettaglioAccessorioRowDeleted" msprop:Generator_RowDeletingName="T044_ElenchiMaterialiDettaglioAccessorioRowDeleting" msprop:Generator_RowEvArgName="T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent" msprop:Generator_TablePropName="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RowChangedName="T044_ElenchiMaterialiDettaglioAccessorioRowChanged" msprop:Generator_RowChangingName="T044_ElenchiMaterialiDettaglioAccessorioRowChanging" msprop:Generator_TableClassName="T044_ElenchiMaterialiDettaglioAccessorioDataTable" msprop:Generator_RowClassName="T044_ElenchiMaterialiDettaglioAccessorioRow" msprop:Generator_TableVarName="tableT044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_UserTableName="T044_ElenchiMaterialiDettaglioAccessorio">
+        <xs:element name="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RowClassName="T044_ElenchiMaterialiDettaglioAccessorioRow" msprop:Generator_RowEvHandlerName="T044_ElenchiMaterialiDettaglioAccessorioRowChangeEventHandler" msprop:Generator_RowDeletedName="T044_ElenchiMaterialiDettaglioAccessorioRowDeleted" msprop:Generator_RowDeletingName="T044_ElenchiMaterialiDettaglioAccessorioRowDeleting" msprop:Generator_RowEvArgName="T044_ElenchiMaterialiDettaglioAccessorioRowChangeEvent" msprop:Generator_TablePropName="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RowChangedName="T044_ElenchiMaterialiDettaglioAccessorioRowChanged" msprop:Generator_UserTableName="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RowChangingName="T044_ElenchiMaterialiDettaglioAccessorioRowChanging" msprop:Generator_TableClassName="T044_ElenchiMaterialiDettaglioAccessorioDataTable" msprop:Generator_TableVarName="tableT044_ElenchiMaterialiDettaglioAccessorio">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="T044Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T044Id" msprop:Generator_ColumnPropNameInTable="T044IdColumn" msprop:Generator_ColumnVarNameInTable="columnT044Id" msprop:Generator_UserColumnName="T044Id" type="xs:int" />
-              <xs:element name="T044Commessa" msprop:Generator_ColumnPropNameInRow="T044Commessa" msprop:Generator_ColumnPropNameInTable="T044CommessaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Commessa" msprop:Generator_UserColumnName="T044Commessa">
+              <xs:element name="T044Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T044Id" msprop:Generator_ColumnPropNameInTable="T044IdColumn" msprop:Generator_ColumnPropNameInRow="T044Id" msprop:Generator_ColumnVarNameInTable="columnT044Id" type="xs:int" />
+              <xs:element name="T044Commessa" msprop:Generator_UserColumnName="T044Commessa" msprop:Generator_ColumnPropNameInTable="T044CommessaColumn" msprop:Generator_ColumnPropNameInRow="T044Commessa" msprop:Generator_ColumnVarNameInTable="columnT044Commessa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044ElencoMateriali" msprop:Generator_ColumnPropNameInRow="T044ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T044ElencoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT044ElencoMateriali" msprop:Generator_UserColumnName="T044ElencoMateriali">
+              <xs:element name="T044ElencoMateriali" msprop:Generator_UserColumnName="T044ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T044ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T044ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT044ElencoMateriali">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044Riga" msprop:Generator_ColumnPropNameInRow="T044Riga" msprop:Generator_ColumnPropNameInTable="T044RigaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Riga" msprop:Generator_UserColumnName="T044Riga" type="xs:decimal" />
-              <xs:element name="T044Quantita" msprop:Generator_ColumnPropNameInRow="T044Quantita" msprop:Generator_ColumnPropNameInTable="T044QuantitaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Quantita" msprop:Generator_UserColumnName="T044Quantita" type="xs:decimal" minOccurs="0" />
-              <xs:element name="T044UnitaMisura" msprop:Generator_ColumnPropNameInRow="T044UnitaMisura" msprop:Generator_ColumnPropNameInTable="T044UnitaMisuraColumn" msprop:Generator_ColumnVarNameInTable="columnT044UnitaMisura" msprop:Generator_UserColumnName="T044UnitaMisura" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Codice" msprop:Generator_ColumnPropNameInRow="T044Codice" msprop:Generator_ColumnPropNameInTable="T044CodiceColumn" msprop:Generator_ColumnVarNameInTable="columnT044Codice" msprop:Generator_UserColumnName="T044Codice" minOccurs="0">
+              <xs:element name="T044Riga" msprop:Generator_UserColumnName="T044Riga" msprop:Generator_ColumnPropNameInTable="T044RigaColumn" msprop:Generator_ColumnPropNameInRow="T044Riga" msprop:Generator_ColumnVarNameInTable="columnT044Riga" type="xs:decimal" />
+              <xs:element name="T044Quantita" msprop:Generator_UserColumnName="T044Quantita" msprop:Generator_ColumnPropNameInTable="T044QuantitaColumn" msprop:Generator_ColumnPropNameInRow="T044Quantita" msprop:Generator_ColumnVarNameInTable="columnT044Quantita" type="xs:decimal" minOccurs="0" />
+              <xs:element name="T044UnitaMisura" msprop:Generator_UserColumnName="T044UnitaMisura" msprop:Generator_ColumnPropNameInTable="T044UnitaMisuraColumn" msprop:Generator_ColumnPropNameInRow="T044UnitaMisura" msprop:Generator_ColumnVarNameInTable="columnT044UnitaMisura" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Codice" msprop:Generator_UserColumnName="T044Codice" msprop:Generator_ColumnPropNameInTable="T044CodiceColumn" msprop:Generator_ColumnPropNameInRow="T044Codice" msprop:Generator_ColumnVarNameInTable="columnT044Codice" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="32" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044SettoreMerceologico" msprop:Generator_ColumnPropNameInRow="T044SettoreMerceologico" msprop:Generator_ColumnPropNameInTable="T044SettoreMerceologicoColumn" msprop:Generator_ColumnVarNameInTable="columnT044SettoreMerceologico" msprop:Generator_UserColumnName="T044SettoreMerceologico" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Marca" msprop:Generator_ColumnPropNameInRow="T044Marca" msprop:Generator_ColumnPropNameInTable="T044MarcaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Marca" msprop:Generator_UserColumnName="T044Marca" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Specifica" msprop:Generator_ColumnPropNameInRow="T044Specifica" msprop:Generator_ColumnPropNameInTable="T044SpecificaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Specifica" msprop:Generator_UserColumnName="T044Specifica" minOccurs="0">
+              <xs:element name="T044SettoreMerceologico" msprop:Generator_UserColumnName="T044SettoreMerceologico" msprop:Generator_ColumnPropNameInTable="T044SettoreMerceologicoColumn" msprop:Generator_ColumnPropNameInRow="T044SettoreMerceologico" msprop:Generator_ColumnVarNameInTable="columnT044SettoreMerceologico" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Marca" msprop:Generator_UserColumnName="T044Marca" msprop:Generator_ColumnPropNameInTable="T044MarcaColumn" msprop:Generator_ColumnPropNameInRow="T044Marca" msprop:Generator_ColumnVarNameInTable="columnT044Marca" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Specifica" msprop:Generator_UserColumnName="T044Specifica" msprop:Generator_ColumnPropNameInTable="T044SpecificaColumn" msprop:Generator_ColumnPropNameInRow="T044Specifica" msprop:Generator_ColumnVarNameInTable="columnT044Specifica" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044XCodice" msprop:Generator_ColumnPropNameInRow="T044XCodice" msprop:Generator_ColumnPropNameInTable="T044XCodiceColumn" msprop:Generator_ColumnVarNameInTable="columnT044XCodice" msprop:Generator_UserColumnName="T044XCodice" minOccurs="0">
+              <xs:element name="T044XCodice" msprop:Generator_UserColumnName="T044XCodice" msprop:Generator_ColumnPropNameInTable="T044XCodiceColumn" msprop:Generator_ColumnPropNameInRow="T044XCodice" msprop:Generator_ColumnVarNameInTable="columnT044XCodice" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="24" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044ContoLavorazione" msprop:Generator_ColumnPropNameInRow="T044ContoLavorazione" msprop:Generator_ColumnPropNameInTable="T044ContoLavorazioneColumn" msprop:Generator_ColumnVarNameInTable="columnT044ContoLavorazione" msprop:Generator_UserColumnName="T044ContoLavorazione" type="xs:boolean" minOccurs="0" />
-              <xs:element name="T044Nota" msprop:Generator_ColumnPropNameInRow="T044Nota" msprop:Generator_ColumnPropNameInTable="T044NotaColumn" msprop:Generator_ColumnVarNameInTable="columnT044Nota" msprop:Generator_UserColumnName="T044Nota" minOccurs="0">
+              <xs:element name="T044ContoLavorazione" msprop:Generator_UserColumnName="T044ContoLavorazione" msprop:Generator_ColumnPropNameInTable="T044ContoLavorazioneColumn" msprop:Generator_ColumnPropNameInRow="T044ContoLavorazione" msprop:Generator_ColumnVarNameInTable="columnT044ContoLavorazione" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T044Nota" msprop:Generator_UserColumnName="T044Nota" msprop:Generator_ColumnPropNameInTable="T044NotaColumn" msprop:Generator_ColumnPropNameInRow="T044Nota" msprop:Generator_ColumnVarNameInTable="columnT044Nota" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044Revisione" msprop:Generator_ColumnPropNameInRow="T044Revisione" msprop:Generator_ColumnPropNameInTable="T044RevisioneColumn" msprop:Generator_ColumnVarNameInTable="columnT044Revisione" msprop:Generator_UserColumnName="T044Revisione" type="xs:int" minOccurs="0" />
-              <xs:element name="T044DataRevisione" msprop:Generator_ColumnPropNameInRow="T044DataRevisione" msprop:Generator_ColumnPropNameInTable="T044DataRevisioneColumn" msprop:Generator_ColumnVarNameInTable="columnT044DataRevisione" msprop:Generator_UserColumnName="T044DataRevisione" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T044StandBy" msprop:Generator_ColumnPropNameInRow="T044StandBy" msprop:Generator_ColumnPropNameInTable="T044StandByColumn" msprop:Generator_ColumnVarNameInTable="columnT044StandBy" msprop:Generator_UserColumnName="T044StandBy" type="xs:boolean" minOccurs="0" />
-              <xs:element name="T044IdSuperiore" msprop:Generator_ColumnPropNameInRow="T044IdSuperiore" msprop:Generator_ColumnPropNameInTable="T044IdSuperioreColumn" msprop:Generator_ColumnVarNameInTable="columnT044IdSuperiore" msprop:Generator_UserColumnName="T044IdSuperiore" type="xs:int" minOccurs="0" />
-              <xs:element name="T044InsertUser" msprop:Generator_ColumnPropNameInRow="T044InsertUser" msprop:Generator_ColumnPropNameInTable="T044InsertUserColumn" msprop:Generator_ColumnVarNameInTable="columnT044InsertUser" msprop:Generator_UserColumnName="T044InsertUser" minOccurs="0">
+              <xs:element name="T044Revisione" msprop:Generator_UserColumnName="T044Revisione" msprop:Generator_ColumnPropNameInTable="T044RevisioneColumn" msprop:Generator_ColumnPropNameInRow="T044Revisione" msprop:Generator_ColumnVarNameInTable="columnT044Revisione" type="xs:int" minOccurs="0" />
+              <xs:element name="T044DataRevisione" msprop:Generator_UserColumnName="T044DataRevisione" msprop:Generator_ColumnPropNameInTable="T044DataRevisioneColumn" msprop:Generator_ColumnPropNameInRow="T044DataRevisione" msprop:Generator_ColumnVarNameInTable="columnT044DataRevisione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T044StandBy" msprop:Generator_UserColumnName="T044StandBy" msprop:Generator_ColumnPropNameInTable="T044StandByColumn" msprop:Generator_ColumnPropNameInRow="T044StandBy" msprop:Generator_ColumnVarNameInTable="columnT044StandBy" type="xs:boolean" minOccurs="0" />
+              <xs:element name="T044IdSuperiore" msprop:Generator_UserColumnName="T044IdSuperiore" msprop:Generator_ColumnPropNameInTable="T044IdSuperioreColumn" msprop:Generator_ColumnPropNameInRow="T044IdSuperiore" msprop:Generator_ColumnVarNameInTable="columnT044IdSuperiore" type="xs:int" minOccurs="0" />
+              <xs:element name="T044InsertUser" msprop:Generator_UserColumnName="T044InsertUser" msprop:Generator_ColumnPropNameInTable="T044InsertUserColumn" msprop:Generator_ColumnPropNameInRow="T044InsertUser" msprop:Generator_ColumnVarNameInTable="columnT044InsertUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044InsertDate" msprop:Generator_ColumnPropNameInRow="T044InsertDate" msprop:Generator_ColumnPropNameInTable="T044InsertDateColumn" msprop:Generator_ColumnVarNameInTable="columnT044InsertDate" msprop:Generator_UserColumnName="T044InsertDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T044UpdateUser" msprop:Generator_ColumnPropNameInRow="T044UpdateUser" msprop:Generator_ColumnPropNameInTable="T044UpdateUserColumn" msprop:Generator_ColumnVarNameInTable="columnT044UpdateUser" msprop:Generator_UserColumnName="T044UpdateUser" minOccurs="0">
+              <xs:element name="T044InsertDate" msprop:Generator_UserColumnName="T044InsertDate" msprop:Generator_ColumnPropNameInTable="T044InsertDateColumn" msprop:Generator_ColumnPropNameInRow="T044InsertDate" msprop:Generator_ColumnVarNameInTable="columnT044InsertDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T044UpdateUser" msprop:Generator_UserColumnName="T044UpdateUser" msprop:Generator_ColumnPropNameInTable="T044UpdateUserColumn" msprop:Generator_ColumnPropNameInRow="T044UpdateUser" msprop:Generator_ColumnVarNameInTable="columnT044UpdateUser" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044UpdateDate" msprop:Generator_ColumnPropNameInRow="T044UpdateDate" msprop:Generator_ColumnPropNameInTable="T044UpdateDateColumn" msprop:Generator_ColumnVarNameInTable="columnT044UpdateDate" msprop:Generator_UserColumnName="T044UpdateDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="T044Accessori" msprop:Generator_ColumnPropNameInRow="T044Accessori" msprop:Generator_ColumnPropNameInTable="T044AccessoriColumn" msprop:Generator_ColumnVarNameInTable="columnT044Accessori" msprop:Generator_UserColumnName="T044Accessori" minOccurs="0">
+              <xs:element name="T044UpdateDate" msprop:Generator_UserColumnName="T044UpdateDate" msprop:Generator_ColumnPropNameInTable="T044UpdateDateColumn" msprop:Generator_ColumnPropNameInRow="T044UpdateDate" msprop:Generator_ColumnVarNameInTable="columnT044UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="T044Accessori" msprop:Generator_UserColumnName="T044Accessori" msprop:Generator_ColumnPropNameInTable="T044AccessoriColumn" msprop:Generator_ColumnPropNameInRow="T044Accessori" msprop:Generator_ColumnVarNameInTable="columnT044Accessori" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T044RaggruppamentoMateriali" msprop:Generator_ColumnPropNameInRow="T044RaggruppamentoMateriali" msprop:Generator_ColumnPropNameInTable="T044RaggruppamentoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT044RaggruppamentoMateriali" msprop:Generator_UserColumnName="T044RaggruppamentoMateriali" type="xs:int" minOccurs="0" />
-              <xs:element name="T049Descrizione" msprop:Generator_ColumnPropNameInRow="T049Descrizione" msprop:Generator_ColumnPropNameInTable="T049DescrizioneColumn" msprop:Generator_ColumnVarNameInTable="columnT049Descrizione" msprop:Generator_UserColumnName="T049Descrizione" minOccurs="0">
+              <xs:element name="T044RaggruppamentoMateriali" msprop:Generator_UserColumnName="T044RaggruppamentoMateriali" msprop:Generator_ColumnPropNameInTable="T044RaggruppamentoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T044RaggruppamentoMateriali" msprop:Generator_ColumnVarNameInTable="columnT044RaggruppamentoMateriali" type="xs:int" minOccurs="0" />
+              <xs:element name="T049Descrizione" msprop:Generator_UserColumnName="T049Descrizione" msprop:Generator_ColumnPropNameInTable="T049DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T049Descrizione" msprop:Generator_ColumnVarNameInTable="columnT049Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="32" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T043Id" msprop:Generator_ColumnPropNameInTable="T043IdColumn" msprop:Generator_ColumnVarNameInTable="columnT043Id" msprop:Generator_UserColumnName="T043Id" type="xs:int" />
-              <xs:element name="T043Commessa" msprop:Generator_ColumnPropNameInRow="T043Commessa" msprop:Generator_ColumnPropNameInTable="T043CommessaColumn" msprop:Generator_ColumnVarNameInTable="columnT043Commessa" msprop:Generator_UserColumnName="T043Commessa">
+              <xs:element name="T043Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="T043Id" msprop:Generator_ColumnPropNameInTable="T043IdColumn" msprop:Generator_ColumnPropNameInRow="T043Id" msprop:Generator_ColumnVarNameInTable="columnT043Id" type="xs:int" />
+              <xs:element name="T043Commessa" msprop:Generator_UserColumnName="T043Commessa" msprop:Generator_ColumnPropNameInTable="T043CommessaColumn" msprop:Generator_ColumnPropNameInRow="T043Commessa" msprop:Generator_ColumnVarNameInTable="columnT043Commessa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043ElencoMateriali" msprop:Generator_ColumnPropNameInRow="T043ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T043ElencoMaterialiColumn" msprop:Generator_ColumnVarNameInTable="columnT043ElencoMateriali" msprop:Generator_UserColumnName="T043ElencoMateriali">
+              <xs:element name="T043ElencoMateriali" msprop:Generator_UserColumnName="T043ElencoMateriali" msprop:Generator_ColumnPropNameInTable="T043ElencoMaterialiColumn" msprop:Generator_ColumnPropNameInRow="T043ElencoMateriali" msprop:Generator_ColumnVarNameInTable="columnT043ElencoMateriali">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Descrizione" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" minOccurs="0">
+              <xs:element name="T043Descrizione" msprop:Generator_UserColumnName="T043Descrizione" msprop:Generator_ColumnPropNameInTable="T043DescrizioneColumn" msprop:Generator_ColumnPropNameInRow="T043Descrizione" msprop:Generator_ColumnVarNameInTable="columnT043Descrizione" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="T043Note" msprop:Generator_ColumnPropNameInRow="T043Note" msprop:Generator_ColumnPropNameInTable="T043NoteColumn" msprop:Generator_ColumnVarNameInTable="columnT043Note" msprop:Generator_UserColumnName="T043Note" minOccurs="0">
+              <xs:element name="T043Note" msprop:Generator_UserColumnName="T043Note" msprop:Generator_ColumnPropNameInTable="T043NoteColumn" msprop:Generator_ColumnPropNameInRow="T043Note" msprop:Generator_ColumnVarNameInTable="columnT043Note" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TipoRiga" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TipoRiga" msprop:Generator_ColumnPropNameInTable="TipoRigaColumn" msprop:Generator_ColumnVarNameInTable="columnTipoRiga" msprop:Generator_UserColumnName="TipoRiga" type="xs:int" minOccurs="0" />
-              <xs:element name="T044Movimentato" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="T044Movimentato" msprop:Generator_ColumnPropNameInTable="T044MovimentatoColumn" msprop:Generator_ColumnVarNameInTable="columnT044Movimentato" msprop:Generator_UserColumnName="T044Movimentato" type="xs:int" minOccurs="0" />
+              <xs:element name="TipoRiga" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TipoRiga" msprop:Generator_ColumnPropNameInTable="TipoRigaColumn" msprop:Generator_ColumnPropNameInRow="TipoRiga" msprop:Generator_ColumnVarNameInTable="columnTipoRiga" type="xs:int" minOccurs="0" />
+              <xs:element name="T044Movimentato" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T044Movimentato" msprop:Generator_ColumnPropNameInTable="T044MovimentatoColumn" msprop:Generator_ColumnPropNameInRow="T044Movimentato" msprop:Generator_ColumnVarNameInTable="columnT044Movimentato" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T062_ListeQuadriNumerazione" msprop:Generator_RowEvHandlerName="T062_ListeQuadriNumerazioneRowChangeEventHandler" msprop:Generator_RowDeletedName="T062_ListeQuadriNumerazioneRowDeleted" msprop:Generator_RowDeletingName="T062_ListeQuadriNumerazioneRowDeleting" msprop:Generator_RowEvArgName="T062_ListeQuadriNumerazioneRowChangeEvent" msprop:Generator_TablePropName="T062_ListeQuadriNumerazione" msprop:Generator_RowChangedName="T062_ListeQuadriNumerazioneRowChanged" msprop:Generator_RowChangingName="T062_ListeQuadriNumerazioneRowChanging" msprop:Generator_TableClassName="T062_ListeQuadriNumerazioneDataTable" msprop:Generator_RowClassName="T062_ListeQuadriNumerazioneRow" msprop:Generator_TableVarName="tableT062_ListeQuadriNumerazione" msprop:Generator_UserTableName="T062_ListeQuadriNumerazione">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="T062IdTipologia" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="T062IdTipologia" msprop:Generator_ColumnPropNameInTable="T062IdTipologiaColumn" msprop:Generator_ColumnVarNameInTable="columnT062IdTipologia" msprop:Generator_UserColumnName="T062IdTipologia" type="xs:int" />
+              <xs:element name="T062Tipologia" msprop:Generator_ColumnPropNameInRow="T062Tipologia" msprop:Generator_ColumnPropNameInTable="T062TipologiaColumn" msprop:Generator_ColumnVarNameInTable="columnT062Tipologia" msprop:Generator_UserColumnName="T062Tipologia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T062Attiva" msprop:Generator_ColumnPropNameInRow="T062Attiva" msprop:Generator_ColumnPropNameInTable="T062AttivaColumn" msprop:Generator_ColumnVarNameInTable="columnT062Attiva" msprop:Generator_UserColumnName="T062Attiva" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2435,14 +2471,18 @@ ORDER BY T074Centro,T074LavorazioniEsterne</CommandText>
       <xs:field xpath="mstns:T043Commessa" />
       <xs:field xpath="mstns:T043ElencoMateriali" />
     </xs:unique>
+    <xs:unique name="T062_ListeQuadriNumerazione_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:T062_ListeQuadriNumerazione" />
+      <xs:field xpath="mstns:T062IdTipologia" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="T059_Lotti_T074_LottiDettaglio" msdata:parent="T059_Lotti" msdata:child="T074_LottiDettaglio" msdata:parentkey="T059Commessa T059Lotto" msdata:childkey="T074Commessa T074Lotto" msprop:Generator_UserParentTable="T059_Lotti" msprop:Generator_UserChildTable="T074_LottiDettaglio" msprop:Generator_RelationVarName="relationT059_Lotti_T074_LottiDettaglio" msprop:Generator_ChildPropName="GetT074_LottiDettaglioRows" msprop:Generator_UserRelationName="T059_Lotti_T074_LottiDettaglio" msprop:Generator_ParentPropName="T059_LottiRowParent" />
-      <msdata:Relationship name="T042_ListeQuadri_T117_ListeQuadriDettaglio" msdata:parent="T042_ListeQuadri" msdata:child="T117_ListeQuadriDettaglio" msdata:parentkey="T042Commessa T042PosizioneInterna" msdata:childkey="T117Commessa T117PosizioneInterna" msprop:Generator_UserParentTable="T042_ListeQuadri" msprop:Generator_UserChildTable="T117_ListeQuadriDettaglio" msprop:Generator_RelationVarName="relationT042_ListeQuadri_T117_ListeQuadriDettaglio" msprop:Generator_ChildPropName="GetT117_ListeQuadriDettaglioRows" msprop:Generator_UserRelationName="T042_ListeQuadri_T117_ListeQuadriDettaglio" msprop:Generator_ParentPropName="T042_ListeQuadriRowParent" />
-      <msdata:Relationship name="T042_ListeQuadri_T045_ListeQuadriElenchiMateriali" msdata:parent="T042_ListeQuadri" msdata:child="T045_ListeQuadriElenchiMateriali" msdata:parentkey="T042Commessa T042PosizioneInterna" msdata:childkey="T045Commessa T045PosizioneInterna" msprop:Generator_UserParentTable="T042_ListeQuadri" msprop:Generator_UserChildTable="T045_ListeQuadriElenchiMateriali" msprop:Generator_RelationVarName="relationT042_ListeQuadri_T045_ListeQuadriElenchiMateriali" msprop:Generator_ChildPropName="GetT045_ListeQuadriElenchiMaterialiRows" msprop:Generator_UserRelationName="T042_ListeQuadri_T045_ListeQuadriElenchiMateriali" msprop:Generator_ParentPropName="T042_ListeQuadriRowParent" />
-      <msdata:Relationship name="T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente" msdata:parent="T043_ElenchiMateriali" msdata:child="T044_ElenchiMaterialiDettaglioComponente" msdata:parentkey="T043Commessa T043ElencoMateriali" msdata:childkey="T044Commessa T044ElencoMateriali" msprop:Generator_UserParentTable="T043_ElenchiMateriali" msprop:Generator_UserChildTable="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RelationVarName="relationT043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_ChildPropName="GetT044_ElenchiMaterialiDettaglioComponenteRows" msprop:Generator_ParentPropName="T043_ElenchiMaterialiRowParent" msprop:Generator_UserRelationName="T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente" />
-      <msdata:Relationship name="T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio" msdata:parent="T044_ElenchiMaterialiDettaglioComponente" msdata:child="T044_ElenchiMaterialiDettaglioAccessorio" msdata:parentkey="T044Id" msdata:childkey="T044IdSuperiore" msprop:Generator_UserParentTable="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_UserChildTable="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RelationVarName="relationT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_ChildPropName="GetT044_ElenchiMaterialiDettaglioAccessorioRows" msprop:Generator_ParentPropName="T044_ElenchiMaterialiDettaglioComponenteRow" msprop:Generator_UserRelationName="T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio" />
+      <msdata:Relationship name="T059_Lotti_T074_LottiDettaglio" msdata:parent="T059_Lotti" msdata:child="T074_LottiDettaglio" msdata:parentkey="T059Commessa T059Lotto" msdata:childkey="T074Commessa T074Lotto" msprop:Generator_UserParentTable="T059_Lotti" msprop:Generator_UserChildTable="T074_LottiDettaglio" msprop:Generator_RelationVarName="relationT059_Lotti_T074_LottiDettaglio" msprop:Generator_ChildPropName="GetT074_LottiDettaglioRows" msprop:Generator_ParentPropName="T059_LottiRowParent" msprop:Generator_UserRelationName="T059_Lotti_T074_LottiDettaglio" />
+      <msdata:Relationship name="T042_ListeQuadri_T117_ListeQuadriDettaglio" msdata:parent="T042_ListeQuadri" msdata:child="T117_ListeQuadriDettaglio" msdata:parentkey="T042Commessa T042PosizioneInterna" msdata:childkey="T117Commessa T117PosizioneInterna" msprop:Generator_UserParentTable="T042_ListeQuadri" msprop:Generator_UserChildTable="T117_ListeQuadriDettaglio" msprop:Generator_RelationVarName="relationT042_ListeQuadri_T117_ListeQuadriDettaglio" msprop:Generator_ChildPropName="GetT117_ListeQuadriDettaglioRows" msprop:Generator_ParentPropName="T042_ListeQuadriRowParent" msprop:Generator_UserRelationName="T042_ListeQuadri_T117_ListeQuadriDettaglio" />
+      <msdata:Relationship name="T042_ListeQuadri_T045_ListeQuadriElenchiMateriali" msdata:parent="T042_ListeQuadri" msdata:child="T045_ListeQuadriElenchiMateriali" msdata:parentkey="T042Commessa T042PosizioneInterna" msdata:childkey="T045Commessa T045PosizioneInterna" msprop:Generator_UserParentTable="T042_ListeQuadri" msprop:Generator_UserChildTable="T045_ListeQuadriElenchiMateriali" msprop:Generator_RelationVarName="relationT042_ListeQuadri_T045_ListeQuadriElenchiMateriali" msprop:Generator_ChildPropName="GetT045_ListeQuadriElenchiMaterialiRows" msprop:Generator_ParentPropName="T042_ListeQuadriRowParent" msprop:Generator_UserRelationName="T042_ListeQuadri_T045_ListeQuadriElenchiMateriali" />
+      <msdata:Relationship name="T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente" msdata:parent="T043_ElenchiMateriali" msdata:child="T044_ElenchiMaterialiDettaglioComponente" msdata:parentkey="T043Commessa T043ElencoMateriali" msdata:childkey="T044Commessa T044ElencoMateriali" msprop:Generator_UserParentTable="T043_ElenchiMateriali" msprop:Generator_UserChildTable="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_RelationVarName="relationT043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_ChildPropName="GetT044_ElenchiMaterialiDettaglioComponenteRows" msprop:Generator_UserRelationName="T043_ElenchiMateriali_T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_ParentPropName="T043_ElenchiMaterialiRowParent" />
+      <msdata:Relationship name="T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio" msdata:parent="T044_ElenchiMaterialiDettaglioComponente" msdata:child="T044_ElenchiMaterialiDettaglioAccessorio" msdata:parentkey="T044Id" msdata:childkey="T044IdSuperiore" msprop:Generator_UserParentTable="T044_ElenchiMaterialiDettaglioComponente" msprop:Generator_UserChildTable="T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_RelationVarName="relationT044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_ChildPropName="GetT044_ElenchiMaterialiDettaglioAccessorioRows" msprop:Generator_UserRelationName="T044_ElenchiMaterialiDettaglioComponente_T044_ElenchiMaterialiDettaglioAccessorio" msprop:Generator_ParentPropName="T044_ElenchiMaterialiDettaglioComponenteRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

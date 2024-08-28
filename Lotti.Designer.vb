@@ -39,118 +39,123 @@ Partial Class Lotti
         Dim Appearance11 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance12 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim UltraGridBand2 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T058_Commesse_Totale_Ore", -1)
-        Dim UltraGridColumn267 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn268 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Preventivo")
-        Dim UltraGridColumn269 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Obbiettivo")
-        Dim UltraGridColumn270 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Esterne")
-        Dim UltraGridColumn271 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
+        Dim UltraGridColumn5 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
+        Dim UltraGridColumn6 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Preventivo")
+        Dim UltraGridColumn7 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Obbiettivo")
+        Dim UltraGridColumn8 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Esterne")
+        Dim UltraGridColumn9 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
         Dim UltraGridBand3 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T058_Commesse_Totale_Ore_Lotti_Selezionati", -1)
-        Dim UltraGridColumn272 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn273 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Preventivo")
-        Dim UltraGridColumn274 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Obbiettivo")
-        Dim UltraGridColumn275 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Esterne")
-        Dim UltraGridColumn276 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
+        Dim UltraGridColumn10 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
+        Dim UltraGridColumn11 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Preventivo")
+        Dim UltraGridColumn12 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Obbiettivo")
+        Dim UltraGridColumn13 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Esterne")
+        Dim UltraGridColumn14 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
         Dim UltraGridBand4 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T059_Lotti", -1)
-        Dim UltraGridColumn277 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059IdLotto")
-        Dim UltraGridColumn278 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Commessa")
-        Dim UltraGridColumn279 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Lotto")
-        Dim UltraGridColumn280 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DescrizioneLotto")
-        Dim UltraGridColumn281 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataConsegna")
-        Dim UltraGridColumn282 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Sede")
-        Dim UltraGridColumn283 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Consegna")
-        Dim UltraGridColumn284 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Colonne")
-        Dim UltraGridColumn285 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Note")
-        Dim UltraGridColumn286 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059NoteUfficioIndustrializzazione")
-        Dim UltraGridColumn287 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059LavorazioniEsterne")
-        Dim UltraGridColumn288 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataChiusura")
-        Dim UltraGridColumn289 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataAggiornamentoOre")
-        Dim UltraGridColumn290 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UtenteAggiornamentoOre")
-        Dim UltraGridColumn291 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059InsertUser")
-        Dim UltraGridColumn292 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059InsertDate")
-        Dim UltraGridColumn293 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UpdateUser")
-        Dim UltraGridColumn294 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UpdateDate")
-        Dim UltraGridColumn295 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059_Lotti_T074_LottiDettaglio")
+        Dim UltraGridColumn15 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059IdLotto")
+        Dim UltraGridColumn16 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Commessa")
+        Dim UltraGridColumn17 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Lotto")
+        Dim UltraGridColumn18 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DescrizioneLotto")
+        Dim UltraGridColumn19 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataConsegna")
+        Dim UltraGridColumn20 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Sede")
+        Dim UltraGridColumn21 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Consegna")
+        Dim UltraGridColumn22 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Colonne")
+        Dim UltraGridColumn23 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059Note")
+        Dim UltraGridColumn24 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059NoteUfficioIndustrializzazione")
+        Dim UltraGridColumn25 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059LavorazioniEsterne")
+        Dim UltraGridColumn26 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataChiusura")
+        Dim UltraGridColumn27 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059DataAggiornamentoOre")
+        Dim UltraGridColumn28 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UtenteAggiornamentoOre")
+        Dim UltraGridColumn29 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059InsertUser")
+        Dim UltraGridColumn30 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059InsertDate")
+        Dim UltraGridColumn31 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UpdateUser")
+        Dim UltraGridColumn32 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059UpdateDate")
+        Dim UltraGridColumn33 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T059_Lotti_T074_LottiDettaglio")
         Dim UltraGridBand5 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T059_Lotti_T074_LottiDettaglio", 0)
-        Dim UltraGridColumn296 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Id")
-        Dim UltraGridColumn297 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Commessa")
-        Dim UltraGridColumn298 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Lotto")
-        Dim UltraGridColumn299 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
-        Dim UltraGridColumn300 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Obbiettivo")
-        Dim UltraGridColumn301 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074OreEsterne")
-        Dim UltraGridColumn302 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
-        Dim UltraGridColumn303 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074InsertUser")
-        Dim UltraGridColumn304 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074InsertDate")
-        Dim UltraGridColumn305 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074UpdateUser")
-        Dim UltraGridColumn306 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074UpdateDate")
-        Dim UltraGridColumn307 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Preventivo")
-        Dim UltraGridColumn308 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
+        Dim UltraGridColumn34 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Id")
+        Dim UltraGridColumn35 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Commessa")
+        Dim UltraGridColumn36 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Lotto")
+        Dim UltraGridColumn37 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Centro")
+        Dim UltraGridColumn38 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Obbiettivo")
+        Dim UltraGridColumn39 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074OreEsterne")
+        Dim UltraGridColumn40 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074LavorazioniEsterne")
+        Dim UltraGridColumn41 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074InsertUser")
+        Dim UltraGridColumn42 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074InsertDate")
+        Dim UltraGridColumn43 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074UpdateUser")
+        Dim UltraGridColumn44 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074UpdateDate")
+        Dim UltraGridColumn45 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T074Preventivo")
+        Dim UltraGridColumn46 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Consuntivo")
         Dim UltraGridBand6 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T058_Commesse_aperte", -1)
-        Dim UltraGridColumn309 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058Commessa")
-        Dim UltraGridColumn310 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T055RagioneSociale")
-        Dim UltraGridColumn311 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058Descrizione")
-        Dim UltraGridColumn312 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058IdCommessa")
-        Dim UltraGridColumn313 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058CartellaArchivio")
+        Dim UltraGridColumn47 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058Commessa")
+        Dim UltraGridColumn48 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T055RagioneSociale")
+        Dim UltraGridColumn49 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058Descrizione")
+        Dim UltraGridColumn50 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058IdCommessa")
+        Dim UltraGridColumn51 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T058CartellaArchivio")
         Dim Appearance13 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim UltraGridBand7 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("tmpLotti", -1)
-        Dim UltraGridColumn314 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Lotto")
-        Dim UltraGridColumn315 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Selezionato")
+        Dim UltraGridColumn52 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Lotto")
+        Dim UltraGridColumn53 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Selezionato")
         Dim UltraGridBand8 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T042_ListeQuadri", -1)
-        Dim UltraGridColumn316 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Ordinamento")
-        Dim UltraGridColumn317 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Id")
-        Dim UltraGridColumn318 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Commessa")
-        Dim UltraGridColumn319 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Numerazione")
-        Dim UltraGridColumn320 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PosizioneInterna")
-        Dim UltraGridColumn321 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PosizioneOrdine")
-        Dim UltraGridColumn322 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Quantita")
-        Dim UltraGridColumn323 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Descrizione")
-        Dim UltraGridColumn324 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Lotto")
-        Dim UltraGridColumn325 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042StandBy")
-        Dim UltraGridColumn326 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Revisione")
-        Dim UltraGridColumn327 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042DataRevisione")
-        Dim UltraGridColumn328 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Note")
-        Dim UltraGridColumn329 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042ConsegnaMateriali")
-        Dim UltraGridColumn330 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Colonne")
-        Dim UltraGridColumn331 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PrezzoUnitario")
-        Dim UltraGridColumn332 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PrezzoVarianti")
-        Dim UltraGridColumn333 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042InsertUser")
-        Dim UltraGridColumn334 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042InsertDate")
-        Dim UltraGridColumn335 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042UpdateUser")
-        Dim UltraGridColumn336 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042UpdateDate")
-        Dim UltraGridColumn337 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PrezzoTotale")
-        Dim UltraGridColumn338 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042DescrizioneLotto")
-        Dim UltraGridColumn339 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042_ListeQuadri_T117_ListeQuadriDettaglio")
-        Dim UltraGridColumn340 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali")
+        Dim UltraGridColumn54 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("Ordinamento")
+        Dim UltraGridColumn55 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Id")
+        Dim UltraGridColumn56 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Commessa")
+        Dim UltraGridColumn57 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Numerazione")
+        Dim UltraGridColumn58 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PosizioneInterna")
+        Dim UltraGridColumn59 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PosizioneOrdine")
+        Dim UltraGridColumn60 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Quantita")
+        Dim UltraGridColumn61 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Descrizione")
+        Dim UltraGridColumn62 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Lotto")
+        Dim UltraGridColumn63 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042StandBy")
+        Dim UltraGridColumn64 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Revisione")
+        Dim UltraGridColumn65 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042DataRevisione")
+        Dim UltraGridColumn66 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Note")
+        Dim UltraGridColumn67 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042ConsegnaMateriali")
+        Dim UltraGridColumn68 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Colonne")
+        Dim UltraGridColumn69 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PrezzoUnitario")
+        Dim UltraGridColumn70 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PrezzoVarianti")
+        Dim UltraGridColumn71 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042InsertUser")
+        Dim UltraGridColumn72 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042InsertDate")
+        Dim UltraGridColumn73 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042UpdateUser")
+        Dim UltraGridColumn74 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042UpdateDate")
+        Dim UltraGridColumn75 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042PrezzoTotale")
+        Dim UltraGridColumn76 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042DescrizioneLotto")
+        Dim UltraGridColumn77 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042_ListeQuadri_T117_ListeQuadriDettaglio")
+        Dim UltraGridColumn78 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali")
         Dim UltraGridBand9 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T042_ListeQuadri_T117_ListeQuadriDettaglio", 0)
-        Dim UltraGridColumn341 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117Id")
-        Dim UltraGridColumn342 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117Commessa")
-        Dim UltraGridColumn343 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117PosizioneInterna")
-        Dim UltraGridColumn344 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117Centro")
-        Dim UltraGridColumn345 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117OrePreventivate")
-        Dim UltraGridColumn346 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117InsertUser")
-        Dim UltraGridColumn347 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117InsertDate")
-        Dim UltraGridColumn348 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117UpdateUser")
-        Dim UltraGridColumn349 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117UpdateDate")
+        Dim UltraGridColumn79 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117Id")
+        Dim UltraGridColumn80 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117Commessa")
+        Dim UltraGridColumn81 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117PosizioneInterna")
+        Dim UltraGridColumn82 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117Centro")
+        Dim UltraGridColumn83 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117OrePreventivate")
+        Dim UltraGridColumn84 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117InsertUser")
+        Dim UltraGridColumn85 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117InsertDate")
+        Dim UltraGridColumn86 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117UpdateUser")
+        Dim UltraGridColumn87 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T117UpdateDate")
         Dim UltraGridBand10 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T042_ListeQuadri_T045_ListeQuadriElenchiMateriali", 0)
-        Dim UltraGridColumn350 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Id")
-        Dim UltraGridColumn351 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Commessa")
-        Dim UltraGridColumn352 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045PosizioneInterna")
-        Dim UltraGridColumn353 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045ElencoMateriali")
-        Dim UltraGridColumn354 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Quantita")
-        Dim UltraGridColumn355 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045DataConsegnaMateriali")
-        Dim UltraGridColumn356 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045TipoConsegna")
-        Dim UltraGridColumn357 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045StandBy")
-        Dim UltraGridColumn358 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Revisione")
-        Dim UltraGridColumn359 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045DataRevisione")
-        Dim UltraGridColumn360 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Note")
-        Dim UltraGridColumn361 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045InsertUser")
-        Dim UltraGridColumn362 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045InsertDate")
-        Dim UltraGridColumn363 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045UpdateUser")
-        Dim UltraGridColumn364 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045UpdateDate")
-        Dim UltraGridColumn365 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Descrizione")
-        Dim UltraGridColumn366 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Quantita")
-        Dim UltraGridColumn367 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T043Descrizione")
+        Dim UltraGridColumn88 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Id")
+        Dim UltraGridColumn89 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Commessa")
+        Dim UltraGridColumn90 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045PosizioneInterna")
+        Dim UltraGridColumn91 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045ElencoMateriali")
+        Dim UltraGridColumn92 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Quantita")
+        Dim UltraGridColumn93 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045DataConsegnaMateriali")
+        Dim UltraGridColumn94 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045TipoConsegna")
+        Dim UltraGridColumn95 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045StandBy")
+        Dim UltraGridColumn96 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Revisione")
+        Dim UltraGridColumn97 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045DataRevisione")
+        Dim UltraGridColumn98 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045Note")
+        Dim UltraGridColumn99 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045InsertUser")
+        Dim UltraGridColumn100 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045InsertDate")
+        Dim UltraGridColumn101 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045UpdateUser")
+        Dim UltraGridColumn102 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T045UpdateDate")
+        Dim UltraGridColumn103 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Descrizione")
+        Dim UltraGridColumn104 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T042Quantita")
+        Dim UltraGridColumn105 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T043Descrizione")
+        Dim UltraGridBand11 As Infragistics.Win.UltraWinGrid.UltraGridBand = New Infragistics.Win.UltraWinGrid.UltraGridBand("T062_ListeQuadriNumerazione", -1)
+        Dim UltraGridColumn160 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T062IdTipologia")
+        Dim UltraGridColumn161 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T062Tipologia")
+        Dim UltraGridColumn162 As Infragistics.Win.UltraWinGrid.UltraGridColumn = New Infragistics.Win.UltraWinGrid.UltraGridColumn("T062Attiva")
         Dim UltraTab1 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim UltraTab2 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab3 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim UltraToolbar1 As Infragistics.Win.UltraWinToolbars.UltraToolbar = New Infragistics.Win.UltraWinToolbars.UltraToolbar("UltraToolbar1")
         Dim ButtonTool13 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool1")
         Dim ButtonTool15 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("ButtonTool3")
@@ -259,6 +264,9 @@ Partial Class Lotti
         Me.ngrdT042_ListeQuadri = New Infragistics.Win.UltraWinGrid.UltraGrid()
         Me.T042ListeQuadriBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ugT042Totali = New Infragistics.Win.UltraWinGrid.UltraGrid()
+        Me.UltraTabPageControl3 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
+        Me.cboT042Numerazione = New Infragistics.Win.UltraWinGrid.UltraCombo()
+        Me.T062ListeQuadriNumerazioneBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UltraPanelResto = New Infragistics.Win.Misc.UltraPanel()
         Me.TabControlPrincipale = New Infragistics.Win.UltraWinTabControl.UltraTabControl()
         Me.UltraTabSharedControlsPage1 = New Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage()
@@ -288,6 +296,7 @@ Partial Class Lotti
         Me.T117_ListeQuadriDettaglioTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T117_ListeQuadriDettaglioTableAdapter()
         Me.T045_ListeQuadriElenchiMaterialiTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T045_ListeQuadriElenchiMaterialiTableAdapter()
         Me.T042_MagicTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T042_MagicTableAdapter()
+        Me.T062_ListeQuadriNumerazioneTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T062_ListeQuadriNumerazioneTableAdapter()
         Me.UltraTabPageControl1.SuspendLayout()
         Me.UltraPanel1.ClientArea.SuspendLayout()
         Me.UltraPanel1.SuspendLayout()
@@ -350,6 +359,9 @@ Partial Class Lotti
         CType(Me.ngrdT042_ListeQuadri, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.T042ListeQuadriBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ugT042Totali, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UltraTabPageControl3.SuspendLayout()
+        CType(Me.cboT042Numerazione, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.T062ListeQuadriNumerazioneBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraPanelResto.ClientArea.SuspendLayout()
         Me.UltraPanelResto.SuspendLayout()
         CType(Me.TabControlPrincipale, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -362,7 +374,7 @@ Partial Class Lotti
         Me.UltraTabPageControl1.Controls.Add(Me.UltraPanel1)
         Me.UltraTabPageControl1.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
-        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 700)
+        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 786)
         '
         'UltraPanel1
         '
@@ -377,7 +389,7 @@ Partial Class Lotti
         Me.UltraPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanel1.Location = New System.Drawing.Point(0, 0)
         Me.UltraPanel1.Name = "UltraPanel1"
-        Me.UltraPanel1.Size = New System.Drawing.Size(1689, 700)
+        Me.UltraPanel1.Size = New System.Drawing.Size(1689, 786)
         Me.UltraPanel1.TabIndex = 6
         '
         'UltraPanel4
@@ -389,7 +401,7 @@ Partial Class Lotti
         Me.UltraPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanel4.Location = New System.Drawing.Point(0, 420)
         Me.UltraPanel4.Name = "UltraPanel4"
-        Me.UltraPanel4.Size = New System.Drawing.Size(1689, 280)
+        Me.UltraPanel4.Size = New System.Drawing.Size(1689, 366)
         Me.UltraPanel4.TabIndex = 6
         '
         'UltraGanttView1
@@ -410,7 +422,7 @@ Partial Class Lotti
         Me.UltraGanttView1.GridSettings.ColumnSettings.GetValue("RowNumber").VisiblePosition = 12
         Me.UltraGanttView1.Location = New System.Drawing.Point(0, 0)
         Me.UltraGanttView1.Name = "UltraGanttView1"
-        Me.UltraGanttView1.Size = New System.Drawing.Size(1689, 280)
+        Me.UltraGanttView1.Size = New System.Drawing.Size(1689, 366)
         Me.UltraGanttView1.TabIndex = 11
         Me.UltraGanttView1.Text = "UltraGanttView1"
         Me.UltraGanttView1.VerticalSplitterMinimumResizeWidth = 10
@@ -856,12 +868,12 @@ Partial Class Lotti
         'ngrdT059_Lotti4
         '
         Me.ngrdT059_Lotti4.DataSource = Me.T058CommesseTotaleOreBindingSource
-        UltraGridColumn267.Header.VisiblePosition = 0
-        UltraGridColumn268.Header.VisiblePosition = 1
-        UltraGridColumn269.Header.VisiblePosition = 2
-        UltraGridColumn270.Header.VisiblePosition = 3
-        UltraGridColumn271.Header.VisiblePosition = 4
-        UltraGridBand2.Columns.AddRange(New Object() {UltraGridColumn267, UltraGridColumn268, UltraGridColumn269, UltraGridColumn270, UltraGridColumn271})
+        UltraGridColumn5.Header.VisiblePosition = 0
+        UltraGridColumn6.Header.VisiblePosition = 1
+        UltraGridColumn7.Header.VisiblePosition = 2
+        UltraGridColumn8.Header.VisiblePosition = 3
+        UltraGridColumn9.Header.VisiblePosition = 4
+        UltraGridBand2.Columns.AddRange(New Object() {UltraGridColumn5, UltraGridColumn6, UltraGridColumn7, UltraGridColumn8, UltraGridColumn9})
         Me.ngrdT059_Lotti4.DisplayLayout.BandsSerializer.Add(UltraGridBand2)
         Me.ngrdT059_Lotti4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ngrdT059_Lotti4.Location = New System.Drawing.Point(0, 0)
@@ -890,12 +902,12 @@ Partial Class Lotti
         'ngrdT059_Lotti3
         '
         Me.ngrdT059_Lotti3.DataSource = Me.T058CommesseTotaleOreLottiSelezionatiBindingSource
-        UltraGridColumn272.Header.VisiblePosition = 0
-        UltraGridColumn273.Header.VisiblePosition = 1
-        UltraGridColumn274.Header.VisiblePosition = 2
-        UltraGridColumn275.Header.VisiblePosition = 3
-        UltraGridColumn276.Header.VisiblePosition = 4
-        UltraGridBand3.Columns.AddRange(New Object() {UltraGridColumn272, UltraGridColumn273, UltraGridColumn274, UltraGridColumn275, UltraGridColumn276})
+        UltraGridColumn10.Header.VisiblePosition = 0
+        UltraGridColumn11.Header.VisiblePosition = 1
+        UltraGridColumn12.Header.VisiblePosition = 2
+        UltraGridColumn13.Header.VisiblePosition = 3
+        UltraGridColumn14.Header.VisiblePosition = 4
+        UltraGridBand3.Columns.AddRange(New Object() {UltraGridColumn10, UltraGridColumn11, UltraGridColumn12, UltraGridColumn13, UltraGridColumn14})
         Me.ngrdT059_Lotti3.DisplayLayout.BandsSerializer.Add(UltraGridBand3)
         Me.ngrdT059_Lotti3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ngrdT059_Lotti3.Location = New System.Drawing.Point(0, 0)
@@ -950,40 +962,40 @@ Partial Class Lotti
         'ngrdT059_Lotti
         '
         Me.ngrdT059_Lotti.DataSource = Me.T059LottiBindingSource
-        UltraGridColumn277.Header.VisiblePosition = 0
-        UltraGridColumn278.Header.VisiblePosition = 1
-        UltraGridColumn279.Header.VisiblePosition = 2
-        UltraGridColumn280.Header.VisiblePosition = 3
-        UltraGridColumn281.Header.VisiblePosition = 4
-        UltraGridColumn282.Header.VisiblePosition = 5
-        UltraGridColumn283.Header.VisiblePosition = 6
-        UltraGridColumn284.Header.VisiblePosition = 7
-        UltraGridColumn285.Header.VisiblePosition = 8
-        UltraGridColumn286.Header.VisiblePosition = 9
-        UltraGridColumn287.Header.VisiblePosition = 10
-        UltraGridColumn288.Header.VisiblePosition = 11
-        UltraGridColumn289.Header.VisiblePosition = 12
-        UltraGridColumn290.Header.VisiblePosition = 13
-        UltraGridColumn291.Header.VisiblePosition = 14
-        UltraGridColumn292.Header.VisiblePosition = 15
-        UltraGridColumn293.Header.VisiblePosition = 16
-        UltraGridColumn294.Header.VisiblePosition = 17
-        UltraGridColumn295.Header.VisiblePosition = 18
-        UltraGridBand4.Columns.AddRange(New Object() {UltraGridColumn277, UltraGridColumn278, UltraGridColumn279, UltraGridColumn280, UltraGridColumn281, UltraGridColumn282, UltraGridColumn283, UltraGridColumn284, UltraGridColumn285, UltraGridColumn286, UltraGridColumn287, UltraGridColumn288, UltraGridColumn289, UltraGridColumn290, UltraGridColumn291, UltraGridColumn292, UltraGridColumn293, UltraGridColumn294, UltraGridColumn295})
-        UltraGridColumn296.Header.VisiblePosition = 0
-        UltraGridColumn297.Header.VisiblePosition = 1
-        UltraGridColumn298.Header.VisiblePosition = 2
-        UltraGridColumn299.Header.VisiblePosition = 3
-        UltraGridColumn300.Header.VisiblePosition = 4
-        UltraGridColumn301.Header.VisiblePosition = 5
-        UltraGridColumn302.Header.VisiblePosition = 6
-        UltraGridColumn303.Header.VisiblePosition = 7
-        UltraGridColumn304.Header.VisiblePosition = 8
-        UltraGridColumn305.Header.VisiblePosition = 9
-        UltraGridColumn306.Header.VisiblePosition = 10
-        UltraGridColumn307.Header.VisiblePosition = 11
-        UltraGridColumn308.Header.VisiblePosition = 12
-        UltraGridBand5.Columns.AddRange(New Object() {UltraGridColumn296, UltraGridColumn297, UltraGridColumn298, UltraGridColumn299, UltraGridColumn300, UltraGridColumn301, UltraGridColumn302, UltraGridColumn303, UltraGridColumn304, UltraGridColumn305, UltraGridColumn306, UltraGridColumn307, UltraGridColumn308})
+        UltraGridColumn15.Header.VisiblePosition = 0
+        UltraGridColumn16.Header.VisiblePosition = 1
+        UltraGridColumn17.Header.VisiblePosition = 2
+        UltraGridColumn18.Header.VisiblePosition = 3
+        UltraGridColumn19.Header.VisiblePosition = 4
+        UltraGridColumn20.Header.VisiblePosition = 5
+        UltraGridColumn21.Header.VisiblePosition = 6
+        UltraGridColumn22.Header.VisiblePosition = 7
+        UltraGridColumn23.Header.VisiblePosition = 8
+        UltraGridColumn24.Header.VisiblePosition = 9
+        UltraGridColumn25.Header.VisiblePosition = 10
+        UltraGridColumn26.Header.VisiblePosition = 11
+        UltraGridColumn27.Header.VisiblePosition = 12
+        UltraGridColumn28.Header.VisiblePosition = 13
+        UltraGridColumn29.Header.VisiblePosition = 14
+        UltraGridColumn30.Header.VisiblePosition = 15
+        UltraGridColumn31.Header.VisiblePosition = 16
+        UltraGridColumn32.Header.VisiblePosition = 17
+        UltraGridColumn33.Header.VisiblePosition = 18
+        UltraGridBand4.Columns.AddRange(New Object() {UltraGridColumn15, UltraGridColumn16, UltraGridColumn17, UltraGridColumn18, UltraGridColumn19, UltraGridColumn20, UltraGridColumn21, UltraGridColumn22, UltraGridColumn23, UltraGridColumn24, UltraGridColumn25, UltraGridColumn26, UltraGridColumn27, UltraGridColumn28, UltraGridColumn29, UltraGridColumn30, UltraGridColumn31, UltraGridColumn32, UltraGridColumn33})
+        UltraGridColumn34.Header.VisiblePosition = 0
+        UltraGridColumn35.Header.VisiblePosition = 1
+        UltraGridColumn36.Header.VisiblePosition = 2
+        UltraGridColumn37.Header.VisiblePosition = 3
+        UltraGridColumn38.Header.VisiblePosition = 4
+        UltraGridColumn39.Header.VisiblePosition = 5
+        UltraGridColumn40.Header.VisiblePosition = 6
+        UltraGridColumn41.Header.VisiblePosition = 7
+        UltraGridColumn42.Header.VisiblePosition = 8
+        UltraGridColumn43.Header.VisiblePosition = 9
+        UltraGridColumn44.Header.VisiblePosition = 10
+        UltraGridColumn45.Header.VisiblePosition = 11
+        UltraGridColumn46.Header.VisiblePosition = 12
+        UltraGridBand5.Columns.AddRange(New Object() {UltraGridColumn34, UltraGridColumn35, UltraGridColumn36, UltraGridColumn37, UltraGridColumn38, UltraGridColumn39, UltraGridColumn40, UltraGridColumn41, UltraGridColumn42, UltraGridColumn43, UltraGridColumn44, UltraGridColumn45, UltraGridColumn46})
         Me.ngrdT059_Lotti.DisplayLayout.BandsSerializer.Add(UltraGridBand4)
         Me.ngrdT059_Lotti.DisplayLayout.BandsSerializer.Add(UltraGridBand5)
         Me.ngrdT059_Lotti.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1023,12 +1035,12 @@ Partial Class Lotti
         'ngrdCommesse
         '
         Me.ngrdCommesse.DataSource = Me.T058CommesseaperteBindingSource
-        UltraGridColumn309.Header.VisiblePosition = 0
-        UltraGridColumn310.Header.VisiblePosition = 1
-        UltraGridColumn311.Header.VisiblePosition = 2
-        UltraGridColumn312.Header.VisiblePosition = 3
-        UltraGridColumn313.Header.VisiblePosition = 4
-        UltraGridBand6.Columns.AddRange(New Object() {UltraGridColumn309, UltraGridColumn310, UltraGridColumn311, UltraGridColumn312, UltraGridColumn313})
+        UltraGridColumn47.Header.VisiblePosition = 0
+        UltraGridColumn48.Header.VisiblePosition = 1
+        UltraGridColumn49.Header.VisiblePosition = 2
+        UltraGridColumn50.Header.VisiblePosition = 3
+        UltraGridColumn51.Header.VisiblePosition = 4
+        UltraGridBand6.Columns.AddRange(New Object() {UltraGridColumn47, UltraGridColumn48, UltraGridColumn49, UltraGridColumn50, UltraGridColumn51})
         Me.ngrdCommesse.DisplayLayout.BandsSerializer.Add(UltraGridBand6)
         Me.ngrdCommesse.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ngrdCommesse.Location = New System.Drawing.Point(0, 0)
@@ -1100,9 +1112,9 @@ Partial Class Lotti
         'ngrdT059_Lotti2
         '
         Me.ngrdT059_Lotti2.DataSource = Me.TmpLottiBindingSource
-        UltraGridColumn314.Header.VisiblePosition = 0
-        UltraGridColumn315.Header.VisiblePosition = 1
-        UltraGridBand7.Columns.AddRange(New Object() {UltraGridColumn314, UltraGridColumn315})
+        UltraGridColumn52.Header.VisiblePosition = 0
+        UltraGridColumn53.Header.VisiblePosition = 1
+        UltraGridBand7.Columns.AddRange(New Object() {UltraGridColumn52, UltraGridColumn53})
         Me.ngrdT059_Lotti2.DisplayLayout.BandsSerializer.Add(UltraGridBand7)
         Me.ngrdT059_Lotti2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ngrdT059_Lotti2.Location = New System.Drawing.Point(0, 0)
@@ -1119,7 +1131,7 @@ Partial Class Lotti
         'UltraTabPageControl2
         '
         Me.UltraTabPageControl2.Controls.Add(Me.SplitContainer1)
-        Me.UltraTabPageControl2.Location = New System.Drawing.Point(0, 0)
+        Me.UltraTabPageControl2.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabPageControl2.Name = "UltraTabPageControl2"
         Me.UltraTabPageControl2.Size = New System.Drawing.Size(1689, 786)
         '
@@ -1145,61 +1157,61 @@ Partial Class Lotti
         'ngrdT042_ListeQuadri
         '
         Me.ngrdT042_ListeQuadri.DataSource = Me.T042ListeQuadriBindingSource
-        UltraGridColumn316.Header.VisiblePosition = 0
-        UltraGridColumn317.Header.VisiblePosition = 1
-        UltraGridColumn318.Header.VisiblePosition = 2
-        UltraGridColumn319.Header.VisiblePosition = 3
-        UltraGridColumn320.Header.VisiblePosition = 4
-        UltraGridColumn321.Header.VisiblePosition = 5
-        UltraGridColumn322.Header.VisiblePosition = 6
-        UltraGridColumn323.Header.VisiblePosition = 7
-        UltraGridColumn324.Header.VisiblePosition = 8
-        UltraGridColumn325.Header.VisiblePosition = 9
-        UltraGridColumn326.Header.VisiblePosition = 10
-        UltraGridColumn327.Header.VisiblePosition = 11
-        UltraGridColumn328.Header.VisiblePosition = 12
-        UltraGridColumn329.Header.VisiblePosition = 13
-        UltraGridColumn330.Header.VisiblePosition = 14
-        UltraGridColumn331.Header.VisiblePosition = 15
-        UltraGridColumn332.Header.VisiblePosition = 16
-        UltraGridColumn333.Header.VisiblePosition = 17
-        UltraGridColumn334.Header.VisiblePosition = 18
-        UltraGridColumn335.Header.VisiblePosition = 19
-        UltraGridColumn336.Header.VisiblePosition = 20
-        UltraGridColumn337.Header.VisiblePosition = 21
-        UltraGridColumn338.Header.VisiblePosition = 22
-        UltraGridColumn339.Header.VisiblePosition = 23
-        UltraGridColumn340.Header.VisiblePosition = 24
-        UltraGridBand8.Columns.AddRange(New Object() {UltraGridColumn316, UltraGridColumn317, UltraGridColumn318, UltraGridColumn319, UltraGridColumn320, UltraGridColumn321, UltraGridColumn322, UltraGridColumn323, UltraGridColumn324, UltraGridColumn325, UltraGridColumn326, UltraGridColumn327, UltraGridColumn328, UltraGridColumn329, UltraGridColumn330, UltraGridColumn331, UltraGridColumn332, UltraGridColumn333, UltraGridColumn334, UltraGridColumn335, UltraGridColumn336, UltraGridColumn337, UltraGridColumn338, UltraGridColumn339, UltraGridColumn340})
-        UltraGridColumn341.Header.VisiblePosition = 0
-        UltraGridColumn342.Header.VisiblePosition = 1
-        UltraGridColumn343.Header.VisiblePosition = 2
-        UltraGridColumn344.Header.VisiblePosition = 3
-        UltraGridColumn345.Header.VisiblePosition = 4
-        UltraGridColumn346.Header.VisiblePosition = 5
-        UltraGridColumn347.Header.VisiblePosition = 6
-        UltraGridColumn348.Header.VisiblePosition = 7
-        UltraGridColumn349.Header.VisiblePosition = 8
-        UltraGridBand9.Columns.AddRange(New Object() {UltraGridColumn341, UltraGridColumn342, UltraGridColumn343, UltraGridColumn344, UltraGridColumn345, UltraGridColumn346, UltraGridColumn347, UltraGridColumn348, UltraGridColumn349})
-        UltraGridColumn350.Header.VisiblePosition = 0
-        UltraGridColumn351.Header.VisiblePosition = 1
-        UltraGridColumn352.Header.VisiblePosition = 2
-        UltraGridColumn353.Header.VisiblePosition = 3
-        UltraGridColumn354.Header.VisiblePosition = 4
-        UltraGridColumn355.Header.VisiblePosition = 5
-        UltraGridColumn356.Header.VisiblePosition = 6
-        UltraGridColumn357.Header.VisiblePosition = 7
-        UltraGridColumn358.Header.VisiblePosition = 8
-        UltraGridColumn359.Header.VisiblePosition = 9
-        UltraGridColumn360.Header.VisiblePosition = 10
-        UltraGridColumn361.Header.VisiblePosition = 11
-        UltraGridColumn362.Header.VisiblePosition = 12
-        UltraGridColumn363.Header.VisiblePosition = 13
-        UltraGridColumn364.Header.VisiblePosition = 14
-        UltraGridColumn365.Header.VisiblePosition = 15
-        UltraGridColumn366.Header.VisiblePosition = 16
-        UltraGridColumn367.Header.VisiblePosition = 17
-        UltraGridBand10.Columns.AddRange(New Object() {UltraGridColumn350, UltraGridColumn351, UltraGridColumn352, UltraGridColumn353, UltraGridColumn354, UltraGridColumn355, UltraGridColumn356, UltraGridColumn357, UltraGridColumn358, UltraGridColumn359, UltraGridColumn360, UltraGridColumn361, UltraGridColumn362, UltraGridColumn363, UltraGridColumn364, UltraGridColumn365, UltraGridColumn366, UltraGridColumn367})
+        UltraGridColumn54.Header.VisiblePosition = 0
+        UltraGridColumn55.Header.VisiblePosition = 1
+        UltraGridColumn56.Header.VisiblePosition = 2
+        UltraGridColumn57.Header.VisiblePosition = 3
+        UltraGridColumn58.Header.VisiblePosition = 4
+        UltraGridColumn59.Header.VisiblePosition = 5
+        UltraGridColumn60.Header.VisiblePosition = 6
+        UltraGridColumn61.Header.VisiblePosition = 7
+        UltraGridColumn62.Header.VisiblePosition = 8
+        UltraGridColumn63.Header.VisiblePosition = 9
+        UltraGridColumn64.Header.VisiblePosition = 10
+        UltraGridColumn65.Header.VisiblePosition = 11
+        UltraGridColumn66.Header.VisiblePosition = 12
+        UltraGridColumn67.Header.VisiblePosition = 13
+        UltraGridColumn68.Header.VisiblePosition = 14
+        UltraGridColumn69.Header.VisiblePosition = 15
+        UltraGridColumn70.Header.VisiblePosition = 16
+        UltraGridColumn71.Header.VisiblePosition = 17
+        UltraGridColumn72.Header.VisiblePosition = 18
+        UltraGridColumn73.Header.VisiblePosition = 19
+        UltraGridColumn74.Header.VisiblePosition = 20
+        UltraGridColumn75.Header.VisiblePosition = 21
+        UltraGridColumn76.Header.VisiblePosition = 22
+        UltraGridColumn77.Header.VisiblePosition = 23
+        UltraGridColumn78.Header.VisiblePosition = 24
+        UltraGridBand8.Columns.AddRange(New Object() {UltraGridColumn54, UltraGridColumn55, UltraGridColumn56, UltraGridColumn57, UltraGridColumn58, UltraGridColumn59, UltraGridColumn60, UltraGridColumn61, UltraGridColumn62, UltraGridColumn63, UltraGridColumn64, UltraGridColumn65, UltraGridColumn66, UltraGridColumn67, UltraGridColumn68, UltraGridColumn69, UltraGridColumn70, UltraGridColumn71, UltraGridColumn72, UltraGridColumn73, UltraGridColumn74, UltraGridColumn75, UltraGridColumn76, UltraGridColumn77, UltraGridColumn78})
+        UltraGridColumn79.Header.VisiblePosition = 0
+        UltraGridColumn80.Header.VisiblePosition = 1
+        UltraGridColumn81.Header.VisiblePosition = 2
+        UltraGridColumn82.Header.VisiblePosition = 3
+        UltraGridColumn83.Header.VisiblePosition = 4
+        UltraGridColumn84.Header.VisiblePosition = 5
+        UltraGridColumn85.Header.VisiblePosition = 6
+        UltraGridColumn86.Header.VisiblePosition = 7
+        UltraGridColumn87.Header.VisiblePosition = 8
+        UltraGridBand9.Columns.AddRange(New Object() {UltraGridColumn79, UltraGridColumn80, UltraGridColumn81, UltraGridColumn82, UltraGridColumn83, UltraGridColumn84, UltraGridColumn85, UltraGridColumn86, UltraGridColumn87})
+        UltraGridColumn88.Header.VisiblePosition = 0
+        UltraGridColumn89.Header.VisiblePosition = 1
+        UltraGridColumn90.Header.VisiblePosition = 2
+        UltraGridColumn91.Header.VisiblePosition = 3
+        UltraGridColumn92.Header.VisiblePosition = 4
+        UltraGridColumn93.Header.VisiblePosition = 5
+        UltraGridColumn94.Header.VisiblePosition = 6
+        UltraGridColumn95.Header.VisiblePosition = 7
+        UltraGridColumn96.Header.VisiblePosition = 8
+        UltraGridColumn97.Header.VisiblePosition = 9
+        UltraGridColumn98.Header.VisiblePosition = 10
+        UltraGridColumn99.Header.VisiblePosition = 11
+        UltraGridColumn100.Header.VisiblePosition = 12
+        UltraGridColumn101.Header.VisiblePosition = 13
+        UltraGridColumn102.Header.VisiblePosition = 14
+        UltraGridColumn103.Header.VisiblePosition = 15
+        UltraGridColumn104.Header.VisiblePosition = 16
+        UltraGridColumn105.Header.VisiblePosition = 17
+        UltraGridBand10.Columns.AddRange(New Object() {UltraGridColumn88, UltraGridColumn89, UltraGridColumn90, UltraGridColumn91, UltraGridColumn92, UltraGridColumn93, UltraGridColumn94, UltraGridColumn95, UltraGridColumn96, UltraGridColumn97, UltraGridColumn98, UltraGridColumn99, UltraGridColumn100, UltraGridColumn101, UltraGridColumn102, UltraGridColumn103, UltraGridColumn104, UltraGridColumn105})
         Me.ngrdT042_ListeQuadri.DisplayLayout.BandsSerializer.Add(UltraGridBand8)
         Me.ngrdT042_ListeQuadri.DisplayLayout.BandsSerializer.Add(UltraGridBand9)
         Me.ngrdT042_ListeQuadri.DisplayLayout.BandsSerializer.Add(UltraGridBand10)
@@ -1224,6 +1236,34 @@ Partial Class Lotti
         Me.ugT042Totali.TabIndex = 10
         Me.ugT042Totali.Text = "ugT042Totali"
         '
+        'UltraTabPageControl3
+        '
+        Me.UltraTabPageControl3.Controls.Add(Me.cboT042Numerazione)
+        Me.UltraTabPageControl3.Location = New System.Drawing.Point(0, 0)
+        Me.UltraTabPageControl3.Name = "UltraTabPageControl3"
+        Me.UltraTabPageControl3.Size = New System.Drawing.Size(1689, 786)
+        '
+        'cboT042Numerazione
+        '
+        Me.cboT042Numerazione.DataSource = Me.T062ListeQuadriNumerazioneBindingSource
+        UltraGridColumn160.Header.VisiblePosition = 0
+        UltraGridColumn161.Header.VisiblePosition = 1
+        UltraGridColumn162.Header.VisiblePosition = 2
+        UltraGridBand11.Columns.AddRange(New Object() {UltraGridColumn160, UltraGridColumn161, UltraGridColumn162})
+        Me.cboT042Numerazione.DisplayLayout.BandsSerializer.Add(UltraGridBand11)
+        Me.cboT042Numerazione.DisplayMember = "T062Tipologia"
+        Me.cboT042Numerazione.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboT042Numerazione.Location = New System.Drawing.Point(99, 42)
+        Me.cboT042Numerazione.Name = "cboT042Numerazione"
+        Me.cboT042Numerazione.Size = New System.Drawing.Size(100, 22)
+        Me.cboT042Numerazione.TabIndex = 0
+        Me.cboT042Numerazione.ValueMember = "T062IdTipologia"
+        '
+        'T062ListeQuadriNumerazioneBindingSource
+        '
+        Me.T062ListeQuadriNumerazioneBindingSource.DataMember = "T062_ListeQuadriNumerazione"
+        Me.T062ListeQuadriNumerazioneBindingSource.DataSource = Me.LottiDataSet
+        '
         'UltraPanelResto
         '
         '
@@ -1241,6 +1281,7 @@ Partial Class Lotti
         Me.TabControlPrincipale.Controls.Add(Me.UltraTabSharedControlsPage1)
         Me.TabControlPrincipale.Controls.Add(Me.UltraTabPageControl1)
         Me.TabControlPrincipale.Controls.Add(Me.UltraTabPageControl2)
+        Me.TabControlPrincipale.Controls.Add(Me.UltraTabPageControl3)
         Me.TabControlPrincipale.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControlPrincipale.Location = New System.Drawing.Point(0, 0)
         Me.TabControlPrincipale.Name = "TabControlPrincipale"
@@ -1254,7 +1295,9 @@ Partial Class Lotti
         UltraTab2.Key = "Prospetto Ore"
         UltraTab2.TabPage = Me.UltraTabPageControl2
         UltraTab2.Text = "Prospetto Ore"
-        Me.TabControlPrincipale.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab1, UltraTab2})
+        UltraTab3.TabPage = Me.UltraTabPageControl3
+        UltraTab3.Text = "tab1"
+        Me.TabControlPrincipale.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab1, UltraTab2, UltraTab3})
         '
         'UltraTabSharedControlsPage1
         '
@@ -1462,12 +1505,15 @@ Partial Class Lotti
         '
         Me.T042_MagicTableAdapter.ClearBeforeFill = True
         '
+        'T062_ListeQuadriNumerazioneTableAdapter
+        '
+        Me.T062_ListeQuadriNumerazioneTableAdapter.ClearBeforeFill = True
+        '
         'Lotti
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1689, 829)
-        Me.ControlBox = False
         Me.Controls.Add(Me.UltraPanelResto)
         Me.Controls.Add(Me.Lotti_Fill_Panel)
         Me.Controls.Add(Me._UltraTabPageControl2_Toolbars_Dock_Area_Left)
@@ -1475,6 +1521,8 @@ Partial Class Lotti
         Me.Controls.Add(Me._UltraTabPageControl2_Toolbars_Dock_Area_Bottom)
         Me.Controls.Add(Me._UltraTabPageControl2_Toolbars_Dock_Area_Top)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Lotti"
         Me.Text = "Form1"
         Me.UltraTabPageControl1.ResumeLayout(False)
@@ -1546,6 +1594,10 @@ Partial Class Lotti
         CType(Me.ngrdT042_ListeQuadri, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.T042ListeQuadriBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ugT042Totali, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UltraTabPageControl3.ResumeLayout(False)
+        Me.UltraTabPageControl3.PerformLayout()
+        CType(Me.cboT042Numerazione, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.T062ListeQuadriNumerazioneBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraPanelResto.ClientArea.ResumeLayout(False)
         Me.UltraPanelResto.ResumeLayout(False)
         CType(Me.TabControlPrincipale, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1654,4 +1706,8 @@ Partial Class Lotti
     Friend WithEvents T117_ListeQuadriDettaglioTableAdapter As LottiDataSetTableAdapters.T117_ListeQuadriDettaglioTableAdapter
     Friend WithEvents T045_ListeQuadriElenchiMaterialiTableAdapter As LottiDataSetTableAdapters.T045_ListeQuadriElenchiMaterialiTableAdapter
     Friend WithEvents T042_MagicTableAdapter As LottiDataSetTableAdapters.T042_MagicTableAdapter
+    Friend WithEvents UltraTabPageControl3 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
+    Friend WithEvents cboT042Numerazione As Infragistics.Win.UltraWinGrid.UltraCombo
+    Friend WithEvents T062ListeQuadriNumerazioneBindingSource As BindingSource
+    Friend WithEvents T062_ListeQuadriNumerazioneTableAdapter As LottiDataSetTableAdapters.T062_ListeQuadriNumerazioneTableAdapter
 End Class
