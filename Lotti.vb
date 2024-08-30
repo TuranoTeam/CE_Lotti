@@ -1,14 +1,12 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
-Imports System.Threading
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar
 Imports CE_Lotti.LottiDataSetTableAdapters
 Imports Infragistics.Win
 Imports Infragistics.Win.UltraWinGanttView
 Imports Infragistics.Win.UltraWinGrid
 Imports Infragistics.Win.UltraWinSchedule
-Imports Infragistics.Win.UltraWinTabControl
 
+'aggestionale01l.dmcasagrande.local
 Public Class Lotti
     Dim CommessaAttiva As String
     Private GanttProject As Project
@@ -179,7 +177,9 @@ Public Class Lotti
                     UTBManager.Toolbars(0).Tools(4).CustomizedCaption = "Cancella Lotto"
                 End If
             Case "ButtonTool5"
-                Process.Start("O:\CE_VS\Access\Lotti.accdb", "/X McrModelli /runtime")
+                'Process.Start("O:\CE_VS\Access\Lotti.accdb", "/X McrModelli")
+                Process.Start("C:\Program Files (x86)\Microsoft Office\Office16\MSACCESS.EXE", "O:\CE_VS\Access\Lotti.accdb /X McrModelli")
+
             Case "ButtonTool6"
                 MsgBox("6666")
             Case "ButtonTool7"

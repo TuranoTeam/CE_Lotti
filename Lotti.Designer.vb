@@ -297,6 +297,8 @@ Partial Class Lotti
         Me.T045_ListeQuadriElenchiMaterialiTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T045_ListeQuadriElenchiMaterialiTableAdapter()
         Me.T042_MagicTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T042_MagicTableAdapter()
         Me.T062_ListeQuadriNumerazioneTableAdapter = New CE_Lotti.LottiDataSetTableAdapters.T062_ListeQuadriNumerazioneTableAdapter()
+        Me.UltraLabel1 = New Infragistics.Win.Misc.UltraLabel()
+        Me.UFLL1 = New Infragistics.Win.FormattedLinkLabel.UltraFormattedLinkLabel()
         Me.UltraTabPageControl1.SuspendLayout()
         Me.UltraPanel1.ClientArea.SuspendLayout()
         Me.UltraPanel1.SuspendLayout()
@@ -374,7 +376,7 @@ Partial Class Lotti
         Me.UltraTabPageControl1.Controls.Add(Me.UltraPanel1)
         Me.UltraTabPageControl1.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
-        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 786)
+        Me.UltraTabPageControl1.Size = New System.Drawing.Size(1689, 761)
         '
         'UltraPanel1
         '
@@ -389,7 +391,7 @@ Partial Class Lotti
         Me.UltraPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanel1.Location = New System.Drawing.Point(0, 0)
         Me.UltraPanel1.Name = "UltraPanel1"
-        Me.UltraPanel1.Size = New System.Drawing.Size(1689, 786)
+        Me.UltraPanel1.Size = New System.Drawing.Size(1689, 761)
         Me.UltraPanel1.TabIndex = 6
         '
         'UltraPanel4
@@ -401,7 +403,7 @@ Partial Class Lotti
         Me.UltraPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UltraPanel4.Location = New System.Drawing.Point(0, 420)
         Me.UltraPanel4.Name = "UltraPanel4"
-        Me.UltraPanel4.Size = New System.Drawing.Size(1689, 366)
+        Me.UltraPanel4.Size = New System.Drawing.Size(1689, 341)
         Me.UltraPanel4.TabIndex = 6
         '
         'UltraGanttView1
@@ -422,7 +424,7 @@ Partial Class Lotti
         Me.UltraGanttView1.GridSettings.ColumnSettings.GetValue("RowNumber").VisiblePosition = 12
         Me.UltraGanttView1.Location = New System.Drawing.Point(0, 0)
         Me.UltraGanttView1.Name = "UltraGanttView1"
-        Me.UltraGanttView1.Size = New System.Drawing.Size(1689, 366)
+        Me.UltraGanttView1.Size = New System.Drawing.Size(1689, 341)
         Me.UltraGanttView1.TabIndex = 11
         Me.UltraGanttView1.Text = "UltraGanttView1"
         Me.UltraGanttView1.VerticalSplitterMinimumResizeWidth = 10
@@ -1238,6 +1240,8 @@ Partial Class Lotti
         '
         'UltraTabPageControl3
         '
+        Me.UltraTabPageControl3.Controls.Add(Me.UFLL1)
+        Me.UltraTabPageControl3.Controls.Add(Me.UltraLabel1)
         Me.UltraTabPageControl3.Controls.Add(Me.cboT042Numerazione)
         Me.UltraTabPageControl3.Location = New System.Drawing.Point(0, 0)
         Me.UltraTabPageControl3.Name = "UltraTabPageControl3"
@@ -1509,6 +1513,23 @@ Partial Class Lotti
         '
         Me.T062_ListeQuadriNumerazioneTableAdapter.ClearBeforeFill = True
         '
+        'UltraLabel1
+        '
+        Me.UltraLabel1.Location = New System.Drawing.Point(640, 130)
+        Me.UltraLabel1.Name = "UltraLabel1"
+        Me.UltraLabel1.Size = New System.Drawing.Size(100, 23)
+        Me.UltraLabel1.TabIndex = 1
+        Me.UltraLabel1.Text = "UltraLabel1"
+        '
+        'UFLL1
+        '
+        Me.UFLL1.Location = New System.Drawing.Point(822, 378)
+        Me.UFLL1.Name = "UFLL1"
+        Me.UFLL1.Size = New System.Drawing.Size(130, 23)
+        Me.UFLL1.TabIndex = 2
+        Me.UFLL1.TabStop = True
+        Me.UFLL1.Value = "UltraFormattedLinkLabel1"
+        '
         'Lotti
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1710,4 +1731,6 @@ Partial Class Lotti
     Friend WithEvents cboT042Numerazione As Infragistics.Win.UltraWinGrid.UltraCombo
     Friend WithEvents T062ListeQuadriNumerazioneBindingSource As BindingSource
     Friend WithEvents T062_ListeQuadriNumerazioneTableAdapter As LottiDataSetTableAdapters.T062_ListeQuadriNumerazioneTableAdapter
+    Friend WithEvents UFLL1 As Infragistics.Win.FormattedLinkLabel.UltraFormattedLinkLabel
+    Friend WithEvents UltraLabel1 As Infragistics.Win.Misc.UltraLabel
 End Class
